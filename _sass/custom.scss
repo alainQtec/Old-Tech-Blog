@@ -1,3 +1,23 @@
 /* start custom scss snippet */
+@font-face {
+	font-family: Roboto;
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff2")
+			format("woff2"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff")
+			format("woff"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.ttf")
+			format("ttf");
+	font-weight: 300;
+	font-style: var(--font-medium);
+}
 
+@font-face {
+    font-family: DesignerBlock;
+    src: url(/assets/css/fonts/DesignerBlock.ttf);
+}
+
+@font-face {
+    font-family: zorque;
+    src: url(/assets/css/fonts/zorque.ttf);
+}
 /* end custom scss snippet */
