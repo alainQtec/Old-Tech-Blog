@@ -36,7 +36,7 @@ jobs:
         with:
           token: ${{ secrets.JEKYLL_PAT }}
           jekyll_src: _site # The folder the action should deploy.
-          gem_src: /Gemfile
+          gem_src: /site.gemspec
           target_branch: main
           # entryPoint:
           # args:
