@@ -1,7 +1,6 @@
 # [Tech-blog](https://github.com/alainQtec/tech-blog)
 
 [![Jekyll site CI](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml)
-[![license](https://img.shields.io/github/license/alainQtec/tech-blog.svg)](https://github.com/alainQtec/tech-blog/blob/main/LICENSE)
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
 
@@ -50,6 +49,6 @@ This is a personnal project so features are always changing.
 
 [TODO](TODO.md)
 
-### License
+### License [![license](https://img.shields.io/github/license/alainQtec/tech-blog.svg)](https://github.com/alainQtec/tech-blog/blob/main/LICENSE)
 
-[Apache License](https://github.com/alainQtec/tech-blog/blob/main/LICENSE).
+This blog uses [Apache License](https://github.com/alainQtec/tech-blog/blob/main/LICENSE).
