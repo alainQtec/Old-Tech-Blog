@@ -5,7 +5,7 @@
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
 
-## **Launch the local Site**
+## **Launch the Site on localhost**
 
 Prerequisites:
 
