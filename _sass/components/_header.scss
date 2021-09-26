@@ -1,5 +1,19 @@
 .header {
-  background: $header-background;
+  // Custom B
+  width: 100%;
+  text-align: center;
+  align-items: center !important;
+  align-self: center;
+  position: relative;
+  top: 0 !important;
+  left: 0;
+  margin-bottom: 10px;
+  // z-index: 9000;
+  border-radius: 2rem;
+  background-color: transparent;
+  // Custom E
+
+  // background: $header-background;
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
