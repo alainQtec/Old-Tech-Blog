@@ -71,13 +71,13 @@ toc:
 ##############################
 ## Mathjax
 mathjax: true # false
-mathjax_autoNumber: # false (default), true
+mathjax_autoNumber: true # false
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true # false
 
 ## Chart
-chart: # false (default), true
+chart: true # false
 
 ## => Paginate
 ##############################
