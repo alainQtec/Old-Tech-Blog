@@ -1,44 +1,90 @@
+<!-- <div class="header__title">
+          <div class="header__brand"> -->
+
 {%- if include.theme == 'dark' -%}
-  <header class="header header--dark" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- elsif include.theme == 'light' -%}
-  <header class="header header--light" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- else -%}
-  <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- endif -%}
-    <div class="main">
-      <div class="header__title">
-        <div class="header__brand">
-          {%- include svg/logo.svg -%}
-          {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
-          {%- include snippets/get-nav-url.html path=_paths_root -%}
-          {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+<header class="header header--dark fixed-top" {%- if include.background -%}
+  style="background: {{ include.background }};" {%- endif -%}>
+  {%- elsif include.theme == 'light' -%}
+  <header class="header header--light fixed-top" {%- if include.background -%}
+    style="background: {{ include.background }};" {%- endif -%}>
+    {%- else -%}
+    <header id="header" class="header fixed-top" {%- if include.background -%}
+      style="background: {{ include.background }};" {%- endif -%}>
+      {%- endif -%}
+      <!-- Desktop menu -->
+
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="nav_container fixed-top">
+        {%- if site.data.navigation.header -%}
+        <nav class="navbar" id="navbar">
+          <a class="blognavbrand" href="https://alainqtec.com"><span>alain</span><span>Q</span><span>tec</span></a>
+          <ul>
+            <li class="navigation__item"><a class="nav-link scrollto" href="{{ site.url}}{{site.blogurl}}">Home</a></li>
+            <li class="navigation__item dropdown"><a class="nav-link scrollto"
+                href="{{ site.url}}{{site.abouturl}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">This blog</a></li>
+                <li class="dropdown"><a href="#"><span>Authors</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain#/">Alain</a></li>
+                    <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/geekauthor#/">Geek Author</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item dropdown"><a class="nav-link scrollto" href="#"><span>Categories</span> <i
+                  class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Windows</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Mac Osx</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Other</a></li>
+              </ul>
+            </li>
+            <li class="navigation__item"><a class="nav-link scrollto"
+                href="{{ site.url}}{{site.galleryurl}}">Gallery</a></li>
+            <li class="navigation__item nav_shopicon">
+              <a class="nav-link scrollto toggle-shop-button" href="{{ site.url}}{{site.shopurl}}">
+                <i class="uil uil-shopping-cart" aria-hidden="true"></i> Shop
+              </a>
+            </li>
+            <li class="navigation__item dropdown"><a class="nav-link scrollto" href="#"><span>More</span> <i
+                  class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#"><i class="uil uil-lightbulb-alt nav-sublink"> Topic Suggestion</i></a></li>
+                <li><a href="#"><i class="uil uil-gift nav-sublink"> Giveaways</i></a></li>
+              </ul>
+            </li>
+            <li class="navigation__item dropdown"><a class="nav-link scrollto" href="#Profile">
+                <span>Account</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#profile"><i class="uil uil-user nav-sublink"> Profile</i></a></li>
+                <li><a href="#register"><i class="uil uil-user-plus nav-sublink"> Register</i></a></li>
+                <li><a href="#login"><i class="uil uil-sign-in-alt nav-sublink"> Login</i></a></li>
+              </ul>
+            </li>
+          </ul>
+          {%- if site.search.provider -%}
+          <div class="nav_searchicon">
+            <a class="nav-link toggle-search-button" href="#search">
+              <li class="nav-link toggle-search-button"><button
+                  class="button button--secondary button--circle search-button js-search-toggle"><i
+                    class="fas fa-search search-icon" aria-hidden="true"></i></button></li>
+            </a>
+          </div>
           {%- endif -%}
-        </div>
-        {%- if site.search.provider -%}
-          <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
+          <div class="uil uil-apps mobile-nav-toggle"></div>
+        </nav>
         {%- endif -%}
       </div>
-      {%- if site.data.navigation.header -%}
-      <nav class="navigation">
-        <ul>
-          {%- for _item in site.data.navigation.header -%}
-            {%- include snippets/get-nav-url.html path=_item.url -%}
-            {%- assign _nav_url = __return -%}
-            {%- include snippets/get-nav-url.html path=page.url -%}
-            {%- assign _page_url = __return -%}
-            {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
-            {%- if _nav_url == _page_url or page.nav_key and _item.key and page.nav_key == _item.key -%}
-              <li class="navigation__item navigation__item--active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
-            {%- else -%}
-              <li class="navigation__item"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
-            {%- endif -%}
-          {%- endfor -%}
-          {%- if site.search.provider -%}
-            <li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
-          {%- endif -%}
-        </ul>
-      </nav>
-      {%- endif -%}
-    </div>
-  </header>
+    </header>
