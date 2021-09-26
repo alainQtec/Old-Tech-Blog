@@ -63,24 +63,19 @@
 
 a { 
 	text-decoration: none !important;
-	transition: all 0.5s ease-in-out !important;
 }
+
+a:focus,
 a:hover { 
 	text-decoration: none !important;
-	transition: all 0.5s ease-in-out !important;
+
 }
-a:focus { text-decoration: none !important; }
 
 html{
 	scroll-behavior: smooth !important;
 	-webkit-font-smoothing: antialiased;
 }
 
-ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
 a{
 	text-decoration: none !important;
 	color: var(--text-color) !important;
@@ -601,7 +596,7 @@ html[data-theme="light"] {
 
 .info img {
 	height: 3em;
-	margin-right: 0.5em;
+	// margin-right: 0.5em;
 }
 
 .info h1 {
