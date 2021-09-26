@@ -1,3 +1,108 @@
 <!-- start custom head snippets -->
+{% if page.noindex %}
+<meta name="robots" content="noindex" />
+{% endif %} {% if page.title %}
+<meta content="{{ page.title }}" property="og:title" />
+<meta content="article" property="og:type" />
+{% else %}
+<meta content="{{ site.title }}" property="og:title" />
+<meta content="website" property="og:type" />
+{% endif %} {% if page.summary %}
+<meta content="{{ page.summary }}" property="og:description" />
+{% else %}
+<meta content="{{ site.description }}" property="og:description" />
+{% endif %} {% if page.url %}
+<meta content="{{ site.url }}{{ page.url }}" property="og:url" />
+{% endif %} {% if page.date %}
+<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
+<meta content="{{ site.url }}/about/" property="article:author" />
+{% endif %} {% if page.thumbnail %}
+<meta content="{{ site.url }}{{ page.thumbnail }}" property="og:image" />
+{% endif %} {% if page.categories %} {% for category in page.categories
+limit:1 %}
+<meta content="{{ category }}" property="article:section" />
+{% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
+<meta content="{{ tag }}" property="article:tag" />
+{% endfor %} {% endif %}
 
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ site.share.twitter_username }}" />
+<meta name="twitter:creator" content="@{{ site.share.twitter_username }}" />
+
+{% if page.title %}
+<meta name="twitter:title" content="{{ page.title }}" />
+{% else %}
+<meta name="twitter:title" content="{{ site.title }}" />
+{% endif %}
+
+{% if page.url %}
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+{% endif %} {% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}" />
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}" />
+{% endif %} {% if page.header-img %}
+<meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
+{% endif %}
+
+<script>
+  var base_url = '{{ site.url}}{{site.baseurl}}';
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/blog.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/main.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/navscript.js"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<!-- Netlify Identity Widget (For backend support)-->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<!-- for Mathjax support -->
+{% if page.usemathjax %}
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+   </script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
+
+<!-- Github Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+<!-- "Build by Alain" widget  -->
+<script>
+  (function (d, h, m) {
+    var js, fjs = d.getElementsByTagName(h)[0];
+    if (d.getElementById(m)) { return; }
+    js = d.createElement(h); js.id = m;
+    js.onload = function () {
+      window.makerWidgetComInit({
+        position: "left",
+        widget: "t96v84nvcjom1hvr-hgfqrw7o0s1vcqm6-wkkhuity43yndwor"
+      })
+    };
+    js.src = "https://makerwidget.com/js/embed.js";
+    fjs.parentNode.insertBefore(js, fjs)
+  }(document, "script", "dhm"))
+</script>
+<!-- https://www.buymeacoffee.com/alainherve -->
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve"
+  data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)"
+  data-position="right" data-x_margin="10" data-y_margin="10"></script>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 <!-- end custom head snippets -->

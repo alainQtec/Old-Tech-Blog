@@ -2,23 +2,50 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+{% if page.summary %}
+<meta name="description"
+  content="{{ page.summary | escape }}- {% if {page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}">
+{% endif %}
+
 {%- include snippets/get-article-title.html article=page -%}
 <title>{%- if __return -%}{{ __return }} - {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
 
-<meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
+<meta name="description"
+  content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
+<meta name="keywords"
+  content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %},{{ page.keywords | escape }}" />
 <link rel="canonical" href="{%- include snippets/page-url.html -%}">
-
+<meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
+<meta content="{{ site.title }}" property="og:site_name" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
 {%- include snippets/get-nav-url.html path=_paths_rss -%}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
+<!--=================== BOX ICONS ===================-->
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<!--==================== UNICONS ====================-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-{%- include head/favicon.html -%}
+<!-- //%- include head/favicon.html -%// -->
+<!-- or use -->
+<link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" type="image/x-icon">
+<link rel="icon" href="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" type="image/x-icon">
+<!-- <link href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" rel="icon">
+<link href="{{site.url}}{{site.baseurl}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+<!-- <link rel="shortcut icon"
+  href="https://db3pap005files.storage.live.com/y4mnJglXRa08TLUc7GvlC3UPab1HstdN_b2ddv2YgG3aFVFEulXjKfo9bK5EhbodY5678r5eICDtA2UxslVwcYeexEemhPUrvnMQzuZRpSnXZ1_36zddkQHVUbkyHI2v3zcUaa9YpfLie7SkBIUL05BLfKn24ejqmQeLyrqbXUXDT56kreT8yF7WYLx_9QUYNg8?width=391&height=382&cropmode=none"> -->
+
 
 {%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">
 
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
-<link rel="stylesheet" href="{{ _sources.font_awesome }}" >
+<link rel="stylesheet" href="{{ _sources.font_awesome }}">
+
+<!-- google-analytics -->
+{% if site.google-analytics %}
+{% include google-analytics.html %}
+{% endif %}
 
 {%- include head/custom.html -%}
