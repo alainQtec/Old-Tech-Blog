@@ -67,6 +67,20 @@ paths:
 ## excerpt
 excerpt_separator: <!--more-->
 
+jekyll_admin:
+  homepage: "pages"
+  hidden_links:
+    - configuration
+  #   - posts
+  #   - pages
+  #   - staticfiles
+  #   - datafiles
+collections:
+  products:
+    output: true
+  authors:
+    output: true
+
 ## license
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
@@ -168,6 +182,14 @@ markdown: kramdown
 highlighter: rouge
 permalink: date
 
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
 exclude:
   - CHANGELOG.md
   - HOW_TO_RELEASE.md
