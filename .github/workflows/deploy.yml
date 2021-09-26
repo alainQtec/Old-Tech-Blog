@@ -35,7 +35,7 @@ jobs:
         uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.JEKYLL_PAT }}
-          jekyll_src: _site # The folder the action should deploy.
+          jekyll_src: /
           gem_src: /
           target_branch: main
           # entryPoint:
