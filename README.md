@@ -5,11 +5,6 @@
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
 
-## Personal blog & Portfolio site
-
-[![Deploy to `Github Pages`](https://github.com/alainQtec/alainQtec.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/alainQtec/alainQtec.github.io/actions/workflows/deploy.yml)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-
 ### **Launch the local Site**
 
 Prerequisites:
