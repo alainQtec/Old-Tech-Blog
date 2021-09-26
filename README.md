@@ -37,7 +37,7 @@ bundle exec jekyll serve --watch
 
 This is a personnal project so features are always changing.
 
-[TODO.md](TODO)
+[TODO](TODO.md)
 
 #### **Backend using Jekyll Admin**
 
