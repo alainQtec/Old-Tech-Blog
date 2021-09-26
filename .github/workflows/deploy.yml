@@ -35,8 +35,12 @@ jobs:
         uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.JEKYLL_PAT }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: _site # The folder the action should deploy.
-          REPOSITORY_NAME: alainQtec/tech-blog
-          CLEAN: true # Automatically remove deleted files from the deploy branch
-
+          jekyll_src: _site # The folder the action should deploy.
+          target_branch: main
+          # entryPoint:
+          # args:
+          # jekyll_env:
+          # jekyll_build_options:
+          # gem_src:
+          # build_only: true
+          # pre_build_commands: bundle exec jekyll doctor
