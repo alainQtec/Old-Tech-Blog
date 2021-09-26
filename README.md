@@ -1,4 +1,4 @@
-# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+# [Tech-blog](https://github.com/alainQtec/tech-blog)
 
 [![Jekyll site CI](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml)
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
