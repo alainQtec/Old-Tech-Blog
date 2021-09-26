@@ -24,7 +24,7 @@ bundle update
 bundle install
 ```
 
-But if thats does not work out, (Plan-B) I use CMS.cmd from my terminal <!-- This script should be smart enough to fix any errors in the Backend, and Quickly open the CMS -->
+But if thats does not work out, (Plan-B) I use cms.cmd from my terminal <!-- This script should be smart enough to fix any errors in the Backend, and Quickly open the CMS -->
 
 ```batch
 cd Project_repo/Admin
