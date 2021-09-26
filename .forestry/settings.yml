@@ -47,7 +47,6 @@ file_template: ":year:/:month:/:day:/:filename:"
 build:
   preview_env:
   - JEKYLL_ENV=staging
-  - JEKYLL_PAT=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
   preview_output_directory: _site
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
