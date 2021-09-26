@@ -1,6 +1,9 @@
 ---
 title: Quick guide to using ADB Platform Tools
-tags: TeXt
+tags:
+- android
+- ADB
+date: 2021-08-30T03:25:23.702Z
 layout: post
 author: alain
 article_header:

@@ -2,7 +2,9 @@
 layout: post
 author: alain
 title: Basic Networking with PowerShell
-tags: TeXt
+tags:
+- PowerShell
+- Networking
 date: 2021-08-30T04:57:23.752Z
 article_header:
   type: cover

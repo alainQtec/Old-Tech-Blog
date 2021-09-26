@@ -2,7 +2,10 @@
 layout: post
 author: alain
 title: Windows 10 password reset utilities
-tags: TeXt
+tags:
+- PowerShell
+- password
+- reset
 date: 2021-08-25T17:15:49.014Z
 thumbnail-img: /assets/images/posts/troubleshoot.jpeg
 category: it-ops

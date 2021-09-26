@@ -1,6 +1,9 @@
 ---
 title: Install Windows Drivers using powershell
-tags: TeXt
+tags:
+- Windows
+- Driver
+date: 2021-08-30T04:35:23.702Z
 layout: post
 author: alain
 article_header:
