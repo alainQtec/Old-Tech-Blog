@@ -1,0 +1,67 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- include head.html -%}
+
+<body>
+  <main class="main" id="scroll-animate">
+    <div id="scroll-animate-main">
+      <header>
+        {%- include header.html -%}
+      </header>
+      {%- include mobile_menu.html -%}
+      <div class="content">
+        {{ content }}
+        <div class="col-lg-12" id="newsletter_footer">
+          {%- include blog_newsletter.html -%}
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--==================== FOOTER ====================-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
+  {%- include footer.html-%}
+  <!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!--==================== MAIN JS ====================-->
+  <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script> -->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
+  <script>
+    var options = {
+      classname: 'my-class',
+      id: 'my-id'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+  <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
+  </div>
+  <script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <!-- Vendor JS Files -->
+  <!-- <script src="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/typed.js/typed.min.js"></script> -->
+</body>
+
+</html>

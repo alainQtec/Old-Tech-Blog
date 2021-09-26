@@ -1,0 +1,309 @@
+---
+layout: default
+---
+<div class="col-lg-12">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" id="profile-card">
+        <a href="/">
+          <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="profile-img" />
+        </a>
+        <h1 class="profile-name">{{ site.author }}</h1>
+        <p class="profile-bio">Quick Productive Tech.</p>
+        {% if site.github_username %} {%- include github_follow_button.html -%} {%
+        endif %}
+
+        <p class="profile-links">
+          {% if site.twitter_username %}
+          <a class="social-link" href="http://twitter.com/{{ site.twitter_username }}">
+            <i class="fab fa-twitter"></i>
+          </a>
+          {% endif %} {% if site.facebook_username %}
+          <a class="social-link" href="http://facebook.com/{{ site.facebook_username }}">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          {% endif %} {% if site.instagram_username %}
+          <a class="social-link" href="http://instagram.com/{{ site.instagram_username }}">
+            <i class="fab fa-instagram"></i>
+          </a>
+          {% endif %} {% if site.medium_username %}
+          <a class="social-link" href="http://medium.com/@{{ site.medium_username }}">
+            <i class="fab fa-medium-m"></i>
+          </a>
+          {% endif %} {% if site.github_username %}
+          <a class="social-link" href="http://github.com/{{ site.github_username }}">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %} {% if site.behance_username %}
+          <a class="social-link" href="http://behance.net/{{ site.behance_username }}">
+            <i class="fab fa-behance"></i>
+          </a>
+          {% endif %} {% if site.linkedin_username %}
+          <a class="social-link" href="http://linkedin.com/in/{{ site.linkedin_username }}">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          {% endif %} {% if site.telegram_username %}
+          <a class="social-link" href="http://t.me/{{ site.telegram_username }}">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          {% endif %} {% if site.dribbble_username %}
+          <a class="social-link" href="https://dribbble.com/{{ site.dribbble_username }}">
+            <i class="fab fa-dribbble"></i>
+          </a>
+          {% endif %} {% if site.flickr_username %}
+          <a class="social-link" href="https://www.flickr.com/photos/{{ site.flickr_username }}">
+            <i class="fab fa-flickr"></i>
+          </a>
+          {% endif %}
+        </p>
+
+        {% if site.author_location %}
+        <h6><i class="fas fa-map-marker-alt"></i> {{ site.author_location }}</h6>
+        {% endif %} {% if site.author_email %}
+        <h6><i class="fas fa-envelope"></i> {{ site.author_email }}</h6>
+        {% endif %} {% if site.author_website_url %}
+        <h6><i class="fas fa-link"></i> {{ site.author_website_url }}</h6>
+        {% endif %}
+      </div>
+      <div class="card">
+        <h1>Skills</h1>
+        {%- include author_skills.html -%}
+      </div>
+      <!-- 
+      # TODO:
+      One way to get fynamic Language stats is by using versel
+      Versel example: ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alainQtec&layout=compact&hide=css,html&theme=tokyonight)
+      Wakatime example: [![alainQtec's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=alainQtec&layout=compact)](https://github.com/alainQtec)
+      # TODO
+      -->
+      {% if site.wakatime_username %}
+      <div class="card">
+        <h1>Coding Activity</h1>
+
+        {%- include coding_activity.html -%}
+      </div>
+      {% endif %}
+    </div>
+    <div class="col-lg-7">
+      {% if site.author_bio %}
+      <div class="card">
+        <h2 class="section__title">About me</h2>
+      </div>
+      <section class="about section" id="about">
+        <span class="section__subtitle">Introduction</span>
+
+        <div class="about__container container grid">
+          <img class="about__img" src="{{site.url}}{{site.baseurl}}/assets/img/about_Me.png" alt="about Me">
+          <div class="about__data">
+            <p class="about__description">
+              When I'm not coding I like sketching and getting inspiration from "online Art Communities".
+              <br>
+              I also enjoy automating my workflow with <a
+                href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> and <a
+                href="https://en.wikipedia.org/wiki/PowerShell">PowerShell</a>.<br>I mean Why not make your
+              computer do the grunt work!
+            </p>
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">2+</span>
+                <span class="about__info-name">Years <br> experience</span>
+              </div>
+              <div>
+                <span class="about__info-title">20+</span>
+                <span class="about__info-name">Completed <br> Projects</span>
+              </div>
+              <div>
+                <span class="about__info-title">1</span>
+                <span class="about__info-name">Company <br> Worked</span>
+              </div>
+              <div class="about__buttons">
+                <!-- TODO : add a css popup that requires user E-mail address to send the cv (and aggre to respect my privacy) -->
+                <a download="" href="{{site.url}}{{site.baseurl}}/assets/pdf/Alain_Herve_Resume_Preview.pdf"
+                  class="button button_Dl_CV button--fex">CV<i class="uil uil-download-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      {% endif %} {% if site.show_author_project_details == true %}
+      <div class="card" id="author_projects">
+        <section class="projects section" id="projects">
+          <!-- <h1 class="card-title">Projects</h1> -->
+          <h2 class="section__title">Projects</h2>
+          <span class="section__subtitle">My most recent work</span>
+          <div class="project__container container bd-grid">
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work1.jpg" alt="projEct1">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work2.jpg" alt="project2">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work3.jpg" alt="proj3ct3">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work4.jpg" alt="project4">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work5.jpg" alt="proj3ct5">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+            <div class="project__img">
+              <img src="{{site.url}}{{site.baseurl}}/assets/img/work6.jpg" alt="proj3ct6">
+
+              <div class="project__link">
+                <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
+                    class="uil uil-github-alt"></i> View details</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="project section">
+          <!-- This is the part where I will put a small animation  that shows the progress of my opensource projects from github -->
+        </section>
+        <br />
+        {% for project in site.author_project_details %} {% if project.visibility
+        == true %}
+        <div class="row" id="project-card">
+          <div class="col-md-6">
+            <img src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}" class="project-img" />
+          </div>
+          <div class="col-md-4 center">
+            <h4 class="experience-title">{{ project.project_title }}</h4>
+            <h6 class="experience-info">{{ project.project_info}}</h6>
+            <p class="experience-desc">{{ project.project_description }}</p>
+            <p>
+              <a class="project-link" href="{{project.project_url}}">{{ project.project_url}}</a>
+            </p>
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+      {% endif %} {% if site.show_author_work_experiences == true %}
+      <div class="card">
+        <h1 class="card-title">Qualification</h1>
+        <section class="qualification section">
+          <span class="section__subtitle">My Personal Journey</span>
+          <div class="qualification__container container">
+            <div class="qualification__tabs">
+              <div class="qualification__button button--flex">
+                <i class="uil uil-graduation-cap qualification__icon"></i>
+                Education
+              </div>
+
+              <div class="qualification__button button--flex" data-target="#work">
+                <i class="uil uil-briefcase-alt qualification__icon"></i>
+                Work
+              </div>
+            </div>
+
+            <div class="qualification__sections">
+              <!--==================== QUALIFICATION Content 1 ====================-->
+              <div class="qualification__content qualification__active" data-content id="education">
+                <!--==================== QUALIFICATION 1 ====================-->
+                <div class="qualification__data">
+
+                  <div>
+                    <Span class="qualification__rounder"></Span>
+                    <Span class="qualification__line"></Span>
+                  </div>
+
+                  <div>
+                    <a href="https://uok.ac.rw">
+                      <h3 class="qualification__title">Bachelor's in Business Information Technology</h3>
+                      <span class="qualification__subtitle">University of Kigali</span>
+                    </a>
+                    <div class="qualification__calendar">
+                      <i class="uil uil-calendar-alt"></i>
+                      Sep2018 - 2022
+                    </div>
+                  </div>
+                </div>
+
+                <!--==================== QUALIFICATION 2 ====================-->
+                <div class="qualification__data">
+                  <div>
+                    <Span class="qualification__rounder"></Span>
+                    <Span class="qualification__line"></Span>
+                  </div>
+
+                  <div>
+                    <a href="https://rura.rw">
+                      <h3 class="qualification__title">IT Technical Support Intern</h3>
+                      <span class="qualification__subtitle">RURA</span>
+                    </a>
+                    <div class="qualification__calendar">
+                      <i class="uil uil-calendar-alt"></i>
+                      Jun2021 - Sep2021
+                    </div>
+                  </div>
+                </div>
+
+                <!--==================== QUALIFICATION 3 ====================-->
+                <div class="qualification__data">
+
+                  <div>
+                    <Span class="qualification__rounder"></Span>
+                    <Span class="qualification__line"></Span>
+                  </div>
+
+                  <div>
+                    <a href="https://alainQtec.com">
+                      <h3 class="qualification__title">Founder & CEO</h3>
+                      <span class="qualification__subtitle">alainQtec</span>
+                    </a>
+                    <div class="qualification__calendar">
+                      <i class="uil uil-calendar-alt"></i>
+                      2022 - 20??
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {% for exp in site.author_work_experiences %} {% if exp.visibility == true
+        %}
+        <div class="row">
+          <div class="col-md-2">
+            <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo }}" class="company-logo" />
+          </div>
+          <div class="col-md-6">
+            <h4 class="experience-title">{{ exp.designation }}</h4>
+            <h6 class="experience-info">{{ exp.company_name}}</h6>
+            <p class="experience-desc">{{ exp.description }}</p>
+            <p><a href="{{exp.company_url}}">{{ exp.company_url}}</a></p>
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

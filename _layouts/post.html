@@ -1,0 +1,54 @@
+---
+layout: default
+comments: true
+---
+
+<div class="top blog-card">
+  <div class="blog-card__background"
+    style="--bg-img: url('{{site.url}}{{site.baseurl}}{{ page.thumbnail }}'); background: url('{{site.url}}{{site.baseurl}}{{ page.thumbnail }}') center/cover no-repeat;">
+    <div class="card__background--layer">
+      <div class="blog-card__head">
+        <span class="date__box">
+          <span class="date__day"><time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date: "%-d"
+              }}</time></span>
+          <span class="date__month"><time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date:
+              "%b" }}</time></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+{%- include blog_post_article.html -%}
+<!-- //%- include blog_categories.html -%// -->
+<div class="comments_container has-col-all">
+  <!-- 
+  //%- if site.hyvor_talk_website_id -%//
+    //%- include hyvor_comments.html -%//
+  //%- endif -%//
+  -->
+  {% if site.disqus_shortname %}
+  {%- include disqus-comments.html -%}
+  {% endif %}
+</div>
+{%- include share_page.html -%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/jquery.scrollaway.js"></script>
+<script>
+  jQuery(function ($) {
+    $('#share-btn').scrollAway();
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
