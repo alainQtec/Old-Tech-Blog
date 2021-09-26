@@ -1,4 +1,4 @@
-## Features to add
+# Features to add
 
 - Responsive
 - Semantic HTML
