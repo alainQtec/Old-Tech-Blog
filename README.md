@@ -5,7 +5,9 @@
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
 
-## **Launch the Site on localhost**
+### **Backend using Jekyll Admin**
+
+I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) : [http://localhost:4000/admin](http://localhost:4000/admin)
 
 Prerequisites:
 
@@ -18,6 +20,13 @@ bundle add jekyll
 bundle exec jekyll -v
 bundle update
 bundle install
+```
+
+But if thats does not work out, (Plan-B) I use CMS.cmd from my terminal <!-- This script should be smart enough to fix any errors in the Backend, and Quickly open the CMS -->
+
+```batch
+cd Project_repo/Admin
+cms
 ```
 
 Depending on which version of jekyll you'll be using you may face issues with dependencies and plugins.
@@ -38,17 +47,6 @@ bundle exec jekyll serve --watch
 This is a personnal project so features are always changing.
 
 [TODO](TODO.md)
-
-### **Backend using Jekyll Admin**
-
-I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) : [http://localhost:4000/admin](http://localhost:4000/admin)
-
-But if thats does not work out, (Plan-B) I use CMS.cmd from my terminal <!-- This script should be smart enough to fix any errors in the Backend, and Quickly open the CMS -->
-
-```batch
-cd Project_repo/Admin
-cms
-```
 
 ### License
 
