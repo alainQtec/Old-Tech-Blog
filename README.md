@@ -5,7 +5,7 @@
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
 
-### **Launch the local Site**
+## **Launch the local Site**
 
 Prerequisites:
 
@@ -33,13 +33,13 @@ cd Project_repo
 bundle exec jekyll serve --watch
 ```
 
-#### Features
+### Features
 
 This is a personnal project so features are always changing.
 
 [TODO](TODO.md)
 
-#### **Backend using Jekyll Admin**
+### **Backend using Jekyll Admin**
 
 I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) : [http://localhost:4000/admin](http://localhost:4000/admin)
 
@@ -50,6 +50,6 @@ cd Project_repo/Admin
 cms
 ```
 
-## License
+### License
 
 [Apache License](https://github.com/alainQtec/tech-blog/blob/main/LICENSE).
