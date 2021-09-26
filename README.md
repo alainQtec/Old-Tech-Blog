@@ -142,4 +142,4 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 
 ## License
 
-[Apache License](https://github.com/alaintec/tech-blog/blob/main/LICENSE).
+[Apache License](https://github.com/alainQtec/tech-blog/blob/main/LICENSE).
