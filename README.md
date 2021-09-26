@@ -49,6 +49,6 @@ This is a personnal project so features are always changing.
 
 [TODO](TODO.md)
 
-### License [![license](https://img.shields.io/github/license/alainQtec/tech-blog.svg)](https://github.com/alainQtec/tech-blog/blob/main/LICENSE)
+### [![License](https://img.shields.io/github/license/alainQtec/tech-blog.svg)](https://github.com/alainQtec/tech-blog/blob/main/LICENSE)
 
 This blog uses [Apache License](https://github.com/alainQtec/tech-blog/blob/main/LICENSE).
