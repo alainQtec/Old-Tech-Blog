@@ -2,6 +2,7 @@
 layout: post
 author: alain
 title: Windows 10 password reset utilities
+tags: TeXt
 date: 2021-08-25T17:15:49.014Z
 thumbnail-img: /assets/img/posts/troubleshoot.jpeg
 category: it-ops

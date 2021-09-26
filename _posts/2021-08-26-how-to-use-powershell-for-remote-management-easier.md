@@ -2,6 +2,7 @@
 layout: post
 author: alain
 title: How to use PowerShell for easier remote management
+tags: TeXt
 date: 2021-08-26T10:02:43.214Z
 thumbnail-img: /assets/img/posts/programming evolution.jpg
 category: it-ops
