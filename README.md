@@ -1,5 +1,6 @@
 # [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
+[![Jekyll site CI](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml)
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
