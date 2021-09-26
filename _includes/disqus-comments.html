@@ -1,0 +1,28 @@
+<!-- disqus-comments -->
+<div class="comments">
+  <div id="disqus_thread" class="comments__article"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables 
+    **/
+    // I guess comments will only work on posts 
+    // var disqus_config = function () {
+    //   this.page.url = "{{ post.url | prepend: site.baseurl }}";
+    //   this.page.identifier = "{{ post.id }}";
+    //   // this.page.title = "{{ post.title }}";
+    // };
+    /* DON'T EDIT BELOW THIS LINE */
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments</a>.
+  </noscript>
+</div>
+<!-- /disqus-comments -->

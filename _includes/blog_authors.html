@@ -1,0 +1,7 @@
+<ul class="blog_authors_list">
+    {% for author in site.authors %}
+    <li class="tag-head">
+        <a href="/blog/authors/{{ author.username }}"><span>{{ author.name }}</span></a>
+    </li>
+    {% endfor %}
+</ul>

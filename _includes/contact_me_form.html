@@ -1,0 +1,78 @@
+<section class="contact section" id="contact">
+  <h2 class="section__title">Contact Me</h2>
+  <span class="section__subtitle">Get in touch</span>
+
+  <div class="contact__container container grid">
+    <div>
+      <div class="contact__information">
+        <i class="uil uil-phone contact__icon"></i>
+
+        <div>
+          <h3 class="contact__title">Call Me</h3>
+          <span class="contact__subtitle">+250-784-703-243</span>
+        </div>
+      </div>
+
+      <div class="contact__information">
+        <i class="uil uil-envelope contact__icon"></i>
+
+        <div>
+          <h3 class="contact__title">Email</h3>
+          <span class="contact__subtitle">alain.1337dev@outlook.com</span>
+        </div>
+      </div>
+
+      <div class="contact__information">
+        <i class="uil uil-map-marker contact__icon"></i>
+
+        <div>
+          <h3 class="contact__title">Online</h3>
+          <span class="contact__subtitle">false</span>
+        </div>
+      </div>
+    </div>
+    <!-- Using <form action="https://formspree.io/{{ site.formspree_email }}" method="POST" > is legacy and unsecure (it exposes user email in url) -->
+    <form action="https://formspree.io/f/xqkwgodd" method="POST" class="contact__form grid">
+      <div class="contact__inputs grid">
+        <div class="contact__content">
+          <label for="" class="contact__label">Name</label>
+          <input type="text" class="contact__input">
+        </div>
+
+        <div class="contact__content">
+          <label for="" class="contact__label">Email</label>
+          <input type="email" class="contact__input">
+        </div>
+      </div>
+      <div class="contact__content">
+        <label for="" class="contact__label">Project</label>
+        <input type="text" class="contact__input">
+      </div>
+      <div class="contact__content">
+        <label for="" class="contact__label">Message</label>
+        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+      </div>
+      <div>
+        <a href="#" class="button button--flex">
+          Send Message
+          <i class="uil uil-message button__icon"></i>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- Old <form action="https://formspree.io/f/xqkwgodd" method="POST"></form>
+<div class="form-group">
+  <label for="contact_form_name">Your Name :</label>
+  <input type="text" class="form-control" name="name" id="contact_form_name" placeholder="Enter Your Name">
+</div>
+<div class="form-group">
+  <label for="contact_form_email">Your Email :</label>
+  <input type="email" class="form-control" name="_replyto" id="contact_form_email" placeholder="Enter Your Email">
+</div>
+<div class="form-group">
+  <label for="contact_form_message"> Your Message :</label>
+  <textarea name="_message" class="form-control" id="contact_form_message" placeholder="Enter Your Message"></textarea>
+</div>
+<button type="submit" value="Send" class="btn btn-lg btn-dark">Submit</button>
+</form> -->

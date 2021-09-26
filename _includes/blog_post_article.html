@@ -1,0 +1,32 @@
+<article class="blog_article-card" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-content-wrap">
+    <div class="has-col-all">
+      <div class="divx--item">
+        <h2 class="blog-post_title">{{ page.title }}</h2>
+      </div>
+    </div>
+    <div class="blog-card__info">
+      <p>
+        {% if page.author %}
+        <a href="{{site.url}}{{site.baseurl}}/blog/authors/{{page.author}}" class="icon-link mr-3"><i
+            class="uil uil-edit"></i><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+              itemprop="name"><a href="{{site.url}}{{site.baseurl}}/blog/authors/{{page.author}}">{{
+                page.author}}</a></span></span>
+        </a>
+        {% endif %}
+        &nbsp<a href="#" class="icon-link"><i class="uil uil-comments-alt"></i>&nbsp&nbsp150</a>
+      </p>
+      <p>{{ page.summary }}</p>
+      <div class="post-categories">
+        {% if post %} {% assign categories = post.categories %} {% else %} {%
+        assign categories = page.categories %} {% endif %} Category : {% for
+        category in categories %}
+        <a href="{{site.baseurl}}/blog/categories/{{category|slugize}}">{{category}}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+      </div>
+    </div>
+    <div class="blog_post_content">
+      {{ content }}
+    </div>
+  </div>
+</article>

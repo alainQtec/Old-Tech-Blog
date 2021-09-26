@@ -1,0 +1,29 @@
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "facebook-jssdk");
+</script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="share-btn" class="share__btn">
+  <ul class="share-menu">
+    <li class="share top">
+      <i class="fa fa-share-alt"></i>
+      <ul class="submenu">
+        <li><a class="fb-share-button" data-href="{{site.url}}{{page.url}}" data-size="large" data-layout="button"><i
+              class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false"><i
+              class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
