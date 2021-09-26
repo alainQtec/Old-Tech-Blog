@@ -3,7 +3,7 @@ rvm:
   - 2.4.1
 branches:
   only:
-  - master
+    - main
 before_script: cp -rfv docs/_includes .
 script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
 deploy:
@@ -13,5 +13,5 @@ deploy:
   local_dir: _site
   keep-history: true
   on:
-    branch: master
+    branch: main
     target_branch: gh-pages
