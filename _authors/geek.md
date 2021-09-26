@@ -1,6 +1,6 @@
 ---
 name: Geek Author
-title: geek
+title: Geek
 username: geek
 bio: "Hi I'm a geek, a testauthor created by Alain for test purpos~..."
 site: http://alainQtec.com

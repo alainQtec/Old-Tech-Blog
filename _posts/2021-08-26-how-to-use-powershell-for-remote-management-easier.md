@@ -4,11 +4,11 @@ author: alain
 title: How to use PowerShell for easier remote management
 tags: TeXt
 date: 2021-08-26T10:02:43.214Z
-thumbnail-img: /assets/img/posts/programming evolution.jpg
+thumbnail-img: /assets/images/posts/programming evolution.jpg
 category: it-ops
 summary: Learn cool ways to use powershell for remote managment.
 keywords: PowerShell
-thumbnail: /assets/img/posts/programming evolution.jpg
+thumbnail: /assets/images/posts/programming evolution.jpg
 permalink: /blog/powershell-for-easier-remote-management
 ---
 

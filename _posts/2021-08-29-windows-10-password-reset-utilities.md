@@ -4,11 +4,11 @@ author: alain
 title: Windows 10 password reset utilities
 tags: TeXt
 date: 2021-08-25T17:15:49.014Z
-thumbnail-img: /assets/img/posts/troubleshoot.jpeg
+thumbnail-img: /assets/images/posts/troubleshoot.jpeg
 category: it-ops
 summary: Learn how to use lifesaver password reset utilities for windows pc
 keywords: password
-thumbnail: /assets/img/posts/troubleshoot.jpeg
+thumbnail: /assets/images/posts/troubleshoot.jpeg
 permalink: /blog/password-reset-utilities
 ---
 <!--StartFragment-->
@@ -83,7 +83,7 @@ Note: NTPasswd is not capable of accessing encrypted drives, such as Bitlocker-e
 
  At the following prompt, hit Enter again to list the available video modes.
 
-![Press Enter to list available video modes](/assets/img/posts/pc-troubleshoot.jpeg)
+![Press Enter to list available video modes](/assets/images/posts/pc-troubleshoot.jpeg)
 
 Press Enter to list available video modes
 

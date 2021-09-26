@@ -7,12 +7,12 @@ date: 2021-08-20T10:03:43.234Z
 article_header:
   type: cover
   image:
-    src: /assets/img/posts/code.jpg
-thumbnail-img: /assets/img/posts/code.jpg
+    src: /assets/images/posts/code.jpg
+thumbnail-img: /assets/images/posts/code.jpg
 category: it-ops
 summary: Learn several possibilities of how you can reset an AD account Password.
 keywords: PowerShell, Active Directory
-thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/images/posts/code.jpg
 permalink: /blog/reset-active-directory-password
 ---
 >## Contents

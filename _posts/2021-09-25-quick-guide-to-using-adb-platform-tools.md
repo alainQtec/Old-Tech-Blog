@@ -6,12 +6,12 @@ author: alain
 article_header:
   type: cover
   image:
-    src: /assets/img/posts/pexels-pixabay-270557.jpg
-thumbnail-img: /assets/img/posts/pexels-pixabay-270557.jpg
+    src: /assets/images/posts/pexels-pixabay-270557.jpg
+thumbnail-img: /assets/images/posts/pexels-pixabay-270557.jpg
 category: android
 summary: Learn how to use adb to uninstall packages
 keywords: android, adb
-thumbnail: /assets/img/posts/pexels-pixabay-270557.jpg
+thumbnail: /assets/images/posts/pexels-pixabay-270557.jpg
 permalink: /blog/guide-to-using-adb-platform-tools
 ---
 

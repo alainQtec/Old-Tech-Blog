@@ -7,12 +7,12 @@ date: 2021-08-30T04:57:23.752Z
 article_header:
   type: cover
   image:
-    src: /assets/img/posts/powershell.jpg
-thumbnail-img: /assets/img/posts/powershell.jpg
+    src: /assets/images/posts/powershell.jpg
+thumbnail-img: /assets/images/posts/powershell.jpg
 category: guides
 summary: Get started on how to use powershell with networking
 keywords: PowerShell, Networking
-thumbnail: /assets/img/posts/powershell.jpg
+thumbnail: /assets/images/posts/powershell.jpg
 permalink: blog/basic-networking-with-powershell
 ---
 <!--StartFragment-->
