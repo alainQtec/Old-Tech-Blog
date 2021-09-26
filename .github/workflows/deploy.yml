@@ -35,9 +35,9 @@ jobs:
         uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.JEKYLL_PAT }}
-          jekyll_src: /
-          gem_src: /
           target_branch: main
+          # jekyll_src: /
+          # gem_src: /
           # entryPoint:
           # args:
           # jekyll_env:
