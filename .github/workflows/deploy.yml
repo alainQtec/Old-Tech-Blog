@@ -36,7 +36,7 @@ jobs:
         with:
           token: ${{ secrets.JEKYLL_PAT }}
           target_branch: main
-          jekyll_src: _site
+          jekyll_src: /
           # gem_src: /
           # entryPoint:
           # args:
