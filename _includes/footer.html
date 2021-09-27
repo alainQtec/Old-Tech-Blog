@@ -295,7 +295,7 @@
         <div
           style="justify-content: center !important; align-items: center !important; text-align: center !important; padding-top: 27px;">
           <div><a class="footer__link" href="https://alainqtec.com"><img class="logo"
-                src="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" alt="BrandLogo"></a>
+                src="{{site.url}}{{site.baseurl}}/assets/img/logo/favicon.png" alt="BrandLogo"></a>
           </div>
           <div><a class="footer__link footerbrand"
               href="https://alainqtec.com"><span><span>alain</span><span>Q</span><span>tec</span></span></a>
@@ -405,3 +405,78 @@
   </div>
   </div>
 </footer>
+
+<!-- <script src="/assets/js/main.min.js?v=1"></script> -->
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+<script>
+  // Instanciating InstantSearch.js with Algolia credentials
+  const search = instantsearch({
+    appId: 'O83A8CEWFW',
+    apiKey: '0e6b0043df89c41b679090c792a23acb',
+    indexName: 'alainQtec',
+    searchParameters: {
+      restrictSearchableAttributes: [
+        'title',
+        'content'
+      ]
+    }
+  });
+
+  const hitTemplate = function (hit) {
+    const url = hit.url;
+    const title = hit._highlightResult.title.value;
+    const content = hit._highlightResult.html.value;
+
+    return `
+		    <div class="list__item">
+		      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+		        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+		        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+		      </article>
+		    </div>
+		  `;
+  }
+
+  // Adding searchbar and results widgets
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '.search-searchbar',
+      poweredBy: true,
+      placeholder: 'Enter your search term...'
+    })
+  );
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '.search-hits',
+      templates: {
+        item: hitTemplate,
+        empty: 'No results',
+      }
+    })
+  );
+
+  // Starting the search only when toggle is clicked
+  $(document).ready(function () {
+    $(".search__toggle").on("click", function () {
+      if (!search.started) {
+        search.start();
+      }
+    });
+  });
+</script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-115907213-1']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>

@@ -1,20 +1,12 @@
 ---
 title: Quick guide to using ADB Platform Tools
-tags:
-- android
-- ADB
-date: 2021-08-30T03:25:23.702Z
 layout: post
 author: alain
-article_header:
-  type: cover
-  image:
-    src: /assets/images/posts/pexels-pixabay-270557.jpg
-thumbnail-img: /assets/images/posts/pexels-pixabay-270557.jpg
+thumbnail-img: /assets/img/posts/pexels-pixabay-270557.jpg
 category: android
 summary: Learn how to use adb to uninstall packages
 keywords: android, adb
-thumbnail: /assets/images/posts/pexels-pixabay-270557.jpg
+thumbnail: /assets/img/posts/pexels-pixabay-270557.jpg
 permalink: /blog/guide-to-using-adb-platform-tools
 ---
 

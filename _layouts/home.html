@@ -1,30 +1,5 @@
 ---
 layout: compress
-
-titles:
-# @start locale config
-en : &EN Home
-en-GB : *EN
-en-US : *EN
-en-CA : *EN
-en-AU : *EN
-zh-Hans : &ZH_HANS 主页
-zh : *ZH_HANS
-zh-CN : *ZH_HANS
-zh-SG : *ZH_HANS
-zh-Hant : &ZH_HANT 主頁
-zh-TW : *ZH_HANT
-zh-HK : *ZH_HANT
-ko : &KO 홈
-ko-KR : *KO
-fr : &FR Accueil
-fr-BE : *FR
-fr-CA : *FR
-fr-CH : *FR
-fr-FR : *FR
-fr-LU : *FR
-# @end locale config
-show_title: false
 ---
 
 <!DOCTYPE html>
@@ -41,10 +16,10 @@ show_title: false
   <!-- Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" />
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" type="image/x-icon">
-  <link rel="icon" href="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" type="image/x-icon">
-  <!-- <link href="{{site.url}}{{site.baseurl}}/assets/images/logo/favicon.png" rel="icon">
-    <link href="{{site.url}}{{site.baseurl}}/assets/images/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" type="image/x-icon">
+  <!-- <link href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" rel="icon">
+    <link href="{{site.url}}{{site.baseurl}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
   <!-- <link rel="shortcut icon"
       href="https://db3pap005files.storage.live.com/y4mnJglXRa08TLUc7GvlC3UPab1HstdN_b2ddv2YgG3aFVFEulXjKfo9bK5EhbodY5678r5eICDtA2UxslVwcYeexEemhPUrvnMQzuZRpSnXZ1_36zddkQHVUbkyHI2v3zcUaa9YpfLie7SkBIUL05BLfKn24ejqmQeLyrqbXUXDT56kreT8yF7WYLx_9QUYNg8?width=391&height=382&cropmode=none"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -148,7 +123,7 @@ show_title: false
               </li>
               <li class="home__nav__item">
                 <a href="#about" class="home__nav__link">
-                  <i class="uil uil-user homep__nav__icon"></i> <strong>About Me</strong>
+                  <i class="uil uil-user homep__nav__icon"></i> <strong>About</strong>
                 </a>
               </li>
               <li class="home__nav__item">
@@ -240,7 +215,7 @@ show_title: false
                                             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
                         <image class="homepage__blob__dp"
-                          xlink:href="{{site.url}}{{site.baseurl}}/assets/images/profile.png" />
+                          xlink:href="{{site.url}}{{site.baseurl}}/assets/img/profile.png" />
                       </g>
                     </svg>
                   </div>
@@ -280,7 +255,7 @@ show_title: false
               <h2 class="section__title">About me</h2>
               <span class="section__subtitle">Introduction</span>
               <div class="about__container hlayout__containr hp_grid">
-                <img src="{{site.url}}{{site.baseurl}}/assets/images/about_Me.png" alt="" class="about__img">
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/about_Me.png" alt="" class="about__img">
                 <div class="about__data">
                   <p class="about__description">
                     Passionate 👨‍💻.Helping you get more done, using quick tech solutions.
@@ -337,7 +312,7 @@ show_title: false
                             {% assign author = post.author %}
                             {% if author %}
                             {% assign author_data = site.data.authors[author] %}
-                            <img src="{{site.url}}{{site.baseurl}}/assets/images/authors/{{author_data.avatar}}"
+                            <img src="{{site.url}}{{site.baseurl}}/assets/img/authors/{{author_data.avatar}}"
                               width="50px" height="50px" />
                             {% endif %}
                             {% endif %}
@@ -795,7 +770,7 @@ show_title: false
               <span class="section__subtitle">My most recent work</span>
               <div class="project__container hlayout__containr bd-grid">
                 <div class="project__img">
-                  <img src="assets/images/work1.jpg" alt="projEct1">
+                  <img src="assets/img/work1.jpg" alt="projEct1">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -803,7 +778,7 @@ show_title: false
                   </div>
                 </div>
                 <div class="project__img">
-                  <img src="assets/images/work2.jpg" alt="project2">
+                  <img src="assets/img/work2.jpg" alt="project2">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -811,7 +786,7 @@ show_title: false
                   </div>
                 </div>
                 <div class="project__img">
-                  <img src="assets/images/work3.jpg" alt="proj3ct3">
+                  <img src="assets/img/work3.jpg" alt="proj3ct3">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -819,7 +794,7 @@ show_title: false
                   </div>
                 </div>
                 <div class="project__img">
-                  <img src="assets/images/work4.jpg" alt="project4">
+                  <img src="assets/img/work4.jpg" alt="project4">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -827,7 +802,7 @@ show_title: false
                   </div>
                 </div>
                 <div class="project__img">
-                  <img src="assets/images/work5.jpg" alt="proj3ct5">
+                  <img src="assets/img/work5.jpg" alt="proj3ct5">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -835,7 +810,7 @@ show_title: false
                   </div>
                 </div>
                 <div class="project__img">
-                  <img src="assets/images/work6.jpg" alt="proj3ct6">
+                  <img src="assets/img/work6.jpg" alt="proj3ct6">
 
                   <div class="project__link">
                     <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
@@ -857,7 +832,7 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial2.png" alt="testimonial"
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial2.png" alt="testimonial"
                             class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Joe</span>
@@ -876,7 +851,7 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial1.png" alt="testimonial"
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial1.png" alt="testimonial"
                             class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Ena</span>
@@ -894,8 +869,8 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial_template3.png"
-                            alt="testimonial" class="testimonial__img">
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template3.png" alt="testimonial"
+                            class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Achelle</span>
                             <br>
@@ -913,8 +888,8 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial_template1.png"
-                            alt="testimonial" class="testimonial__img">
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template1.png" alt="testimonial"
+                            class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Arther</span>
                             <br>
@@ -932,8 +907,8 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial_template2.png"
-                            alt="testimonial" class="testimonial__img">
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template2.png" alt="testimonial"
+                            class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Luiz.</span>
                             <br>
@@ -951,7 +926,7 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial0.jpg" alt="testimonial"
+                          <img src="{{site.url}}{{site.baseurl}}/assets//img/testimonial0.jpg" alt="testimonial"
                             class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Dave.</span>
@@ -970,8 +945,8 @@ show_title: false
                     <div class="testimonial__content fade">
                       <div class="testimonial__data hp_grid">
                         <div class="testimonial__header hp_grid">
-                          <img src="{{site.url}}{{site.baseurl}}/assets/images/testimonial_template4.png"
-                            alt="testimonial" class="testimonial__img">
+                          <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template4.png" alt="testimonial"
+                            class="testimonial__img">
                           <div class="testimonial__client">
                             <span class="testimonial__name">Xavier Pablo</span>
                             <br>
