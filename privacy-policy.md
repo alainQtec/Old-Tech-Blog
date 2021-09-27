@@ -1,7 +1,7 @@
 ---
-title: Privacy policy
-layout: privacy-policy
 title: privacy-policy
+layout: privacy-policy
 permalink: "/privacy-policy"
 ---
+
 
