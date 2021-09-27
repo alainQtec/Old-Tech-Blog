@@ -238,6 +238,11 @@ nav#navbar.navbar{
   text-align: center !important;
 }
 
+nav#navbar.navbar ul {
+  justify-content: center !important;
+  margin: 0 auto;
+}
+
 
 .navbar:hover,  
 .navbar:focus {
