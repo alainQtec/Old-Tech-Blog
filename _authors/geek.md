@@ -29,5 +29,6 @@ social:
       url: "https://dribbble.com/testauthor"
     - title: "flickr"
       url: "https://flickr.com/testauthor"
+permalink: /blog/authors/geek/
 ---
 
