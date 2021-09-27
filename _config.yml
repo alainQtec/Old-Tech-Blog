@@ -12,6 +12,14 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: tomorrow-night-bright # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url: https://www.alainqtec.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: "" # does not include hostname
+homeurl: "/"
+blogurl: "/blog"
+shopurl: "/shop"
+abouturl: "/about"
+galleryurl: "/gallery"
+contacturl: "/contact"
+privacyurl: "/privacy-policy"
+termsurl: "/terms-of-service"
 title: alainQtec
 description: > # this means to ignore newlines until "Language & timezone"
   Howdy ! I'm Alain, a developer 👨‍💻. passionate and helping you get more done, using quick tech solutions.
