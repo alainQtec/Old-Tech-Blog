@@ -1,89 +1,77 @@
 <!-- <div class="header__title">
-          <div class="header__brand"> -->
-
-{%- if include.theme == 'dark' -%}
-<header class="header header--dark fixed-top" {%- if include.background -%}
-  style="background: {{ include.background }};" {%- endif -%}>
-  {%- elsif include.theme == 'light' -%}
-  <header class="header header--light fixed-top" {%- if include.background -%}
-    style="background: {{ include.background }};" {%- endif -%}>
-    {%- else -%}
-    <header id="header" class="header fixed-top" {%- if include.background -%}
-      style="background: {{ include.background }};" {%- endif -%}>
-      {%- endif -%}
-      <!-- Desktop menu -->
-
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      <div class="main nav_container fixed-top">
-        {%- if site.data.navigation.header -%}
-        <nav class="navbar" id="navbar">
-          <a class="blognavbrand" href="https://alainqtec.com"><span>alain</span><span>Q</span><span>tec</span></a>
+<div class="header__brand"> -->
+<header id="header" class="header fixed-top">
+  <!-- Desktop menu -->
+  <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <div class="nav_container fixed-top">
+    {%- if site.data.navigation.header -%}
+    <nav class="navbar" id="navbar">
+      <a class="blognavbrand" href="https://alainqtec.com"><span>alain</span><span>Q</span><span>tec</span></a>
+      <ul>
+        <li><a class="nav-link scrollto" href="{{ site.url}}{{site.blogurl}}">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" href="{{ site.url}}{{site.abouturl}}"><span>About</span>
+            <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a class="nav-link scrollto" href="{{ site.url}}{{site.blogurl}}">Home</a></li>
-            <li class="dropdown"><a class="nav-link scrollto" href="{{ site.url}}{{site.abouturl}}"><span>About</span>
-                <i class="bi bi-chevron-down"></i></a>
+            <li><a href="#">This blog</a></li>
+            <li class="dropdown"><a href="#"><span>Authors</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
-                <li><a href="#">This blog</a></li>
-                <li class="dropdown"><a href="#"><span>Authors</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain#/">Alain</a></li>
-                    <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/geekauthor#/">Geek Author</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Categories</span> <i
-                  class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li class="dropdown"><a href="#"><span>Windows</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                    <li><a href="#">Category 3</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#"><span>Mac Osx</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Other</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link scrollto" href="{{ site.url}}{{site.galleryurl}}">Gallery</a></li>
-            <li class="nav_shopicon">
-              <a class="nav-link scrollto toggle-shop-button" href="{{ site.url}}{{site.shopurl}}">
-                <i class="uil uil-shopping-cart" aria-hidden="true"></i> Shop
-              </a>
-            </li>
-            <li class="dropdown"><a class="nav-link scrollto" href="#"><span>More</span> <i
-                  class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#"><i class="uil uil-lightbulb-alt nav-sublink"> Topic Suggestion</i></a></li>
-                <li><a href="#"><i class="uil uil-gift nav-sublink"> Giveaways</i></a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a class="nav-link scrollto" href="#Profile">
-                <span>Account</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#profile"><i class="uil uil-user nav-sublink"> Profile</i></a></li>
-                <li><a href="#register"><i class="uil uil-user-plus nav-sublink"> Register</i></a></li>
-                <li><a href="#login"><i class="uil uil-sign-in-alt nav-sublink"> Login</i></a></li>
+                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain#/">Alain</a></li>
+                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/geekauthor#/">Geek Author</a></li>
               </ul>
             </li>
           </ul>
-          {%- if site.search.provider -%}
-          <div class="nav_searchicon">
-            <a class="nav-link toggle-search-button" href="#search">
-              <li class="nav-link toggle-search-button"><button
-                  class="button button--secondary button--circle search-button js-search-toggle"><i
-                    class="fas fa-search search-icon" aria-hidden="true"></i></button></li>
-            </a>
-          </div>
-          {%- endif -%}
-          <div class="uil uil-apps mobile-nav-toggle"></div>
-        </nav>
-        {%- endif -%}
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Categories</span> <i
+              class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="#"><span>Windows</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Mac Osx</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Other</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="{{ site.url}}{{site.galleryurl}}">Gallery</a></li>
+        <li class="nav_shopicon">
+          <a class="nav-link scrollto toggle-shop-button" href="{{ site.url}}{{site.shopurl}}">
+            <i class="uil uil-shopping-cart" aria-hidden="true"></i> Shop
+          </a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" href="#"><span>More</span> <i
+              class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#"><i class="uil uil-lightbulb-alt nav-sublink"> Topic Suggestion</i></a></li>
+            <li><a href="#"><i class="uil uil-gift nav-sublink"> Giveaways</i></a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" href="#Profile">
+            <span>Account</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#profile"><i class="uil uil-user nav-sublink"> Profile</i></a></li>
+            <li><a href="#register"><i class="uil uil-user-plus nav-sublink"> Register</i></a></li>
+            <li><a href="#login"><i class="uil uil-sign-in-alt nav-sublink"> Login</i></a></li>
+          </ul>
+        </li>
+      </ul>
+      {%- if site.search.provider -%}
+      <div class="nav_searchicon">
+        <a class="nav-link toggle-search-button" href="#search">
+          <button class="button button--secondary button--circle search-button js-search-toggle"><i
+              class="fas fa-search search-icon" aria-hidden="true"></i></button>
+        </a>
       </div>
-    </header>
+      {%- endif -%}
+      <div class="uil uil-apps mobile-nav-toggle"></div>
+    </nav>
+    {%- endif -%}
+  </div>
+</header>
