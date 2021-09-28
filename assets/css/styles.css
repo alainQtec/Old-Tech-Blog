@@ -2211,13 +2211,13 @@ image.homepage__blob__dp {
 @media (min-width: 541px) and (max-width: 768px) {
     .homepage__title,
     h1.homepage__title.name-anime {
-        font-size: 4.8rem !important;
+        font-size: 4.5rem !important;
     }
 }
 @media (min-width: 769px) and (max-width: 960px) {
     .homepage__title,
     h1.homepage__title.name-anime {
-        font-size: 5rem !important;
+        font-size: 4.8rem !important;
     }
 }
 @media (min-width: 960px) {
