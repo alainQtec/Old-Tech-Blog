@@ -12,43 +12,45 @@
 </head>
 
 <body>
-  <a href="{{site.url}}{{site.homeurl}}" target="_blank">
-    <header class="top-header">
-    </header>
-    <!--dust particel-->
-    <div>
-      <div class="starsec"></div>
-      <div class="starthird"></div>
-      <div class="starfourth"></div>
-      <div class="starfifth"></div>
-    </div>
-    <!--Dust particle end--->
-    <section class="error">
-      <!-- Content -->
-      <div class="error__content">
-        <div class="error__message message">
-          <h1 class="the_404_nums">404</h1>
-          <br>
-          <h2 class="message__title">Page Not Found</h2>
-        </div>
-        <div class="error__nav e-nav">
-          <p class="message__text">
-            I have no idea where that file is!<br>
-            That can happen when you used a link to something that <br>
-            has since been deleted. Or the link was incorrect to begin with.
-          </p>
-          <p>
-            Sorry about that. We've logged the error for review, in case it's our fault.
-          </p>
-          <br>
-          <div>
-            <a href="{{site.url}}{{site.blogurl}}" target="_blanck" class="goto_btn e-nav__link2"></a>
+  <main>
+    <a href="#">
+      <header class="top-header">
+      </header>
+      <!--dust particel-->
+      <div>
+        <div class="starsec"></div>
+        <div class="starthird"></div>
+        <div class="starfourth"></div>
+        <div class="starfifth"></div>
+      </div>
+      <!--Dust particle end--->
+      <section class="error">
+        <!-- Content -->
+        <div class="error__content">
+          <div class="error__message message">
+            <h1 class="the_404_nums">404</h1>
+            <br>
+            <h2 class="message__title">Page Not Found</h2>
+          </div>
+          <div class="error__nav e-nav">
+            <p class="message__text">
+              I have no idea where that file is!<br>
+              That can happen when you used a link to something that <br>
+              has since been deleted. Or the link was incorrect to begin with.
+            </p>
+            <p>
+              Sorry about that. We've logged the error for review, in case it's our fault.
+            </p>
+            <br>
+            <div>
+              <a href="{{site.url}}{{site.blogurl}}" target="_blanck" class="goto_btn e-nav__link2"></a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-  </a>
+      </section>
+    </a>
+  </main>
+  {%- include footer.html-%}
 </body>
 
 </html>
