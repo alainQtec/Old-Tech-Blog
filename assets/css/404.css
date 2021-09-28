@@ -323,14 +323,14 @@ button {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #212121;
+  color: #4CAF50;
   -webkit-transition: color .25s ease;
   transition: color .25s ease;
 }
 
 .goto_btn {
-  border: solid 2px #4CAF50;
-  border-radius: 7em;
+  border: 2px solid #4CAF50;
+  border-radius: 2.5rem;
 
 }
 .e-nav__link2 {
@@ -340,7 +340,6 @@ button {
   display: inline-block;
   vertical-align: top;
   margin: 0 15px;
-  border: 1px solid #181828;
   color: #181828;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
@@ -349,7 +348,7 @@ button {
   letter-spacing: .1rem;
   position: relative;
   overflow: hidden;
-  content: "Goto Home Page";
+  content: "Back to Home Page";
 }
 
 .e-nav__link2:before {
@@ -374,7 +373,7 @@ button {
 }
 
 .e-nav__link2::after {
-  content: "Goto Home Page";
+  content: "Return to Home Page";
 }
 
 .e-nav__link2:hover:before {
