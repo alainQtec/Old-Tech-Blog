@@ -9,34 +9,38 @@
         <li class="dropdown"><a class="nav-link scrollto" href="{{ site.url}}{{site.abouturl}}"><span>About</span> <i
               class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">This blog</a></li>
-            <li class="dropdown"><a href="#"><span>Authors</span> <i class="bi bi-chevron-right"></i></a>
+            <li><a href="{{site.url}}{{site.baseurl}}/about/">This blog</a></li>
+            <li class="dropdown"><a href="{{site.url}}{{site.baseurl}}/blog/authors/"><span>Authors</span> <i
+                  class="bi bi-chevron-right"></i></a>
               <ul>
-                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain#/">Alain</a></li>
-                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/testauthor#/">Test Author</a></li>
+                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain/">Alain</a></li>
+                <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/testauthor/">Test Author</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Categories</span> <i
+        <li class="dropdown"><a class="nav-link scrollto"
+            href="{{site.url}}{{site.baseurl}}/blog/categories/"><span>Categories</span> <i
               class="bi bi-chevron-down"></i></a>
           <ul>
-            <li class="dropdown"><a href="#"><span>Windows</span> <i class="bi bi-chevron-right"></i></a>
+            <li class="dropdown"><a href="{{site.url}}{{site.baseurl}}/blog/categories/windows/"><span>Windows</span> <i
+                  class="bi bi-chevron-right"></i></a>
               <ul>
                 <li><a href="#">guides</a></li>
                 <li><a href="#">Sub category 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Mac OSX</a></li>
-            <li class="dropdown"><a href="#"><span>Linux</span> <i class="bi bi-chevron-right"></i></a>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/#">Mac OSX</a></li>
+            <li class="dropdown"><a href="{{site.url}}{{site.baseurl}}/blog/categories/linux/"><span>Linux</span> <i
+                  class="bi bi-chevron-right"></i></a>
               <ul>
                 <li><a href="#">guides</a></li>
                 <li><a href="#">sub category 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Cloud</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Other</a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/cloud/">Cloud</a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/security/">Security</a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/#">Other</a></li>
           </ul>
         </li>
         <li><a class="nav-link scrollto" href="{{ site.url}}{{site.galleryurl}}">Gallery</a></li>
@@ -52,12 +56,15 @@
             <li><a href="#"><i class="uil uil-gift nav-sublink"> Giveaways</i></a></li>
           </ul>
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" href="#Profile">
+        <li class="dropdown"><a class="nav-link scrollto" href="{{site.url}}{{site.baseurl}}/forum/profile/">
             <span>Account</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#profile"><i class="uil uil-user nav-sublink"> Profile</i></a></li>
-            <li><a href="#register"><i class="uil uil-user-plus nav-sublink"> Register</i></a></li>
-            <li><a href="#login"><i class="uil uil-sign-in-alt nav-sublink"> Login</i></a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/forum/profile/"><i class="uil uil-user nav-sublink">
+                  Profile</i></a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/forum/register/"><i class="uil uil-user-plus nav-sublink">
+                  Register</i></a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/forum/login/"><i class="uil uil-sign-in-alt nav-sublink">
+                  Login</i></a></li>
           </ul>
         </li>
       </ul>
