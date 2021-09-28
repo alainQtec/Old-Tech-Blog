@@ -41,10 +41,13 @@
     <section class="error">
       <!-- Content -->
       <div class="error__content">
-        <div class="error__message message">
+        <div class="error__message">
           <h1 class="the_404_nums">404</h1>
           <br>
           <h2 class="message__title">Page Not Found</h2>
+          <br>
+        </div>
+        <div class="error__nav e-nav">
           <p class="message__text">
             I'm afraid you've found a page that doesn't exist.<br>
             That can happen when you follow a link to something that <br>
@@ -54,10 +57,9 @@
             Sorry about that. We've logged the error for review, in case it's our fault.
           </p>
           <br>
-          <br>
-        </div>
-        <div class="error__nav e-nav">
-          <a href="{{site.url}}{{site.blogurl}}" target="_blanck" class="e-nav__link2"></a>
+          <div class="goto_btn">
+            <a href="{{site.url}}{{site.blogurl}}" target="_blanck" class="e-nav__link2"></a>
+          </div>
         </div>
       </div>
     </section>

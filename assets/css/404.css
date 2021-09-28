@@ -328,6 +328,11 @@ button {
   transition: color .25s ease;
 }
 
+.goto_btn {
+  border: solid 2px #4CAF50;
+  border-radius: 7em;
+
+}
 .e-nav__link2 {
   height: 45px;
   line-height: 45px;
@@ -423,22 +428,6 @@ button {
 }
 
 /* 2.2. END Social style */
-
-/* 2.3. Lamp */
-.lamp {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  margin: 0px auto;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform-origin: center top;
-  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
-  animation: move 5.2s infinite;
-}
 
 @keyframes move {
   0% {
