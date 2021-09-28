@@ -1,10 +1,10 @@
 {
-  "name": "Alain's tech blog",
+  "name": "Tech blog",
   "homepage": "https://alainqtec.com",
   "authors": [
     "alainQtec <alainhervem@gmail.com>"
   ],
-  "description": "My tech blog",
+  "description": "My tech blog and portfolio site",
   "main": "",
   "keywords": [
     "it-ops",

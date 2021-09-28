@@ -99,7 +99,7 @@ author_work_experiences:
     designation: Software Engineer
     description: Worked on various Google Products
     visibility: true
-  - company_name: Microsoft
+  - company_name: project.png
     company_logo: microsoft.png
     company_url: https://microsoft.com
     designation: Azure Developer
@@ -107,7 +107,7 @@ author_work_experiences:
     visibility: true
 
 author_education_details:
-  - college_logo: mit.png
+  - college_logo: project.png
     college_name: MIT
     college_url: https://mit.org
     college_degree: CS Engineer
@@ -115,7 +115,7 @@ author_education_details:
     visibility: true
 
 author_project_details:
-  - project_thumbnail: _about.jpg
+  - project_thumbnail: project.png
     project_title: Box optimizer
     project_description: A windows 11/10 utility app to easily troubleshoot and optimize the system for end-users.
     project_url: https://boxoptimizer.com
