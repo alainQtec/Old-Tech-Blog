@@ -336,23 +336,22 @@ button {
 .e-nav__link2 {
   height: 45px;
   line-height: 45px;
-  width: 170px;
+  width: 175px;
   display: inline-block;
   vertical-align: top;
   margin: 0 15px;
-  color: #181828;
+  color: #38a73b;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: .1rem;
+  font-size: 10px;
+  letter-spacing: .7rem;
   position: relative;
   overflow: hidden;
   content: "Back to Home Page";
 }
 
 .e-nav__link2:before {
-  content: '';
+  content: '>> ⛑️ >>';
   height: 200px;
   background: #212121;
   position: absolute;
