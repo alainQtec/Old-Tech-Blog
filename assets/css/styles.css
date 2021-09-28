@@ -2152,7 +2152,7 @@ div.about__container {
 
 .homepage__title,
 h1.homepage__title.name-anime {
-    font-size: 38px !important;
+    font-size: 45px;
     font-family: 'Quicksand', sans-serif !important;
     font-weight: var(--font-medium);
 }
@@ -2225,12 +2225,8 @@ image.homepage__blob__dp {
     }
 }
 @media (min-width: 915px) and (max-width: 1024px) {
-    .homepage__title,
-    h1.homepage__title.name-anime {
-        font-size: 35px !important;
-    }
     span.alain {
-        font-size: 38px !important;
+        font-size: 50px !important;
     }
 }
 
