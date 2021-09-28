@@ -2152,7 +2152,7 @@ div.about__container {
 
 .homepage__title,
 h1.homepage__title.name-anime {
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Quicksand', sans-serif !important;
     font-weight: var(--font-medium);
 }
@@ -2212,21 +2212,19 @@ image.homepage__blob__dp {
 @media (min-width: 541px) and (max-width: 768px) {
     .homepage__title,
     h1.homepage__title.name-anime {
-        font-size: 4.5rem !important;
-    }
-}
-@media (min-width: 769px) and (max-width: 915px) {
-    .homepage__title,
-    h1.homepage__title.name-anime {
-        font-size: 4.7rem !important;
+        font-size: 4.5rem;
     }
     span.alain {
         font-size: 4.9rem !important;
     }
 }
-@media (min-width: 915px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 915px) {
+    .homepage__title,
+    h1.homepage__title.name-anime {
+        font-size: 4.7rem;
+    }
     span.alain {
-        font-size: 50px !important;
+        font-size: 5rem !important;
     }
 }
 
