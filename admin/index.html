@@ -466,11 +466,8 @@
       <span data-show="error" class="ui-error">
         Invalid password
       </span>
-      <span data-show="success">
-        <!-- TODO: div#app should always be hidden untill  span.data-show="success" -->
-        <div id="app">
-
-        </div>
+      <!-- TODO: div#app should always be hidden untill  span.data-show="success" -->
+      <div id="app" data-show="success">
         <script id="admin-config-script" type="text/javascript">
           var env = {
             siteId: "mufuojwz6nnomg",
@@ -495,9 +492,8 @@
           link.rel = "stylesheet";
           link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
           document.head.appendChild(link);
-
         </script>
-      </span>
+      </div>
     </div>
     <div class="ui-password">
       <input type="password" name="" id="" class="ui-password-input" placeholder="Enter your passkey to continue." />
