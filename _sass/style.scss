@@ -3702,23 +3702,39 @@ div.gdpr_content {
 }
 
 /* pagination */
-.pagination-link{
-    padding: 15px;
-    background-color: var(--card-background-color);
-    text-decoration: none;
-}
-.pagination-link a:hover{
-    background-color: var(--main-background-color);
-    text-decoration: none;
-}
 
 .pagination {
     display: -ms-flexbox;
     display: flex;
-    padding-left: 0;
     list-style: none;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
     border-radius: .25rem;
-    margin-left: 20px !important;
+    padding: 0;
+    margin: 0 auto !important;
+}
+
+.paginator_row {
+    justify-items: center;
+    padding: 0px;
+    margin: 0 auto;
+}
+ul.pagination.pagination-sm {
+    margin: 0 auto;
+    justify-self: center;
+    text-align: center;
+    background-color: var(--card-background-color);
+    border-radius: .25rem;
+}
+
+.pagination-link{
+    padding: 15px;
+    text-decoration: none;
+}
+.pagination-link a:hover{
+    color: var(--first-color);
+    text-decoration: none;
 }
 
 .lead {
