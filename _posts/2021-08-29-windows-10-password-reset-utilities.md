@@ -82,7 +82,7 @@ Note: NTPasswd is not capable of accessing encrypted drives, such as Bitlocker-e
 
  At the following prompt, hit Enter again to list the available video modes.
 
-![Press Enter to list available video modes](/assets/img/posts/pc-troubleshoot.jpeg)
+![Press Enter to list available video modes](/assets/img/posts/troubleshoot.jpeg)
 
 Press Enter to list available video modes
 

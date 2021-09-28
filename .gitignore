@@ -10,6 +10,7 @@
 *.log.*
 
 /.vscode/
+/*_algolia_api_key*
 
 node_modules/
 .sass-cache/
@@ -23,5 +24,6 @@ package-lock.json
 Gemfile.lock
 
 _site/
+test/
 .jekyll-metadata
 .jekyll-cache/

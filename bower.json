@@ -1,0 +1,22 @@
+{
+  "name": "Alain's tech blog",
+  "homepage": "https://alainqtec.com",
+  "authors": [
+    "alainQtec <alainhervem@gmail.com>"
+  ],
+  "description": "My tech blog",
+  "main": "",
+  "keywords": [
+    "it-ops",
+    "automation",
+    "gallery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

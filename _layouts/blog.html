@@ -1,42 +1,103 @@
 ---
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  主页
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  主頁
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       홈
-  ko-KR   : *KO
-  fr      : &FR       Accueil
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: false
-  show_excerpt: true
-  show_readmore: true
-  show_info: true
+layout: default
 ---
-<div class="layout--home">
-  {%- include paginator.html -%}
+<!-- whats new {slider} -->
+<div class="band">
+  <div class="item-1">
+    <!-- item-1 is used for a featured Post  -->
+    <a class="firststblog_card" href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}"
+      style="--bg-img: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg); background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg') center/cover no-repeat;">
+      <div class="wrapper">
+      </div>
+      <article>
+        <h1>Featured Article Title</h1>
+        <span>Famous Author</span>
+      </article>
+    </a>
+  </div>
+  {% for post in paginator.posts %}
+  <div class="item-2">
+    <figure class="blog_card it2-card"
+      style="--bg-img: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat; background: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat;"
+      data-disqus-identifier="{{ post.url }}">
+      <div class="header">
+        <div class="date">
+          <span class="day">{{ post.date | date: "%b" }}</span>
+          <span class="month">{{ post.date | date: "%-d" }}</span>
+          <span class="year">{{ post.date | date: "%Y" }}</span>
+        </div>
+        <ul class="menu-content">
+          <li>
+            <a href="#" class="fa fa-bookmark-o" style="color: rgb(0, 0, 0) !important;"></a>
+          </li>
+          <li><a href="#" class="fa fa-heart-o" style="color: rgb(255, 73, 73) !important;"><span>18</span></a></li>
+          <li><a href="#" class="fa fa-comment-o" style="color: rgb(0, 0, 0) !important;"><span>3</span></a></li>
+        </ul>
+      </div>
+      <div class="data">
+        <div class="content">
+          <span class="post-category">{{ post.category }}</span>
+          <div class="blog_post_title" onclick="">{{ post.title }}</div>
+          <p class="post-scroll-i"> </p>
+          <span class="post-summary"><a href="{{ post.url | prepend: site.baseurl }}"
+              data-disqus-identifier="{{ post.url }}">{{ post.summary}}</a></span>
+        </div>
+      </div>
+    </figure>
+  </div>
+  {% endfor %}
+  <div class="item-3">
+    <div class="firststblog_card">
+      <div class="card-header header">Authors</div>
+      <div class="card-body text-dark">
+        {%- include blog_authors.html -%}
+      </div>
+    </div>
+  </div>
+  <!-- since People can easily get to any category using the navbar, I hide this card: 
+    <div class="item-4">
+    <div class="card">
+      <div class="card-header">Categories </div>
+      <div class="card-body text-dark">
+        // include blog_categories.html //
+      </div>
+    </div>
+  </div> -->
+  <!-- Todo : add an automated / dynamic class naming script. ie: item-x where x can be: {1..n} -->
+  <!-- /- include blog_sidebar.html -/ -->
 </div>
-<script>
-  {%- include scripts/home.js -%}
-</script>
+<div class="paginator_row row center">
+  {% if paginator.total_pages > 1 %}
+  <ul class="pagination pagination-sm">
+    {% if paginator.previous_page %}
+    <li class="pagination-link"><a
+        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+    {% else %}
+    <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
+    {% endif %}
 
-{{ content }}
+    <li class="pagination-link"><a href="/blog">First</a></li>
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <li class="active pagination-link"><a>{{ page }}<span class="sr-only">(current)</span></a></li>
+    {% elsif page == 1 %}
+    <li class="pagination-link"><a href="/blog">{{ page }}</a></li>
+    {% else %}
+    <li class="pagination-link"><a
+        href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{
+        page }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+    <li class="pagination-link"><a href="/blog/page/{{ paginator.total_pages }}/#/">Last</a></li>
+
+    {% if paginator.next_page %}
+    <li class="pagination-link"><a
+        href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+    {% else %}
+    <li class="disabled pagination-link"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+</div>

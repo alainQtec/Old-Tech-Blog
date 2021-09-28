@@ -4,7 +4,7 @@
 [![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
-[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
+[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/img/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
@@ -95,7 +95,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 | 微信支付 | 支付宝 |
 | --- | --- |
-| ![微信支付二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
+| ![微信支付二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/img/tip_wechat.jpg) | ![支付宝二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/img/tip_alipay.jpg) |
 
 ## 其他资源
 

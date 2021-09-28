@@ -28,27 +28,6 @@ termsurl: "/terms-of-service"
 lang: en # the language of your site, default as "en"
 timezone: Africa/Kigali # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
-## => Author and Social
-##############################
-author:
-  type: # "person" (default), "organization"
-  name: Alain Herve
-  url: https://alainqtec.com
-  avatar: # path or url of avatar image (square)
-  bio: Passionate developer, helping you get more done, using quick tech solutions.
-  email: "alainhervem@gmail.com"
-  facebook: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter: "alainQtec" # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo: # "alainQtec" # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
-  googleplus: "alainQtec" # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram: "alainQtec" # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  medium: "alainQtec" # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu: # "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban: # "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github: "alainQtec" # "user_name" the last part of your profile url, e.g. https://github.com/user_name
-  npm: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
-
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: alainQtec/tech-blog
@@ -69,6 +48,121 @@ paths:
   privacy: "/privacy-policy"
   terms: "/terms-of-service"
 
+urls:
+  - text: Home
+    url: /
+  - text: About
+    url: /about
+  - text: Blog
+    url: /blog
+  - text: Gallery
+    url: /gallery
+  - text: Shop
+    url: /shop
+  - text: Contact
+    url: /contact
+
+## => Author and Social
+##############################
+
+author_logo: profile.png
+author: Alain Herve
+author_bio: Passionate developer, helping you get more done, using quick tech solutions.
+author_email: "alainhervem@gmail.com"
+author_location: Earth
+author_website_url: "https://alainqtec.com"
+typewrite-text: Thanks for visiting.
+
+# author:
+#   type: # "person" (default), "organization"
+#   name: Alain Herve
+#   url: https://alainqtec.com
+#   avatar: # path or url of avatar image (square)
+#   bio: Passionate developer, helping you get more done, using quick tech solutions.
+#   email: "alainhervem@gmail.com"
+#   facebook: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+#   twitter: "alainQtec" # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+#   weibo: # "alainQtec" # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+#   googleplus: "alainQtec" # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
+#   telegram: "alainQtec" # "user_name" the last part of your profile url, e.g. https://t.me/user_name
+#   medium: "alainQtec" # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
+#   zhihu: # "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+#   douban: # "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
+#   linkedin: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+#   github: "alainQtec" # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+#   npm: "alainQtec" # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+
+author_work_experiences:
+  - company_name: Google
+    company_logo: google.png
+    company_url: https://google.com
+    designation: Software Engineer
+    description: Worked on various Google Products
+    visibility: true
+  - company_name: Microsoft
+    company_logo: microsoft.png
+    company_url: https://microsoft.com
+    designation: Azure Developer
+    description: Worked on various Azure Cloud Products
+    visibility: true
+
+author_education_details:
+  - college_logo: mit.png
+    college_name: MIT
+    college_url: https://mit.org
+    college_degree: CS Engineer
+    description: Bachelor of Technology
+    visibility: true
+
+author_project_details:
+  - project_thumbnail: _about.jpg
+    project_title: Box optimizer
+    project_description: A windows 11/10 utility app to easily troubleshoot and optimize the system for end-users.
+    project_url: https://boxoptimizer.com
+    visibility: true
+  - project_thumbnail: dashb_chart.jpg
+    project_title: Admin Toolpack
+    project_description: A small windows app built for network and system admins.
+    project_url: https://alainqtec.com/apps/admintoolpack
+    visibility: true
+
+twitter_username: alainQtec
+github_username: alainQtec
+facebook_username: alainQtec
+linkedin_username: alainQtec
+behance_username: alainQtec
+instagram_username: alainQtec
+medium_username: alainQtec
+telegram_username: alainQtec
+dribbble_uszername: alainQtec
+flickr_username: alainQtec
+
+algolia:
+  application_id: O83A8CEWFW
+  index_name: prod_alainQtec # You can replace that with whatever name you want. I used the preffix "prod_" as in production environment
+wakatime_username: alainQtec
+
+mailchimp_form_url: https://alainqtec.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+
+formspree_email: alainhervem@gmail.com
+
+# markdown: kramdown
+# tomorrow-night-bright
+# highlighter: rouge
+# permalink: pretty
+
+show_author_work_experiences: true
+show_author_education_details: true
+show_author_project_details: true
+
+# minify
+# compress_html:
+#   clippings: all
+#   comments: ["<!-- ", " -->"]
+#   endings: all
+#   ignore:
+#     envs: ['development']
+
 ## => Post
 ##############################
 ## excerpt
@@ -82,11 +176,38 @@ jekyll_admin:
   #   - pages
   #   - staticfiles
   #   - datafiles
+
 collections:
   products:
     output: true
   authors:
     output: true
+
+defaults:
+  - scope:
+      path: "gallery"
+    values:
+      permalink: /:path/:basename:output_ext
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
+      permalink: /blog/authors/:slug
+
+#     defaults:
+# - scope:
+#     path: ""
+#     type: posts
+#   values:
+#     layout: article
+#     sharing: true
+#     license: true
+#     aside:
+#       toc: true
+#     show_edit_on_github: true
+#     show_subscribe: true
+#     pageview: true
 
 ## license
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
@@ -109,8 +230,9 @@ chart: true # false
 
 ## => Paginate
 ##############################
-paginate: 8
-paginate_path: /page:num # don't change this unless for special need
+paginate: 5
+paginate_path: "/blog/page/:num/" # don't change this unless for special need . ex: paginate_path: /page:num
+per_page: 5
 
 ## => Sources
 ##############################
@@ -187,7 +309,7 @@ analytics:
 ##############################
 markdown: kramdown
 highlighter: rouge
-permalink: date
+permalink: pretty # or permalink: date
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -215,20 +337,6 @@ exclude:
   - /test
   - /vendor
 
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: article
-      sharing: true
-      license: true
-      aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
-
 ## => Plugins
 ##############################
 plugins:
@@ -236,3 +344,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-admin
+  - jekyll-menus
