@@ -1878,23 +1878,27 @@ div#projects.projects.hp__section {
     justify-self: center;
 }
 
-.project__container {
-    gap: 1.6rem;
+.project__container,
+div.project__container.hlayout__containr.bd-grid {
+    /* gap: 1.6rem; */
     justify-self: center;
     justify-items: center;
     row-gap: 2rem;
-    column-gap: auto;
+    column-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     padding: 0px;
     margin: 0 auto;
 }
+
 .project__img {
     position: relative;
     overflow: hidden;
 }
+
 .project__img img{
     border-radius: .5rem;
 }
+
 .project__link{
     position: absolute;
     bottom: -100%;
