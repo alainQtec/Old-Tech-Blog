@@ -1561,6 +1561,14 @@ span#recent-articles-show-all {
     width: 60%;
 }
 
+.skills__Jekyll {
+    width: 70%;
+}
+
+.skills__Wordpress {
+    width: 80%;
+}
+
 .skills__NodeJS{
     width: 45%;
 }
