@@ -7,11 +7,11 @@
       <div class="col">
         <div
           style="justify-content: center !important; align-items: center !important; text-align: center !important; padding-top: 27px;">
-          <div><a class="footer__link" href="https://alainqtec.com"><img class="logo"
+          <div><a class="footer__link" href="{{site.url}}{{site.baseurl}}"><img class="logo"
                 src="{{site.url}}{{site.baseurl}}/assets/img/logo/favicon.png" alt="BrandLogo"></a>
           </div>
           <div><a class="footer__link footerbrand"
-              href="https://alainqtec.com"><span><span>alain</span><span>Q</span><span>tec</span></span></a>
+              href="{{site.url}}{{site.baseurl}}"><span><span>alain</span><span>Q</span><span>tec</span></span></a>
           </div>
           <div style="font-size: var(--smaller-font-size);"><a href="" class="footer__link">Quick productive
               tech</a></div>
@@ -21,11 +21,11 @@
         <h1>Quick Links</h1>
         <ul>
           <li><a class="footer__link" href="{{ " /feed.xml" | prepend: site.baseurl }}">RSS</a></li>
-          <li><a href="" class="footer__link">Shop</a></li>
-          <li><a href="" class="footer__link">Gallery</a></li>
-          <li><a href="" class="footer__link">Forum</a></li>
-          <li><a href="" class="footer__link">Site map</a></li>
-          <li><a href="" class="footer__link">Resources</a></li>
+          <li><a href="{{ site.url}}{{site.shopurl}}" class="footer__link">Shop</a></li>
+          <li><a href="{{ site.url}}{{site.galleryurl}}" class="footer__link">Gallery</a></li>
+          <li><a href="{{site.url}}{{site.baseurl}}/forum" class="footer__link">Forum</a></li>
+          <li><a href="{{site.url}}{{site.baseurl}}/sitemap" class="footer__link">Site map</a></li>
+          <li><a href="{{site.url}}{{site.baseurl}}/resources" class="footer__link">Resources</a></li>
         </ul>
         <!-- TODO: Use a script that selects Quick links based on the ones I set in Config.yml -->
         <!-- ie
@@ -39,10 +39,11 @@
       <div class="col">
         <h1>Services</h1>
         <ul>
-          <li><a href="" class="footer__link">Web devlopment</a></li>
-          <li><a href="" class="footer__link">UI design</a></li>
-          <li><a href="" class="footer__link">Brand design</a></li>
-          <li><a href="" class="footer__link">IT tech Support</a></li>
+
+          <li><a href="#contact" class="footer__link">Web devlopment</a></li>
+          <li><a href="#contact" class="footer__link">UI design</a></li>
+          <li><a href="#contact" class="footer__link">Brand design</a></li>
+          <li><a href="#contact" class="footer__link">IT tech Support</a></li>
         </ul>
       </div>
       <div class="col">
