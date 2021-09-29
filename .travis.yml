@@ -4,8 +4,8 @@ rvm:
 branches:
   only:
     - main
-# before_script: cp -rfv docs/_includes .
-script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
+before_script: cp -rfv ./_includes .
+script: JEKYLL_ENV=production bundle exec jekyll build --config ./_config.yml
 deploy:
   provider: pages
   skip_cleanup: true

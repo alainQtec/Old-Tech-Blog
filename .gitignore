@@ -25,5 +25,6 @@ Gemfile.lock
 
 _site/
 test/
+docs/
 .jekyll-metadata
 .jekyll-cache/
