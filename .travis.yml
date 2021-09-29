@@ -4,7 +4,7 @@ rvm:
 branches:
   only:
     - main
-before_script: cp -rfv ./_includes .
+# before_script: cp -rfv ./_includes .
 script: JEKYLL_ENV=production bundle exec jekyll build --config ./_config.yml
 deploy:
   provider: pages
