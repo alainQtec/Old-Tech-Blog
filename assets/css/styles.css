@@ -1880,14 +1880,13 @@ div#projects.projects.hp__section {
 
 .project__container,
 div.project__container.hlayout__containr.bd-grid {
-    /* gap: 1.6rem; */
     justify-self: center;
     justify-items: center;
     row-gap: 2rem;
     column-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0px;
-    margin: 0 auto;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .project__img {
