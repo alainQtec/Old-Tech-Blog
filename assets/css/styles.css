@@ -1882,20 +1882,22 @@ div#projects.projects.hp__section {
 div.project__container.hlayout__containr.bd-grid {
     justify-self: center;
     justify-items: center;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    /* row-gap: 2rem; */
+    column-gap: 3rem;
     grid-template-columns: repeat(2, 1fr);
     padding: 0px !important;
-    margin: 0px !important;
+    margin: 0 auto !important;
 }
 
 .project__img {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .project__img img{
     border-radius: .5rem;
+    width: fit-content;
 }
 
 .project__link{
