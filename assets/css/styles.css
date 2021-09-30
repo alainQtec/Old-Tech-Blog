@@ -1665,6 +1665,7 @@ div#recent-articles.Recent_Posts.hp__section {
     margin-bottom: 30px;
     line-height: 1.5em;
 }
+
 .blog-slider__button {
     display: inline-flex;
     background-image: linear-gradient(147deg, var(--first-color) 0%, var(--body-color) 74%);
@@ -1679,16 +1680,19 @@ div#recent-articles.Recent_Posts.hp__section {
     text-align: center;
     letter-spacing: 1px;
 }
+
 @media screen and (max-width: 576px) {
     .blog-slider__button {
         width: 100%;
     }
 }
+
 .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
     bottom: 10px;
     left: 0;
     width: 100%;
 }
+
 .blog-slider__pagination {
     position: absolute;
     z-index: 21;
