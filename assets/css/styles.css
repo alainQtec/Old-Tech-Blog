@@ -1682,7 +1682,10 @@ div#recent-articles.Recent_Posts.hp__section {
     text-align: center;
     letter-spacing: 1px;
 }
-
+.blog-slider__button:hover,
+.blog-slider__button:focus {
+    color: var(--container-color);
+}
 @media screen and (max-width: 576px) {
     .blog-slider__button {
         width: 100%;
