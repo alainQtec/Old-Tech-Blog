@@ -1669,7 +1669,7 @@ div#recent-articles.Recent_Posts.hp__section {
     display: inline-flex;
     background-image: linear-gradient(147deg, var(--first-color) 0%, var(--body-color) 74%);
     padding: 15px 35px;
-    border-radius: 25px;
+    border-radius: 15px;
     color: #dd4040db;
     box-shadow: 0px 14px 80px rgba(213, 127, 127, 0.508);
     border: 1px solid var(--main-text-color);
