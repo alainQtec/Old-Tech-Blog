@@ -99,7 +99,8 @@ author_work_experiences:
     designation: Software Engineer
     description: Worked on various Google Products
     visibility: true
-  - company_name: project.png
+
+  - company_name: Microsoft
     company_logo: microsoft.png
     company_url: https://microsoft.com
     designation: Azure Developer
@@ -116,14 +117,14 @@ author_education_details:
 
 author_project_details:
   - project_thumbnail: project.png
-    project_title: Box optimizer
+    project_title: $appname
     project_description: A windows 11/10 utility app to easily troubleshoot and optimize the system for end-users.
-    project_url: https://boxoptimizer.com
+    project_url: https://alainqtec.com/apps/$appname
     visibility: true
   - project_thumbnail: dashb_chart.jpg
     project_title: Admin Toolpack
     project_description: A small windows app built for network and system admins.
-    project_url: https://alainqtec.com/apps/admintoolpack
+    project_url: https://alainqtec.com/apps/$appname
     visibility: true
 
 twitter_username: alainQtec
