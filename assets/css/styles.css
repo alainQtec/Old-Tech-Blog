@@ -1390,7 +1390,6 @@ div.about__container {
 }
 
 .container{
-    /* max-width: 768px; */
     width: 85%;
     margin: 0 auto;
     padding: 20px;
@@ -1413,20 +1412,19 @@ div.about__container {
     padding: 2rem 0 2rem !important;
 }
 
-span#recent-articles-show-all {
+/* div#recent-articles-title,
+div#recent-articles-show-all {
     margin: 0 auto;
     justify-self: center;
-}
+} */
 
 .jumbotron {
-    /* background-color: var(--main-background-color) !important; */
     background-image: var(--jumbotron-img-url) !important;
     width: 70%;
     border-radius: 25px;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    /* margin: 20px !important; */
 }
 
 .jumbotron-heading{
@@ -1440,10 +1438,6 @@ span#recent-articles-show-all {
     text-align: center;
 }
 
-#blog-posts-container{
-    margin-left:20px !important;
-}
-
 #article-container{
     display: grid;
     width: 100%;
@@ -1451,16 +1445,9 @@ span#recent-articles-show-all {
 }
 
 #recent-articles-header{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 17fr 2fr;
-    }
-    
-#article-img, #article-link, #article-alert {
-        padding-left: 5px;
-        padding-top: 2px;
-        width: auto;
-        margin: 5px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 17fr 2fr;
 }
 
 .article-card a :hover{
