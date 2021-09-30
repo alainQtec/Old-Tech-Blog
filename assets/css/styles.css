@@ -1466,9 +1466,9 @@ div#recent-articles-show-all {
 .blog-slider {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 98%;
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background-image: linear-gradient(147deg, var(--first-color-second) 0%, var(--card-background-color) 74%);
     border: 1px solid var(--main-text-color);
