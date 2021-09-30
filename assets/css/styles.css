@@ -1497,7 +1497,7 @@ span#recent-articles-show-all {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    background-image: linear-gradient(147deg, var(--first-color-second) 0%, #e69494 74%);
+    background-image: linear-gradient(147deg, var(--first-color-second) 0%, var(--card-background-color) 74%);
     font-family: "Fira Sans", sans-serif !important;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     padding: 25px;
@@ -1601,7 +1601,7 @@ div#recent-articles.Recent_Posts.hp__section {
     width: 300px;
     flex-shrink: 0;
     height: 300px;
-    background-image: linear-gradient(147deg, var(--first-color-second) 0%, #e69494 74%);
+    background-image: linear-gradient(147deg, var(--first-color-second) 0%, #f0b3b3e5 74%);
     box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
     border-radius: 20px;
     transform: translateX(-80px);
@@ -1614,7 +1614,7 @@ div#recent-articles.Recent_Posts.hp__section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(147deg, #f7b687 0%, var(--first-color-second) 74%);
+    background-image: linear-gradient(147deg, var(--card-background-color) 0%, var(--first-color-second) 74%);
     border-radius: 20px;
     opacity: 0.8;
 }
@@ -1682,11 +1682,11 @@ div#recent-articles.Recent_Posts.hp__section {
 }
 .blog-slider__button {
     display: inline-flex;
-    background-image: linear-gradient(147deg, var(--first-color) 0%, #e69494 74%);
+    background-image: linear-gradient(147deg, var(--first-color) 0%, var(--body-color) 74%);
     padding: 15px 35px;
     border-radius: 50px;
-    color: #fff;
-    box-shadow: 0px 14px 80px rgba(238, 84, 84, 0.508);
+    color: var(--container-color);
+    box-shadow: 0px 14px 80px rgba(213, 127, 127, 0.508);
     text-decoration: none;
     font-weight: 500;
     justify-content: center;
@@ -1730,7 +1730,12 @@ div#recent-articles.Recent_Posts.hp__section {
 }
 @media screen and (max-width: 768px) {
     .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 5px;
+        margin: 0 5px;
+    }
+}
+@media (min-width: 769px) {
+    .blog-slider {
+        margin-top: 30px !important;
     }
 }
 .blog-slider__pagination .swiper-pagination-bullet {
@@ -1738,7 +1743,7 @@ div#recent-articles.Recent_Posts.hp__section {
     height: 11px;
     display: block;
     border-radius: 10px;
-    background: #062744;
+    background: var(--first-color);
     opacity: 0.2;
     transition: all 0.3s;
 }
@@ -1756,7 +1761,7 @@ div#recent-articles.Recent_Posts.hp__section {
 }
 
 /*==================== SKILLS ====================*/
-.skills__container{
+.skills__container {
     row-gap: 0;
 }
 
