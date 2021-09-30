@@ -893,33 +893,33 @@ nav#home__navbar.home___nav {
 .blognavbrand span {
     transition: .54s linear;
 }
-  
+
 .blognavbrand:hover span:nth-child(1) {
     margin-right: 5px;
 }
-  
+
 .blognavbrand:hover span:nth-child(1):after {
     content: "✨";
     margin-right: 5px;
 }
-  
+
 .blognavbrand:hover span:nth-child(2) {
     margin-right: 5px;
     color: var(--bold-color);
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
-  
+
 .blognavbrand:hover span:nth-child(2):after {
     position: relative;
     content: "uick";
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
-  
+
 .blognavbrand:hover span:nth-child(3) {
     margin-right: 5px;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
-  
+
 .blognavbrand:hover span:nth-child(3):after {
     position: relative;
     content: "h";
@@ -1122,53 +1122,53 @@ div#nav-toggle.nav__toggle {
 /* Make the Icons Wiggle */
 @keyframes icon {
     0% {
-      transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
     }
     100% {
-      transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
     }
 }
 
 /*==================== HOME ====================*/
 
 .home__container{
-  gap: 1rem;
-  /* height:fit-content; */
+    gap: 1rem;
+    /* height:fit-content; */
 }
 
 /* The front-end dev div */
 #Ocuppation {
-  color: transparent;
-  background: #666666;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    color: transparent;
+    background: var(--card-background-color);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
 
 .homepage__blob__dp{
-  float: top;
-  width: 240px;
-  height: auto;
-  transform:scaleY(1.16);
-  transform-origin: bottom;
-  z-index: 100;
-  box-shadow: 0 4px 8px rgba(0,0,0.15);
+    float: top;
+    width: 240px;
+    height: auto;
+    transform:scaleY(1.16);
+    transform-origin: bottom;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0,0,0.15);
 }
 
 .homepage__blob__dp:hover {
-  cursor: grab;  /* gay shit 😝! */
-  margin-top: 5px;
-  transform:scaleY(1.16);
+    cursor: grab;  /* gay shit 😝! */
+    margin-top: 5px;
+    transform:scaleY(1.16);
 }
 
 .homepage__blob{
-  width: 240px;
-  transition: 300ms;
-  height: auto;
-  z-index: 100;
-  position: relative;
-  fill: var(--first-color-second);
+    width: 240px;
+    transition: 300ms;
+    height: auto;
+    z-index: 100;
+    position: relative;
+    fill: var(--first-color-second);
 }
 
 .homepage__blob:hover{
@@ -1176,21 +1176,21 @@ div#nav-toggle.nav__toggle {
 }
 
 .home__content{
-  grid-template-columns: .5fr 3fr;
-  padding-top: 3.5rem;
-  padding-bottom: 1.5rem;
-  align-items: center;
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
 }
 
 .home__social{
-  display: grid;
-  grid-template-columns: max-content;
-  row-gap: 1rem;
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
 }
 
 .homepage__social-icon{
-  font-size: 1.24rem;
-  color: var(--first-color);
+    font-size: 1.24rem;
+    color: var(--first-color);
 }
 
 .homepage__social-icon:hover{
