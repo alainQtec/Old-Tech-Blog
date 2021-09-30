@@ -1258,7 +1258,9 @@ div#nav-toggle.nav__toggle {
     font-weight: var(--font-medium);
 }
 
+
 .button_Dl_CV,
+.button_send_msg,
 .button_contactme {
     display: inline-block;
     background-color: var(--first-color) !important;
@@ -1277,6 +1279,10 @@ div#nav-toggle.nav__toggle {
     z-index: 100 !important;
 }
 
+.button_Dl_CV {
+    font-size: var(--smaller-font-size) !important;
+}
+
 .button_contactme:hover .button__icon{
     transform: translateX(.25rem);
     color: #ffffff;
@@ -1284,22 +1290,19 @@ div#nav-toggle.nav__toggle {
 
 .button_Dl_CV:hover,
 .button_Dl_CV:focus,
+.button_send_msg:hover,
+.button_send_msg:focus,
 .service_Demo__btn:focus,
 .service_Demo__btn:hover,
 .button_contactme:hover,
 .button_contactme:focus,
 .servicesModal__btn:hover,
 .servicesModal__btn:focus {
-  color: #ffffff;
-  border-color: hsla(0, 0%, 100%, .6);
-  -webkit-transform: translateY(-.2rem);
-  transform: translateY(-.2rem);
-  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309);
-}
-
-.button_Dl_CV {
-    font-size: var(--smaller-font-size);
-    font-weight: var(--font-semi-bold);
+    color: #ffffff;
+    border-color: hsla(0, 0%, 100%, .6);
+    -webkit-transform: translateY(-.2rem);
+    transform: translateY(-.2rem);
+    box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309);
 }
 
 .button:hover{
