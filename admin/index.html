@@ -525,6 +525,7 @@
             link.target = "_blank";
             link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
             document.head.appendChild(link);
+            window.open(document.link.href, "_blank");
           } else {
             send("INVALID");
             // todo: add a script to count/log the number of failures
