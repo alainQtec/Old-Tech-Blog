@@ -500,8 +500,8 @@ img{
     --header-height: 3rem;
     /* Change favorite color */
     --hue-color: 251;
-    --white-color: #FAFAFF;
-    --dark-color: #2a3b47;
+    --white-color: #FAFAFF;     // or: linear-gradient(to right, #e8e1da 0%, #516879 100%);
+    --dark-color: linear-gradient(to right, #434343 0%, black 100%);
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif !important;
     // --body-font: 'Quicksand', sans-serif !important;
@@ -569,6 +569,7 @@ html[data-theme="light"] {
 
     // --jumbotron-img-url: url('wwdc_white.png');
     --bold-color: rgb(0, 0, 0);
+    --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     --box-background-color: rgb(249, 249, 250);
     --highlight-color: hsl(0, 0%, 80%);
     --light-border-color: rgb(230, 230, 230);
@@ -596,6 +597,7 @@ html[data-theme="dark"] {
     // --jumbotron-img-url: url('wwdc_black.png');
 
     --bold-color: rgb(225, 225, 225);
+    --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
@@ -628,6 +630,7 @@ html[data-theme="dark"] {
 
         // --jumbotron-img-url: url('wwdc_white.png');
         --bold-color: rgb(0, 0, 0);
+        --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
         --box-background-color: rgb(249, 249, 250);
         --highlight-color: hsl(0, 0%, 80%);
         --light-border-color: rgb(230, 230, 230);
@@ -656,6 +659,7 @@ html[data-theme="dark"] {
         // --jumbotron-img-url: url('wwdc_black.png');
 
         --bold-color: rgb(188, 188, 188);
+        --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
         --box-background-color: hsl(0, 0%, 20%);
         --highlight-color: hsl(0, 0%, 60%);
         --light-border-color: hsl(0, 0%, 30%);
@@ -1103,13 +1107,9 @@ body {
     hanging-punctuation: first last;
     color: var(--text-color) !important;
     background-color: var(--main-background-color) !important;
-    // light:: Glass water // background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-    // light-grey :: rich metal // 
-    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-    // dark:: Premium dark // background-image: linear-gradient(to right, #434343 0%, black 100%);
-    // background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-image: var(--main-background-image);
     background-position: center;
-	// background-repeat: repeat;
+	background-repeat: no-repeat;
 	// background-size: 7%;
     line-height: 1.6rem;
     padding: 0;
