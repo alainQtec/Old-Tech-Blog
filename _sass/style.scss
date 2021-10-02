@@ -1104,10 +1104,9 @@ body {
     color: var(--text-color) !important;
     background-color: var(--main-background-color) !important;
     // light:: Glass water // background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-    // light-grey :: rich metal // background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    // light-grey :: rich metal // 
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     // dark:: Premium dark // background-image: linear-gradient(to right, #434343 0%, black 100%);
-    // vicious stance // 
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     // background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
     background-position: center;
 	// background-repeat: repeat;
