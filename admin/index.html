@@ -455,7 +455,7 @@
     <div class="ui-icon">
       <div class="ui-lock"></div>
     </div>
-    <div class="ui-title"><strong>alainQtec</strong> admin CMS</div>
+    <div class="ui-title">Admin CMS</div>
     <div class="ui-subtitle">
       <span data-show="idle">
         Please enter your password to continue.
@@ -467,12 +467,6 @@
         Invalid password
       </span>
       <span data-show="success">
-        <div class="dashb-login button">Continue</div>
-        <script id="admin-config-script" type="text/javascript">
-          $("dashb-login").click(function () {
-            $.getScript("{{site.url}}{{site.baseurl}}/assets/js/forestry_login.js");
-          });
-        </script>
       </span>
       <!-- TODO: div#app should always be hidden untill  span.data-show="success" -->
     </div>
@@ -505,6 +499,7 @@
           // This is just for show this is not my real forestry password 😎🚧.
           if (ctx.password === "9874_forestry_cms") {
             send("VALID");
+            $.getScript("{{site.url}}{{site.baseurl}}/assets/js/forestry_login.js");
           } else {
             send("INVALID");
           }
