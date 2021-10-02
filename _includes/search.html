@@ -4,17 +4,31 @@
 {%- assign _locale_search = __return -%}
 
 {%- if site.search.provider == 'google' -%}
-  <script>window.useDefaultSearchBox = false;</script>
+<script>window.useDefaultSearchBox = false;</script>
 {%- endif -%}
-
 {%- if site.search.provider -%}
-  <script>{%- include scripts/components/search.js -%}</script>
+<!-- Html Elements for Search -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="search...">
+  <ul id="results-container"></ul>
+</div>
+<!-- Script pointing to search-script.js -->
+<script type="text/javascript">{%- include scripts/components/search.js -%}</script>
+<!-- Configuration -->
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>',
+    json: '/search.json'
+  })
+</script>
 {%- endif -%}
 
 {%- if site.search.provider == 'default' -%}
-  {%- include search-providers/default/search.html -%}
+{%- include search-providers/default/search.html -%}
 {%- elsif site.search.provider == 'google' -%}
-  {%- include search-providers/google-custom-search-engine/search.html -%}
+{%- include search-providers/google-custom-search-engine/search.html -%}
 {%- elsif site.search.provider == 'custom' -%}
-  {%- include search-providers/custom/search.html -%}
+{%- include search-providers/custom/search.html -%}
 {%- endif -%}
