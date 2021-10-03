@@ -15,6 +15,7 @@ gem "github-pages", group: :jekyll_plugins
 # Plugins
 group :jekyll_plugins do
     gem 'jekyll-admin'
+    gem 'simple_search_filter', '~> 0.2.1'
 end
 
 # and associated library.
