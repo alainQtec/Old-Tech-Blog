@@ -8,11 +8,6 @@
       search_results = $('.search-results'),
       toggle_search = $('.toggle-search-button'),
       close_search = $('.close-search-button');
-    // search_result_template = "\
-    //       <div class='search-results__item'>\
-    //         <a class='search-results__item__title' href='{{link}}'>{{title}}</a>\
-    //         <span class='post__date'>{{pubDate}}</span>\
-    //       </div>";
     toggle_search.click(function (event) {
       event.preventDefault();
       $('.search-form-container').addClass('is-active');
@@ -32,18 +27,18 @@
       $('.search-form-container').removeClass('is-active');
     });
 
-var search_data = [
-{% for post in site.posts %}
+    var search_data = [
+      {% for post in site.posts %}
         {
-              "title"       : "{{ post.title | escape }}",
-              "category"    : "{{ post.category }}",
-              "tags"        : "{{ post.tags | join: ', ' }}",
-              "url"         : "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
-              "date"        : "{{ post.date }}",
-              "thumbnail"   : "{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}",
-              "discription" : {{ post.summary | strip_html | strip_newlines | escape | jsonify }}
-        } {% unless forloop.last %},{% endunless %}
-{% endfor %}
+      "title": "{{ post.title | escape }}",
+      "category": "{{ post.category }}",
+      "tags": "{{ post.tags | join: ', ' }}",
+      "url": "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
+      "date": "{{ post.date }}",
+      "thumbnail": "{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}",
+      "discription": {{ post.summary | strip_html | strip_newlines | escape | jsonify }}
+        } {% unless forloop.last %}, {% endunless %}
+    {% endfor %}
 ]
 
     $('#search-input').keyup(function () {
