@@ -6,6 +6,9 @@ gem 'webrick'
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 gem "sprockets", "~> 3.7"
 
+# If you are using search search filters uncomment the line bellow.
+# gem "simple_search_filter", "~> 0.2.1"
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # If you want to use GitHub Pages, make sure to remove the "gem 'jekyll'" and
@@ -15,7 +18,6 @@ gem "github-pages", group: :jekyll_plugins
 # Plugins
 group :jekyll_plugins do
     gem 'jekyll-admin'
-    gem 'simple_search_filter', '~> 0.2.1'
 end
 
 # and associated library.

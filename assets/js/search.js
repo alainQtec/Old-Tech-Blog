@@ -1,51 +1,78 @@
-$(document).ready(function () {
-  'use strict';
-  var search_field = $('.search-form__field'),
-    search_results = $('.search-results'),
-    toggle_search = $('.toggle-search-button'),
-    close_search = $('.close-search-button'),
-    search_result_template = "\
-          <div class='search-results__item'>\
-            <a class='search-results__item__title' href='{{link}}'>{{title}}</a>\
-            <span class='post__date'>{{pubDate}}</span>\
-          </div>";
-  // Configuration
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>',
-    json: '/search.json'
-  })
+---
+  layout: none
+---
 
-  toggle_search.click(function (event) {
-    event.preventDefault();
-    $('.search-form-container').addClass('is-active');
+  $(document).ready(function () {
+    'use strict';
+    var search_field = $('.search-form__field'),
+      search_results = $('.search-results'),
+      toggle_search = $('.toggle-search-button'),
+      close_search = $('.close-search-button');
+    // search_result_template = "\
+    //       <div class='search-results__item'>\
+    //         <a class='search-results__item__title' href='{{link}}'>{{title}}</a>\
+    //         <span class='post__date'>{{pubDate}}</span>\
+    //       </div>";
+    toggle_search.click(function (event) {
+      event.preventDefault();
+      $('.search-form-container').addClass('is-active');
 
-    setTimeout(function () {
-      search_field.focus();
-    }, 500);
-  });
+      setTimeout(function () {
+        search_field.focus();
+      }, 500);
+    });
 
-  $('.search-form-container').on('keyup', function (event) {
-    if (event.keyCode == 27) {
+    $('.search-form-container').on('keyup', function (event) {
+      if (event.keyCode == 27) {
+        $('.search-form-container').removeClass('is-active');
+      }
+    });
+
+    close_search.click(function () {
       $('.search-form-container').removeClass('is-active');
-    }
-  });
+    });
 
-  $('.close-search-button').click(function () {
-    $('.search-form-container').removeClass('is-active');
-  });
+var search_data = [
+{% for post in site.posts %}
+        {
+              "title"       : "{{ post.title | escape }}",
+              "category"    : "{{ post.category }}",
+              "tags"        : "{{ post.tags | join: ', ' }}",
+              "url"         : "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
+              "date"        : "{{ post.date }}",
+              "thumbnail"   : "{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}",
+              "discription" : {{ post.summary | strip_html | strip_newlines | escape | jsonify }}
+        } {% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
 
-  search_field.ghostHunter({
-    results: search_results,
-    onKeyUp: true,
-    rss: base_url + '/feed.xml',
-    zeroResultsInfo: false,
-    info_template: "<h4 class='heading'>Number of posts found: {{amount}}</h4>",
-    result_template: searchResultTemplate,
-    before: function () {
-      search_results.fadeIn();
-    }
-  });
+    $('#search-input').keyup(function () {
+      var searchField = $(this).val();
+      if (searchField === '') {
+        $('#filter-records').html('');
+        return;
+      }
+      var regex = new RegExp(searchField, "i");
+      var output = '<div class="card search-results">';
+      var count = 1;
+      $.each(search_data, function (key, val) {
+        if ((val.url.search(regex) != -1) || (val.title.search(regex) != -1)) {
+          output += '<div class="card">';
+          output += '<div class="card"><img class="img-responsive" src="' + val.thumbnail + '" alt="' + val.title + '" /></div>';
+          output += '<div class="card">';
+          output += '<h5>' + val.title + '</h5>';
+          output += '<p>' + val.url + '</p>'
+          output += '</div>';
+          output += '</div>';
+          if (count % 2 == 0) {
+            output += '</div><div class="card">'
+          }
+          count++;
+        }
+      });
+      output += '</div>';
+      $('#filter-records').html(output);
+    });
+    // search_results.fadeIn();
 
-});
+  });

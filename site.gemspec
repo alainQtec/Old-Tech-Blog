@@ -1,13 +1,13 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-text-theme"
+  spec.name          = "jekyll-tech-blog"
   spec.version       = "2.2.6"
-  spec.authors       = ["Tian Qi"]
-  spec.email         = ["kitian616@outlook.com"]
+  spec.authors       = ["Alain Herve"]
+  spec.email         = ["alain.1337dev@outlook.com"]
 
-  spec.summary       = %q{A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.}
-  spec.homepage      = "https://github.com/kitian616/jekyll-TeXt-theme"
+  spec.summary       = %q{personal site and blog project.}
+  spec.homepage      = "https://github.com/alainQtec/tech-blog"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"

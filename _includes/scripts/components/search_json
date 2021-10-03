@@ -1,8 +1,4 @@
----
-layout: none
----
-
-[
+var search_data = [
 {% for post in site.posts %}
        {
               "title"       : "{{ post.title | escape }}",
@@ -10,8 +6,8 @@ layout: none
               "tags"        : "{{ post.tags | join: ', ' }}",
               "url"         : "{{ site.baseurl }}{{ post.url }}",
               "date"        : "{{ post.date }}",
-              "discription" : "{{ post.summary | strip_html | strip_newlines | escape }}",
-              "content"     : {{ post.content | jsonify }}
+              "thumbnail"   : "{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}",
+              "discription" : "{{ post.summary | strip_html | strip_newlines | jsonify | escape }}"
        } {% unless forloop.last %},{% endunless %}
 {% endfor %}
 ,
@@ -23,8 +19,8 @@ layout: none
               "tags"        : "{{ page.tags | join: ', ' }}",
               "url"         : "{{ site.baseurl }}{{ page.url }}",
               "date"        : "{{ page.date }}",
-              "discription" : "{{ page.summary | strip_html | strip_newlines | escape }}",
-              "content"     : {{ post.content | jsonify }}
+              "discription" : "{{ page.summary | strip_html | strip_newlines | jsonify | escape }}",
+              "content"     : {{ page.content | jsonify }}
        {% endif %}
        } {% unless forloop.last %},{% endunless %}
 {% endfor %}

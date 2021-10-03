@@ -80,35 +80,23 @@
 </header>
 
 <div class="search-form-container">
-  <form class="search-form">
+  <form role="form" class="search-form">
     <fieldset class="search-form__fieldset">
       <div class="row">
-        <div id="search-container" class="col-lg-8 offset-md-2">
-          <input class="search-form__field" type="text" id="search-input" placeholder="Type to Search..." autofocus>
+        <div id="search-container" class="form-group col-lg-8 offset-md-2">
+          <input class="search-form__field form-control input-lg" type="input" id="search-input"
+            placeholder="Type to Search..." autofocus>
           <input class="search-form__submit" type="submit" value="search">
         </div>
       </div>
     </fieldset>
   </form>
+  <div id="filter-records"></div>
 
-  <div class="row">
-    <div class="col-lg-8 offset-md-2 search-results">
-      <ul>
-        <div id="results-container" class="card search-results"></div>
-      </ul>
-    </div>
+  <div id="results-container" class="row">
+    <!-- pointing to the search script.js -->
+    <script src="{{site.url}}{{site.baseurl}}/assets/js/search.js" type="text/javascript"></script>
   </div>
-  <script>
-    // Configuration
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>',
-      json: '/search.json'
-    })
-  </script>
-  <!-- Script pointing to search-script.js -->
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript"></script>
   <div class="close-search-button search-form-container__close">
     <i class="fa fa-times icon"></i>
   </div>
