@@ -2367,7 +2367,8 @@ figure.blog_card.it2-card {
     height: 200%;
 }
 
-.blog_card:hover:before, .blog_card:hover:after {
+.blog_card:hover:before,
+.blog_card:hover:after {
     background-blend-mode: darken;
     transform: scale(1);
 }
