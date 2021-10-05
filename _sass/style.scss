@@ -204,12 +204,11 @@ div.sr_card.result_item,
 }
 .searchr_title {
     width: fit-content;
-    // font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.2;
 }
 .searchr_descr {
-    font-family: var(--font-serif);
+    font-family: var(--body-font);
     font-size: 1.125rem;
     font-style: italic;
     line-height: 1.35;
