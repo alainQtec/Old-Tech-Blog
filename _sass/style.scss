@@ -131,6 +131,7 @@ img{
     .result_item,
     .sr_card.result_item {
         height: 295px;
+        max-width: 500px;
     }
 }
 
@@ -158,8 +159,7 @@ div.sr_card.result_item,
     align-items: flex-end;
     overflow: hidden;
     padding: 0;
-    max-width: 120px;
-    // width: 100%;
+    width: 100%;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
