@@ -70,11 +70,13 @@ body{
 h1,h2,p{
     margin: 0;  
 }
+
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 a{
     text-decoration: none !important;
     color: var(--text-color) !important;
@@ -86,14 +88,16 @@ img{
     display: block;
 }
 
-/*/================== SEARCH Results ================ /*/
+/*/================== SEARCH results Output ================ /*/
 
 .sr_card_out {
+    width: 100%;
+    max-width: 1240px;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto; 
     font-family: var(--font-sans);
 }
 
@@ -2202,7 +2206,7 @@ div.band {
 .blog_card {
     background: white;
     text-decoration: none;
-    color: #444;
+    color: var(--main-text-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -2236,16 +2240,17 @@ figure.blog_card.it2-card {
     background: var(--bg-img);
 }
 
-figure.blog_card.it2-card:focus,
-figure.blog_card.it2-card:hover {
-    --bg-filter-opacity: 0.5;
-    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-    // --bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
-    background-blend-mode: darken;    
-}
+// figure.blog_card.it2-card:focus,
+// figure.blog_card.it2-card:hover {
+//     --bg-filter-opacity: 0.5;
+//     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img) !important;
+//     background-blend-mode: darken !important;    
+// }
 
 figure.blog_card.it2-card:hover::after {
     content: "";
+    // --bg-filter-opacity: 0.5;
+    //     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img) !important;
 }
 
 .blog_card:hover .menu-content span {
