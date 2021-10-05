@@ -54,7 +54,7 @@
         if ((val.url.search(regex) != -1) || (val.title.search(regex) != -1)) {
           output += '<div class="sr_card result_item" style="--search-bg-img: url(' + val.thumbnail + ')">';
           output += '<div class="search_content">';
-          output += '<h2 class="searchr_title">' + val.title + '</h2>';
+          output += '<h5 class="searchr_title">' + val.title + '</h5>';
           output += '<p class="searchr_descr">' + val.description + '</p>';
           output += '<button class="btn"><a href="' + val.url + '" target="_blank" rel="noopener noreferrer">Read more</a></button>';
           output += '</div>';
