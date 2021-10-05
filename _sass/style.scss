@@ -2240,12 +2240,12 @@ figure.blog_card.it2-card {
     background: var(--bg-img);
 }
 
-// figure.blog_card.it2-card:focus,
-// figure.blog_card.it2-card:hover {
-//     --bg-filter-opacity: 0.5;
-//     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img) !important;
-//     background-blend-mode: darken !important;    
-// }
+figure.blog_card.it2-card:focus,
+figure.blog_card.it2-card:hover {
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img) !important;
+    background-blend-mode: darken !important;    
+}
 
 figure.blog_card.it2-card:hover::after {
     content: "";
