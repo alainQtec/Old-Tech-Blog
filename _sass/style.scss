@@ -86,13 +86,6 @@ img{
     display: block;
 }
 
-// div.card.result_item {
-//     max-width: 120px;
-//     display: flex;
-//     flex-direction: row;
-//     float: left;
-// }
-
 /*/================== SEARCH Results ================ /*/
 
 .sr_card_out {
@@ -117,8 +110,6 @@ img{
     transition-delay: 1.5s;
     background: inherit !important;
     backdrop-filter: blur(5px) !important;
-
-    // border-top: 1px solid #688a97;
     animation: square 3s linear;
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease;
@@ -163,10 +154,12 @@ div.sr_card.result_item,
     position: relative;
     display: flex;
     flex-direction: row;
+    float: left;
     align-items: flex-end;
     overflow: hidden;
     padding: 0;
-    width: 100%;
+    max-width: 120px;
+    // width: 100%;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
@@ -210,6 +203,7 @@ div.sr_card.result_item,
     margin-top: 1rem;
 }
 .searchr_title {
+    width: fit-content;
     // font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.2;
