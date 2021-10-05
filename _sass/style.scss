@@ -2356,12 +2356,13 @@ figure.blog_card.it2-card {
 
 
 .blog_card:before {
-    // content: '';
     width: 250%;
     height: 250%;
 }
 
 .blog_card:after {
+    content: "";
+    background-blend-mode: darken;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
     width: 200%;
     height: 200%;
@@ -2381,11 +2382,9 @@ figure.blog_card.it2-card {
   //     letter-spacing: 0.05em;
   //     margin: 2em 0 0 0;
   // }
-  
   // .blog_card .tags {
   //     display: flex;
   // }
-  
   // .blog_card .tags .tag {
   //     font-size: 0.75em;
   //     background: rgba(255,255,255,0.5);
@@ -2395,12 +2394,10 @@ figure.blog_card.it2-card {
   //     line-height: 1.5em;
   //     transition: all 0.4s ease-in !important;
   // }
-  
   // .blog_card:hover .tags .tag {
   //     background: var(--color);
   //     color: white;
   // }
-  
   // not really that necess~
   // .blog_card .date {
   //     position: absolute;
@@ -2411,7 +2408,6 @@ figure.blog_card.it2-card {
   //     line-height: 1em;
   //     opacity: .8;
   // }
-  
   // .blog-card:hover {
   //     .nav-link {
   //         color: rgba(255, 255, 255, 0.844);
@@ -2422,29 +2418,27 @@ figure.blog_card.it2-card {
   //         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.994);
   //     }
   // }
-  
-  
-  .blog_card article {
+.blog_card article {
     padding: 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
-  .blog-card .date__box {
+}
+
+.blog-card .date__box {
     opacity: 0;
     transform: scale(0.5);
     transition: 300ms ease-in-out;
-  
-  }
-  
-  div.top.blog-card,
-  div.blog-card__background {
+
+}
+
+div.top.blog-card,
+div.blog-card__background {
     margin: 0 auto;
-  }
-  
-  div.blog-card__background {
+}
+
+div.blog-card__background {
     border-radius: .8em;
     transition: 300ms ease-in-out;
     z-index: -1;
@@ -2456,8 +2450,8 @@ figure.blog_card.it2-card {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-  }
-  
+}
+
 .blog-card .card__background--layer {
     z-index: 0;
     opacity: 0;
@@ -2468,14 +2462,14 @@ figure.blog_card.it2-card {
     border-radius: .9em;
     transition: 300ms ease-in-out;
 }
-  
+
 .blog-card .blog-card__head {
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-  
+
 div.blog-card__info {
     background:var(--body-color);
     padding-top: var(--mb-0-75);
@@ -2497,21 +2491,21 @@ div.blog-card__info p {
 div.post-categories {
     padding-top: var(--mb-0-25);
 }
-  
+
 .blog-card .blog-card__info h5 {
     transition: 300ms ease-in-out;
 }
-  
+
 .blog-card:hover .date__box {
     z-index: 9000;
     opacity: 1;
     transform: scale(1);
 }
-  
+
 .blog-card:hover .blog-card__background {
     background-blend-mode: darken;
 }
-  
+
 .blog-card:hover .card__background--layer {
     opacity: 1;
     background-repeat: no-repeat !important;
@@ -2520,7 +2514,7 @@ div.post-categories {
 .blog-card:hover .blog-card__info h5 {
     color: var(--first-color-alt);
 }
-  
+
 .blog-post_title {
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
@@ -2577,11 +2571,10 @@ figure.it2-card:hover .post-summary {
 	transform: scale3d(1,1,1);
 }
 
-  
 .it2-card .post-category {
     font-size: 13px;
 }
-  
+
 .it2-card .post-category:hover,
 .it2-card .post-category:focus,
 .it2-card .post-summary a:hover,
@@ -2589,7 +2582,7 @@ figure.it2-card:hover .post-summary {
     -webkit-transform: scale3d(2,2,1);
 	transform: scale3d(2,2,1);
 }
-  
+
 .it2-card .blog_post_title {
     position: relative;
     font-size: var(--h3-font-size);
