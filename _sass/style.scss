@@ -1372,25 +1372,25 @@ blockquote {
 
 /* Scrollbar */
 
- /* width */
- ::-webkit-scrollbar {
+/* width */
+::-webkit-scrollbar {
     width: 10px;
- }
+}
 
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background:  rgb(28, 28, 30);;
-  }
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #212529;
-  }
+}
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #333;
-  }
+}
 
 // h1, h2, h3, h4, h5, h6 {
 //   color: var(--bold-color) !important;
@@ -1399,7 +1399,7 @@ blockquote {
 
 /* #Navigation
 ================================================== */
- 
+
 .cd-header{
     position: fixed;
 	width:100%;
