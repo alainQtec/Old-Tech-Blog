@@ -36,7 +36,7 @@
       "url": "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
       "date": "{{ post.date }}",
       "thumbnail": "{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}",
-      "discription": {{ post.summary | strip_html | strip_newlines | escape | jsonify }}
+      "description": {{ post.summary | strip_html | strip_newlines | escape | jsonify }}
         } {% unless forloop.last %}, {% endunless %}
     {% endfor %}
 ]
@@ -48,19 +48,19 @@
         return;
       }
       var regex = new RegExp(searchField, "i");
-      var output = '<div class="card search-results">';
+      var output = '<div class="search-results">';
       var count = 1;
       $.each(search_data, function (key, val) {
         if ((val.url.search(regex) != -1) || (val.title.search(regex) != -1)) {
-          output += '<div class="card">';
-          output += '<div class="card"><img class="img-responsive" src="' + val.thumbnail + '" alt="' + val.title + '" /></div>';
-          output += '<div class="card">';
-          output += '<h5>' + val.title + '</h5>';
-          output += '<p>' + val.url + '</p>'
+          output += '<div class="sr_card result_item" style="--search-bg-img: url(' + val.thumbnail + ')">';
+          output += '<div class="search_content">';
+          output += '<h2 class="searchr_title">' + val.title + '</h2>';
+          output += '<p class="searchr_descr">' + val.description + '</p>';
+          output += '<button class="btn"><a href="' + val.url + '" target="_blank" rel="noopener noreferrer">Read more</a></button>';
           output += '</div>';
           output += '</div>';
           if (count % 2 == 0) {
-            output += '</div><div class="card">'
+            output += '</div><div class="sr_card_out">'
           }
           count++;
         }
