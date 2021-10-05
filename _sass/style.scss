@@ -2211,8 +2211,6 @@ div.band {
     top: 0;
     transition: all 0.4s ease-in !important;
     font-family: 'Heebo' !important;
-    // --bg-filter-opacity: 0.5;
-    //     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
     border-radius: .7em;
 
     min-width: 100% !important;
@@ -2238,30 +2236,42 @@ figure.blog_card.it2-card {
     background: var(--bg-img);
 }
 
+figure.blog_card.it2-card:focus,
+figure.blog_card.it2-card:hover {
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+    // --bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+    background-blend-mode: darken;    
+}
+
+figure.blog_card.it2-card:hover::after {
+    content: "";
+}
+
 .blog_card:hover .menu-content span {
     transform: translate(-50%, -10px);
     opacity: 1;
 }
-  
+
 .blog_card .header {
     color: #fff;
     padding: 1em;
 }
-  
+
 .blog_card .header::before, .blog_card .header::after {
     content: "";
     display: table;
 }
-  
+
 .blog_card .header::after {
     clear: both;
 }
-  
+
 .blog_card .header .date {
     float: left;
     font-size: 12px;
 }
-  
+
 .blog_card .menu-content {
     float: right;
 }
@@ -2360,9 +2370,7 @@ figure.blog_card.it2-card {
     height: 250%;
 }
 
-.blog_card:after {
-    content: "";
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+.blog_card:after {    
     width: 200%;
     height: 200%;
 }
