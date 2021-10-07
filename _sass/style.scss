@@ -4602,8 +4602,15 @@ ins.adsbygoogle {
 }
 
 @media (max-width: 780px) {
+    div#newsletter_footer,
     ins.adsbygoogle {
         width: 90%;
+    }
+}
+@media (min-width: 781px) {
+    div#newsletter_footer,
+    ins.adsbygoogle {
+        width: 80%;
     }
 }
 
