@@ -4596,7 +4596,11 @@ ins.adsbygoogle {
     background-color: var(--text-color);
     border-radius: 1em;
     margin-top: 2em;
-    overflow: scroll;
+    // overflow: scroll;
+}
+
+ins.adsbygoogle::-webkit-scrollbar {
+    visibility: hidden;
 }
 
  /* Github Follow Button */
