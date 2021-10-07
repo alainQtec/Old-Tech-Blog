@@ -4240,7 +4240,6 @@ ul.pagination.pagination-sm li {
 
 
 #newsletter_footer {
-    background-color: var(--newsletter-background-color);
     color: var(--main-text-color);
     text-align: center;
     margin: 0 auto;
@@ -4249,11 +4248,18 @@ ul.pagination.pagination-sm li {
 }
 
 /*  Ads by Google */
+ins.adsbygoogle,
+#newsletter_footer {
+    background-color: var(--newsletter-background-color);
+}
+
+ins.adsbygoogle::-webkit-scrollbar {
+    visibility: hidden;
+}
 
 ins.adsbygoogle {
     border: 1px solid var(--container-color);
     // background-image: url(https://path.to/adsbgimg.jpg);
-    background-color: var(--text-color);
     border-radius: 1em;
     margin: 0 auto;
     margin-top: 2em !important;
@@ -4274,9 +4280,6 @@ ins.adsbygoogle {
     }
 }
 
-ins.adsbygoogle::-webkit-scrollbar {
-    visibility: hidden;
-}
 
 #mc-embedded-subscribe-form {
     width: 100%;
