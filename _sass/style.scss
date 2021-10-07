@@ -4595,7 +4595,9 @@ ins.adsbygoogle {
     // background-image: url(https://path.to/adsbgimg.jpg);
     background-color: var(--text-color);
     border-radius: 1em;
-    margin-top: 2em;
+    margin: 0 auto;
+    margin-top: 2em !important;
+    width: 80%;
     // overflow: scroll;
 }
 
