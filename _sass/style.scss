@@ -4586,7 +4586,15 @@ section#letter form input[type='email'] {
                 float:left;
         }
 
- }
+}
+
+/*  Ads by Google */
+
+ins.adsbygoogle {
+    border: 1px solid var(--container-color);
+    background-color: var(--text-color);
+    border-radius: 7em;
+}
 
  /* Github Follow Button */
 .widget-lg .btn, .widget-lg .social-count {
@@ -4596,7 +4604,7 @@ section#letter form input[type='email'] {
     line-height: 20px !important;
 }
 
- .switch {
+.switch {
      position: relative;
      width: 72px;
      height: 30px;
