@@ -243,7 +243,6 @@ footer .logo {
 }
 
 .footer__copy {
-  animation: icon 0.2s 1;
   font-size: var(--small-font-size);
   text-align: center;
   color: rgba(240, 248, 255, 0.96);
