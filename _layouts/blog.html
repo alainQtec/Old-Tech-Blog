@@ -20,7 +20,7 @@ layout: default
     <figure class="blog_card it2-card"
       style="--bg-img: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat; background: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat;"
       data-disqus-identifier="{{ post.url }}">
-      <div class="header">
+      <div class="card-header">
         <div class="date">
           <span class="day">{{ post.date | date: "%b" }}</span>
           <span class="month">{{ post.date | date: "%-d" }}</span>
@@ -49,7 +49,7 @@ layout: default
   {% endfor %}
   <div class="item-3">
     <div class="firststblog_card">
-      <div class="card-header header">Tags</div>
+      <div class="card-header">Tags</div>
       <div class="card-body text-dark">
         {%- include tags.html -%}
       </div>

@@ -983,16 +983,15 @@ img {
     gap: 1.5rem;
 }
 
-.header_homep{
+.header_homep {
     width: 100%;
     position: fixed;
     bottom: 0px;
     left: 0px;
-    // z-index: var(--z-fixed);
     z-index: 9000;
     border-radius: 2rem;
+    background: inherit;
     background-color: transparent;
-    // background-color: var(--body-color);
 }
 
 .bd-grid{
