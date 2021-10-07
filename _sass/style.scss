@@ -1803,10 +1803,11 @@ body.nav-active .nav__list-item:nth-child(10) {
     width: fit-content !important;
     margin: 0 auto !important;
     margin-top: 10px !important;
-
 }
 
-.card-header {
+
+.card-header,
+.item-2 .card-header {
     width: 100%;
     text-align: center;
     align-items: center !important;
@@ -1815,12 +1816,13 @@ body.nav-active .nav__list-item:nth-child(10) {
     top: 0 !important;
     left: 0;
     margin-bottom: 10px;
-    // border-radius: 2rem;
+}
+
+.card-header {
     background-color: transparent;
     border-radius: .67em !important;
     background-size: cover;
 }
-
 .blog_authors_list {
     list-style: none !important;
 }
@@ -4887,7 +4889,7 @@ section#letter form input[type='email'] {
 .highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
 .highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
-.highlight .gh { color: #111111 } /* Generic Heading & Diff Header */
-.highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
-.highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
-.highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+.highlight .gh { color: #111111 } /* Generic Heading and Diff Header */
+.highlight .gu { color: #75715e } /* Generic.Subheading and Diff Unified/Comment? */
+.highlight .gd { color: #f92672 } /* Generic.Deleted and Diff Deleted */
+.highlight .gi { color: #a6e22e } /* Generic.Diff and Diff Inserted */
