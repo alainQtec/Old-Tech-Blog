@@ -3955,6 +3955,10 @@ ul.pagination.pagination-sm li {
 .pagination-link a:hover {
     color: var(--first-color);
 }
+.pagination-link::after {
+    visibility: hidden;
+    display: none;
+}
 
 .lead {
     font-size: 1.30rem !important;
