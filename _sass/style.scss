@@ -4601,7 +4601,7 @@ ins.adsbygoogle {
     // overflow: scroll;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 780px) {
     ins.adsbygoogle {
         width: 90%;
     }
