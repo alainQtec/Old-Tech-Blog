@@ -8,14 +8,12 @@ layout: compress
 
 <body>
   <main class="main" id="scroll-animate">
-    <div id="scroll-animate-main">
-        {%- include header.html -%}
-      {%- include mobile_menu.html -%}
-      <div class="content">
-        {{ content }}
-        <div id="newsletter_footer">
-          {%- include blog_newsletter.html -%}
-        </div>
+    {%- include header.html -%}
+    {%- include mobile_menu.html -%}
+    <div class="content">
+      {{ content }}
+      <div id="newsletter_footer">
+        {%- include blog_newsletter.html -%}
       </div>
     </div>
   </main>
@@ -28,16 +26,6 @@ layout: compress
   <!--==================== MAIN JS ====================-->
   <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script> -->
   <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
-  <script>
-    var options = {
-      classname: 'my-class',
-      id: 'my-id'
-    };
-    var nanobar = new Nanobar(options);
-    nanobar.go(30);
-    nanobar.go(76);
-    nanobar.go(100);
-  </script>
 
   <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
   </div>
