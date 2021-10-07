@@ -1807,7 +1807,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 
 .card-header,
-.item-2 .card-header {
+.item-2_card-header {
     width: 100%;
     text-align: center;
     align-items: center !important;
@@ -1823,10 +1823,10 @@ body.nav-active .nav__list-item:nth-child(10) {
     border-radius: .67em !important;
     background-size: cover;
 }
-.item-2 .card-header {
+.item-2_card-header {
     background-color: inherit;
     border-radius: .67em !important;
-    background-size: cover;
+    // background-size: cover;
     background-blend-mode: darken;
 }
 .blog_authors_list {
