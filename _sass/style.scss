@@ -4592,8 +4592,11 @@ section#letter form input[type='email'] {
 
 ins.adsbygoogle {
     border: 1px solid var(--container-color);
+    // background-image: url(https://path.to/adsbgimg.jpg);
     background-color: var(--text-color);
-    border-radius: 7em;
+    border-radius: 1em;
+    margin-top: 2em;
+    overflow: scroll;
 }
 
  /* Github Follow Button */
