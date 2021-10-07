@@ -64,6 +64,7 @@ body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    background-image: var(--body-background-image) !important;
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -1317,7 +1318,7 @@ body {
     hanging-punctuation: first last;
     color: var(--text-color) !important;
     background-color: var(--main-background-color) !important;
-    background-image: var(--body-background-image);
+    background-image: var(--body-background-image) !important;
     background-position: center;
 	background-repeat: no-repeat;
 	// background-size: 7%;
