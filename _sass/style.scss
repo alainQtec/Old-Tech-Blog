@@ -2188,12 +2188,12 @@ body.light .switch-wrap p span:nth-child(1):before {
 }
 
 .date__box {
+    color: rgba(252, 252, 252, 0.987);
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgba(252, 252, 252, 0.987);
     border: 4px solid;
     font-weight: bold;
     padding: 5px 10px;
@@ -2220,8 +2220,8 @@ div.band {
 }
 
 .firststblog_card {
-    font-size: 1.5em;
     color: white;
+    font-size: 1.5em;
 }
 
 .firststblog_card,
@@ -2270,7 +2270,7 @@ figure.blog_card.it2-card {
 
 figure.blog_card.it2-card:focus,
 figure.blog_card.it2-card:hover {
-    color: var(--bold-color);
+    color: rgb(255, 255, 255);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: 5px;
     -webkit-filter: brightness(70%);
@@ -2282,7 +2282,7 @@ figure.blog_card.it2-card:hover {
 }
 
 .blog_card .data {
-    color: var(--main-text-color);
+    color: rgb(255, 255, 255);
 }
 
 .blog_card:focus .data, .blog_card:hover .data span {
