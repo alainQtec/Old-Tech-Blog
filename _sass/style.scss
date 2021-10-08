@@ -1317,11 +1317,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     hanging-punctuation: first last;
     color: var(--text-color) !important;
-    background-color: var(--main-background-color) !important;
+    // background-color: var(--main-background-color) !important;
     background-image: var(--body-background-image) !important;
     background-position: center;
+    background-size: cover;
 	background-repeat: no-repeat;
-	// background-size: 7%;
     line-height: 1.6rem;
     padding: 0;
     padding-top: 30px !important;
@@ -2776,24 +2776,6 @@ div.comments_container {
 // 	   border-radius: 5px;
 // }
 
-@media (min-width: 769px) {
-	.navbar {
-		display: flex;
-        flex-direction: column;
-		align-items: center;
-        width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
-}
-
-@media (min-width: 1025px) {
-	.navbar {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-}
-
 nav#navbar.navbar:before {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -2831,11 +2813,17 @@ nav#navbar.navbar {
     border-top: 1px solid var(--text-color) !important;
     backdrop-filter: blur(5px) !important;
     transition-delay: 1s;
-    z-index: 9000;
 
     -webkit-border-radius: .5rem !important;
 	-moz-border-radius: .5rem !important;
 	border-radius: .5rem !important;
+}
+
+.navbar,
+.mobile__nvmenu,
+nav#navbar.navbar,
+.mobile__nvmenu .mmcontainer {
+    z-index: 9000 !important;
 }
 
 .navbar:hover {
@@ -2974,6 +2962,24 @@ nav#navbar.navbar {
     }
 }
 
+@media (min-width: 769px) {
+	.navbar {
+		display: flex;
+        flex-direction: column;
+		align-items: center;
+        width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.navbar {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
 
 a.blognavbrand,
 .blognavbrand {
@@ -3065,7 +3071,6 @@ a.nav-link.scrollto {
     overflow: hidden;
     transition: all 0.35s ease-out, background 1s ease-out;
     transition-delay: 0.2s;
-    z-index: 1;
 }
 
 .mobile__nvmenu .mmcontainer:before {
