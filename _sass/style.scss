@@ -1421,9 +1421,9 @@ blockquote {
     border-radius: 2rem;
 }
 
-.header,
-header#header.header.fixed-top {
-    background: inherit !important;
+#header.header {
+    // background: inherit !important;
+    background: transparent !important;
 }
 
 .header-wrapper{
@@ -2824,6 +2824,7 @@ div.comments_container {
     width: 100%;
     height: var(--header-height);
     position: relative;
+    top: 0 !important;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
