@@ -37,6 +37,14 @@ footer .logo {
   color: rgba(228, 135, 91, 0.987) !important;
 }
 
+.footer__legal:hover {
+  color: rgba(255, 86, 8, 0.864) !important;
+  transform: translateX(+2%);
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+
 .footer__feedbackm {
   color: var(--bold-color) !important;
   font-size: var(--smaller-font-size) !important;
@@ -85,11 +93,6 @@ footer .logo {
   -moz-transition: .2s;
 }
 
-.footer .col ul li:hover {
-  transform: translateX(+3%);
-}
-
-
 .footer .col div a {
   color: var(--bold-color);
   font-size: var(--font-medium);
@@ -105,6 +108,7 @@ footer .logo {
 
 .footer .col ul li:hover {
   color: #ffffff;
+  transform: translateX(+3%);
   transition: .1s;
   -webkit-transition: .1s;
   -moz-transition: .1s;

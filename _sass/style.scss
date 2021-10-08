@@ -2730,14 +2730,12 @@ div.comments_container {
 }
 
 @media screen and (max-width: 640px) {
-
     .blog_article-card {
         background: var(--body-color);
         box-shadow: 0px 0px 15px rgb(51, 51, 51);
         width: 95%;
         border-radius: 1em;
     }
-
     div.top.blog-card,
     div.blog-card__background,
     div.comments_container.has-col-all {
@@ -2854,9 +2852,9 @@ div.comments_container {
 }
 .starfield > * {
     position: absolute;
-    top: -250%;
+    top: -50%;
     left: 0;
-    height: 500%;
+    height: 100%;
     width: 100%;
 }
 .starfield span:nth-child(2) {
