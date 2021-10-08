@@ -1409,8 +1409,7 @@ blockquote {
 	z-index:100;
 }
 
-.header,
-header#header.header.fixed-top {
+.header {
     width: 100%;
     text-align: center;
     align-items: center !important;
@@ -1420,6 +1419,10 @@ header#header.header.fixed-top {
     left: 0;
     margin-bottom: 10px;
     border-radius: 2rem;
+}
+
+.header,
+header#header.header.fixed-top {
     background: inherit !important;
 }
 
