@@ -2833,9 +2833,9 @@ nav#navbar.navbar {
     transition-delay: 1s;
     z-index: 9000;
 
-    -webkit-border-radius: .4rem !important;
-	-moz-border-radius: .4rem !important;
-	border-radius: .4rem !important;
+    -webkit-border-radius: .5rem !important;
+	-moz-border-radius: .5rem !important;
+	border-radius: .5rem !important;
 }
 
 .navbar:hover {
@@ -2847,9 +2847,9 @@ nav#navbar.navbar {
 	-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.618);
 	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.618);
 
-	-webkit-border-radius: .4rem !important;
-	-moz-border-radius: .4rem !important;
-	border-radius: .4rem !important;
+	-webkit-border-radius: .5rem !important;
+	-moz-border-radius: .5rem !important;
+	border-radius: .5rem !important;
 }
 
 .navbar ul {
@@ -3297,12 +3297,12 @@ a.nav-link.scrollto {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.597);
 }
 @media screen and (max-width: 640px) {
-.page_article-card {
-    background: var(--body-color);
-    box-shadow: 0px 0px 15px rgb(51, 51, 51);
-    width: 95%;
-    border-radius: 1em;
-}
+    .page_article-card {
+        background: var(--body-color);
+        box-shadow: 0px 0px 15px rgb(51, 51, 51);
+        width: 95%;
+        border-radius: 1em;
+    }
 }
 
 div.terms_content,
