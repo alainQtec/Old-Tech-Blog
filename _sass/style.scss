@@ -2323,14 +2323,22 @@ figure.blog_card.it2-card:hover {
     font-size: 12px;
 }
 
-.blog_card:focus .date,
-.blog_card:hover .date {
-    // visibility: hidden;
-    // display: none;
-
-    font: size 7px;
-    transform: translateX(+60%);
-    transition: all 0.3s;
+@media (min-width: 480px) {
+    .blog_card:focus .date,
+    .blog_card:hover .date {
+        font: size 6px;
+        transform: translateX(+90%);
+        transition: all 0.3s;
+    }
+}
+@media (max-width: 479px) {
+    .blog_card:focus .date,
+    .blog_card:hover .date {
+        visibility: hidden;
+        display: none;
+        font: size 9px;
+        transition: all 0.3s;
+    }
 }
 
 .blog_card .menu-content {
