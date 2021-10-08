@@ -1409,7 +1409,8 @@ blockquote {
 	z-index:100;
 }
 
-.header{
+.header,
+header#header.header.fixed-top {
     width: 100%;
     text-align: center;
     align-items: center !important;
@@ -1426,6 +1427,7 @@ blockquote {
     position: relative;
 	width: calc(100% - 100px);
 	margin-left: 50px;
+    background: inherit !important;
 } 
 
 .logo-wrap {
