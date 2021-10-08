@@ -85,6 +85,11 @@ footer .logo {
   -moz-transition: .2s;
 }
 
+.footer .col ul li:hover {
+  transform: translateX(+3%);
+}
+
+
 .footer .col div a {
   color: var(--bold-color);
   font-size: var(--font-medium);
@@ -239,7 +244,7 @@ footer .logo {
 }
 
 .footer__social:hover {
-  color: var(--first-color-lighter)
+  color: var(--first-color-lighter);
 }
 
 .footer__copy {
