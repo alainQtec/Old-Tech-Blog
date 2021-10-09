@@ -2695,9 +2695,9 @@ div.comments_container.has-col-all {
 .blog_post_content > blockquote::-webkit-scrollbar {
     overflow: hidden !important;
     visibility: visible;
-    border-radius: 10%;
-    width: 5px;
-    height: 5px;
+    border-radius: .5em;
+    width: 8px;
+    height: 8px;
     background: inherit;
     background-color: transparent;
 }
@@ -2714,7 +2714,7 @@ div.comments_container.has-col-all {
     color: var(--first-color-second);
 }
 
-.blog_post_content > ul {
+.blog_post_content ul {
     padding: 0px !important;
     margin-top: 15px !important;
 }
@@ -2724,6 +2724,10 @@ div.comments_container.has-col-all {
     margin: 0px !important;
 }
 
+figure.highlight pre {
+    border-radius: .5em;
+    border-top: 1px solid var(--text-color) !important;
+}
 div.comments {
     margin: 0 auto !important;
     padding: 1rem 0;
