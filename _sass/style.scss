@@ -2729,7 +2729,10 @@ div.comments_container.has-col-all {
 
 @media (min-width: 480px) {
     .blog_article-card img {
-        max-height: 25vh;
+        max-height: 50vh;
+        -o-object-fit: cover;
+        object-fit: cover;
+        object-position: center ;
     }
 }
 
