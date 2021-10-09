@@ -2721,12 +2721,16 @@ div.comments_container.has-col-all {
 
 
 .blog_article-card img {
-    // height: 260px;
-    // max-height: 22vh;
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     filter: contrast(100%);
+}
+
+@media (min-width: 480px) {
+    .blog_article-card img {
+        max-height: 25vh;
+    }
 }
 
 .blog_post_content p img {
