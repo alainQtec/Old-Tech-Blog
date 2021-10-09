@@ -2758,7 +2758,7 @@ figure.highlight pre {
 
 code.language-cmd {
     background-color: #000;
-    border-left: 1.2px solid var(--text-color) !important;
+    border-left: 1.2px solid background-color !important;
     color: #e2e2e2;
 }
 
