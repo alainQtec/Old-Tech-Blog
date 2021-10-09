@@ -2729,11 +2729,18 @@ div.comments_container.has-col-all {
     margin: 15px 0px !important;
 }
 
+pre,
 div.highlight,
 pre.highlight,
 figure.highlight pre {
     border-radius: .5em;
     border-top: 1px solid var(--text-color) !important;
+    background: var(--card-background-color);
+}
+
+code.language-cmd {
+    background-color: #000;
+    color: #e2e2e2;
 }
 
 ::marker,
