@@ -2689,7 +2689,14 @@ div.comments_container.has-col-all {
 }
 .blog_post_content > blockquote {
     border-radius: .5rem;
+    overflow: scroll;
 }
+
+.blog_post_content > blockquote::-webkit-scrollbar {
+    visibility: hidden;
+    width: 4px;
+}
+
 .blog_post_content > h1 {
     font-size: 1.4rem;
     font-weight: var(--font-semi-bold);
