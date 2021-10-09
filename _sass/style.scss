@@ -2731,8 +2731,8 @@ div.comments_container.has-col-all {
     .blog_article-card img {
         max-height: 50vh;
         -o-object-fit: cover;
-        object-fit: cover;
-        object-position: center ;
+        object-fit: contain;
+        object-position: center;
     }
 }
 
