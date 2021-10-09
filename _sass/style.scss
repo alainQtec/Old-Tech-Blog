@@ -2725,6 +2725,17 @@ div.comments_container.has-col-all {
     margin: 0px !important;
 }
 
+.blog_post_content > a,
+.blog_post_content ul > a,
+.blog_post_content ol > a,
+.blog_post_content ul li a,
+.blog_post_content ol li > a {
+    color: var(--highlight-color) !important;
+}
+
+.blog_post_content > a:hover {
+    color: var(--first-color) !important;
+}
 
 .blog_article-card img {
     width: 100%;
@@ -2758,7 +2769,7 @@ figure.highlight pre {
 
 code.language-cmd {
     background-color: #000;
-    border-left: 1.2px solid background-color !important;
+    border-left: 1.2px solid #000 !important;
     color: #e2e2e2;
 }
 
