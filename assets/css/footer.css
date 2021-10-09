@@ -12,6 +12,11 @@
   padding-bottom: 1em;
 }
 
+.footer:focus,
+.footer:hover {
+  cursor: auto;
+}
+
 .footer__container {
   text-align: left;
   margin: 0 auto !important;
@@ -79,6 +84,11 @@ footer .logo {
   list-style-type: none !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.footer .col ul:focus,
+.footer .col ul:hover {
+  cursor: pointer !important;
 }
 
 .footer .col ul li {
