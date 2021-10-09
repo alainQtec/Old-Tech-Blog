@@ -2729,10 +2729,18 @@ div.comments_container.has-col-all {
     margin: 15px 0px !important;
 }
 
+div.highlight,
 figure.highlight pre {
     border-radius: .5em;
     border-top: 1px solid var(--text-color) !important;
 }
+
+::marker,
+li ::marker {
+    color: var(--first-color) !important;
+    font-weight: var(--font-medium) !important;
+}
+
 div.comments {
     margin: 0 auto !important;
     padding: 1rem 0;
