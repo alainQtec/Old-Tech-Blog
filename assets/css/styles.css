@@ -6,6 +6,20 @@
 
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
+
+@media print {
+    .ms-editor-squiggler {
+        display: none !important;
+    }
+}
+
+.ms-editor-squiggler {
+    all: initial;
+    display: block !important;
+    height: 0px !important;
+    width: 0px !important;
+}
+
 /*==================== VARIABLES CSS ====================*/
 :root {
     --header-height: 3rem;

@@ -5,6 +5,19 @@
 
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
+@media print {
+    .ms-editor-squiggler {
+        display: none !important;
+    }
+}
+
+.ms-editor-squiggler {
+    all: initial;
+    display: block !important;
+    height: 0px !important;
+    width: 0px !important;
+}
+
 :root{
     --first-color: #5361FF;
     --white-color: #FAFAFF;
