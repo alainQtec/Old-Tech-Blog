@@ -2714,7 +2714,8 @@ div.comments_container.has-col-all {
     margin-top: 15px !important;
 }
 
-.blog_post_content > li {
+.blog_post_content ul li,
+.blog_post_content ol li {
     color: var(--bold-color) !important;
     font-size: var(--mb-1) !important;
 }
