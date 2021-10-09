@@ -69,7 +69,7 @@ footer .logo {
   font-size: 12px;
   line-height: 17px !important;
   padding: 20px 0px 5px 0px !important;
-  color: var(--first-color);
+  color: var(--bold-color) !important;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.250em;
@@ -252,6 +252,7 @@ footer .logo {
 }
 
 .footer__social:hover {
+  transform: translateX(+2%);
   color: var(--first-color-lighter);
 }
 
