@@ -2692,10 +2692,19 @@ div.comments_container.has-col-all {
 }
 .blog_post_content > h1 {
     font-size: 1.3rem;
+    font-weight: var(--font-medium);
+    color: var(--first-color-second);
 }
 
 .blog_post_content > h2 {
     font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color-second);
+}
+
+.blog_post_content > ul {
+    padding: 0px !important;
+    margin-top: 15px !important;
 }
 
 div.comments {
