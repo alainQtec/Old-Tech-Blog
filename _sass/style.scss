@@ -2725,15 +2725,24 @@ div.comments_container.has-col-all {
     margin: 0px !important;
 }
 
+.blog_post_content a,
 .blog_post_content > a,
-.blog_post_content ul > a,
-.blog_post_content ol > a,
 .blog_post_content ul li a,
-.blog_post_content ol li > a {
+.blog_post_content ol li a,
+.blog_post_content ul li ol a,
+.blog_post_content ol li ol a,
+.blog_post_content ul li ul li a,
+.blog_post_content ol li ol li a {
     color: var(--highlight-color) !important;
 }
-
-.blog_post_content > a:hover {
+.blog_post_content a:hover,
+.blog_post_content > a:hover,
+.blog_post_content ul li a:hover,
+.blog_post_content ol li a:hover,
+.blog_post_content ul li ol a:hover,
+.blog_post_content ol li ol a:hover,
+.blog_post_content ul li ul li a:hover,
+.blog_post_content ol li ol li a:hover {
     color: var(--first-color) !important;
 }
 
