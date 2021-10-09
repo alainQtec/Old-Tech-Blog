@@ -938,16 +938,6 @@ div#nav-toggle.nav__toggle {
     font-weight: var(--font-medium);
 }
 
-
-.alainqteclogo:hover,
-.alainqteclogo:focus,
-.alainqtec__logo_part1:hover,
-.alainqtec__logo_part1:focus{
-    color: #ffffff;
-    background-color: var(--body-color) !important;
-    box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309) !important;
-}
-
 .home__nav__item {
     display: flex;
     flex-direction: column;
@@ -2545,7 +2535,7 @@ image.homepage__blob__dp {
         margin: 0;
     }
 
-    body{
+    body {
         margin: 0;
     }
 
@@ -2585,13 +2575,13 @@ image.homepage__blob__dp {
     .nav__close,
     .modeSwitcher_btn,
     .nav__toggle {
-      display: none;
-      visibility: hidden;
+        display: none;
+        visibility: hidden;
     }
 
     .home__nav__list {
-      display: flex;
-      column-gap: 2rem;
+        display: flex;
+        column-gap: 2rem;
     }
 }
 
