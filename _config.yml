@@ -147,11 +147,6 @@ mailchimp_form_url: https://alainqtec.us10.list-manage.com/subscribe/post?u=50ba
 
 formspree_email: alainhervem@gmail.com
 
-# markdown: kramdown
-# tomorrow-night-bright
-# highlighter: rouge
-# permalink: pretty
-
 show_author_work_experiences: true
 show_author_education_details: true
 show_author_project_details: true

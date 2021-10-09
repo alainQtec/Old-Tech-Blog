@@ -9,7 +9,7 @@
 ## => Site Settings
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: tomorrow-night-bright # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+# highlight_theme: tomorrow-night-bright # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url: https://www.alainqtec.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: "" # does not include hostname
 title: alainQtec
@@ -145,11 +145,6 @@ wakatime_username: alainQtec
 mailchimp_form_url: https://alainqtec.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 formspree_email: alainhervem@gmail.com
-
-# markdown: kramdown
-# tomorrow-night-bright
-# highlighter: rouge
-# permalink: pretty
 
 show_author_work_experiences: true
 show_author_education_details: true
