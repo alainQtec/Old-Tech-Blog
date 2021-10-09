@@ -2714,6 +2714,11 @@ div.comments_container.has-col-all {
     margin-top: 15px !important;
 }
 
+.blog_post_content > li {
+    color: var(--bold-color) !important;
+    font-size: var(--mb-1) !important;
+}
+
 .blog_post_content > blockquote > ul > li {
     padding: 0;
     margin: 0px !important;
