@@ -505,9 +505,6 @@ img {
     padding: 3rem 0 4rem !important;
 }
 
-
-
-
 .section__title{
     position: relative;
     font-size: var(--big-font-size) !important;
@@ -627,10 +624,10 @@ img {
 /* Make the Icons Wiggle */
 @keyframes icon {
     0% {
-      transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
     }
     100% {
-      transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
     }
 }
 
@@ -681,52 +678,6 @@ img {
     color: var(--first-color-alt);
 }
 
-/*==================== ABOUT ====================*/
-.about__img{
-    width: 250px;
-    border-radius: .5rem;
-    justify-self: center;
-    align-self: center;
-}
-
-.about__img:hover{
-    transform: translateY(-.11rem);
-}
-
-.about__description{
-    text-align: center;
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info-title{
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-semi-bold);
-    color: var(--title-color);
-}
-
-.about__info-name{
-    font-size: var(--small-font-size);
-}
-
-.about__info-title,
-.about__info-name{
-    display: block;
-    text-align: center;
-}
-
-.about__button{
-    display: flex;
-    justify-content: center;
-}
-
-// +++==========================================================================+++
-
 .section__title{
     position: relative;
     font-size: var(--h1-font-size);
@@ -756,7 +707,9 @@ img {
 .section__subtitle{
     text-align: center;
 }
+
 /*==================== LAYOUT ====================*/
+
 .container{
     width: 85%;
     display: flex;
@@ -1110,53 +1063,7 @@ img {
     color: var(--first-color-alt);
 }
 
-/*==================== ABOUT ====================*/
-.about__img{
-    width: 250px;
-    height: auto;
-    border-radius: .5rem;
-    justify-self: center;
-    align-self: center;
-}
 
-.about__img:hover{
-    transform: translateY(-.11rem);
-}
-
-.about__description{
-    text-align: center;
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2-5);
-}
-
-.skill__title,
-.about__info-title{
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-semi-bold);
-    color: var(--title-color);
-    display: flex;
-    justify-content: space-between;
-}
-
-.about__info-name{
-    font-size: var(--small-font-size);
-}
-
-.about__info-title,
-.about__info-name{
-    display: block;
-    text-align: center;
-}
-
-.about__button{
-    display: flex;
-    justify-content: center;
-}
 /*==================== SKILLS ====================*/
 .skills__container{
     row-gap: 0;
@@ -1400,7 +1307,7 @@ img {
     box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
     overflow: visible;
     transition: .3s;
-  }
+}
 
 .services__modal-content{
     position: relative;
@@ -1572,8 +1479,6 @@ img {
 .project__link-name{
     color: var(--dark-color);
 }
-/*==================== PROJECT IN MIND ====================*/
-
 
 /*==================== TESTIMONIAL ====================*/
 .testimonial__title{
