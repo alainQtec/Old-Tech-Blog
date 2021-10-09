@@ -1629,16 +1629,20 @@ img {
 // Show scroll //
 
 
-// ========== SCROLL BAR ==========//
+// ========== Custom Admin pannel ==========//
+
+div.sidebar a.logo {
+    background-color: #000000 !important;
+}
 
 
 // ==================== MEDIA QUERIES ====================//
 
 @media (max-width: 500px) {
     .testimonial__data {
-      margin: auto;
-      float: none;
-      display: block;
+        margin: auto;
+        float: none;
+        display: block;
     }
 }
 
