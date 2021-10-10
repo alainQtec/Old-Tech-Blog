@@ -496,12 +496,12 @@
 
       validatePassword: ctx => {
         setTimeout(() => {
-          // This is just for show this is not my real forestry password 😎🚧.
+          // Just for show. Not my real forestry password & not secure 🚧.
           if (ctx.password === "9874_forestry_cms") {
             send("VALID");
             // $.getScript("{{site.url}}{{site.baseurl}}/assets/js/forestry_login.js");
             var env = {
-              siteId: "mufuojwz6nnomg",
+              siteId: "mufuojwz6nnomg", // ie: https://app.forestry.io/sites/mufuojwz6nnomg
               local: false
             };
 
@@ -521,10 +521,9 @@
             var link = document.createElement("link");
             link.type = "text/css";
             link.rel = "stylesheet";
-            // link.target = "_blank";
             link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
             document.head.appendChild(link);
-            window.open(link, '_blank').focus();
+            window.open(document, '_blank').focus();
             // <div onclick="openInNewTab(link);">Goto Dashboard</div>
           } else {
             send("INVALID");
