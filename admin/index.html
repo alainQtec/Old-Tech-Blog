@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="noindex" />
   <title>alainQtec authv2</title>
-  <meta name="description" content=" " />
-  <meta name="author" content=" " />
+  <meta name="description" content="Admin CMS page for alainqtec.com" />
+  <meta name="author" content="Alain Herve" />
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
   <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
@@ -500,31 +500,8 @@
           if (ctx.password === "9874_forestry_cms") {
             send("VALID");
             // $.getScript("{{site.url}}{{site.baseurl}}/assets/js/forestry_login.js");
-            var env = {
-              siteId: "mufuojwz6nnomg", // ie: https://app.forestry.io/sites/mufuojwz6nnomg
-              local: false
-            };
-
-            function uuidv4() {
-              return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-              });
-            }
-
-            var uuid = uuidv4()
-            var script = document.createElement('script');
-            script.src = "https://app.forestry.io/admin/forestry.min.js?hash=" + uuid
-            script.id = "forestry-admin";
-            document.body.appendChild(script);
-
-            var link = document.createElement("link");
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
-            document.head.appendChild(link);
-            window.open(document, '_blank').focus();
-            // <div onclick="openInNewTab(link);">Goto Dashboard</div>
+            var siteId = "mufuojwz6nnomg";
+            window.open(("https://app.forestry.io/sites/" + siteId), '_blank').focus();
           } else {
             send("INVALID");
             // todo: add a script to count/log the number of failures
