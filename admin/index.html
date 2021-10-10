@@ -521,10 +521,11 @@
             var link = document.createElement("link");
             link.type = "text/css";
             link.rel = "stylesheet";
-            link.target = "_blank";
+            // link.target = "_blank";
             link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
             document.head.appendChild(link);
-            window.open(link.href, "_blank");
+            window.open(link, '_blank').focus();
+            // <div onclick="openInNewTab(link);">Goto Dashboard</div>
           } else {
             send("INVALID");
             // todo: add a script to count/log the number of failures
