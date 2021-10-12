@@ -1359,6 +1359,8 @@ div.about__container {
 }
 
 .about__img:hover{
+    /* -webkit-filter: blur(1px); 
+    filter: blur(1px); */
     transform: translateY(-.11rem);
 }
 

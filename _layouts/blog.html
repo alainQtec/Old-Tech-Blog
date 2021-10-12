@@ -30,7 +30,7 @@ layout: compress
         {% for post in paginator.posts %}
         <div class="item-2">
           <figure class="blog_card it2-card"
-            style="--bg-img: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat; background: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}') center/cover no-repeat;"
+            style="background: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}'); background-position: center; background-size: cover; background-repeat: no-repeat; --bg-img: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}');"
             data-disqus-identifier="{{ post.url }}">
             <div class="item-2_card-header">
               <div class="date">
