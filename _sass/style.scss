@@ -3823,7 +3823,7 @@ div.gdpr_content {
     left: 0px;
     width: 100%;
     height: 100%;
-    border-radius: 1.4rem;
+    border-radius: 1rem;
     background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
     white-space: nowrap;
     visibility:hidden;
@@ -3858,9 +3858,9 @@ div.gdpr_content {
         color: var(--first-color);
 
         .icon {
-        vertical-align: text-top;
-        transition: 0.4s;
-        fill: #fff;
+            vertical-align: text-top;
+            transition: 0.4s;
+            fill: #fff;
             &:hover {
                 fill: var(--first-color-alt);
                 transform: rotate(90deg);
@@ -3877,6 +3877,7 @@ div.gdpr_content {
         opacity: 1;
         visibility: visible;
         transform: translate(0px, 0px) scale(1, 1);
+        height: 100vh;
     }
 }
 
@@ -3902,9 +3903,9 @@ div.gdpr_content {
         padding-right: 30px;
         outline: none;
 
-    &:focus {
-        border: 0;
-        border-bottom: 1px dashed var(--first-color-alt);
+        &:focus {
+            border: 0;
+            // border-bottom: 1px dashed var(--first-color-alt);
         }
     }
 
