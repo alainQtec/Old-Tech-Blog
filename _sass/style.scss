@@ -2929,16 +2929,24 @@ header * {
     display: none;
 }
 
-.fixed {
-    // position: -webkit-sticky !important;
-    // position: sticky !important;
-    position: fixed;
+.fixed1 {
+    position: relative;
     color: white;
     font-weight: 700;
     text-align: center;
     width: 100vw;
-    top: 50%;
+    // top: 50%;
     font-size: 24px;
+}
+
+.fixed2 {
+    position: relative;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    width: 100vw;
+    // top: 50%;
+    font-size: 14px;
 }
 
 .parallax__layer {
