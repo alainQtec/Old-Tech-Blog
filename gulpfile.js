@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var imageop = require('gulp-image-optimization');
 var sass = require("gulp-sass");
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
@@ -14,6 +15,14 @@ var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
 };
+
+gulp.task('images', function (cb) {
+  gulp.src(['assets/**/*.png', 'assets/**/*.jpg', 'assets/**/*.gif', 'assets/**/*.jpeg']).pipe(imageop({
+    optimizationLevel: 5,
+    progressive: true,
+    interlaced: true
+  })).pipe(gulp.dest('_site/assets/img')).on('end', cb).on('error', cb);
+});
 
 gulp.task('scss', function () {
   return gulp
@@ -40,3 +49,4 @@ gulp.task('watch-scss', function () {
   gulp.watch(inputScss, ['scss']);
   gutil.log(process.version);
 });
+
