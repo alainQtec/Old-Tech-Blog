@@ -3012,11 +3012,28 @@ header * {
     transform: rotate(123deg);
 }
 
+/* ------ Sticky ------*/
+
+.sticky-top,
+.sticky-bottom {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    transition: all 300ms;
+}
+
+.sticky-top {
+    top: 1.5px;
+}
+
+.sticky-bottom {
+    bottom: 10px;
+}
+
+
+
 /* -------- Navbar ----- */
 
 nav#navbar.navbar:before {
-    position: -webkit-sticky !important;
-    position: sticky !important;
     top: 0;
     left: 0;
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5) !important;
@@ -3027,16 +3044,12 @@ nav#navbar.navbar:before {
 
 .navbar,
 nav#navbar.navbar {
-    max-width: 968px;
-    width: 100%;
-
     top: 0;
     left: 0;
-    position: -webkit-sticky !important;
-    position: sticky !important;
-
     display: flex;
     flex-wrap: wrap;
+    max-width: 968px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto !important;
@@ -3047,8 +3060,6 @@ nav#navbar.navbar {
     background: inherit !important;
     background-position: bottom center;
 
-    border: 1px solid rgba(87, 87, 87, 0.042);
-    border-top: 1px solid var(--text-color) !important;
     backdrop-filter: blur(5px) !important;
     transition-delay: 1s;
 
@@ -3064,20 +3075,24 @@ nav#navbar.navbar,
     z-index: 8000 !important;
 }
 
+.search-form,
 .search-form:hover,
 .sr_results-container,
+.sr_results-container:hover,
 .close-search-button,
 .search-form-container:hover {
-    z-index: 9000 !important;
+    z-index: 9999 !important;
 }
 
-.navbar:hover {
-	-webkit-transition-delay: .5s;
-    transition-delay: .5s;
+.navbar:focus,
+.navbar:hover,
+nav#navbar.navbar:focus {
+    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: 8px !important;
 
-    // -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.618);
-	// -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.618);
-	// box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.618);
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.666);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.666);
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.666);
 
 	-webkit-border-radius: .5rem !important;
 	-moz-border-radius: .5rem !important;
@@ -3163,6 +3178,26 @@ nav#navbar.navbar,
 
 .navbar .dropdown ul li {
     min-width: 200px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul a i:hover,
+.navbar .dropdown ul li:hover,
+.navbar .dropdown ul li:focus {
+    transform: translateX(+2%);
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+.navbar a span:hover,
+.navbar ul a:hover,
+.navbar ul a span:hover,
+.navbar .dropdown ul a:hover,
+.navbar ul .dropdown a:hover,
+.navbar ul .dropdown a span:hover,
+.navbar .dropdown ul li a span:hover {
+    color: var(--first-color);
 }
 
 .navbar .dropdown ul a {
