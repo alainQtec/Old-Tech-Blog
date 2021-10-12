@@ -6,7 +6,7 @@
 
 ## **Backend**
 
-I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) : [http://localhost:4000/admin](http://localhost:4000/admin)
+I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/)
 
 or when I'm not on my PC I use [`Foresty Admin`](https://app.forestry.io/dashboard/#) : [https://alainqtec.com/admin](/admin)
 
