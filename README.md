@@ -32,7 +32,9 @@ cms
 
 Depending on which version of jekyll you'll be using you may face issues with dependencies and plugins.
 
-If this happens you'll have to troubleshoot that first. You can refer to these links:
+If this happens you'll have to troubleshoot that first. 
+
+Netlify CMS common errors include:
 
 [Fix netlify CMS Authentication problem](https://github.com/netlify/netlify-cms/issues/1474) and [Fix Jekyll menus issue: double-splats for hash parameters error](https://github.com/forestryio/jekyll-menus/commit/6c8b53eeb0d4b58743fb6461aa94d84004c8a35d).
 
