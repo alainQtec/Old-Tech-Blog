@@ -3190,14 +3190,8 @@ nav#navbar.navbar:focus {
     -moz-transition: .1s;
 }
 
-.navbar a span:hover,
-.navbar ul a:hover,
-.navbar ul a span:hover,
-.navbar .dropdown ul a:hover,
-.navbar ul .dropdown a:hover,
-.navbar ul .dropdown a span:hover,
-.navbar .dropdown ul li a span:hover {
-    color: var(--first-color);
+.navbar > li > span a:hover {
+    color: var(--first-color-lighter);
 }
 
 .navbar .dropdown ul a {

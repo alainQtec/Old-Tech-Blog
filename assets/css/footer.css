@@ -122,6 +122,7 @@ footer .logo {
 }
 
 .footer .col ul li:hover {
+  color: var(--first-color-lighter);
   transform: translateX(+3%);
   transition: .1s;
   -webkit-transition: .1s;
