@@ -2994,13 +2994,12 @@ div.blog::before {
 }
 
 .fixed3 {
-    position: fixed;
+    position: relative;
     top: 40% !important;
-    // -webkit-transform: translateZ(0);
-    // transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     margin: 0 auto;
     padding: 0;
-    justify-items: center;
 }
 
 

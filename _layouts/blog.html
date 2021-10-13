@@ -156,49 +156,10 @@ layout: compress
   <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <!--==================== MAIN JS ====================-->
   <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script> -->
   <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
-  <!-- Handle Stiky elements -->
-  <script>
-    $(() => {
-      const stuckClass = 'is-stuck';
-      const $stickyTopElements = $('.sticky-top');
-      const $stickyBottomElements = $('.sticky-bottom');
-
-      const determineSticky = () => {
-        $stickyTopElements.each((i, el) => {
-          const $el = $(el);
-          const stickPoint = parseInt($el.css('top'), 10);
-          const currTop = el.getBoundingClientRect().top;
-          const isStuck = currTop <= stickPoint;
-          $el.toggleClass(stuckClass, isStuck);
-        });
-
-        $stickyBottomElements.each((i, el) => {
-          const $el = $(el);
-          const stickPoint = parseInt($el.css('bottom'), 10);
-          const currBottom = el.getBoundingClientRect().bottom;
-          const isStuck = currBottom + stickPoint >= window.innerHeight;
-          $el.toggleClass(stuckClass, isStuck);
-        });
-      };
-
-      //run immediately
-      determineSticky();
-
-      //Run when the browser is resized or scrolled
-      //Uncomment below to run less frequently with a debounce
-      //let debounce = null;
-      $(window).on('resize scroll', () => {
-        //clearTimeout(debounce);
-        //debounce = setTimeout(determineSticky, 100);
-
-        determineSticky();
-      });
-
-    });
-  </script>
+  <!-- Toggle Stiky elements -->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/stiky-toggle.js"></script>
   <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
   </div>
   <script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script>
