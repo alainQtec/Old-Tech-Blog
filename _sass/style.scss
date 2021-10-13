@@ -2936,6 +2936,11 @@ div.blog::before, .blog::after {
     color: white;
 }
 
+.fixed1:focus, .fixed1:hover,
+.fixed2:focus, .fixed2:hover {
+    cursor: pointer;
+}
+
 .fixed2 {
     position: relative;
     text-align: center;
