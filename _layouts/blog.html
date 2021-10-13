@@ -52,11 +52,16 @@ layout: compress
               <div class="data">
                 <div class="content">
                   <span class="post-category">{{ post.category }}</span>
-                  <div class="blog_post_title"><a style="text-shadow: #000000e3;"
-                      href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+                  <!-- // assign post_url = post.url | append: '#disqus_thread' | prepend: site.baseurl //  Not recommended -->
+                  {% assign post_url = post.url | prepend: site.baseurl %}
+                  <!-- since I used : data-disqus-identifier -->
+                  <div class="blog_post_title">
+                    <a style="text-shadow: #000000e3;" href="{{ post_url }}">{{ post.title }}</a>
+                  </div>
                   <p class="post-scroll-i"> </p>
-                  <span class="post-summary"><a href="{{ post.url | prepend: site.baseurl }}"
-                      data-disqus-identifier="{{ post.url }}">{{post.summary}}</a></span>
+                  <span class="post-summary">
+                    <a href="{{ post_url }}" data-disqus-identifier="{{ post.url }}">{{post.summary}}</a>
+                  </span>
                 </div>
               </div>
             </figure>

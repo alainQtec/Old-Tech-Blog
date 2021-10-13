@@ -248,10 +248,6 @@ sharing:
 comments:
   provider: "disqus" # false (default), "disqus", "gitalk", "valine", "custom"
 
-  ## Disqus
-  disqus:
-    shortname: # the Disqus shortname for the site
-
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
@@ -270,6 +266,9 @@ comments:
     placeholder: # Prompt information
     visitor: # false (default)
     meta: # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
+
+## Disqus
+disqus_shortname: "alainqtec" # the Disqus shortname for the site
 
 ## => Pageview
 ##############################

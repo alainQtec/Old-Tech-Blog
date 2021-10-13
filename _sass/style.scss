@@ -2126,6 +2126,15 @@ div.band {
     grid-gap: 18px;
 }
 
+
+.blog_card::before,
+.blog_card.it2-card::before,
+.firststblog_card::before {
+    background-color: var(--body-color);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
 .firststblog_card,
 .blog_card {
     background: white;

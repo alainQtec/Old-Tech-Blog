@@ -27,10 +27,13 @@ comments: true
     //%- include hyvor_comments.html -%//
   //%- endif -%//
   -->
+  {% if page.comments %}
   {% if site.disqus_shortname %}
   {%- include disqus-comments.html -%}
   {% endif %}
+  {% endif %}
 </div>
+<script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
 {%- include share_page.html -%}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
