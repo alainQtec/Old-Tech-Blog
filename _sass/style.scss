@@ -2879,6 +2879,7 @@ header,
 header, header:before {
     background: 50% 50% / cover;
 }
+
 header::before {
     bottom: 0;
     content: "";
@@ -2929,15 +2930,64 @@ header * {
     display: none;
 }
 
+/*-----------------------------------------------*/
+/*               Blog & Parallax                 */
+/*-----------------------------------------------*/
+
+div.blog, div.blog:before {
+    background: 50% 50% / cover;
+}
+div.blog {
+    box-sizing: border-box;
+    // min-height: 40vw;
+    // padding: 30vw 0 5vw;
+    position: relative;
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+    // width: 100vw;
+    // top: 0 !important;
+}
+div.blog::before {
+    // display: block;
+    // background-color: #8a8;
+    // background-image: url(http://ksk-soft.com/css_labo/dimg/orengeFlower.jpg);
+    background-size: cover;
+    -webkit-transform-origin: center center 0;
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+}
+
+.blog_parallax {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    margin: 0;
+    padding: 0;
+    font: 100% / 1.5 Arial;
+    background: linear-gradient(135deg, #3e028c -50%, #000 100%);
+    /* background-image: linear-gradient(135deg, #e7627d 0%, #b8235a 25%, #801357 50%, #3d1635 75%, #1c1a27 100%); */
+    -webkit-border-radius: .5rem !important;
+	-moz-border-radius: .5rem !important;
+	border-radius: .5rem !important;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .fixed1 {
     position: relative;
     color: white;
     font-weight: 700;
     text-align: center;
     width: 100vw;
-    top: 50%;
+    top: 10%;
     font-size: 24px;
 }
+
 
 .fixed2 {
     position: relative;
@@ -2945,8 +2995,27 @@ header * {
     font-weight: 400;
     text-align: center;
     width: 100vw;
-    top : 90%;
+    top : 30%;
     font-size: 14px;
+}
+
+.fixed3 {
+    position: relative;
+    top : 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.fixed4 {
+    position: relative;
+    top : 80%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.fixed1:hover {
+    color: var(--bold-color);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
 
 .parallax__layer {
@@ -2975,6 +3044,11 @@ header * {
 .parallax__layer--back3 {
     -webkit-transform: translateZ(-12px) scale(6);
     transform: translateZ(-12px) scale(6);
+}
+
+.parallax__layer--back4 {
+    -webkit-transform: translateZ(-16px) scale(9);
+    transform: translateZ(-16px) scale(9);
 }
 
 /* add some padding to force scrollbars */
