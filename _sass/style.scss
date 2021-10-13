@@ -1269,10 +1269,16 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
 .main {
-    // background-color: var(--main-background-color) !important;
     position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    margin: 0 auto;
+    padding: 0;
+    -webkit-border-radius: .5rem !important;
+	-moz-border-radius: .5rem !important;
+    border-radius: .5rem;
+    background: var(--body-background-image);
 }
 
 .reactions-view {
@@ -2862,18 +2868,12 @@ header, header:before {
 
 header,
 #header.header {
-    height: 15%;
-    min-height: 15%;
-    // height: 40vh;
+    width: 100vw;
+    top: 0 !important;
+    height: 17%;
+    min-height: 17%;
     box-sizing: border-box;
     // position: relative;
-    // -webkit-transform-style: inherit;
-    // transform-style: inherit;
-    // width: 100vw;
-    top: 0 !important;
-    // 	   -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    // 	   -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    // 	   box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 }
 
 /*-----------------------------------------------*/
@@ -2911,9 +2911,6 @@ div.blog::before {
     font: 100% / 1.5 Arial;
     background: linear-gradient(135deg, #3e028cc9 -50%, #000 100%);
     /* background-image: linear-gradient(135deg, #e7627d 0%, #b8235a 25%, #801357 50%, #3d1635 75%, #1c1a27 100%); */
-    -webkit-border-radius: .1rem !important;
-	-moz-border-radius: .1rem !important;
-	border-radius: .1rem !important;
     &::-webkit-scrollbar {
         display: none;
         visibility: hidden;
@@ -2929,7 +2926,6 @@ div.blog::before {
     font-size: 24px;
 }
 
-
 .fixed2 {
     position: relative;
     text-align: center;
@@ -2938,18 +2934,17 @@ div.blog::before {
     font-size: 14px;
 }
 
-.fixed3 {
-    position: relative;
-    top: 30% !important;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    margin: 0 auto;
-    padding: 0;
-    -webkit-border-radius: .5rem !important;
-	-moz-border-radius: .5rem !important;
-    border-radius: .5rem;
-    background: var(--body-background-image);
-}
+// .fixed3 {
+//     position: relative;
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//     margin: 0 auto;
+//     padding: 0;
+//     -webkit-border-radius: .5rem !important;
+// 	-moz-border-radius: .5rem !important;
+//     border-radius: .5rem;
+//     background: var(--body-background-image);
+// }
 
 .fixed1:hover {
     color: var(--bold-color);
