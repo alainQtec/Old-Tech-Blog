@@ -2990,7 +2990,7 @@ div.blog::before {
 
 .fixed3 {
     position: relative;
-    top: 40% !important;
+    top: 30% !important;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     margin: 0 auto;
@@ -3000,8 +3000,8 @@ div.blog::before {
 }
 
 .fixed4 {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    // top: 30% !important;
 }
 
 .fixed1:hover {
