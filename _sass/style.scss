@@ -2870,10 +2870,10 @@ header,
 #header.header {
     width: 100vw;
     top: 0 !important;
-    height: 25%;
-    min-height: 25%;
+    // height: 25%;
+    min-height: 19vw;
     box-sizing: border-box;
-    // position: relative;
+    position: relative;
 }
 
 /*-----------------------------------------------*/
@@ -2925,7 +2925,7 @@ div.blog::before, .blog::after {
     color: white;
     text-align: center;
     width: 100vw;
-    // top: 10%;
+    top: 10%;
     font-size: 24px;
 }
 
@@ -2933,15 +2933,14 @@ div.blog::before, .blog::after {
     position: relative;
     text-align: center;
     width: 100vw;
-    // top : 30%;
-    font-size: 14px;
+    top : 20%;
+    font-size: 16px;
 }
 
-
-.fixed1:hover {
-    color: var(--bold-color);
+.fixed2 span:hover {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
+
 
 .parallax__layer {
     position: absolute;
