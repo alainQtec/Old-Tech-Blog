@@ -2940,7 +2940,7 @@ div.blog::before, .blog::after {
     position: relative;
     text-align: center;
     width: 100vw;
-    top : 20%;
+    top : 30%;
     z-index: 1000;
 }
 
@@ -2953,6 +2953,11 @@ div.blog::before, .blog::after {
     font-size: 16px;
     font-family: var(--body-font);
     font-weight: var(--font-medium);
+}
+
+.fixed1 span:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    color: var(--first-color-lighter);
 }
 
 .fixed2 span:hover {
