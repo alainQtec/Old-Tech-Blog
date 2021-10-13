@@ -2873,7 +2873,7 @@ header,
     // height: 25%;
     min-height: 19vw;
     box-sizing: border-box;
-    // position: relative;
+    /* position  -not- relative; */
 }
 
 /*-----------------------------------------------*/
@@ -2927,6 +2927,7 @@ div.blog::before, .blog::after {
     width: 100vw;
     top: 10%;
     font-size: 24px;
+    z-index: 1000;
 }
 
 .fixed2 {
@@ -2935,6 +2936,7 @@ div.blog::before, .blog::after {
     width: 100vw;
     top : 20%;
     font-size: 16px;
+    z-index: 1000;
 }
 
 .fixed2 span:hover {
@@ -2956,6 +2958,7 @@ div.blog::before, .blog::after {
     left: 0;
     height: 85%;
     width: 100%;
+    z-index: -1;
 }
 
 .parallax__layer--base {
