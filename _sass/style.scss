@@ -3014,7 +3014,6 @@ div.blog::before {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 5vh;
     padding: 100% 0; /* add some padding to force scrollbars */
 }
 
@@ -3061,7 +3060,7 @@ div.blog::before {
     position: absolute;
     top: -50%;
     left: 0;
-    height: 100%;
+    height: 40%;
     width: 100%;
 }
 .starfield span:nth-child(2) {
