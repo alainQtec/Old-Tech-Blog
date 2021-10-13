@@ -2736,7 +2736,8 @@ pre.highlight,
 figure.highlight pre {
     border-radius: .5em;
     border-top: 1px solid var(--text-color) !important;
-    background: var(--card-background-color);
+    background-color: #000;
+    background: #000;
 }
 
 code.language-cmd {
