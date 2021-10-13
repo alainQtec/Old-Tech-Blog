@@ -3014,8 +3014,8 @@ div.blog::before {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 10vh;
-    padding: 100vh 0; /* add some padding to force scrollbars */
+    height: 5vh;
+    padding: 100% 0; /* add some padding to force scrollbars */
 }
 
 .parallax__layer--base {
