@@ -34,10 +34,8 @@ layout: compress
         <span></span>
       </div>
     </div>
-    <div class="fixed4">
+    <main class="fixed3 main" id="scroll-animate">
       {%- include navbar.html -%}
-    </div>
-    <main class="main parallax__layer fixed3" id="scroll-animate">
       {%- include mobile_menu.html -%}
       <div class="content">
         <!-- whats new {slider} -->
@@ -146,13 +144,13 @@ layout: compress
           {% endif %}
         </div>
         {%- include ads_inpage.html -%}
-
         <div id="newsletter_footer">
           {%- include blog_newsletter.html -%}
         </div>
       </div>
-      {%- include footer.html-%}
+      <!-- <div class="cont_bg"></div> -->
     </main>
+    {%- include footer.html-%}
   </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
