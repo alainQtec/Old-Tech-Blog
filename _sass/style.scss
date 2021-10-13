@@ -2873,14 +2873,14 @@ header,
     // height: 25%;
     min-height: 19vw;
     box-sizing: border-box;
-    position: relative;
+    // position: relative;
 }
 
 /*-----------------------------------------------*/
 /*               Blog & Parallax                 */
 /*-----------------------------------------------*/
 div.blog::before {
-    // display: block;
+    display: block;
     background-size: cover;
         -webkit-transform-style: inherit;
     transform-style: inherit;
