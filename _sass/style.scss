@@ -3062,7 +3062,7 @@ nav#navbar.navbar:before {
     left: 0;
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5) !important;
 	filter: blur(10px) !important;
-    background: inherit !important;
+    background: transparent !important;
 	overflow: hidden;
 }
 
@@ -3082,7 +3082,7 @@ nav#navbar.navbar {
     justify-self: center !important;
     text-align: center !important;
 
-    background: inherit !important;
+    background: transparent !important;
     background-position: bottom center;
 
     backdrop-filter: blur(5px) !important;
