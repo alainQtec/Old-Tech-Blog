@@ -2951,7 +2951,7 @@ div.blog::before {
 
 .blog_parallax {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-perspective: 1px;
@@ -2964,10 +2964,10 @@ div.blog::before {
     -webkit-border-radius: .5rem !important;
 	-moz-border-radius: .5rem !important;
 	border-radius: .5rem !important;
-    &::-webkit-scrollbar {
-        display: none;
-        visibility: hidden;
-    }
+    // &::-webkit-scrollbar {
+    //     display: none;
+    //     visibility: hidden;
+    // }
 }
 
 .fixed1 {
@@ -2999,6 +2999,10 @@ div.blog::before {
     background: var(--body-background-image);
 }
 
+.fixed4 {
+    position: absolute;
+    bottom: 0;
+}
 
 .fixed1:hover {
     color: var(--bold-color);
@@ -3006,12 +3010,23 @@ div.blog::before {
 }
 
 .parallax__layer {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 100% 0; /* add some padding to force scrollbars */
+    // padding: 5% 0; /* add some padding to force scrollbars */
+}
+
+.starspace {
+    height: 15%;
+}
+.starfield > * {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 85%;
+    width: 100%;
 }
 
 .parallax__layer--base {
@@ -3052,16 +3067,6 @@ div.blog::before {
     radial-gradient(2px 2px at 110px 90px, rgb(255, 0, 0), rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 190px 150px, rgb(255, 200, 0), rgba(0, 0, 0, 0));
     background-repeat: repeat;
-}
-.starspace {
-    height: 15%;
-}
-.starfield > * {
-    position: absolute;
-    top: -50%;
-    left: 0;
-    height: 85%;
-    width: 100%;
 }
 
 .starfield span:nth-child(2) {
