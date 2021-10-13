@@ -2863,15 +2863,14 @@ header, header:before {
 header,
 #header.header {
     height: 15%;
+    min-height: 15%;
     // height: 40vh;
     box-sizing: border-box;
-    // min-height: 40vw;
-    // padding: 30vw 0 5vw;
     // position: relative;
     // -webkit-transform-style: inherit;
     // transform-style: inherit;
     // width: 100vw;
-    // top: 0 !important;
+    top: 0 !important;
     // 	   -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
     // 	   -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
     // 	   box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
@@ -2912,9 +2911,9 @@ div.blog::before {
     font: 100% / 1.5 Arial;
     background: linear-gradient(135deg, #3e028cc9 -50%, #000 100%);
     /* background-image: linear-gradient(135deg, #e7627d 0%, #b8235a 25%, #801357 50%, #3d1635 75%, #1c1a27 100%); */
-    -webkit-border-radius: .5rem !important;
-	-moz-border-radius: .5rem !important;
-	border-radius: .5rem !important;
+    -webkit-border-radius: .1rem !important;
+	-moz-border-radius: .1rem !important;
+	border-radius: .1rem !important;
     &::-webkit-scrollbar {
         display: none;
         visibility: hidden;
@@ -2946,6 +2945,8 @@ div.blog::before {
     transform: translateZ(0);
     margin: 0 auto;
     padding: 0;
+    -webkit-border-radius: .5rem !important;
+	-moz-border-radius: .5rem !important;
     border-radius: .5rem;
     background: var(--body-background-image);
 }
