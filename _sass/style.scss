@@ -1270,11 +1270,10 @@ body {
     overflow-x: hidden;
 }
 
-// main {
-//     background-color: var(--main-background-color) !important;
-//     position: relative;
-//     z-index: 2;
-// }
+.main {
+    // background-color: var(--main-background-color) !important;
+    position: relative;
+}
 
 .reactions-view {
     color: var(--bold-color) !important;
@@ -2981,21 +2980,18 @@ div.blog::before {
 .fixed1 {
     position: relative;
     color: white;
-    font-weight: 700;
     text-align: center;
     width: 100vw;
-    top: 10%;
+    // top: 10%;
     font-size: 24px;
 }
 
 
 .fixed2 {
     position: relative;
-    color: white;
-    font-weight: 400;
     text-align: center;
     width: 100vw;
-    top : 30%;
+    // top : 30%;
     font-size: 14px;
 }
 
@@ -3008,7 +3004,8 @@ div.blog::before {
 
 .fixed4 {
     position: relative;
-    top : 80%;
+    // top : 80%;
+    bottom: 0%;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }

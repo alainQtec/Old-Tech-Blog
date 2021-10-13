@@ -295,7 +295,7 @@ footer .logo {
 
 header,
 footer,
-main {
+.main {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
