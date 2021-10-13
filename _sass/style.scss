@@ -2922,12 +2922,18 @@ div.blog::before, .blog::after {
 
 .fixed1 {
     position: relative;
-    color: white;
     text-align: center;
     width: 100vw;
     top: 10%;
-    font-size: 24px;
     z-index: 1000;
+}
+
+.fixed1,
+.fixed1 p,
+.fixed1 p span,
+.fixed1 span {
+    font-size: 24px;
+    color: white;
 }
 
 .fixed2 {
@@ -2935,14 +2941,24 @@ div.blog::before, .blog::after {
     text-align: center;
     width: 100vw;
     top : 20%;
-    font-size: 16px;
     z-index: 1000;
+}
+
+.fixed2,
+.fixed2 p,
+.fixed2 p span,
+.fixed2 span {
+    color: var(--text-color-light);
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
 }
 
 .fixed2 span:hover {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    color: var(--bold-color);
 }
-
 
 .parallax__layer {
     position: absolute;
