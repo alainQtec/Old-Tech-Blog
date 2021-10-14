@@ -6,7 +6,7 @@
 
 ## **Backend**
 
-[`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) or [`Foresty Admin`](https://app.forestry.io/dashboard/#) when I'm not on my PC. [https://alainqtec.com/admin](/admin)
+[`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) or [`Foresty Admin`](https://app.forestry.io/dashboard/#) when I'm not on my PC. [alainqtec.com/admin](https://alainqtec.com/admin)
 
 Prerequisites:
 
