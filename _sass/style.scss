@@ -3933,9 +3933,9 @@ div.gdpr_content {
         opacity: 1;
         visibility: visible;
         transform: translate(0px, 0px) scale(1, 1);
-        height: 100%;
+        height: 100vh;
         
-        top: 5%;
+        top: 2%;
         position: -webkit-sticky !important;
         position: sticky !important;
         transition: all 300ms;
