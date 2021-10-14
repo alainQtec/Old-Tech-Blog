@@ -3351,6 +3351,15 @@ a.nav-link.scrollto {
     font-weight: var(--font-semi-bold);
 }
 
+.nav-chevron {
+    font-style: normal !important;
+    &:focus,
+    &:hover {
+        fill: var(--first-color-alt);
+        transform: rotate(90deg);
+    }
+}
+
 // /===================================/
 //  * Mobile Navigation 
 // /===================================/
