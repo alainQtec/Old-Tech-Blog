@@ -3355,6 +3355,7 @@ a.nav-link.scrollto {
     font-style: normal !important;
     &:focus,
     &:hover {
+        color: var(--first-color-alt);
         fill: var(--first-color-alt);
         transform: rotate(90deg);
     }
