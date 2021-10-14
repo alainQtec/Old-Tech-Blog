@@ -4,7 +4,7 @@ author: alain
 title: Basic Networking with PowerShell
 date: 2021-08-30T04:57:23.752Z
 thumbnail-img: /assets/img/posts/powershell.jpg
-category: guides
+category: it-ops
 summary: Get started on how to use powershell with networking
 keywords: PowerShell, Networking
 thumbnail: /assets/img/posts/powershell.jpg

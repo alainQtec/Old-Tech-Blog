@@ -2,12 +2,12 @@
 title: Install Windows Drivers using powershell
 layout: post
 author: alain
-thumbnail-img: /assets/img/posts/pexels-luis-gomes-546819.jpg
-category: android
+thumbnail-img: "/assets/img/posts/pexels-luis-gomes-546819.jpg"
+category: it-ops
 summary: Learn how to fix and install drivers using poweshell
 keywords: powershell, driver
-thumbnail: /assets/img/posts/pexels-luis-gomes-546819.jpg
-permalink: /blog/install-windows-drivers-using-powershell
+thumbnail: "/assets/img/posts/pexels-luis-gomes-546819.jpg"
+permalink: "/blog/install-windows-drivers-using-powershell"
 ---
 
 ## Summary

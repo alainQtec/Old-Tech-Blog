@@ -10,6 +10,7 @@ keywords: PowerShell, Active Directory
 thumbnail: /assets/img/posts/code.jpg
 permalink: /blog/reset-active-directory-password
 ---
+
 >## Contents
 >
 >>- 1. Prerequisites
