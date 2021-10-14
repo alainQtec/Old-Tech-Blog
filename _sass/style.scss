@@ -3344,15 +3344,24 @@ a.nav-link.scrollto {
     font-weight: 600;
 }
 
-.nav-sublink {
+.nav-sublink,
+.nav-chevron {
+    color: var(--text-color);
     font-style: normal !important;
     font-size: 15px !important;
-    color: var(--text-color);
+}
+
+.nav-sublink {
     font-weight: var(--font-semi-bold);
+    &:focus,
+    &:hover {
+        color: var(--first-color-alt);
+        fill: var(--first-color-alt);
+    }
 }
 
 .nav-chevron {
-    font-style: normal !important;
+    // font-weight: var(--font-semi-bold);
     &:focus,
     &:hover {
         color: var(--first-color-alt);
