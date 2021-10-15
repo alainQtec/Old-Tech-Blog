@@ -1,6 +1,8 @@
 <!-- Jquery -->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
 <!-- <script src="{{site.url}}{{site.baseurl}}/assets/bower_components/jquery/dist/jquery.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="{{site.url}}{{site.baseurl}}/assets/bower_components/jquery.easing/jquery.easing.min.js"></script>
@@ -52,3 +54,36 @@
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve"
   data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)"
   data-position="right" data-x_margin="10" data-y_margin="10"></script>
+
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!--==================== MAIN JS ====================-->
+<!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script> -->
+<script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
+<!-- Toggle Stiky elements -->
+<script src="{{site.url}}{{site.baseurl}}/assets/js/stiky-toggle.js"></script>
+<div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
+</div>
+<script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script>
+
+<div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
+</div>
+<script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!-- Vendor JS Files -->
+<!-- <script src="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/vendor/php-email-form/validate.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/vendor/purecounter/purecounter.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/vendor/typed.js/typed.min.js"></script> -->
