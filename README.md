@@ -6,9 +6,7 @@
 
 ## **Backend**
 
-I manage the site locally using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/)
-
-or when I'm not on my PC I use [`Foresty Admin`](https://app.forestry.io/dashboard/#) : [https://alainqtec.com/admin](/admin)
+[`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/) or [alainqtec.com/admin](https://alainqtec.com/admin) when I'm not on my PC.
 
 Prerequisites:
 
