@@ -30,6 +30,7 @@ layout: compress
           </div>
           {% for post in paginator.posts %}
           <div class="item-2">
+            <!-- TODO: Use data uris. ex: background-image: url("data:image/png;base64,iVBOR...rkJggg=="); -->
             <figure class="blog_card it2-card"
               style="background: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}'); background-position: center; background-size: cover; background-repeat: no-repeat; --bg-img: url('{{site.url}}{{site.baseurl}}{{ post.thumbnail }}');"
               data-disqus-identifier="{{ post.url }}">
