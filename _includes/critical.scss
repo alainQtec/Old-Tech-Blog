@@ -1,0 +1,12 @@
+// nothing to see here !
+
+// I tried using the below code in head.html , but it did not work ?!
+//
+// <style>
+// {% capture include_to_scssify %}
+// {% include critical.scss %}
+// {% endcapture %}
+// {{ include_to_scssify | scssify }}
+// </style>
+//
+// TODO: Figure out a hack to make it work
