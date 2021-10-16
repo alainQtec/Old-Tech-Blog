@@ -158,7 +158,7 @@ compress_html:
   endings: all
   ignore:
     envs: ["development"]
-
+# sass
 sass:
   style: compressed
 
