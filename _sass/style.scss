@@ -4514,6 +4514,10 @@ section#letter form {
     justify-content: space-around;
 }
 
+.crach_bot_signups {
+    position: absolute;
+    left: -5000px;
+}
 @media (min-width: 500px) {
     section#letter,
     #mc-embedded-subscribe-form {
