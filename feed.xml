@@ -1,0 +1,3835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alainQtec</title>
+    <description>Howdy ! I'm Alain, a developer 👨‍💻. passionate and helping you get more done, using quick tech solutions.
+</description>
+    <link>https://www.alainqtec.com/</link>
+    <atom:link href="https://www.alainqtec.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 16 Oct 2021 18:13:06 +0200</pubDate>
+    <lastBuildDate>Sat, 16 Oct 2021 18:13:06 +0200</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+
+    
+      <item>
+        <title>Quick guide to using ADB Platform Tools</title>
+        <description>&lt;h1 id=&quot;pre-requisites-for-using-adb&quot;&gt;Pre-Requisites for Using ADB&lt;/h1&gt;
+
+&lt;p&gt;Setup all of the following to use ADB&lt;/p&gt;
+
+&lt;h2 id=&quot;setup-computer-with-adb-platform-tools&quot;&gt;Setup Computer with ADB Platform Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Windows Install with Chocolatey &lt;strong&gt;choco install adb&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux Install with Terminal &lt;strong&gt;sudo apt-get install android-tools-adb android-tools-fastboot&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;MacOS Install with Homebrew&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Homebrew install - &lt;strong&gt;ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;ADB Homebrew Install -&lt;strong&gt;brew cask install android-platform-tools&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Setup Phone for ADB Debugging
+Open Settings, and select “About”.
+Tap on “Build number” seven times.
+Go back, and select “Developer options”.
+Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.
+Plug your device into your computer.
+On the computer, open up a terminal/command prompt and type adb devices.
+A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.
+Note: If you don’t see this prompt on you device change the usb connection to MTP or File Transfer on the device
+ADB Commands - These only work when device is booted
+adb devices - shows all connected adb devices
+adb shell - launches a shell on the device
+adb shell pm list packages - list all installed packages on the device
+adb shell pm list packages -3”|cut -f 2 -d “: - lists all user installed packages
+adb push &lt;local&gt; &lt;remote&gt; - pushes the file to
+adb pull &lt;remote&gt; [&lt;local&gt;] - pulls the file to . If isn’t specified, it will pull to the current folder.
+adb logcat - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour
+adb install &lt;file&gt; - installs the given .apk file to your device
+adb uninstall com.packagename - uninstalls package from shell pm list packages
+Note: if you encounter “[DELETE_FAILED_INTERNAL_ERROR]” type this to bypass: adb shell pm uninstall --user 0 &lt;appname&gt;
+adb reboot - reboots system
+adb reboot bootloader - reboots to bootloader
+adb reboot recovery - reboots into recovery mode
+adb reboot fastboot - reboots into fastboot mode
+Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode
+fastboot devices - shows all connected devices
+fastboot reboot - reboots device - can add bootloader, recovery, and fastboot
+fastboot oem device-info - shows oem bootloader status (unlocked or locked)
+fastboot oem unlock - unlocks oem phones - note: aosp and unlocked phones don’t need this
+fastboot flashing unlock - unlocks system for custom rom in pixel and other phones
+fastboot flashing unlock_critical - unlocks bootloader and system partitions - note: this isn’t generally needed
+fastboot format:ext4 userdata - format userdata on device - note: this will erase your entire device
+fastboot boot recovery.img - test recovery image without flashing
+fastboot flash recovery recovery.img - flash recovery image then run fastboot reboot recovery to boot into it.
+fastboot flash boot boot.img - flash boot image - this is the kernel
+fastboot -w - wipes device
+fastboot update &amp;lt;/path/to/your/Rom.zip&amp;gt; - flashes zip to the device
+Chris Titus Tech
+Social
+Twitter - https://twitter.com/christitustech
+YouTube - https://youtube.com/c/ChrisTitusTech
+Twitch - https://twitch.tv/christitustech
+Odysee / LBRY (Privacy) - https://christitus.com/lbry
+Exclusive Content
+ChrisTitus.com Members Section (CC Only)
+Digital Downloads with Guides and Pre-Built Images
+Monthly Members Only Video
+$5 Per Month (100% of Proceeds goes to Chris Titus Tech)
+YouTube Chris Titus Tech Membership (All Payments Accepted)
+Monthly Members Only Video
+YouTube Emojis for Comments and Live Chat
+YouTube Badges that changes based on membership time for comments and chat.
+All YouTube comments are highlighted when I review comments daily.
+$4.99 Per Month (70% of the Proceeds goes to Chris Titus Tech)&lt;/appname&gt;&lt;/file&gt;&lt;/local&gt;&lt;/remote&gt;&lt;/remote&gt;&lt;/local&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Sep 2021 00:00:00 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/guide-to-using-adb-platform-tools</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/guide-to-using-adb-platform-tools</guid>
+      </item>
+    
+      <item>
+        <title>Install Windows Drivers using powershell</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;When building any computer, virtual or physical, it requires drivers. This script will allow you to place a folder of .inf (and associated) files onto a computer and then install all relevant drivers. This script is tested as working on Windows Server 2016 and Windows Server 2016 Core.&lt;/p&gt;
+
+&lt;p&gt;Get-ChildItem “C:\mydrivers&quot; -Recurse -Filter “*.inf” |
+ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }&lt;/p&gt;
+
+&lt;p&gt;https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d#file-install-windowsdriversfromfolder-ps1&lt;/p&gt;
+
+&lt;p&gt;Or view &lt;a href=&quot;https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d/raw/e3835f883e1b8611f50718a73cb6ffc29a5fc04f/Install-WindowsDriversFromFolder.ps1&quot;&gt;RAW&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
+&lt;p&gt;The script is very simple:&lt;/p&gt;
+
+&lt;p&gt;Get-ChildItem retrieves any files with a .inf extension in the C:\mydrivers\ directory and its subfolders
+ForEach-Object loops over these and performs the commands in the script block { } against them
+PNPUtil.exe is a CLI utility for management of the Windows driver store. The /add-driver argument adds the specified driver to the driver store. /install installs the driver, resolving any missing driver issues for any attached hardware the driver suits&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Sep 2021 00:00:00 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/install-windows-drivers-using-powershell</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/install-windows-drivers-using-powershell</guid>
+      </item>
+    
+      <item>
+        <title>Basic Networking with PowerShell</title>
+        <description>&lt;!--StartFragment--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/&quot;&gt;PowerShell&lt;/a&gt; together with networking are becoming more and more important. I created this little cheat sheet so it becomes easy for people to get started.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-networking-powershell-cmdlets&quot;&gt;Basic Networking PowerShell cmdlets&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPConfiguration-1024x569.png&quot; alt=&quot;Get-NetIPConfiguration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get the IP Configuration (ipconfig with PowerShell)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetIPConfiguration&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;List all Network Adapters&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get a spesific network adapter by name&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ethernet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get more information VLAN ID, Speed, Connection status&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ft&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Linkspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;VlanID&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get driver information&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ft&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DriverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DriverVersion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DriverInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DriverFileName&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get adapter hardware information. This can be really usefull when you need to know the PCI slot of the NIC.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapterHardwareInfo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Disable and Enable a Network Adapter&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Disable-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless Network Connection&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Enable-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless Network Connection&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Rename a Network Adapter&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Rename-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless Network Connection&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-NewName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;ip-configuration-using-powershell&quot;&gt;IP Configuration using PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPAddress-1024x420.png&quot; alt=&quot;PowerShell Networking Get-NetIPAddress&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get IP and DNS address information&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Local Area Connection&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-NetIPAddress&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get IP address only&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Local Area Connection&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-NetIPAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IPv4Address&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get DNS Server Address information&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Local Area Connection&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-DnsClientServerAddress&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Set IP Address&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;New-NetIPAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-IPv4Address&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;10.0.1.95&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-PrefixLength&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;24&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-DefaultGateway&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;10.0.1.1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;or if you want to change a existing IP Address&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set-NetIPAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-IPv4Address&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;192.168.12.25&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-PrefixLength&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;24&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Remove IP Address&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove-NetIPAddress&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Set DNS Server&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set-DnsClientServerAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ServerAddresses&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10.10.20.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10.10.20.2&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Set interface to DHCP&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set-NetIPInterface&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wireless&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Dhcp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Enabled&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Clear DNS Cache with PowerShell&lt;/p&gt;
+
+&lt;p&gt;You can also manage your DNS cache with PowerShell.&lt;/p&gt;
+
+&lt;p&gt;List DNS Cache:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-DnsClientCache&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Clear DNS Cache&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Clear-DnsClientCache&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;ping-with-powershell&quot;&gt;Ping with PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Test-NetConnection-Ping-1024x599.png&quot; alt=&quot;PowerShell Networking Test-NetConnection Ping&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to Ping with PowerShell. For a simple ping command with PowerShell, you can use the Test-Connection cmdlet:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Test-Connection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alainqtec.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There is an advanced way to test connection using PowerShell&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComputerName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.alainqtec.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get some more details from the Test-NetConnection&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComputerName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.alainqtec.com&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InformationLevel&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Detailed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ping multiple IP using PowerShell&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComputerName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x.x.x.&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FT&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AutoSize&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;tracert&quot;&gt;Tracert&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Tracert-1024x425.png&quot; alt=&quot;PowerShell Tracert&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tracert with PowerShell&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.thomasmaurer.ch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TraceRoute&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;portscan-with-powershell&quot;&gt;Portscan with PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Portscan-1024x505.png&quot; alt=&quot;PowerShell Portscan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use PowerShell to check for open port&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComputerName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.thomasmaurer.ch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test-NetConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComputerName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.thomasmaurer.ch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-CommonTCPPort&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HTTP&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;nslookup-in-powershell&quot;&gt;NSlookup in PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-NSlookup-1024x352.png&quot; alt=&quot;PowerShell Networking NSlookup&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NSlookup using PowerShell:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Resolve-DnsName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.thomasmaurer.ch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Resolve-DnsName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www.thomasmaurer.ch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Type&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MX&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Server&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;8.8.8.8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;route-in-powershell&quot;&gt;Route in PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Route-1024x448.png&quot; alt=&quot;PowerShell Networking Route&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to replace Route command with PowerShell&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetRoute&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Protocol&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Local&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-DestinationPrefix&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;192.168&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-NetRoute&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Wi-Fi&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New-NetRoute&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DestinationPrefix&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10.0.0.0/24&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;InterfaceAlias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ethernet&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NextHop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;192.168.192.1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;netstat-in-powershell&quot;&gt;NETSTAT in PowerShell&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Netstat-1024x448.png&quot; alt=&quot;PowerShell Networking Netstat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to replace NETSTAT with PowerShell&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetTCPConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Get-NetTCPConnection&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Established&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;nic-teaming-powershell-commands&quot;&gt;NIC Teaming PowerShell commands&lt;/h2&gt;
+
+&lt;p&gt;Create a new NIC Teaming (Network Adapter Team)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;New-NetLbfoTeam&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NICTEAM01&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TeamMembers&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ethernet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ethernet2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TeamingMode&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SwitchIndependent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TeamNicName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NICTEAM01&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-LoadBalancingAlgorithm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Dynamic&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;smb-related-powershell-commands&quot;&gt;SMB Related PowerShell commands&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/SMB-PowerShell-SMB-Client-Configuration-1024x521.png&quot; alt=&quot;SMB PowerShell SMB Client Configuration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get SMB Client Configuration&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-SmbClientConfiguration&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get SMB Connections&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-SmbConnection&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get SMB Mutlichannel Connections&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-SmbMutlichannelConnection&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get SMB open files&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-SmbOpenFile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get SMB Direct (RDMA) adapters&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapterRdma&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;hyper-v-networking-cmdlets&quot;&gt;Hyper-V Networking cmdlets&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Hyper-V-PowerShell-Get-VMNetwork-Adapter-1024x215.png&quot; alt=&quot;Hyper-V PowerShell Get-VMNetwork Adapter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get and set Network Adapter VMQ settings&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-NetAdapterVmq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Disable VMQ&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-NetAdapterVmq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Enabled&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Enable VMQ&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-NetAdapterVmq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Enabled&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get VM Network Adapter&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Get-VMNetworkAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-VMName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Server01&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get VM Network Adapter IP Addresses&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-VMNetworkAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-VMName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NanoConHost01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IPAddresses&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get VM Network Adapter Mac Addresses&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-VMNetworkAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-VMName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NanoConHost01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MacAddress&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I hope you enjoyed it and the post was helpful, if you think something important is missing, please add it in the comments.&lt;/p&gt;
+
+&lt;!--EndFragment--&gt;
+</description>
+        <pubDate>Mon, 30 Aug 2021 06:57:23 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/basic-networking-with-powershell</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/basic-networking-with-powershell</guid>
+      </item>
+    
+      <item>
+        <title>How to use PowerShell for easier remote management</title>
+        <description>&lt;blockquote&gt;
+  &lt;h2 id=&quot;requirements&quot;&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Computer running Windows Vista (or higher)&lt;/li&gt;
+    &lt;li&gt;Server running Windows Server 2008 (or higher)&lt;/li&gt;
+    &lt;li&gt;PowerShell 5.0&lt;/li&gt;
+    &lt;li&gt;Administrative access&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 26 Aug 2021 12:02:43 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/powershell-for-easier-remote-management</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/powershell-for-easier-remote-management</guid>
+      </item>
+    
+      <item>
+        <title>Windows 10 password reset utilities</title>
+        <description>&lt;!--StartFragment--&gt;
+
+&lt;p&gt;Forgot your Windows 10 password? Typically, a user would give up, reinstall the operating system (OS), and start from scratch. But you’re not a typical user. Instead of doing an OS reset, why not try a user account password reset first using the &lt;a href=&quot;https://pogostick.net/~pnh/ntpasswd/&quot;&gt;Offline NT Password &amp;amp; Registry Editor (NTPasswd)&lt;/a&gt; utility?&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, learn how to use the NTPasswd utility as a &lt;em&gt;“break-glass-in-case-of-emergency”&lt;/em&gt; response to reset lost or forgotten Windows user or administrator passwords.&lt;/p&gt;
+
+&lt;p&gt;Are you now excited to hack your way into a locked computer? Hold on to your &lt;em&gt;black hat,&lt;/em&gt; and let’s dive in.&lt;/p&gt;
+
+&lt;p&gt;Table of Contents&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adamtheautomator.com/ntpasswd/#Prerequisites&quot; title=&quot;Prerequisites&quot;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adamtheautomator.com/ntpasswd/#Creating_a_Bootable_NTPasswd_USB_Drive&quot; title=&quot;Creating a Bootable NTPasswd USB Drive&quot;&gt;Creating a Bootable NTPasswd USB Drive&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adamtheautomator.com/ntpasswd/#Booting_into_NTPasswd&quot; title=&quot;Booting into NTPasswd&quot;&gt;Booting into NTPasswd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adamtheautomator.com/ntpasswd/#Resetting_a_User_Password_with_NTPasswd&quot; title=&quot;Resetting a User Password with NTPasswd&quot;&gt;Resetting a User Password with NTPasswd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://adamtheautomator.com/ntpasswd/#Conclusion&quot; title=&quot;Conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/p&gt;
+
+    &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+    &lt;p&gt;Since this tutorial is hands-on, you’ll need the following requirements if you plan to follow along.&lt;/p&gt;
+
+    &lt;p&gt;*&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A Windows 10 computer. This tutorial will be using a Windows 10 version 20H2, but earlier versions should work as well.&lt;/li&gt;
+      &lt;li&gt;A test or dummy Windows 10 local user account. This user account is optional but recommended if you don’t want to test this tutorial with production or live user account. This tutorial will be trying the password reset on a test account with the name &lt;em&gt;Dummy&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Make sure that the &lt;a href=&quot;https://lifehacker.com/how-to-boot-from-a-usb-drive-or-cd-on-any-computer-5991848&quot;&gt;computer can boot from a USB drive&lt;/a&gt; and supports &lt;a href=&quot;https://pediaa.com/difference-between-uefi-and-legacy-boot/#Legacy%20Boot&quot;&gt;legacy boot&lt;/a&gt; mode. NTPasswd boot disks do not support &lt;a href=&quot;https://pediaa.com/difference-between-uefi-and-legacy-boot/#UEFI&quot;&gt;UEFI boot&lt;/a&gt; mode.&lt;/li&gt;
+      &lt;li&gt;A USB flash drive with at least 50MB free space where you’ll be installing NTPasswd. This tutorial assumes that you’ve already attached the USB drive to the computer and know its drive letter. In this tutorial, the USB drive letter is E.&lt;/li&gt;
+      &lt;li&gt;Download the latest &lt;a href=&quot;https://pogostick.net/~pnh/ntpasswd/&quot;&gt;NTPasswd USB zip file&lt;/a&gt;. As of this writing, the latest zip file name is &lt;a href=&quot;https://pogostick.net/~pnh/ntpasswd/usb140201.zip&quot;&gt;usb140201.zip&lt;/a&gt;, and the size is approximately 18MB.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;creating-a-bootable-ntpasswd-usb-drive&quot;&gt;Creating a Bootable NTPasswd USB Drive&lt;/h2&gt;
+
+    &lt;p&gt;To boot your computer into the NTPasswd environment, you must first create bootable media containing the NTPasswd files. Don’t worry. Doing so only takes running two lines of command. You don’t need to download any third-party tools, too.&lt;/p&gt;
+
+    &lt;p&gt;Follow the steps below to create an NTPasswd bootable USB drive.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open &lt;a href=&quot;https://adamtheautomator.com/powershell-run-as-administrator/&quot;&gt;PowerShell as admin&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Inside the PowerShell window, extract &lt;em&gt;usb140201.zip&lt;/em&gt; file contents to the root of the USB drive. To do so, run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expand-Archive&lt;/code&gt; command below. This command assumes that the NTPasswd zip file is in the &lt;em&gt;C:\Downloads&lt;/em&gt; folder and the extract destination is the root of drive E.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--EndFragment--&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Expand-Archive&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\Downloads\usb140201.zip&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-DestinationPath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;E:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!--StartFragment--&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;After extracting the NTPasswd zip file, run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;syslinux.exe&lt;/code&gt; command below to make the USB drive bootable. This command assumes that the USB drive letter is E. Change the drive letter if needed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;The NTPasswd zip that you previously extracted to the USB drive already includes the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;syslinux.exe&lt;/code&gt; executable file. You do not need to download the file separately.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--EndFragment--&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;# (m) -- Install the master boot record (MBR).
+# (a) -- Mark the partition as Active.
+
+E:\syslinux.exe -ma E:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The command should only take approximately one second to complete, and there are no output messages. Once the command completes, you now have a bootable NTPasswd USB drive.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Booting into NTPasswd&lt;/strong&gt;
+Now that you’ve created your password reset disk, it’s time to put it to the test. Before you can start resetting passwords, you first need to boot your computer into the NTPasswd environment. Follow the steps below to do so.&lt;/p&gt;
+
+&lt;p&gt;Note: NTPasswd is not capable of accessing encrypted drives, such as Bitlocker-encrypted drives. According to the NTPasswd FAQ, there is no plan to add support for encrypted drives.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First, turn off your computer if you haven’t yet.&lt;/li&gt;
+  &lt;li&gt;Power on your computer and boot it to the USB drive. Typically, you have to press a key while the computer is starting up (F2, Del, F12…), showing you the boot menu. Consult your computer’s manual if needed to learn how.&lt;/li&gt;
+  &lt;li&gt;At the boot prompt, type in boot vga=ask and press Enter. Doing so gives you the option to choose the video mode.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--StartFragment--&gt;
+
+&lt;p&gt; At the following prompt, hit Enter again to list the available video modes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/troubleshoot.jpeg&quot; alt=&quot;Press Enter to list available video modes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Press Enter to list available video modes&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Next, on the list of video modes, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; and press Enter. This step ensures that NTPasswd uses the lowest possible resolution to avoid showing disproportionate screen output.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T224636.458.png&quot; alt=&quot;Selecting the lowest display resolution mode &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selecting the lowest display resolution mode&lt;/p&gt;
+
+&lt;p&gt;After selecting the video mode, NTPasswd then automatically detects the disk partitions. As you can see below, the utility automatically determines which partition(s) may contain the Windows operating system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T224708.148.png&quot; alt=&quot;NTPasswd automatically detects possible Windows installation partitions &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NTPasswd automatically detects possible Windows installation partitions&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://f7e228d19127a9a46b5a250bbd5a77cf.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html&quot;&gt;3rd party ad content&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Note: If the computer did not shut down properly or in hibernate, NTPasswd would complain that the NTFS partition is unsafe, as you can see below. In which case, you have to boot to Windows and shut down the computer properly before booting into NTPasswd again.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T224752.584.png&quot; alt=&quot;The NTFS partition is in an unsafe state error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The NTFS partition is in an unsafe state error&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On the list of &lt;strong&gt;Possible windows installations&lt;/strong&gt;, typically, there would only be one Windows installation on a computer, as you can see below. In which case, you only need to press Enter to accept the default selection.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T224845.080.png&quot; alt=&quot;Selecting the Windows installation partition&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selecting the Windows installation partition&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://f7e228d19127a9a46b5a250bbd5a77cf.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html&quot;&gt;3rd party ad content&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;After selecting the Windows partition, NTPasswd lists files on the screen. Press the SPACEBAR once to exit the files list.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T224924.918.png&quot; alt=&quot;Press the spacebar to exit the files list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Press the spacebar to exit the files list&lt;/p&gt;
+
+&lt;h2 id=&quot;resetting-a-user-password-with-ntpasswd&quot;&gt;Resetting a User Password with NTPasswd&lt;/h2&gt;
+
+&lt;p&gt;Now that you’ve booted your computer into NTPasswd, you’re ready to start resetting passwords. By following a series of prompts, you can reset the password of any Windows 10 local accounts on the computer. To do so, proceed as follows.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On the &lt;strong&gt;Select which part of registry to load&lt;/strong&gt; menu, press Enter to accept the default selection, which is &lt;strong&gt;1 – Password reset [sam]&lt;/strong&gt;. Selecting this option will load the &lt;a href=&quot;https://docs.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users&quot;&gt;SAM Windows registry hive&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;The SAM registry hive contains the local user accounts and passwords data.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Related:&lt;a href=&quot;https://adamtheautomator.com/offline-registry-editor/&quot;&gt;How to Edit the Windows Registry Completely Offline&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225114.563.png&quot; alt=&quot;Loading the Password reset menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Loading the Password reset menu&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://f7e228d19127a9a46b5a250bbd5a77cf.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html&quot;&gt;3rd party ad content&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On the &lt;strong&gt;Main Interactive Menu&lt;/strong&gt; that follows, press Enter to accept the default option, which is &lt;strong&gt;1 – Edit user data and passwords&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225149.461.png&quot; alt=&quot;Select edit user data and passwords&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select edit user data and passwords&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Next, on the list of user accounts, look for the user account whose password you want to reset. Find the user’s number under the RID column. Once you have the user’s RID value, type the value into the prompt to select the user and press Enter.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In the example below, the RID for the user to reset is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;03ea&lt;/code&gt;, and the username is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dummy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225239.556.png&quot; alt=&quot;Entering the user's RID value&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Entering the user’s RID value&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://f7e228d19127a9a46b5a250bbd5a77cf.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html&quot;&gt;3rd party ad content&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On the &lt;strong&gt;User Edit Menu&lt;/strong&gt;, you’ll notice that there’s no option to &lt;em&gt;reset&lt;/em&gt; the password, and that is normal—instead, type 1 to select the option to &lt;strong&gt;Clear (blank) user password&lt;/strong&gt; and press Enter.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Choosing this option will clear the user’s password. Consequently, you can log in to Windows using this user account without entering a password.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225326.052.png&quot; alt=&quot;Selecting to clear the user password &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selecting to clear the user password&lt;/p&gt;
+
+&lt;p&gt;After clearing the password, you should see a confirmation message similar to the screenshot below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225416.992.png&quot; alt=&quot;Confirmation message&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Confirmation message&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Now, press Enter to exit the &lt;strong&gt;User Edit Menu&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225449.389.png&quot; alt=&quot;Exiting the User Edit Menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exiting the User Edit Menu&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Back at the &lt;strong&gt;Main Interactive Menu&lt;/strong&gt;, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt;, and press Enter to exit.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225528.508.png&quot; alt=&quot;Exiting the Main Menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exiting the Main Menu&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;At the next prompt, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; and press Enter. This action will write the changes you made (clear password) back to the SAM registry hive.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://adamtheautomator.com/wp-content/uploads/2021/07/Untitled-2021-07-31T225620.458.png&quot; alt=&quot;Saving the changes &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saving the changes&lt;/p&gt;
+
+&lt;p&gt;After saving the changes, you should see a message saying &lt;strong&gt;EDIT COMPLETE&lt;/strong&gt;. You have now finished resetting the Windows 10 user password.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://f7e228d19127a9a46b5a250bbd5a77cf.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html&quot;&gt;3rd party ad content&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Finally, unplug the USB drive from your computer and press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL+ALT+DEL&lt;/code&gt; to restart your computer and boot into Windows. You can then log in using the account without entering a password.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This tutorial showed you that a forgotten or lost password does not necessarily mean that you’ve already lost access to your computer. Don’t lose hope yet. You’ve learned that the NTPasswd password reset utility can be a lifesaver in such situations.&lt;/p&gt;
+
+&lt;p&gt;Apart from resetting passwords, there are other NTPasswd usage scenarios that you can try. How about enabling the built-in administrator account, promoting a standard user as an administrator, and &lt;a href=&quot;https://adamtheautomator.com/offline-registry-editor/&quot;&gt;editing the registry offline&lt;/a&gt;?&lt;/p&gt;
+
+&lt;!--EndFragment--&gt;
+</description>
+        <pubDate>Wed, 25 Aug 2021 19:15:49 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/password-reset-utilities</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/password-reset-utilities</guid>
+      </item>
+    
+      <item>
+        <title>How to reset an active directory (AD) account password with PowerShell</title>
+        <description>&lt;blockquote&gt;
+  &lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+  &lt;blockquote&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;ol&gt;
+          &lt;li&gt;Prerequisites&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ol&gt;
+          &lt;li&gt;Using Set-ADAccountPassword&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ol&gt;
+          &lt;li&gt;ADSI method&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ol&gt;
+          &lt;li&gt;Final words&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We all know the scenario—a user calls to complain that the computer does not accept the password and asks for a reset. Or you get an email from HR with several new hires that need new passwords generated. In both cases, this can be done using GUI tools (Active Directory Users and Computers and Active Directory Administrative Center). However, the GUI method still requires several steps and thus might not always be effective.&lt;/p&gt;
+
+&lt;p&gt;Luckily, the password reset can be done quickly with PowerShell, even for dozens of accounts. There are two ways to reset a user account password in PowerShell:&lt;/p&gt;
+
+&lt;p&gt;The Set-ADAccountPassword cmdlet, included in the RSAT PowerShell module
+The Active Directory Service Interface (ADSI) method
+Now, let’s get down to business and have a look at both of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;To reset an AD account password with PowerShell, you need three things:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ol&gt;
+        &lt;li&gt;A domain-joined Windows machine, where you will execute the task&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;ol&gt;
+        &lt;li&gt;An administrative account with permissions to reset AD passwords&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;ol&gt;
+        &lt;li&gt;A code editor of your choice, such as Windows PowerShell ISE&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;While these three things are enough to use the ADSI method, if you want to use the Set-ADAccountPassword cmdlet, you will also need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At least Windows PowerShell 5.1&lt;/li&gt;
+  &lt;li&gt;Remote Server Administration Tools (RSAT) installed, specifically Active Directory Domain Services and Lightweight Directory Services tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above-mentioned tools can be installed directly on your Windows 10 PC. Alternatively, you can connect to a dedicated management computer or server, as I did.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-set-adaccountpassword&quot;&gt;Using Set-ADAccountPassword&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Single user account password reset&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To reset an AD user password, you need to know two things—the user’s identity and a password to assign. As the Set-ADAccountPassword cmdlet only accepts secure string representation of the password, you need to convert your password first.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$Pass&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ConvertTo-SecureString&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Password@123&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AsPlainText&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, you can reset the password by running the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set-ADAccountPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;worker03&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-NewPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pass&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Reset&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-ADUser&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;worker03&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ChangePasswordAtLogon&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In my case, the user’s identity is the account’s SAM account name value—worker03. The cmdlet also accepts other values, such as the user’s GUID or SID; however, it is very likely you will not use those. The Set-ADUser command forces the user to change their password at the next logon, which is the best practice, so I always use it. As you can see in the image, the cmdlet has no output if successfully completed.&lt;/p&gt;
+
+&lt;h3 id=&quot;multiple-user-account-password-reset&quot;&gt;Multiple user account password reset&lt;/h3&gt;
+
+&lt;p&gt;When you need to reset multiple user account passwords, you still need two things—a list of users and their password values. The list of users can be stored in a text file; in my case, those names are worker01, worker02, and worker03.&lt;/p&gt;
+
+&lt;p&gt;As for the password, you will most likely want to assign a different one to each user. While there are different methods to do so, I will use the following line of code to generate 15-character passwords:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-join&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;126&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-Random&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Count&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ForEach-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, you can use the code below to generate, reset, and force a password change for each user in your list.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Load user list&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ListOfUsers&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-Content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\temp\list.txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ListOfUsers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Generate a 12-character random password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-join&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;126&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-Random&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Count&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ForEach-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Convert the password to secure string&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Pass&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ConvertTo-SecureString&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AsPlainText&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Reset the account password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-ADAccountPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-NewPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Pass&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Reset&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Force user to change password at next logon&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-ADUser&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ChangePasswordAtLogon&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Display userid and password values &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;reset-passwords-using-different-administrative-credentials&quot;&gt;Reset passwords using different administrative credentials&lt;/h3&gt;
+
+&lt;p&gt;It is quite normal, especially in larger organizations, to have separate administrative accounts to perform privileged tasks, such as password resets. In such cases, running the above commands under your standard account PowerShell session would fail. Like many other cmdlets, Set-ADAccountPassword supports the Credential parameter, which allows it to perform the desired action under different user contexts.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set-ADAccountPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;worker03&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-NewPassword&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Pass&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Credential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-Credential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Credential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;LAB\superadmin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;adsi-method&quot;&gt;ADSI method&lt;/h3&gt;
+
+&lt;p&gt;The second method to reset account passwords in PowerShell is the ADSI method. The code to change the worker03 account password is as follows:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$userid&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ADSI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;LDAP://CN=worker03,OU=Usr,DC=LAB,DC=Local&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$userid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;psbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SetPassword&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Password@123'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$userid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;psbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;CommitChanges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;While the ADSI method can be used on any Windows or PowerShell version, it has more disadvantages. First, it does not support the use of different credentials. That means you would need to run the PowerShell session under an account with the proper privileges to reset passwords. Second, it only supports the user’s distinguished name (CN=worker03,OU=Usr,DC=LAB,DC=Local). This limits you to targeting only users in a specific organizational unit (OU), so you would need to know in advance where the user account is located and change the code appropriately.&lt;/p&gt;
+
+&lt;p&gt;Obviously, this is not a pure PowerShell way to accomplish the task, and its limitations make it pretty much unusable with modern scripting techniques.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 20 Aug 2021 12:03:43 +0200</pubDate>
+        <link>https://www.alainqtec.com/blog/reset-active-directory-password</link>
+        <guid isPermaLink="true">https://www.alainqtec.com/blog/reset-active-directory-password</guid>
+      </item>
+    
+
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;   &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#it-ops&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/it-ops&quot;&gt;it-ops&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;it-ops&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/guide-to-using-adb-platform-tools&quot;&gt;Quick guide to using ADB Platform Tools&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/install-windows-drivers-using-powershell&quot;&gt;Install Windows Drivers using powershell&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/basic-networking-with-powershell&quot;&gt;Basic Networking with PowerShell&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/powershell-for-easier-remote-management&quot;&gt;How to use PowerShell for easier remote management&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/password-reset-utilities&quot;&gt;Windows 10 password reset utilities&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/reset-active-directory-password&quot;&gt;How to reset an active directory (AD) account password with PowerShell&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</description>
+            <link>https://www.alainqtec.com/blog/categories/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>All tags</title>
+            <description>&lt;h3&gt;  All tags &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+
+&lt;/div&gt;
+
+</description>
+            <link>https://www.alainqtec.com/blog/tags/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>automation</title>
+            <description>&lt;h5&gt; Posts by tag : automation &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://www.alainqtec.com/blog/tags/automation/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Cloud Computing</title>
+            <description>&lt;h5&gt; Posts by Category : Cloud Computing &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://www.alainqtec.com/blog/categories/cloud/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>IT Ops</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.it-ops %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://www.alainqtec.com/blog/categories/it-ops/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>search</title>
+            <description>{%- include search.html -%}</description>
+            <link>https://www.alainqtec.com/search/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Security</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.security %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://www.alainqtec.com/blog/categories/security/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>tools</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.guides %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://www.alainqtec.com/blog/categories/tools/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Windows11</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.windows %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://www.alainqtec.com/blog/categories/windows/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Security Policy</title>
+            <description># Security Policy
+
+## Supported Versions
+
+Use this section to tell people about which versions of your project are
+currently being supported with security updates.
+
+## Reporting a Vulnerability
+
+Use this section to tell people how to report a vulnerability.
+
+Tell them where to go, how often they can expect to get an update on a
+reported vulnerability, what to expect if the vulnerability is accepted or
+declined, etc.
+</description>
+            <link>https://www.alainqtec.com/SECURITY/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Features to add</title>
+            <description># Features to add
+
+- Responsive
+- Semantic HTML
+- Skins
+- Highlight Theme
+- Internationalization
+- Search
+- Table of contents
+- Authors
+- Additional styles (alert, tag, image, icon, button, grid, etc)
+- Extensions (audios, videos, slides, demos)
+- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
+- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
+- Pageview ([LeanCloud](https://leancloud.cn/))
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
+- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Continuous deployment with [`github actions`](https://github.com/features/actions).
+- Local CMS Admin using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/).
+- Onine CMS Admin using [`Forestry`](https://app.forestry.io/dashboard/#) a Git-backed CMS.
+- Using Latest [`Jekyll` 4.x](https://jekyllrb.com) and [`Bundler`](https://bundler.io).
+- Stylesheet built using Sass
+- Comments using [`Hyvor`](https://talk.hyvor.com/) and [`Disqus`](https://disqus.com/).&lt;!-- - SEO-optimized. --&gt;
+- Real Time site Search - [`Algolia`](https://www.algolia.com/).
+- Selling Stuff (Ecommerce) using [`Snipcart`](https://snipcart.com/).
+- Send Newsletters using [`Mailchimp`](https://mailchimp.com/).
+- Contact Forms Support for [`Getform`](https://getform.io), [`Formspree`](https://formspree.io/).
+- Coding Activity using [`Wakatime`](https://wakatime.com/).
+- Hosting Support for [`Github Pages`](https://pages.github.com), [`Netlify`](https://netlify.com), [`Vercel`](https://vercel.com), [`Heroku`](https://heroku.com), [`AWS Amplify`](aws.amplify.com), [`Firebase`](https://firebase.com).
+&lt;!-- - [Buddy](https://buddy.works/) , [`Circle CI`](https://circleci.com/) --&gt;</description>
+            <link>https://www.alainqtec.com/TODO/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Change Log</title>
+            <description># Change Log
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
+
+**Note that references to the Font-Awesome-Pro repository refer to a GitHub
+repository that is by invitation only. You will get a 404 - Not Found if you do
+not have access**
+
+---
+
+## [5.1.0](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.1.0)  - 2018-06-20
+
+**Minor version upgrade notice: there are some backward-incompatible changes to this release. See the
+[UPGRADING.md guide](https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md) for more
+information.**
+
+### Added
+* New Emoji, Design, and Travel category pack
+* Another group of requested and commissioned icons
+* Version 4 shim for Web Fonts with CSS
+* New simplified download and NPM packages
+* @fortawesome/fontawesome-free and @fortawesome/fontawesome-pro NPM packages that match what's available in the CDN and .ZIP files
+* Brand icons rev, nimblr, megaport, mailchimp, hornbill, wix, weebly, themeco, squarespace, aws, shopware
+* API method toHtml() for converting abstract objects to HTML
+* API method counter() to generate Layers Counters
+* API method watch() to configure MutationObserver and watch DOM for icon changes and additions
+
+### Changed
+* Relocating sponsor data to a separate sponsors.yml
+* Updated teamspeak brand icon
+* No more default exports in the CommonJS/ES packages (anything installed from NPM)
+* Greatly improved performance and rendering of CSS pseudo-elements with SVG and JavaScript
+* Configuration of SVG with JavaScript can now be done with attributes on the script tag
+* SVG with JavaScript pseudo-elements now match syntax (font-family, font-weight) of Web Fonts with CSS
+
+### Fixed
+* Tree shaking of all NPM packages by default
+* Alignment of the book-open and dice-six icon
+* Correcting creative-commons
+* Incorrect license on the fontawesome-common-types package
+* Improve ligatures that share a base name with another ligature
+* Correcting solid style of the digital-tachograph icon
+* Prevent duplicating classes in some scenarios with SVG with JavaScript
+* Duplicate insertion of CSS when insertCss() method was called
+* Missing TypeScript definitions for the free-brands-svg-icons package
+
+---
+
+## [5.0.13](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.13)  - 2018-05-10
+
+### Added
+* 68 icons to Free and 165 to Pro of the most requested icons in Font Awesome
+
+---
+
+## [5.0.12](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.12)  - 2018-05-03
+
+### Added
+* A long time ago in a galaxy far, far away some icons were added
+
+### Fixed
+* Renamed the r brand to r-project to prevent ligature collision with the &quot;r&quot; glyph
+
+---
+
+## [5.0.11](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.11)  - 2018-05-01
+
+### Added
+* 16 new user icons
+* Full set of Creative Commons symbols
+* Regular style comment-dots used for v4 comment-alt in shim
+* Top 6 brand icons: r, ebay, mastodon, researchgate, keybase, teamspeak
+
+### Changed
+* Revised slider icons FortAwesome/Font-Awesome#11872
+* Make desktop typeface easier to find in apps that support ligature previews
+
+### Fixed
+* Remove errant XML entity from the lastfm-square icon FortAwesome/Font-Awesome#12847
+* Correcting paths in cloud icons FortAwesome/Font-Awesome-Pro#920
+
+---
+
+## [5.0.10](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.10)  - 2018-04-10
+
+### Added
+* New java brand icon FortAwesome/Font-Awesome#386
+
+### Changed
+* Updating depth of dna icon
+* Updating pied-piper, adding pied-piper-hat
+
+### Fixed
+* Correcting path errors on readme icon FortAwesome/Font-Awesome#12754
+* Light style of lamp icon FortAwesome/Font-Awesome#12725
+
+---
+
+## [5.0.9](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.9)  - 2018-03-27
+
+### Added
+* New Chat icon pack and category
+* New Charity icon pack and category
+* New Moving icon pack and category
+* New icons hands and hand-holding
+
+### Changed
+* Updated flipboard, readme, and houzz brand icon
+* Making all solid icons in the medical icon pack free
+* Updated hand-holding-box and hand-receiving in the Light style
+
+### Fixed
+* Missing box-sizing CSS property for fa-layers-counter
+
+---
+
+## [5.0.8](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.8)  - 2018-03-01
+
+### Fixed
+* OTF font files missing ligatures for Pro styles FortAwesome/Font-Awesome#12486 FortAwesome/Font-Awesome-Pro#1034
+
+---
+
+## [5.0.7](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.7)  - 2018-02-26
+
+### Added
+* New Logistics category
+* New Medical category
+* Individual SVG files available from the Font Awesome CDN
+* Additional search terms
+
+### Changed
+* Apple brand icon update FortAwesome/Font-Awesome#12337
+* Disable mutation observers with fontawesome.noAuto() is called
+* License information now references https URL scheme
+
+### Fixed
+* Missing TypeScript names FortAwesome/react-fontawesome#83
+* Adding categories metadata FortAwesome/Font-Awesome#12034
+* TypeScript improvement for fontawesome.layer()
+* Correcting a melting, wobbling, weird-looking whistle
+
+---
+
+## [5.0.6](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.6)  - 2018-01-25
+
+### Fixed
+* @fortawesome/fontawesome-pro-light missing submodules
+
+---
+
+## [5.0.5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.5)  - 2018-01-25
+
+### Added
+* New Sports category
+* New Chess category
+* Added brand icons for flipboard, php, quinscape, and hips
+
+### Fixed
+* Sass and Less mixin fa-icon() now uses ems instead of percentage
+* Corrected misspelling of &quot;Alternate&quot; in category labels
+* Improved TypeScript definitions for @fortawesome/fontawesome
+* Server-side rendering was failing due to DOM-specific object access
+* SVG attributes &quot;data-fa-processed&quot; renamed to &quot;data-fa-i2svg&quot;, only applies if rendered with i2svg() method
+
+---
+
+## [5.0.4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.4)  - 2018-01-10
+
+### Changed
+* Updating all NPM package READMEs
+
+### Fixed
+* Improving TypeScript exports and fixing some incorrect definitions
+* TypeScript error when importing entire style Fort-Awesome/Font-Awesome#12072
+* Pseudo-elements erasing text contents in parent container Fort-Awesome/Font-Awesome-Pro#11995
+* fa-layers-text misalignment when using Bootstrap Fort-Awesome/Font-Awesome#11871
+
+---
+
+## [5.0.3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.3)  - 2018-01-08
+
+### Added
+* Adding elementor, youtube-square brand icons
+* Adding window-minimize to the Free subset
+* TypeScript support for all NPM packages
+
+### Fixed
+* Corrected uneven spacing in university, address-book, address-card, id-badge, id-card, mouse-pointer, phone-volume, portrait, user-alt, user-circle, user-md, user-plus, user-times, user , users
+* Corrected uneven spacing in brand icons behance-square, dashcube, discourse, ember, erlang, fort-awesome, js-square, laravel, mix, patreon, palfed, phoenix-framework, node-js, skyatlas, stack-exchange, stripe, viber, weixin, yahoo , yoast
+
+---
+
+## [5.0.2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.2)  - 2017-12-19
+
+### Added
+* Adding amazon-pay, cc-amazon-pay, korvue, ethereum brand icons
+* Adding stopwatch to Free version
+
+### Changed
+* Ligatures now support capital case, all caps, and title case
+
+### Fixed
+* NPM packages now behave the same way as CDN and browser-specific packages FortAwesome/Font-Awesome-Pro#727 FortAwesome/Font-Awesome-Pro#896 FortAwesome/Font-Awesome-Pro#891
+* Icon doesn't change when pseudo-element content changes FortAwesome/Font-Awesome-Pro#839
+* Invalid XML in sprites FortAwesome/Font-Awesome-Pro#927
+* Incorrect version in Sass and Less variable files
+
+---
+
+## [5.0.1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.1)  - 2017-12-08
+
+### Added
+* Adding font-awesome-flag, lock-open, redo-alt, sync-alt, undo-alt to the Free version
+* New NPM packages `fontawesome-free-webfonts` and `fontawesome-pro-webfonts`
+* Adding old icon names to search terms for renamed icons
+* Extensive metadata added to the `advanced-options` directory
+* Adding stripe-s brand icon
+* Adding typo3 brand icon
+
+### Changed
+* Updated dropbox brand icon to match new branding guidelines
+* Updated firefox brand icon
+* Updated strava brand icon
+* OTF font file now include a space character
+
+### Fixed
+* OTF font file now supports different styles in Windows
+* OTF font file &quot;j&quot; character now has correct space on the right
+* Modifying the `class` attribute on an existing `&lt;svg&gt;` allows you to change the icon
+
+---
+
+## [5.0.0](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0)  - 2017-12-01
+
+### Added
+* License information
+
+### Changed
+* CSS vertical-align now &quot;em&quot;-based instead of percentage making it more consistent
+* fa-ul width now closer to default browser size
+
+---
+
+## [5.0.0-rc5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc5)  - 2017-11-28
+
+**This release includes breaking changes**
+
+### Added
+* Brand icons: gitter, cc-stripe, stripe, hooli, aviato, strava, ember, angular, font-awesome-flag
+* Icons compress-alt and expand-alt
+* Adding calendar to Font Awesome 5 Free
+* SASS function that makes it easier to use variables FortAwesome/Font-Awesome-Pro#824
+
+### Changed
+* BREAKING Renamed icon composition to mask (&quot;data-fa-compose&quot; becomes &quot;data-fa-mask&quot;)
+* BREAKING Re-organized directory structure to match upcoming documentation
+* BREAKING Font Awesome styles inserted into the `&lt;head&gt;` will now precede other link and style definitions
+* BREAKING `fontawesome.text` and `fontawesome.icon` now use `styles` param instead of `style`
+* Updated sizing for twitter, discord, youtube
+* Class fa-li now respects line-height and has new recommended markup (see included docs)
+
+### Fixed
+* Duplicate `style` tags being added in the head FortAwesome/Font-Awesome-Pro#858
+* Error with icon composition/masking that caused a confusing error message
+* An error when using pseudo elements and the element is empty (Array.reduce error)
+* Icons not being replaced with SVG if the text content is not empty
+
+---
+
+## [5.0.0-rc4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc4)  - 2017-10-27
+
+### Added
+* Ligature support in the OTF font
+* Vue.js brand icon
+* Sass and Less brand icons
+* Autoprefixer brand icon
+* Individual icon imports in icon packages FortAwesome/Font-Awesome-Pro#808
+
+### Changed
+* Better poo eyes
+* Renamed HTML status classes to `fontawesome-i2svg-active`, `fontawesome-i2svg-pending`, `fontawesome-i2svg-complete`
+* HTML status class for active is added only after the first batch of icon replacements occur
+* Added mention of newer versions of iOS in documentation FortAwesome/Font-Awesome-Pro#810
+
+### Fixed
+* Performance and missing features with mutation observer (should fix FortAwesome/Font-Awesome-Pro#813)
+* Incorrect handling of icon class and style attributes when using autoReplace = 'nest' FortAwesome/Font-Awesome-Pro#809
+* Pseudo elements not added or removed when class mutations occur FortAwesome/Font-Awesome-Pro#821
+
+---
+
+## [5.0.0-rc3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc3)  - 2017-10-13
+
+### Added
+* Node.js brand icon FortAwesome/Font-Awesome-Pro#779
+* React brand icon FortAwesome/Font-Awesome-Pro#780
+* OSI brand icon FortAwesome/Font-Awesome-Pro#748
+* Add a class to the html element when icon replacement is complete FortAwesome/Font-Awesome-Pro#778
+* Add support for symbols in API including ability to name the symbol
+* Use CSS pseudo elements (:before and :after) to make trigger SVG replacements
+
+### Changed
+* Switched the locations of fork and knife in utensils-alt FortAwesome/Font-Awesome-Pro#466
+* Updated the AWS brand icon FortAwesome/Font-Awesome-Pro#735
+* Updated Apple App Store icon FortAwesome/Font-Awesome-Pro#728
+
+### Fixed
+* Do not throw an error if icon is missing when calling icon() method in API
+* Ensure that unicode values do not change between releases
+* Version field is missing in fontawesome-pro-brands/package.json FortAwesome/Font-Awesome-Pro#781
+* Repeated commenting out of fa-layers when i2svg is called FortAwesome/Font-Awesome-Pro#788
+* Title not showing up correctly for SVG FortAwesome/Font-Awesome-Pro#786
+
+---
+
+## [5.0.0-rc2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc2)  - 2017-09-22
+
+### Added
+* Brand icons: accusoft, ns8, uniregistry
+
+### Fixed
+* Link to the npm package in the docs FortAwesome/Font-Awesome-Pro#729
+* Incorrect reference to fontawesome-pro.js in docs
+
+---
+
+## [5.0.0-rc1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc1)  - 2017-09-15
+
+### Changed
+* New Bitbucket logo FortAwesome/Font-Awesome-Pro#720
+* Modifed the star icons to match use case better FortAwesome/Font-Awesome-Pro#710
+* Switched names of css3 and css3-alt to reflect correct branding
+
+### Fixed
+* Correct whitespace with the Visa logo FortAwesome/Font-Awesome-Pro#719
+* Improve OTF support by passing through FontForge FortAwesome/Font-Awesome-Pro#565
+* Fonts with &quot;undefined&quot; name FortAwesome/Font-Awesome-Pro#711
+* Shims will only function if using old prefix of &quot;fa&quot; FortAwesome/Font-Awesome-Pro#692
+* Added missing &quot;youtube&quot; icon to categories
+
+---
+
+## [5.0.0-beta7](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta7)  - 2017-09-11
+
+### Added
+* Ability to nest the `&lt;svg&gt;` tag within the `&lt;i&gt;` FortAwesome/Font-Awesome-Pro#624
+* Define icons as symbols and leverage SVG sprites FortAwesome/Font-Awesome-Pro#629
+* Added alternative CSS3 logo FortAwesome/Font-Awesome-Pro#682
+
+### Changed
+* Power Transforms now execute inside the SVG instead of on the root element
+* Filenames have changed to reflect a better division between Font Awesome Free and Pro
+
+### Fixed
+* More improvements to the version 4 shim FortAwesome/Font-Awesome-Pro#673 FortAwesome/Font-Awesome-Pro#678 FortAwesome/Font-Awesome-Pro#686 FortAwesome/Font-Awesome-Pro#687 FortAwesome/Font-Awesome-Pro#692
+* Animation support for inline SVG now works as expected FortAwesome/Font-Awesome-Pro#662
+
+---
+
+## [5.0.0-beta6](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta6)  - 2017-09-01
+
+### Added
+* Ability to flip horizontal and vertical with CSS classes fa-flip-horizontal and fa-flip-vertical
+* New film-alt icon that allows for layering other icons
+* Microsoft brand
+
+### Changed
+* New YouTube branding FortAwesome/Font-Awesome-Pro#646
+
+### Fixed
+* Fixed a bunch of shim-related issues
+* Cogs off center FortAwesome/Font-Awesome-Pro#663
+* Corrected icons/categories.yml with canonical names
+
+---
+
+## [5.0.0-beta5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta5)  - 2017-08-25
+
+### Added
+* Full parity with Font Awesome 4! 616 total core icons in each style
+* 297 total brand and logo icons
+* Separate CSS file to accompany the SVG Framework FortAwesome/Font-Awesome-Pro#627
+* Alternative to the dots icon FortAwesome/Font-Awesome-Pro#608
+* Made window icons consistent FortAwesome/Font-Awesome-Pro#611
+
+### Fixed
+* Production builds not correctly being detected FortAwesome/Font-Awesome-Pro#631
+
+---
+
+## [5.0.0-beta4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta4)  - 2017-08-18
+
+### Added
+* 590 total core icons in each style
+* 291 total brand and logo icons
+
+### Fixed
+* Reduced the size of JS file from 66 to 22 kb
+* Regression caused by with web font alignment FortAwesome/Font-Awesome-Pro#460
+
+---
+
+## [5.0.0-beta3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta3)  - 2017-08-15
+
+### Added
+* 583 total core icons in each style
+
+### Fixed
+* Documentation improvements and fixes FortAwesome/Font-Awesome-Pro#586
+* Vertical alignment of TTF and OTF fonts FortAwesome/Font-Awesome-Pro#460
+* The &quot;fa_500px&quot; icon should be named &quot;fa500px&quot; FortAwesome/Font-Awesome-Pro#578
+
+---
+
+## [5.0.0-beta2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta2)  - 2017-08-11
+
+### Added
+* 570 total core icons in each style
+* 291 total brand and logo icons
+* NPM (ES6, CommonJS, AMD) packages for use with other JavaScript libraries and tools FortAwesome/Font-Awesome-Pro#574
+* Added a guide to choosing which implementation is best for you FortAwesome/Font-Awesome-Pro#532
+
+### Changed
+* Showing a missing icon is now configurable FortAwesome/Font-Awesome-Pro#569
+
+### Fixed
+* Composition framework now works in browsers that do not support transform-origin FortAwesome/Font-Awesome-Pro#564
+
+---
+
+## [5.0.0-beta1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta1)  - 2017-08-04
+
+### Added
+* 524 total core icons in each style
+* 289 total brand and logo icons
+* New composition framework FortAwesome/Font-Awesome-Pro#537
+* Animated indicator if you use an icon that does not exist
+
+### Changed
+* Basic linting for Sass and Less files
+* Add JavaScript guard block to prevent leaking errors
+* Add support for automatic accessibility to SVG Framework Layers
+
+### Fixed
+* Regression where stacks and pulled and bordered were not working in SVG Framework
+* SVG sprite example had confusing inline styles FortAwesome/Font-Awesome-Pro#549
+* Make getting started page more consistent between examples FortAwesome/Font-Awesome-Pro#544
+* Added missing sizes fa-[6-10], xs, sm FortAwesome/Font-Awesome-Pro#546
+* Title tag missing in SVG sprites FortAwesome/Font-Awesome-Pro#536
+
+---
+
+## [5.0.0-alpha7](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha7)  - 2017-07-28
+
+### Added
+* 451 total core icons in each style
+* 281 total brand and logo icons
+* Less support is back!
+* OpenType (.otf) file formats for web fonts
+
+### Changed
+* Changes the fa-spin animation to go from 0deg to 360deg to eliminate hitch FortAwesome/Font-Awesome-Pro#522
+* Improved mutation handling FortAwesome/Font-Awesome-Pro#517
+
+### Fixed
+* fa-fw now works correctly with the SVG framework FortAwesome/Font-Awesome-Pro#530
+* Removed execute bit on some icon files FortAwesome/Font-Awesome-Pro#520
+
+---
+
+## [5.0.0-alpha6](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha6)  - 2017-07-21
+
+### Added
+* 410 total core icons in each style
+* 270 total brand and logo icons
+* All new Font Awesome 4 shim file
+* Beginnings of a public JS API FortAwesome/Font-Awesome-Pro#512
+
+### Changed
+* Added Firefox ESR and Chrome for Businesses to browser compatibility FortAwesome/Font-Awesome-Pro#506
+
+### Fixed
+* Ensure that SVG title attributes are unique
+* Fixed incorrect viewBox sizes FortAwesome/Font-Awesome-Pro#492
+* Fix chart-area alignment in the solid style FortAwesome/Font-Awesome-Pro#508
+* Add missing xmlns attributes in some SVGs FortAwesome/Font-Awesome-Pro#509
+
+---
+
+## [5.0.0-alpha5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha5)  - 2017-07-14
+
+### Added
+* 228 total brand and logo icons
+* New transform framework for sizing, moving, rotating, and flipping icons
+* New icon counters
+* New layers framework
+* New text overlays
+* Auto-comments with the original source icons alongside SVG replacements
+
+### Changed
+* Autoprefixer to correctly add browser prefixes for supported browsers
+* Removed browser-specific CSS properties in Sass source files (now relies on autoprefixer)
+
+### Fixed
+* The rotation on checkmark icons
+* Other icon feedback from previous weeks
+* Correct fixed width settings to 1.25em (based on the new 16px grid)
+* Icons displaying as block instead of inline-block in IE and older Safari
+
+---
+
+## [5.0.0-alpha4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha4)  - 2017-07-07
+
+### Added
+* 93 brand icons
+
+---
+
+## [5.0.0-alpha3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha3)  - 2017-06-30
+
+### Added
+* 95 additional icons; including file types, directional, and some existing and new brand icons
+
+### Fixed
+* Wrong content type in generated CSS FortAwesome/Font-Awesome-Pro#458
+* Removal of query string from static resources FortAwesome/Font-Awesome-Pro#458
+* SVG font ID's are incorrect in webfont implementation FortAwesome/Font-Awesome-Pro#474
+
+---
+
+## [5.0.0-alpha2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha2)  - 2017-06-27
+
+### Added
+* How/When to upgrade from FA4 to FA5 FortAwesome/Font-Awesome-Pro#454
+
+### Fixed
+* Links to SVG files broken in the example files FortAwesome/Font-Awesome-Pro#456
+* Misnamed icon names in examples FortAwesome/Font-Awesome-Pro#445
+* Mangled HTML in the Getting Started example FortAwesome/Font-Awesome-Pro#442
+* Bad grammar and typos FortAwesome/Font-Awesome-Pro#443
+* fas-arrow-to-top is identical to fas-arrow-to-right FortAwesome/Font-Awesome-Pro#423
+* Vertical alignment issues with webfont implementation FortAwesome/Font-Awesome-Pro#444
+* Add browser compatibility tables to demo FortAwesome/Font-Awesome-Pro#435
+* Remove MAC OS feces from builds FortAwesome/Font-Awesome-Pro#437
+* TTF naming issues that prevent correct usage/installation FortAwesome/Font-Awesome-Pro#450
+* Correct CSS for SVG framework stacking, was reversed from normal FortAwesome/Font-Awesome-Pro#452
+
+---
+
+## [5.0.0-alpha1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha1)  - 2017-06-23
+
+### Added
+* 300+ more icons
+* Brands pack
+* New JavaScript based SVG Framework
+* New SVG Sprites based framework
+* Source SVGs
+* Documentation with a convenient build-in web server
+
+### Changed
+* New directory structure
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/CHANGELOG/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Upgrading Guide</title>
+            <description># Upgrading Guide
+
+See the [CHANGELOG.md](/assets/bower_components/font-awesome/CHANGELOG/) for detailed information about what has changed between versions.
+
+This guide is useful to figure out what you need to do between breaking changes.
+
+As always, [submit issues](https://github.com/FortAwesome/Font-Awesome/issues/new) that you run into with this guide or with these upgrades to us.
+
+## 5.0.x to 5.1.0
+
+### New packages available for browser-only integration
+
+**If you were previously using @fortawesome/fontawesome you need to switch to one of the new packages.**
+
+Our Free and Pro CDN provide access to JS, CSS, sprites, and separate SVG files.
+
+We've now made these files conveniently available through NPM.
+
+* [@fortawesome/fontawesome-free](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
+* @fortawesome/fontawesome-pro (private package, requires Pro subscription)
+
+If you are familiar with the paths and options available with the CDN these
+packages should be familiar.
+
+Information about [Font Awesome Pro subscriptions](https://fontawesome.com/pro)
+can be found in your [Font Awesome awesome
+account](https://fontawesome.com/account/services).
+
+### Renamed packages
+
+The following packages have been renamed as part of 5.1.0 of Font Awesome.
+
+_All packages are in the [@fortawesome NPM scope](https://www.npmjs.com/search?q=scope:fortawesome&amp;page=1&amp;ranking=optimal)_
+
+| Old package(1)            | New package            |
+|---------------------------|------------------------|
+| fontawesome-free-webfonts | fontawesome-free       |
+| fontawesome-pro-webfonts  | fontawesome-pro        |
+| fontawesome-free-solid    | free-solid-svg-icons   |
+| fontawesome-free-regular  | free-regular-svg-icons |
+| fontawesome-free-brands   | free-brands-svg-icons  |
+| fontawesome-pro-solid     | pro-solid-svg-icons    |
+| fontawesome-pro-regular   | pro-regular-svg-icons  |
+| fontawesome-pro-light     | pro-light-svg-icons    |
+
+(1) Old packages have now been deprecated. They are still available but will only receive high priority patch release fixes.
+
+**You'll need to update your package.json file with the renamed packages and new versions.**
+
+### No more default imports
+
+Recently we spent a good deal of time supporting TypeScript to enable us to
+create the Angular Font Awesome component. During that adventure we
+[were](https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html)
+[convinced](https://blog.neufund.org/why-we-have-banned-default-exports-and-you-should-do-the-same-d51fdc2cf2ad)
+that we were going to remove default exports from all of our components,
+libraries, and packages. This is complete with the umbrella release of `5.1.0` of Font Awesome.
+
+What does that mean?
+
+~~Old way:~~
+
+```javascript
+import fontawesome from '@fortawesome/fontawesome'
+import solid from '@fortawesome/fontawesome-free-solid'
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
+library.add(solid, faTwitter)
+```
+
+New way:
+
+```javascript
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(fas, faTwitter)
+
+// Kicks off the process of finding &lt;i&gt; tags and replacing with &lt;svg&gt;
+dom.watch()
+```
+
+This is also a valid way to import icons that works if your tool does not support tree shaking:
+
+```javascript
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+```
+
+### Improved support for tree shaking
+
+Tree shaking is now functional by default and no additional configuration is required to make it work.
+
+The `shakable.es.js` module has been removed and is no longer needed.
+
+If you've previously configured tree shaking by modifying your webpack or rollup you can safely remove these.
+
+**We recommend that you check your bundle size after upgrading an ensure that file sizes are as you would expect.**
+
+```javascript
+module.exports = {
+  // ...
+  resolve: {
+    alias: {
+      '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js'
+    }
+  }
+}
+```
+
+```javascript
+const alias = require('rollup-plugin-alias')
+
+rollup({
+  // ...
+  plugins: [
+    alias({
+      '@fortawesome/fontawesome-free-solid': 'node_modules/@fortawesome/fontawesome-free-solid/shakable.es.js'
+    })
+  ]
+})
+```
+
+## 5.0.11 to 5.0.12
+
+Due to a collision with the &quot;r&quot; glyph the R Project brand icon has been renamed to `r-project`.
+
+## 5.0.x to 5.0.6
+
+### SVG Attribute was changed from data-fa-processed to data-fa-i2svg
+
+As part of a bug fix for the release of 5.0.6 we renamed an attribute that was found on `&lt;svg&gt;` elements from
+`data-fa-processed` to `data-fa-i2svg`. We feel this more accurately reflects the intent and purpose.
+
+This attribute is added to any icon that has been generated using `fontawesome.dom.i2svg()`.
+
+Be aware that `data-fa-i2svg` (or `data-fa-processed`) will no longer be present on icons that are created using
+`fontawesome.icon()`.
+
+If you've written and DOM queries that rely on `data-fa-processed` you should get things working again by doing a
+simple find and replace.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/UPGRADING/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Mouse Wheel ChangeLog</title>
+            <description># Mouse Wheel ChangeLog
+
+## 3.1.13
+
+* Update copyright notice and license to remove years
+* Create the correct compressed version
+* Remove the obsolete jQuery Plugin Registry file
+
+## 3.1.12
+
+* Fix possible 0 value for line height when in delta mode 1
+
+## 3.1.11
+
+* Fix version number for package managers...
+
+## 3.1.10
+
+* Fix issue with calculating line height when using older versions of jQuery
+* Add offsetX/Y normalization with setting to turn it off
+* Cleans up data on teardown
+
+## 3.1.9
+
+* Fix bower.json file
+* Updated how the deltas are adjusted for older mousewheel based events that have deltas that are factors of 120.
+* Add $.event.special.mousewheel.settings.adjustOldDeltas (defaults to true) to turn off adjusting of old deltas that are factors of 120. You'd turn this off if you want to be as close to native scrolling as possible.
+
+## 3.1.8
+
+* Even better handling of older browsers that use a wheelDelta based on 120
+* And fix version reported by `$.event.special.mousewheel`
+
+## 3.1.7
+
+* Better handle the `deltaMode` values 1 (lines) and 2 (pages)
+* Attempt to better handle older browsers that use a wheelDelta based on 120
+
+## 3.1.6
+
+* Deprecating `delta`, `deltaX`, and `deltaY` event handler arguments
+* Update actual event object with normalized `deltaX `and `deltaY` values (`event.deltaX`, `event.deltaY`)
+* Add `deltaFactor` to the event object (`event.deltaFactor`)
+* Handle `&gt; 0` but `&lt; 1` deltas better
+* Do not fire the event if `deltaX` and `deltaY` are `0`
+* Better handle different devices that give different `lowestDelta` values
+* Add `$.event.special.mousewheel.version`
+* Some clean up
+
+## 3.1.5
+
+* Bad release because I did not update the new `$.event.special.mousewheel.version`
+
+## 3.1.4
+
+* Always set the `deltaY`
+* Add back in the `deltaX` and `deltaY` support for older Firefox versions
+
+## 3.1.3
+
+* Include `MozMousePixelScroll` in the to fix list to avoid inconsistent behavior in older Firefox
+
+## 3.1.2
+
+* Include grunt utilities for development purposes (jshint and uglify)
+* Include support for browserify
+* Some basic cleaning up
+
+## 3.1.1
+
+* Fix rounding issue with deltas less than zero
+
+
+## 3.1.0
+
+* Fix Firefox 17+ issues by using new wheel event
+* Normalize delta values
+* Adds horizontal support for IE 9+ by using new wheel event
+* Support AMD loaders
+
+
+## 3.0.6
+
+* Fix issue with delta being 0 in Firefox
+
+
+## 3.0.5
+
+* jQuery 1.7 compatibility
+
+
+## 3.0.4
+
+* Fix IE issue
+
+
+## 3.0.3
+
+* Added `deltaX` and `deltaY` for horizontal scrolling support (Thanks to Seamus Leahy)
+
+
+## 3.0.2
+
+* Fixed delta being opposite value in latest Opera
+* No longer fix `pageX`, `pageY` for older Mozilla browsers
+* Removed browser detection
+* Cleaned up the code
+
+
+## 3.0.1
+
+* Bad release... creating a new release due to plugins.jquery.com issue :(
+
+
+## 3.0
+
+* Uses new special events API in jQuery 1.2.2+
+* You can now treat `mousewheel` as a normal event and use `.bind`, `.unbind` and `.trigger`
+* Using jQuery.data API for expandos
+
+
+## 2.2
+
+* Fixed `pageX`, `pageY`, `clientX` and `clientY` event properties for Mozilla based browsers
+
+
+## 2.1.1
+
+* Updated to work with jQuery 1.1.3
+* Used one instead of bind to do unload event for clean up
+
+
+## 2.1
+
+* Fixed an issue with the unload handler
+
+
+## 2.0
+
+* Major reduction in code size and complexity (internals have change a whole lot)
+
+
+## 1.0
+
+* Fixed Opera issue
+* Fixed an issue with children elements that also have a mousewheel handler
+* Added ability to handle multiple handlers
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/jquery-mousewheel/ChangeLog/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>matchesSelector helper</title>
+            <description># matchesSelector helper
+
+[`matches`/`matchesSelector`](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) is pretty hot :fire:, but has [vendor-prefix baggage](http://caniuse.com/#feat=matchesselector) :handbag: :pouch:. This helper function takes care of that, without polyfilling or augmenting `Element.prototype`.
+
+``` js
+matchesSelector( elem, selector );
+// for example
+matchesSelector( myElem, 'div.my-hawt-selector' );
+```
+
+## Install
+
+Download [matches-selector.js](https://github.com/desandro/matches-selector/raw/master/matches-selector.js)
+
+Install with [Bower](http://bower.io): `bower install matches-selector`
+
+[Install with npm](https://www.npmjs.org/package/desandro-matches-selector): `npm install desandro-matches-selector`
+
+## Browser support
+
+IE10+, all modern browsers
+
+Use [matchesSelector v1](https://github.com/desandro/matches-selector/releases/tag/v1.0.3) for IE8 and IE9 support.
+
+## MIT license
+
+matchesSelector is released under the [MIT license](http://desandro.mit-license.org)
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/desandro-matches-selector/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>EvEmitter</title>
+            <description># EvEmitter
+
+_Lil' event emitter_ — add a little pub/sub
+
+EvEmitter adds publish/subscribe pattern to a browser class. It's a smaller version of [Olical/EventEmitter](https://github.com/Olical/EventEmitter). That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like [Isotope](http://isotope.metafizzy.co), [Flickity](http://flickity.metafizzy.co), [Masonry](http://masonry.desandro.com), and [imagesLoaded](http://imagesloaded.desandro.com).
+
+## API
+
+``` js
+// Inherit prototype, IE8+
+MyClass.prototype = new EvEmitter();
+
+// Inherit prototype, IE9+
+MyClass.prototype = Object.create( EvEmitter.prototype );
+
+// Mixin prototype
+_.extend( MyClass.prototype, EvEmitter.prototype );
+
+// single instance
+var emitter = new EvEmitter();
+```
+
+### on
+
+Add an event listener.
+
+``` js
+emitter.on( eventName, listener )
+```
+
++ `eventName` - _String_ - name of the event
++ `listener` - _Function_
+
+### off
+
+Remove an event listener.
+
+``` js
+emitter.off( eventName, listener )
+```
+
+### once
+
+Add an event listener to be triggered only once.
+
+``` js
+emitter.once( eventName, listener )
+```
+
+### emitEvent
+
+Trigger an event.
+
+``` js
+emitter.emitEvent( eventName, args )
+```
+
++ `eventName` - _String_ - name of the event
++ `args` - _Array_ - arguments passed to listeners
+
+### allOff
+
+Removes all event listeners.
+
+``` js
+emitter.allOff()
+```
+
+## Code example
+
+``` js
+// create event emitter
+var emitter = new EventEmitter();
+
+// listeners
+function hey( a, b, c ) {
+  console.log( 'Hey', a, b, c )
+}
+
+function ho( a, b, c ) {
+  console.log( 'Ho', a, b, c )
+}
+
+function letsGo( a, b, c ) {
+  console.log( 'Lets go', a, b, c )
+}
+
+// bind listeners
+emitter.on( 'rock', hey )
+emitter.once( 'rock', ho )
+// trigger letsGo once
+emitter.on( 'rock', letsGo )
+
+// emit event
+emitter.emitEvent( 'rock', [ 1, 2, 3 ] )
+// =&gt; 'Hey', 1, 2, 3
+// =&gt; 'Ho', 1, 2, 3
+// =&gt; 'Lets go', 1, 2, 3
+
+// unbind
+emitter.off( 'rock', ho )
+
+emitter.emitEvent( 'rock', [ 4, 5, 6 ] )
+// =&gt; 'Hey' 4, 5, 6
+```
+
+## License
+
+EvEmitter is released under the [MIT License](http://desandro.mit-license.org/). Have at it.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/ev-emitter/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Fizzy UI utils</title>
+            <description># Fizzy UI utils
+
+UI utility &amp; helper functions
+
+Used in [Flickity](http://flickity.metafizzy.co), [Isotope](http://isotope.metafizzy.co), [Masonry](http://masonry.desandro.com), [Draggabilly](http://draggabilly.desandro.com)
+
+## Install
+
+Bower: `bower install fizzy-ui-utils --save`
+
+npm: `npm install fizzy-ui-utils --save`
+
+## API
+
+``` js
+// fizzyUIUtils is the browser global
+var utils = fizzyUIUtils;
+
+// ---- ---- //
+
+utils.extend( a, b )
+// extend object
+
+utils.modulo( num, div )
+// num [modulo] div
+
+utils.makeArray( obj )
+// make array from object
+
+utils.removeFrom( ary, obj )
+// remove object from array
+
+utils.getParent( elem, selector )
+// get parent element of an element, given a selector string
+
+utils.getQueryElement( elem )
+// if elem is a string, use it as a selector and return element
+
+Class.prototype.handleEvent = utils.handleEvent;
+// enable Class.onclick when element.addEventListener( 'click', this, false )
+
+utils.filterFindElements( elems, selector )
+// iterate through elems, filter and find all elements that match selector
+
+utils.debounceMethod( Class, methodName, threhold )
+// debounce a class method
+
+utils.docReady( callback )
+// trigger callback on document ready
+
+utils.toDashed( str )
+// 'camelCaseString' -&gt; 'camel-case-string'
+
+utils.htmlInit( Class, namespace )
+// on document ready, initialize Class on every element
+// that matches js-namespace
+// pass in JSON options from element's data-options-namespace attribute
+```
+
+---
+
+[MIT license](http://desandro.mit-license.org/). Have at it.
+
+By [Metafizzy](http://metafizzy.co)
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/fizzy-ui-utils/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h1&gt;&lt;img src=&quot;https://img.fortawesome.com/349cfdf6/logo-fa-free.svg&quot; alt=&quot;Font Awesome 5 Free&quot; width=&quot;50%&quot;&gt;&lt;/h1&gt;
+
+&gt; Version 5 – the iconic SVG, font, and CSS framework
+
+The internet's most popular icon toolkit has been redesigned and built from
+scratch. On top of this, features like icon font ligatures, an SVG framework,
+official NPM packages for popular frontend libraries like React, and access to
+a new CDN.
+
+Not familiar with Font Awesome 5? [Learn
+more](https://www.kickstarter.com/projects/232193852/font-awesome-5) about our
+successful Kickstarter and plan. You can also **[order Font Awesome
+Pro](https://fontawesome.com/pro)** which includes tons more icons directly
+from [fontawesome.com](https://fontawesome.com).
+
+## Get started with 5!
+
+Learn how to [get started](https://fontawesome.com/get-started) with Font Awesome or dive deeper into [other topics](https://fontawesome.com/how-to-use).
+
+* [SVG with JS](https://fontawesome.com/how-to-use/svg-with-js)
+* [Web Fonts with CSS](https://fontawesome.com/how-to-use/web-fonts-with-css)
+* [Use on the Desktop](https://fontawesome.com/how-to-use/use-on-desktop)
+* [Use with Node.js](https://fontawesome.com/how-to-use/use-with-node-js)
+* [JS Component Packages](https://fontawesome.com/how-to-use/js-component-packages)
+* [SVG Sprites](https://fontawesome.com/how-to-use/svg-sprites)
+* [Upgrading from Version 4](https://fontawesome.com/how-to-use/upgrading-from-4)
+* [Server Side Rendering](https://fontawesome.com/how-to-use/server-side-rendering)
+* [Font Awesome API](https://fontawesome.com/how-to-use/font-awesome-api)
+* [Performance and Security](https://fontawesome.com/how-to-use/performance-and-security)
+* [Accessibility](https://fontawesome.com/how-to-use/accessibility)
+
+### Where did Font Awesome 4 (or 3) go?
+
+Now that Font Awesome 5 has been released we are marking version 4 as
+end-of-life. We don't plan on releasing any further versions of the 4.x or 3.x.
+
+Documentation is still available but it's moved to
+[https://fontawesome.com/v4.7.0](https://fontawesome.com/v4.7.0) and
+[https://fontawesome.com/v3.2.1](https://fontawesome.com/v3.2.1).
+
+The Git repository for
+[v4.7.0](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.7.0) and
+[v3.2.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v3.2.1) can
+be found in our GitHub releases.
+
+## Change log
+
+We'll keep track of each release in the [CHANGELOG.md](/assets/bower_components/font-awesome/CHANGELOG/)
+
+Looking for older versions of Font Awesome? Check the [releases](https://github.com/FortAwesome/Font-Awesome/releases).
+
+## Upgrading
+
+From time-to-time we'll have special upgrading instructions from one version to the next.
+
+Check out the [UPGRADING.md](/assets/bower_components/font-awesome/UPGRADING/) guide when you upgrade your dependencies.
+
+## Code of conduct
+
+We will behave ourselves if you behave yourselves. For more details see our
+[CODE_OF_CONDUCT.md](/assets/bower_components/font-awesome/CODE_OF_CONDUCT.md).
+
+## Contributing
+
+Please read through our [contributing guidelines](/assets/bower_components/font-awesome/CONTRIBUTING.md).  Included
+are directions for opening issues.
+
+## Versioning
+
+Font Awesome will be maintained under the Semantic Versioning guidelines as much as possible. Releases will be numbered
+with the following format:
+
+`&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;`
+
+For more information on SemVer, please visit http://semver.org.
+
+**The major version &quot;5&quot; is part of an umbrella release.  It includes many different types of files and technologies. Therefore
+we deviate from normal SemVer in the following ways:**
+
+* Any release may update the design, look-and-feel, or branding of an existing
+  icon
+* We will never intentionally release a `patch` version update that breaks
+  backward compatibility
+* A `minor` release **may include backward-incompatible changes** but we will
+  write clear upgrading instructions in UPGRADING.md
+* A `minor` or `patch` release will never remove icons
+* Bug fixes will be addressed as `patch` releases unless they include backward
+  incompability then they will be `minor` releases
+
+## License
+
+Font Awesome Free is free, open source, and GPL friendly. You can use it for
+commercial projects, open source projects, or really almost whatever you want.
+
+- Icons — CC BY 4.0 License
+  - In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
+- Fonts — SIL OFL 1.1 License
+  - In the Font Awesome Free download, the SIL OLF license applies to all icons packaged as web and desktop font files.
+- Code — MIT License
+  - In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
+
+Attribution is required by MIT, SIL OLF, and CC BY licenses. Downloaded Font
+Awesome Free files already contain embedded comments with sufficient
+attribution, so you shouldn't need to do anything additional when using these
+files normally.
+
+We've kept attribution comments terse, so we ask that you do not actively work
+to remove them from files, especially code. They're a great way for folks to
+learn about Font Awesome.
+
+## Team
+
+* [Dave Gandy](https://github.com/davegandy)
+* [Travis Chase](https://github.com/supercodepoet)
+* [Rob Madole](https://github.com/robmadole)
+* [Brian Talbot](https://github.com/talbs)
+* [Jory Raphael](https://github.com/sensibleworld)
+* [Mike Wilkerson](https://github.com/mlwilkerson)
+* [Geremia Taglialatela](https://github.com/tagliala)
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-common-types - SVG with JavaScript</title>
+            <description># @fortawesome/fontawesome-common-types - SVG with JavaScript
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-common-types.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-common-types)
+
+## What is this package?
+
+Font Awesome 5 JavaScript packages support TypeScript. This package abstracts out some of the common definitions that those packages use.
+
+## Here be dragons
+
+If you are trying to import types from this package we *highly* recommend you do the following instead as *all types in this package are re-exported to the main fontawesome package*.
+
+your.ts
+
+```
+import {
+  IconName
+} from `@fortawesome/fontawesome`
+
+const myIcon: IconName = &quot;...&quot;
+```
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-brands - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-brands - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-brands.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-brands)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-brands
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-brands
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-regular - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-regular - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-regular.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-regular)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-regular
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-regular
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-solid - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-solid - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-solid.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-solid)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-solid
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-solid
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-webfonts - Web Fonts with CSS version</title>
+            <description># @fortawesome/fontawesome-free-webfonts - Web Fonts with CSS version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-webfonts.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-webfonts
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-webfonts
+```
+
+## What is this package?
+
+This package includes CSS, Less, SCSS, and the individual web font files needed to get Font Awesome 5 Web Fonts with CSS working in your freeject.
+
+Inside `node_modules/@fortawesome/fontawesome-free-webfonts` you'll find the following directories:
+
+* `css`
+* `less`
+* `scss`
+* `webfonts`
+
+It's up to you to configure your build tool to use these.
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/web-fonts-with-css). Continue your journey [here](https://fontawesome.com/how-to-use/web-fonts-with-css).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free - The Official Font Awesome 5 NPM package</title>
+            <description># @fortawesome/fontawesome-free - The Official Font Awesome 5 NPM package
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free
+```
+
+## What's included?
+
+**This package includes all the same files available through our Free and Pro CDN.**
+
+* /js - All JavaScript files associated with Font Awesome 5 SVG with JS
+* /css - All CSS using the classic Web Fonts with CSS implementation
+* /sprites - SVG icons packaged in a convenient sprite
+* /scss, /less - CSS Pre-processor files for Web Fonts with CSS
+* /webfonts - Accompanying files for Web Fonts with CSS
+* /svg - Individual icon files in SVG format
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started). Continue your journey [here](https://fontawesome.com/how-to-use).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-svg-core - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-svg-core - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-svg-core.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-svg-core
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-svg-core
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-svg-core/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-brands-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-brands-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-brands-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-brands-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-brands-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-brands-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-brands-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-regular-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-regular-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-regular-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-regular-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-regular-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-regular-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-solid-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-solid-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-solid-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-solid-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-solid-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-solid-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>getSize</title>
+            <description># getSize
+
+Get the size of elements. Used in [Masonry](https://masonry.desandro.com), [Isotope](https://isotope.metafizzy.co), &amp;  [Flickity](https://flickity.metafizzy.co). 
+
+``` js
+var size = getSize( elem );
+// elem can be an element
+var size = getSize( document.querySelector('.selector') )
+// elem can be a selector string
+var size = getSize('.selector')
+```
+
+Returns an object with: 
+
++ width, height
++ innerWidth, innerHeight
++ outerWidth, outerHeight
++ paddingLeft, paddingTop, paddingRight, paddingBottom
++ marginLeft, marginTop, marginRight, marginBottom
++ borderLeftWidth, borderTopWidth, borderRightWidth, borderBottomWidth
++ isBorderBox
+
+Browser support: IE10+, Android 4.0+, iOS 5+, and modern browsers
+
+## Install
+
+Install with npm: `npm install get-size`
+
+Install with [Bower](https://bower.io): `bower install get-size`
+
+## Firefox hidden iframe bug
+
+[Firefox has an old bug](https://bugzilla.mozilla.org/show_bug.cgi?id=548397) that occurs within iframes that are hidden with `display: none`. To resolve this, you can use alternate CSS to hide the iframe off-screen, with out `display: none`.
+
+``` css
+.hide-iframe {
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+```
+
+## MIT License
+
+getSize is released under the [MIT License](https://desandro.mit-license.org/).
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/get-size/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>![Version](https://img.shields.io/badge/Version-0.6.0-blue.svg)
+![MinGhostVersion](https://img.shields.io/badge/Min%20Ghost%20v.-%3E%3D%202.10-red.svg)
+
+# ghostHunter
+
+**Original developer:** [jamal@i11u.me](mailto:jamal@i11u.me)
+
+GhostHunter makes it easy to add search capability to any Ghost theme, using the [Ghost API](https://api.ghost.org/v1.14.0/docs) and the [lunr.js](https://lunrjs.com) search engine. Indexing and search are done client-side (in the browser). This has several advantages:
+
+* Searches are private to the user, and are not exposed to third parties.
+* Installation and maintenance of powerful-but-daunting standalone search engines (such as [Solr](http://lucene.apache.org/solr/) or [ElasticSearch](https://www.elastic.co/)) is not required.
+* Instant search (&quot;search-as-you-type&quot; or &quot;typeahead&quot;) is simple to configure.
+
+-----------------
+
+## Contents
+
+   * [ghostHunter](#ghosthunter)
+      * [Contents](#contents)
+      * [Upgrade notes](#upgrade-notes)
+      * [Basic setup](#basic-setup)
+      * [Advanced usage](#advanced-usage)
+         * [Production installation](#production-installation)
+         * [GhostHunter options](#ghosthunter-options)
+         * [Multiple search fields](#multiple-search-fields)
+         * [Clearing search results](#clearing-search-results)
+         * [Indexing and caching: how it works](#indexing-and-caching-how-it-works)
+         * [Development: rebuilding ghostHunter](#development-rebuilding-ghosthunter)
+   * [Footnotes](#footnotes)
+
+------------------
+
+## Upgrade notes
+### GhostHunter v0.6.0
+
+* Implements @JiapengLi &quot;dirty fix&quot; to support the new Ghost v2 Content API.
+* Removes spurious production console.log message.
+* Removes `includepages` option.
+
+
+To use this version of ghostHunter, you'll need to create a Custom Integration and inject its Content API key into your blog header. In your Ghost Settings:
+
+&gt;&gt; read more online ....</description>
+            <link>https://www.alainqtec.com/assets/bower_components/ghosthunter/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>imagesLoaded</title>
+            <description># imagesLoaded
+
+&lt;p class=&quot;tagline&quot;&gt;JavaScript is all like &quot;You images done yet or what?&quot;&lt;/p&gt;
+
+[imagesloaded.desandro.com](http://imagesloaded.desandro.com)
+
+Detect when images have been loaded.
+
+## Install
+
+### Download
+
++ [imagesloaded.pkgd.min.js](https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js) minified
++ [imagesloaded.pkgd.js](https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js) un-minified
+
+### CDN
+
+``` html
+&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+Install via [npm](https://www.npmjs.com/package/imagesloaded): `npm install imagesloaded`
+
+Install via [Bower](http://bower.io): `bower install imagesloaded --save`
+
+## jQuery
+
+You can use imagesLoaded as a jQuery Plugin.
+
+``` js
+$('#container').imagesLoaded( function() {
+  // images have loaded
+});
+
+// options
+$('#container').imagesLoaded( {
+  // options...
+  },
+  function() {
+    // images have loaded
+  }
+);
+```
+
+`.imagesLoaded()` returns a [jQuery Deferred object](http://api.jquery.com/category/deferred-object/). This allows you to use `.always()`, `.done()`, `.fail()` and `.progress()`.
+
+``` js
+$('#container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
+```
+
+## Vanilla JavaScript
+
+You can use imagesLoaded with vanilla JS.
+
+``` js
+imagesLoaded( elem, callback )
+// options
+imagesLoaded( elem, options, callback )
+// you can use `new` if you like
+new imagesLoaded( elem, callback )
+```
+
++ `elem` _Element, NodeList, Array, or Selector String_
++ `options` _Object_
++ `callback` _Function_ - function triggered after all images have been loaded
+
+Using a callback function is the same as binding it to the `always` event (see below).
+
+``` js
+// element
+imagesLoaded( document.querySelector('#container'), function( instance ) {
+  console.log('all images are loaded');
+});
+// selector string
+imagesLoaded( '#container', function() {...});
+// multiple elements
+var posts = document.querySelectorAll('.post');
+imagesLoaded( posts, function() {...});
+```
+
+Bind events with vanilla JS with .on(), .off(), and .once() methods.
+
+``` js
+var imgLoad = imagesLoaded( elem );
+function onAlways( instance ) {
+  console.log('all images are loaded');
+}
+// bind with .on()
+imgLoad.on( 'always', onAlways );
+// unbind with .off()
+imgLoad.off( 'always', onAlways );
+```
+
+## Background
+
+Detect when background images have loaded, in addition to `&lt;img&gt;`s.
+
+Set `{ background: true }` to detect when the element's background image has loaded.
+
+``` js
+// jQuery
+$('#container').imagesLoaded( { background: true }, function() {
+  console.log('#container background image loaded');
+});
+
+// vanilla JS
+imagesLoaded( '#container', { background: true }, function() {
+  console.log('#container background image loaded');
+});
+```
+
+[See jQuery demo](http://codepen.io/desandro/pen/pjVMPB) or [vanilla JS demo](http://codepen.io/desandro/pen/avKooW) on CodePen.
+
+Set to a selector string like `{ background: '.item' }` to detect when the background images of child elements have loaded.
+
+``` js
+// jQuery
+$('#container').imagesLoaded( { background: '.item' }, function() {
+  console.log('all .item background images loaded');
+});
+
+// vanilla JS
+imagesLoaded( '#container', { background: '.item' }, function() {
+  console.log('all .item background images loaded');
+});
+```
+
+[See jQuery demo](http://codepen.io/desandro/pen/avKoZL) or [vanilla JS demo](http://codepen.io/desandro/pen/vNrBGz) on CodePen.
+
+## Events
+
+### always
+
+``` js
+// jQuery
+$('#container').imagesLoaded().always( function( instance ) {
+  console.log('ALWAYS - all images have been loaded');
+});
+
+// vanilla JS
+imgLoad.on( 'always', function( instance ) {
+  console.log('ALWAYS - all images have been loaded');
+});
+```
+
+Triggered after all images have been either loaded or confirmed broken.
+
++ `instance` _imagesLoaded_ - the imagesLoaded instance
+
+### done
+
+``` js
+// jQuery
+$('#container').imagesLoaded().done( function( instance ) {
+  console.log('DONE  - all images have been successfully loaded');
+});
+
+// vanilla JS
+imgLoad.on( 'done', function( instance ) {
+  console.log('DONE  - all images have been successfully loaded');
+});
+```
+
+Triggered after all images have successfully loaded without any broken images.
+
+### fail
+
+``` js
+$('#container').imagesLoaded().fail( function( instance ) {
+  console.log('FAIL - all images loaded, at least one is broken');
+});
+
+// vanilla JS
+imgLoad.on( 'fail', function( instance ) {
+  console.log('FAIL - all images loaded, at least one is broken');
+});
+```
+
+Triggered after all images have been loaded with at least one broken image.
+
+### progress
+
+``` js
+imgLoad.on( 'progress', function( instance, image ) {
+  var result = image.isLoaded ? 'loaded' : 'broken';
+  console.log( 'image is ' + result + ' for ' + image.img.src );
+});
+```
+
+Triggered after each image has been loaded.
+
++ `instance` _imagesLoaded_ - the imagesLoaded instance
++ `image` _LoadingImage_ - the LoadingImage instance of the loaded image
+
+&lt;!-- sponsored --&gt;
+
+## Properties
+
+### LoadingImage.img
+
+_Image_ - The `img` element
+
+### LoadingImage.isLoaded
+
+_Boolean_ - `true` when the image has successfully loaded
+
+### imagesLoaded.images
+
+Array of _LoadingImage_ instances for each image detected
+
+``` js
+var imgLoad = imagesLoaded('#container');
+imgLoad.on( 'always', function() {
+  console.log( imgLoad.images.length + ' images loaded' );
+  // detect which image is broken
+  for ( var i = 0, len = imgLoad.images.length; i &lt; len; i++ ) {
+    var image = imgLoad.images[i];
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  }
+});
+```
+
+## Browserify
+
+imagesLoaded works with [Browserify](http://browserify.org/).
+
+``` bash
+npm install imagesloaded --save
+```
+
+``` js
+var imagesLoaded = require('imagesloaded');
+
+imagesLoaded( elem, function() {...} );
+```
+
+Use `.makeJQueryPlugin` to make to use `.imagesLoaded()` jQuery plugin.
+
+``` js
+var $ = require('jquery');
+var imagesLoaded = require('imagesloaded');
+
+// provide jQuery argument
+imagesLoaded.makeJQueryPlugin( $ );
+// now use .imagesLoaded() jQuery plugin
+$('#container').imagesLoaded( function() {...});
+```
+
+## Webpack
+
+Install imagesLoaded with npm.
+
+``` bash
+npm install imagesloaded
+```
+
+You can then `require('imagesloaded')`.
+
+``` js
+// main.js
+var imagesLoaded = require('imagesloaded');
+
+imagesLoaded( '#container', function() {
+  // images have loaded
+});
+```
+
+Use `.makeJQueryPlugin` to make `.imagesLoaded()` jQuery plugin.
+
+``` js
+// main.js
+var imagesLoaded = require('imagesloaded');
+var $ = require('jquery');
+
+// provide jQuery argument
+imagesLoaded.makeJQueryPlugin( $ );
+// now use .imagesLoaded() jQuery plugin
+$('#container').imagesLoaded( function() {...});
+```
+
+Run webpack.
+
+``` bash
+webpack main.js bundle.js
+```
+
+## RequireJS
+
+imagesLoaded works with [RequireJS](http://requirejs.org).
+
+You can require [imagesloaded.pkgd.js](http://imagesloaded.desandro.com/imagesloaded.pkgd.js).
+
+``` js
+requirejs( [
+  'path/to/imagesloaded.pkgd.js',
+], function( imagesLoaded ) {
+  imagesLoaded( '#container', function() { ... });
+});
+```
+
+Use `.makeJQueryPlugin` to make `.imagesLoaded()` jQuery plugin.
+
+``` js
+requirejs( [
+  'jquery',
+  'path/to/imagesloaded.pkgd.js',
+], function( $, imagesLoaded ) {
+  // provide jQuery argument
+  imagesLoaded.makeJQueryPlugin( $ );
+  // now use .imagesLoaded() jQuery plugin
+  $('#container').imagesLoaded( function() {...});
+});
+```
+
+You can manage dependencies with [Bower](http://bower.io). Set `baseUrl` to `bower_components` and set a path config for all your application code.
+
+``` js
+requirejs.config({
+  baseUrl: 'bower_components/',
+  paths: { // path to your app
+    app: '../'
+  }
+});
+
+requirejs( [
+  'imagesloaded/imagesloaded',
+  'app/my-component.js'
+], function( imagesLoaded, myComp ) {
+  imagesLoaded( '#container', function() { ... });
+});
+```
+
+## Browser support
+
++ IE9+
++ Android 2.3+
++ iOS Safari 4+
++ All other modern browsers
+
+Use [imagesLoaded v3](http://imagesloaded.desandro.com/v3/) for IE8 support.
+
+## MIT License
+
+imagesLoaded is released under the [MIT License](http://desandro.mit-license.org/). Have at it.
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/imagesloaded/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Isotope</title>
+            <description># Isotope
+
+_Filter &amp; sort magical layouts_
+
+See [isotope.metafizzy.co](https://isotope.metafizzy.co) for complete docs and demos.
+
+## Install
+
+### Download
+
++ [isotope.pkgd.js](https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js) un-minified, or
++ [isotope.pkgd.min.js](https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js) minified
+
+### CDN
+
+Link directly to Isotope files on [unpkg](https://unpkg.com).
+
+``` html
+&lt;script src=&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+npm: `npm install isotope-layout --save`
+
+Bower: `bower install isotope-layout --save`
+
+## License
+
+### Commercial license
+
+If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase an Isotope Commercial License at [isotope.metafizzy.co](https://isotope.metafizzy.co/#commercial-license)
+
+### Open source license
+
+If you are creating an open source application under a license compatible with the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html), you may use Isotope under the terms of the GPLv3.
+
+[Read more about Isotope's license](https://isotope.metafizzy.co/license.html).
+
+## Initialize
+
+With jQuery
+
+``` js
+$('.grid').isotope({
+  // options...
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 200
+  }
+});
+```
+
+With vanilla JavaScript
+
+``` js
+// vanilla JS
+var grid = document.querySelector('.grid');
+var iso = new Isotope( grid, {
+  // options...
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 200
+  }
+});
+```
+
+With HTML
+
+Add a `data-isotope` attribute to your element. Options can be set in JSON in the value.
+
+``` html
+&lt;div class=&quot;grid&quot;
+  data-isotope='{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;masonry&quot;: { &quot;columnWidth&quot;: 200 } }'&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+* * *
+
+By [Metafizzy 🌈🐻](https://metafizzy.co), 2010–2018
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/isotope-layout/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery Mouse Wheel Plugin</title>
+            <description># jQuery Mouse Wheel Plugin
+
+A [jQuery](http://jquery.com/) plugin that adds cross-browser mouse wheel support with delta normalization.
+
+In order to use the plugin, simply bind the `mousewheel` event to an element.
+
+It also provides two helper methods called `mousewheel` and `unmousewheel`
+that act just like other event helper methods in jQuery.
+
+The event object is updated with the normalized `deltaX` and `deltaY` properties.
+In addition there is a new property on the event object called `deltaFactor`. Multiply
+the `deltaFactor` by `deltaX` or `deltaY` to get the scroll distance that the browser
+has reported.
+
+Here is an example of using both the bind and helper method syntax:
+
+```js
+// using on
+$('#my_elem').on('mousewheel', function(event) {
+    console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+
+// using the event helper
+$('#my_elem').mousewheel(function(event) {
+    console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+```
+
+The old behavior of adding three arguments (`delta`, `deltaX`, and `deltaY`) to the
+event handler is now deprecated and will be removed in later releases.
+
+
+## The Deltas...
+
+The combination of Browsers, Operating Systems, and Devices offer a huge range of possible delta values. In fact if the user
+uses a trackpad and then a physical mouse wheel the delta values can differ wildly. This plugin normalizes those
+values so you get a whole number starting at +-1 and going up in increments of +-1 according to the force or
+acceleration that is used. This number has the potential to be in the thousands depending on the device.
+Check out some of the data collected from users [here](http://mousewheeldatacollector.herokuapp.com/).
+
+### Getting the scroll distance
+
+In some use-cases we prefer to have the normalized delta but in others we want to know how far the browser should
+scroll based on the users input. This can be done by multiplying the `deltaFactor` by the `deltaX` or `deltaY`
+event property to find the scroll distance the browser reported.
+
+The `deltaFactor` property was added to the event object in 3.1.5 so that the actual reported delta value can be
+extracted. This is a non-standard property.
+
+
+## Using with [Browserify](http://browserify.org)
+
+Support for browserify is baked in.
+
+```bash
+npm install jquery-mousewheel
+npm install jquery-browserify
+```
+
+In your server-side node.js code:
+
+```js
+var express = require('express');
+var app = express.createServer();
+
+app.use(require('browserify')({
+    require : [ 'jquery-browserify', 'jquery-mousewheel' ]
+}));
+```
+
+In your browser-side javascript:
+
+```js
+var $ = require('jquery-browserify');
+require('jquery-mousewheel')($);
+```
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/jquery-mousewheel/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery Easing Plugin</title>
+            <description># jQuery Easing Plugin
+
+What is it? A jQuery plugin from GSGD to give advanced easing options. More info [here](http://gsgd.co.uk/sandbox/jquery/easing)
+
+For CDN please use CloudFlare [`https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js`](https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js) to help my host. Thank you.
+
+# AMD or CommonJS usage
+
+```js
+// CommonJS
+var jQuery = require('jquery');
+require('jquery.easing')(jQuery);
+
+// AMD
+define(['jquery', 'jquery.easing'], function (jQuery, easing) {
+  easing(jQuery)
+})
+```
+
+# Building and testing
+
+* Clone the repo
+* `npm install`
+* Make changes
+* Test against files in `/examples`
+* Build minified version with `npm run build`
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/jquery.easing/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery</title>
+            <description># jQuery
+
+&gt; jQuery is a fast, small, and feature-rich JavaScript library.
+
+For information on how to get started and how to use jQuery, please see [jQuery's documentation](http://api.jquery.com/).
+For source files and issues, please visit the [jQuery repo](https://github.com/jquery/jquery).
+
+If upgrading, please see the [blog post for 3.3.1](https://blog.jquery.com/2017/03/20/jquery-3.3.1-now-available/). This includes notable differences from the previous version and a more readable changelog.
+
+## Including jQuery
+
+Below are some of the most common ways to include jQuery.
+
+### Browser
+
+#### Script tag
+
+```html
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+```
+
+#### Babel
+
+[Babel](http://babeljs.io/) is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.
+
+```js
+import $ from &quot;jquery&quot;;
+```
+
+#### Browserify/Webpack
+
+There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including jQuery will usually look like this...
+
+```js
+var $ = require(&quot;jquery&quot;);
+```
+
+#### AMD (Asynchronous Module Definition)
+
+AMD is a module format built for the browser. For more information, we recommend [require.js' documentation](http://requirejs.org/docs/whyamd.html).
+
+```js
+define([&quot;jquery&quot;], function($) {
+
+});
+```
+
+### Node
+
+To include jQuery in [Node](nodejs.org), first install with npm.
+
+```sh
+npm install jquery
+```
+
+For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as [jsdom](https://github.com/tmpvar/jsdom). This can be useful for testing purposes.
+
+```js
+require(&quot;jsdom&quot;).env(&quot;&quot;, function(err, window) {
+	if (err) {
+		console.error(err);
+		return;
+	}
+
+	var $ = require(&quot;jquery&quot;)(window);
+});
+```
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/jquery/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Masonry</title>
+            <description># Masonry
+
+_Cascading grid layout library_
+
+Masonry works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.
+
+See [masonry.desandro.com](https://masonry.desandro.com) for complete docs and demos.
+
+## Install
+
+### Download
+
++ [masonry.pkgd.js](https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js) un-minified, or
++ [masonry.pkgd.min.js](https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js) minified
+
+### CDN
+
+Link directly to Masonry files on [unpkg](https://unpkg.com/).
+
+``` html
+&lt;script src=&quot;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+[npm](https://www.npmjs.com/package/masonry-layout): `npm install masonry-layout --save`
+
+Bower: `bower install masonry-layout --save`
+
+## Support Masonry development
+
+Masonry has been actively maintained and improved upon for 8 years, with 900 GitHub issues closed. Please consider supporting its development by [purchasing a license for one of Metafizzy's commercial libraries](https://metafizzy.co).
+
+## Initialize
+
+With jQuery
+
+``` js
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+```
+
+With vanilla JavaScript
+
+``` js
+// vanilla JS
+// init with element
+var grid = document.querySelector('.grid');
+var msnry = new Masonry( grid, {
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+
+// init with selector
+var msnry = new Masonry( '.grid', {
+  // options...
+});
+```
+
+With HTML
+
+Add a `data-masonry` attribute to your element. Options can be set in JSON in the value.
+
+``` html
+&lt;div class=&quot;grid&quot; data-masonry='{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;columnWidth&quot;: 200 }'&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+## License
+
+Masonry is released under the [MIT license](http://desandro.mit-license.org). Have at it.
+
+* * *
+
+Made by David DeSandro
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/masonry-layout/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>![nanobar](https://raw.githubusercontent.com/jacoborus/nanobar/master/brand/nanobar.png 'nanobar logo')
+=======================================================================================================
+
+Very lightweight progress bars (~699 bytes gzipped).
+
+Compatibility: iE7+ and the rest of the world
+
+[![npm version](https://badge.fury.io/js/nanobar.svg)](https://www.npmjs.com/package/nanobar) [![Bower version](https://img.shields.io/bower/v/nanobar.svg?maxAge=2592000)](https://github.com/jacoborus/nanobar/releases)
+
+## Demo
+
+See [nanobar.jacoborus.codes](http://nanobar.jacoborus.codes)
+
+
+## Installation
+
+Download and extract the [latest release](https://github.com/jacoborus/nanobar/archive/master.zip) or install with package manager:
+
+[Bower](http://bower.io/):
+
+```
+$ bower install nanobar
+```
+
+[npm](https://www.npmjs.org/package/nanobar):
+
+```
+$ npm install nanobar
+```
+
+
+## Usage
+
+### Load
+
+Link `nanobar.js` from your html file
+
+```html
+&lt;script src=&quot;path/to/nanobar.min.js&quot;&gt;&lt;/script&gt;
+```
+
+or require it:
+
+```js
+var Nanobar = require('path/to/nanobar');
+```
+
+### Generate progressbar
+
+```js
+var nanobar = new Nanobar( options );
+```
+
+**options**
+
+- `id` `&lt;String&gt;`: (optional) id for **nanobar** div
+- `classname` `&lt;String&gt;`: (optional) class for **nanobar** div
+- `target` `&lt;DOM Element&gt;`: (optional) Where to put the progress bar, **nanobar** will be fixed to top of document if no `target` is passed
+
+
+### Move bar
+
+Resize the bar with `nanobar.go(percentage)`
+
+**arguments**
+
+- `percentage` `&lt;Number&gt;` : percentage width of nanobar
+
+
+## Example
+
+Create bar
+
+```js
+var options = {
+	classname: 'my-class',
+  id: 'my-id',
+	target: document.getElementById('myDivId')
+};
+
+var nanobar = new Nanobar( options );
+
+//move bar
+nanobar.go( 30 ); // size bar 30%
+nanobar.go( 76 ); // size bar 76%
+
+// size bar 100% and and finish
+nanobar.go(100);
+```
+
+### Customize bars
+
+Nanobar injects a style tag in your HTML head. Bar divs has class `.bar`, and its containers `.nanobar`, so you can overwrite its values.
+
+Default css:
+
+```css
+.nanobar {
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  top:0
+}
+.bar {
+  width: 0;
+  height: 100%;
+  transition: height .3s;
+  background:#000;
+}
+```
+
+You should know what to do with that ;)
+
+
+&lt;br&gt;&lt;br&gt;
+
+---
+
+© 2016 [jacoborus](https://github.com/jacoborus) - Released under [MIT License](https://raw.github.com/jacoborus/nanobar/master/LICENSE)
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/nanobar/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Outlayer</title>
+            <description># Outlayer
+
+_Brains and guts of a layout library_
+
+Outlayer is a base layout class for layout libraries like [Isotope](http://isotope.metafizzy.co), [Packery](http://packery.metafizzy.co), and [Masonry](http://masonry.desandro.com)
+
+Outlayer layouts work with a container element and children item elements.
+
+``` html
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+## Install
+
+Install with [Bower](http://bower.io): `bower install outlayer`
+
+[Install with npm](http://npmjs.org/package/outlayer): `npm install outlayer`
+
+## Outlayer.create()
+
+Create a layout class with `Outlayer.create()`
+
+``` js
+var Layout = Outlayer.create( namespace );
+// for example
+var Masonry = Outlayer.create('masonry');
+```
+
++ `namespace` _{String}_ should be camelCased
++ returns `LayoutClass` _{Function}_
+
+Create a new layout class. `namespace` is used for jQuery plugin, and for declarative initialization.
+
+The `Layout` inherits from [`Outlayer.prototype`](docs/outlayer.md).
+
+```
+var elem = document.querySelector('.selector');
+var msnry = new Masonry( elem, {
+  // set options...
+  columnWidth: 200
+});
+```
+
+## Item
+
+Layouts work with Items, accessible as `Layout.Item`. See [Item API](docs/item.md).
+
+## Declarative
+
+An Outlayer layout class can be initialized via HTML, by setting an attribute of `data-namespace` on the element. Options are set in JSON. For example:
+
+``` html
+&lt;!-- var Masonry = Outlayer.create('masonry') --&gt;
+&lt;div class=&quot;grid&quot; data-masonry='{ &quot;itemSelector&quot;: &quot;.item&quot;, &quot;columnWidth&quot;: 200 }'&gt;
+  ...
+&lt;/div&gt;
+```
+
+The declarative attributes and class will be dashed. i.e. `Outlayer.create('myNiceLayout')` will use `data-my-nice-layout` as the attribute.
+
+## .data()
+
+Get a layout instance from an element.
+
+```
+var myMasonry = Masonry.data( document.querySelector('.grid') );
+```
+
+## jQuery plugin
+
+The layout class also works as jQuery plugin.
+
+``` js
+// create Masonry layout class, namespace will be the jQuery method
+var Masonry = Outlayer.create('masonry');
+// rock some jQuery
+$( function() {
+  // .masonry() to initialize
+  var $grid = $('.grid').masonry({
+    // options...
+  });
+  // methods are available by passing a string as first parameter
+  $grid.masonry( 'reveal', elems );
+});
+```
+
+## RequireJS
+
+To use Outlayer with [RequireJS](http://requirejs.org/), you'll need to set some config.
+
+Set [baseUrl](http://requirejs.org/docs/api.html#config-baseUrl) to bower_components and set a [path config](http://requirejs.org/docs/api.html#config-paths) for all your application code.
+
+``` js
+requirejs.config({
+  baseUrl: 'bower_components',
+  paths: {
+    app: '../'
+  }
+});
+
+requirejs( [ 'outlayer/outlayer', 'app/my-component.js' ], function( Outlayer, myComp ) {
+  new Outlayer( /*...*/ )
+});
+```
+
+Or set a path config for all Outlayer dependencies.
+
+``` js
+requirejs.config({
+  paths: {
+    'ev-emitter': 'bower_components/ev-emitter',
+    'get-size': 'bower_components/get-size',
+    'matches-selector': 'bower_components/matches-selector'
+  }
+});
+```
+
+## MIT license
+
+Outlayer is released under the [MIT license](http://desandro.mit-license.org).
+</description>
+            <link>https://www.alainqtec.com/assets/bower_components/outlayer/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+
+  </channel>
+</rss>

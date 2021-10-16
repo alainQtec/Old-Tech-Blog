@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "cleanUrls": true,
+    "trailingSlash": true,
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "Gemfile",
+      "Gemfile.lock",
+      "Rakefile",
+      "CNAME",
+      "README.md"
+    ]
+  }
+}

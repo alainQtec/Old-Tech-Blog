@@ -1,0 +1,31 @@
+# Features to add
+
+- Responsive
+- Semantic HTML
+- Skins
+- Highlight Theme
+- Internationalization
+- Search
+- Table of contents
+- Authors
+- Additional styles (alert, tag, image, icon, button, grid, etc)
+- Extensions (audios, videos, slides, demos)
+- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
+- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
+- Pageview ([LeanCloud](https://leancloud.cn/))
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
+- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Continuous deployment with [`github actions`](https://github.com/features/actions).
+- Local CMS Admin using [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/).
+- Onine CMS Admin using [`Forestry`](https://app.forestry.io/dashboard/#) a Git-backed CMS.
+- Using Latest [`Jekyll` 4.x](https://jekyllrb.com) and [`Bundler`](https://bundler.io).
+- Stylesheet built using Sass
+- Comments using [`Hyvor`](https://talk.hyvor.com/) and [`Disqus`](https://disqus.com/).<!-- - SEO-optimized. -->
+- Real Time site Search - [`Algolia`](https://www.algolia.com/).
+- Selling Stuff (Ecommerce) using [`Snipcart`](https://snipcart.com/).
+- Send Newsletters using [`Mailchimp`](https://mailchimp.com/).
+- Contact Forms Support for [`Getform`](https://getform.io), [`Formspree`](https://formspree.io/).
+- Coding Activity using [`Wakatime`](https://wakatime.com/).
+- Hosting Support for [`Github Pages`](https://pages.github.com), [`Netlify`](https://netlify.com), [`Vercel`](https://vercel.com), [`Heroku`](https://heroku.com), [`AWS Amplify`](aws.amplify.com), [`Firebase`](https://firebase.com).
+<!-- - [Buddy](https://buddy.works/) , [`Circle CI`](https://circleci.com/) -->
