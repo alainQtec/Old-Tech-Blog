@@ -134,6 +134,13 @@ footer .logo {
   clear: both;
 }
 
+.footer_brand_c {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding-top: 27px;
+}
+
 .footerbrand {
   position: relative;
   display: inline-block !important;
@@ -176,6 +183,16 @@ footer .logo {
 .footerbrand:hover span:nth-child(3):after {
   position: relative;
   content: "h";
+}
+
+.foo_slogan {
+  font-size: var(--smaller-font-size);
+}
+
+.foo_hr {
+  color: rgb(237, 234, 234); width: 90%; 
+  align-self: center !important; 
+  margin: 0 auto !important;
 }
 
 @media only screen and (min-width: 1280px) {
