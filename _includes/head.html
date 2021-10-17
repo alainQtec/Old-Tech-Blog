@@ -91,15 +91,7 @@ layout: compress
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism-okaidia.min.css">
   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/atomic-bulldog-grid.css">
-	
-  <style>
-    {{critical_style | scssify}}
-  </style>
-  <style>
-    {% include footer.css %}
-  </style>
-  <!-- <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/footer.css"> -->
-  
+  {%- include head/inline_css_default.html -%}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
 
   <!-- Fonts-->
