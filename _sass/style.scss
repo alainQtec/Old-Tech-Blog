@@ -486,6 +486,7 @@ div.sr_card.result_item,
         background: rgba(255, 255, 255, 0.3);
         border-radius: .5rem;
         cursor: pointer;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         transition: .3s;
 
@@ -925,6 +926,7 @@ img{
             padding: 2rem;
             background: rgba(255, 255, 255, 0.3);
             transition: .5s;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
     }
@@ -2150,15 +2152,6 @@ figure.blog_card.it2-card:hover {
     transition: all 0.2s ease-in-out !important;
     background-blend-mode: darken !important;
     background-repeat: no-repeat;
-
-    // -webkit-backdrop-filter: blur(4px);
-    // backdrop-filter: 4px;
-
-    // -webkit-filter: brightness(70%);
-	// -moz-filter: brightness(70%);
-	// -o-filter: brightness(70%);
-	// -ms-filter: brightness(70%);
-	// filter: brightness(70%);
 }
 
 .it2-card .data .content,
@@ -3344,7 +3337,7 @@ a.nav-link.scrollto {
     background-position: bottom center;
     background-repeat: repeat;
     background-size: 100%;
-    //   background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/img/bg-header.jpg) no-repeat 50% 50%;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px) !important;
     border-radius: .3rem !important;
     border-top: 1px solid var(--text-color) !important;
