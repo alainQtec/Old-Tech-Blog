@@ -1231,55 +1231,6 @@ img{
 // $text-width: 650px;
 
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-ol, ul {
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-}
-
-body {
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    font-feature-settings: "kernon";
-    font-variant-numeric: oldstyle-nums;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    hanging-punctuation: first last;
-    color: var(--text-color) !important;
-    background-color: var(--main-background-color) !important;
-    background-image: var(--body-background-image) !important;
-    background-position: center;
-    background-size: cover;
-	background-repeat: no-repeat;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
-    transition: all 300ms linear;
-    text-rendering: optimizeLegibility;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    // height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-.main {
-    position: relative;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    margin: 0 auto;
-    padding: 0;
-    -webkit-border-radius: .5rem !important;
-	-moz-border-radius: .5rem !important;
-    border-radius: .5rem;
-    background: var(--body-background-image);
-}
 
 .reactions-view {
     color: var(--bold-color) !important;
