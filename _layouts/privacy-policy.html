@@ -2,6 +2,11 @@
 layout: compress
 ---
 
+{% capture critical_style %}
+{% include {{ critical.scss }} %}
+{% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
+{% endcapture %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 {%- include head.html -%}
