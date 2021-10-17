@@ -2,6 +2,11 @@
 layout: compress
 ---
 
+{% capture 404_style %}
+{% include scss/404.scss %}
+{% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
+{% endcapture %}
+
 <!DOCTYPE html>
 <html>
 
@@ -12,8 +17,7 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OOps!</title>
-  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/404.css">
-  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/footer.css">
+  {%- include head/inline_css_404.html -%}
 </head>
 
 
