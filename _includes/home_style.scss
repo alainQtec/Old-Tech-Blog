@@ -533,11 +533,16 @@ body {
     text-rendering: optimizeLegibility;
     background-color: var(--body-color);
     color: var(--text-color) !important;
-    background-image: var(--body-background-image);
+    background: var(--body-background-image);
     background-attachment: fixed;
     background-position: center;
 	background-repeat: no-repeat;
-	background-size: 7%;
+    transition: all 300ms linear;
+    text-rendering: optimizeLegibility;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 	overflow-x: hidden;
     transition: all 300ms linear;
     height: 100vh;
@@ -2180,6 +2185,8 @@ div.project__container.hlayout__containr.bd-grid {
 
 .project__img img{
     border-radius: .5rem;
+    -webkit-column-width: 100%;
+    column-width: 100%;
     width: fit-content;
 }
 
