@@ -520,6 +520,7 @@ body {
 }
 
 body {
+    width: 100%;
     margin: 0 auto !important;
     padding: 0 !important;
     justify-content: center;
@@ -540,13 +541,13 @@ body {
 	background-repeat: no-repeat;
     transition: all 300ms linear;
     text-rendering: optimizeLegibility;
-    // -webkit-perspective: 1px;
-    // perspective: 1px;
-    // -webkit-transform-style: preserve-3d;
-    // transform-style: preserve-3d;
 	overflow-x: hidden;
     transition: all 300ms linear;
     height: 100vh;
+    &::-webkit-scrollbar {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 ::selection {
