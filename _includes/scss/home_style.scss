@@ -540,10 +540,10 @@ body {
 	background-repeat: no-repeat;
     transition: all 300ms linear;
     text-rendering: optimizeLegibility;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    // -webkit-perspective: 1px;
+    // perspective: 1px;
+    // -webkit-transform-style: preserve-3d;
+    // transform-style: preserve-3d;
 	overflow-x: hidden;
     transition: all 300ms linear;
     height: 100vh;
