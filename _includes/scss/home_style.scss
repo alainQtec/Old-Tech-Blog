@@ -1432,8 +1432,7 @@ div.about__container {
 }
 
 .jumbotron {
-    // background-image: "./wwdc_var(--bold-color).png" !important;
-    background-image: "./wwdc_white.png" !important;
+    background-image: var(--jumbotron-img-url) !important;
     width: 70%;
     border-radius: 25px;
     background-attachment: fixed;
