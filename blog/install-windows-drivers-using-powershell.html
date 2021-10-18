@@ -670,7 +670,51 @@ footer,
       </div>
     </div>
   </div>
-</div><h2 id="summary">Summary</h2><p>When building any computer, virtual or physical, it requires drivers. This script will allow you to place a folder of .inf (and associated) files onto a computer and then install all relevant drivers. This script is tested as working on Windows Server 2016 and Windows Server 2016 Core.</p><p>Get-ChildItem “C:\mydrivers" -Recurse -Filter “*.inf” | ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }</p><p>https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d#file-install-windowsdriversfromfolder-ps1</p><p>Or view <a href="https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d/raw/e3835f883e1b8611f50718a73cb6ffc29a5fc04f/Install-WindowsDriversFromFolder.ps1">RAW</a></p><h2 id="how-does-it-work">How does it work?</h2><p>The script is very simple:</p><p>Get-ChildItem retrieves any files with a .inf extension in the C:\mydrivers\ directory and its subfolders ForEach-Object loops over these and performs the commands in the script block { } against them PNPUtil.exe is a CLI utility for management of the Windows driver store. The /add-driver argument adds the specified driver to the driver store. /install installs the driver, resolving any missing driver issues for any attached hardware the driver suits</p><!-- //%- include blog_categories.html -%// --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6633984128817867"
+</div><article class="blog_article-card" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-content-wrap">
+    <div class="has-col-all">
+      <div class="divx--item">
+        <h2 class="blog-post_title">Install Windows Drivers using powershell</h2>
+      </div>
+    </div>
+    <div class="blog-card__info">
+      <p>
+        
+        <a href="https://www.alainqtec.com/blog/authors/alain" class="icon-link mr-3"><i
+            class="uil uil-edit"></i><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+              itemprop="name"><a href="https://www.alainqtec.com/blog/authors/alain">alain</a></span></span>
+        </a>
+        
+        &nbsp<a href="#" class="icon-link"><i class="uil uil-comments-alt"></i>&nbsp&nbsp150</a>
+      </p>
+      <p>Learn how to fix and install drivers using poweshell</p>
+      <div class="post-categories">
+         Category : 
+        <a href="/blog/categories/it-ops">it-ops</a>
+         
+      </div>
+    </div>
+    <div class="blog_post_content">
+      <h2 id="summary">Summary</h2>
+
+<p>When building any computer, virtual or physical, it requires drivers. This script will allow you to place a folder of .inf (and associated) files onto a computer and then install all relevant drivers. This script is tested as working on Windows Server 2016 and Windows Server 2016 Core.</p>
+
+<p>Get-ChildItem “C:\mydrivers" -Recurse -Filter “*.inf” |
+ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }</p>
+
+<p>https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d#file-install-windowsdriversfromfolder-ps1</p>
+
+<p>Or view <a href="https://gist.github.com/chrisbrownie/dded5da5cbb69dc5f37c9b603797830d/raw/e3835f883e1b8611f50718a73cb6ffc29a5fc04f/Install-WindowsDriversFromFolder.ps1">RAW</a></p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>The script is very simple:</p>
+
+<p>Get-ChildItem retrieves any files with a .inf extension in the C:\mydrivers\ directory and its subfolders
+ForEach-Object loops over these and performs the commands in the script block { } against them
+PNPUtil.exe is a CLI utility for management of the Windows driver store. The /add-driver argument adds the specified driver to the driver store. /install installs the driver, resolving any missing driver issues for any attached hardware the driver suits</p>
+
+    </div>
+  </div>
+</article><!-- //%- include blog_categories.html -%// --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6633984128817867"
   crossorigin="anonymous"></script>
 <!-- alainQtec_blog ads-->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6633984128817867" data-ad-slot="3163853490"

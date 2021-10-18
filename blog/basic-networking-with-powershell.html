@@ -670,18 +670,247 @@ footer,
       </div>
     </div>
   </div>
-</div><!--StartFragment--><p><a href="https://docs.microsoft.com/en-us/powershell/">PowerShell</a> together with networking are becoming more and more important. I created this little cheat sheet so it becomes easy for people to get started.</p><h2 id="basic-networking-powershell-cmdlets">Basic Networking PowerShell cmdlets</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPConfiguration-1024x569.png" alt="Get-NetIPConfiguration" /></p><p>Get the IP Configuration (ipconfig with PowerShell)</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetIPConfiguration</span></code></pre></figure><p>List all Network Adapters</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span></code></pre></figure><p>Get a spesific network adapter by name</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="o">*</span><span class="nx">Ethernet</span><span class="o">*</span></code></pre></figure><p>Get more information VLAN ID, Speed, Connection status</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ft</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">Linkspeed</span><span class="p">,</span><span class="w"> </span><span class="nx">VlanID</span></code></pre></figure><p>Get driver information</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ft</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverName</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverVersion</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverInformation</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverFileName</span></code></pre></figure><p>Get adapter hardware information. This can be really usefull when you need to know the PCI slot of the NIC.</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterHardwareInfo</span></code></pre></figure><p>Disable and Enable a Network Adapter</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Disable-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span><span class="w">
-</span><span class="n">Enable-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span></code></pre></figure><p>Rename a Network Adapter</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Rename-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span><span class="w"> </span><span class="nt">-NewName</span><span class="w"> </span><span class="s2">"Wireless"</span></code></pre></figure><h2 id="ip-configuration-using-powershell">IP Configuration using PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPAddress-1024x420.png" alt="PowerShell Networking Get-NetIPAddress" /></p><p>Get IP and DNS address information</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-NetIPAddress</span></code></pre></figure><p>Get IP address only</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-NetIPAddress</span><span class="p">)</span><span class="o">.</span><span class="nf">IPv4Address</span></code></pre></figure><p>Get DNS Server Address information</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-DnsClientServerAddress</span></code></pre></figure><p>Set IP Address</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">New-NetIPAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-IPv4Address</span><span class="w"> </span><span class="nx">10.0.1.95</span><span class="w"> </span><span class="nt">-PrefixLength</span><span class="w"> </span><span class="s2">"24"</span><span class="w"> </span><span class="nt">-DefaultGateway</span><span class="w"> </span><span class="nx">10.0.1.1</span></code></pre></figure><p>or if you want to change a existing IP Address</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-NetIPAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-IPv4Address</span><span class="w"> </span><span class="nx">192.168.12.25</span><span class="w"> </span><span class="nt">-PrefixLength</span><span class="w"> </span><span class="s2">"24"</span></code></pre></figure><p>Remove IP Address</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Remove-NetIPAddress</span></code></pre></figure><p>Set DNS Server</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-DnsClientServerAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-ServerAddresses</span><span class="w"> </span><span class="s2">"10.10.20.1"</span><span class="p">,</span><span class="s2">"10.10.20.2"</span></code></pre></figure><p>Set interface to DHCP</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-NetIPInterface</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-Dhcp</span><span class="w"> </span><span class="nx">Enabled</span></code></pre></figure><p>Clear DNS Cache with PowerShell</p><p>You can also manage your DNS cache with PowerShell.</p><p>List DNS Cache:</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-DnsClientCache</span></code></pre></figure><p>Clear DNS Cache</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Clear-DnsClientCache</span></code></pre></figure><h2 id="ping-with-powershell">Ping with PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Test-NetConnection-Ping-1024x599.png" alt="PowerShell Networking Test-NetConnection Ping" /></p><p>How to Ping with PowerShell. For a simple ping command with PowerShell, you can use the Test-Connection cmdlet:</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-Connection</span><span class="w"> </span><span class="nx">alainqtec.com</span></code></pre></figure><p>There is an advanced way to test connection using PowerShell</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.alainqtec.com</span></code></pre></figure><p>Get some more details from the Test-NetConnection</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.alainqtec.com</span><span class="w"> </span><span class="nt">-InformationLevel</span><span class="w"> </span><span class="nx">Detailed</span></code></pre></figure><p>Ping multiple IP using PowerShell</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="mi">1</span><span class="o">..</span><span class="mi">99</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">x.x.x.</span><span class="bp">$_</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">FT</span><span class="w"> </span><span class="nt">-AutoSize</span></code></pre></figure><h2 id="tracert">Tracert</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Tracert-1024x425.png" alt="PowerShell Tracert" /></p><p>Tracert with PowerShell</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="err">–</span><span class="nx">TraceRoute</span></code></pre></figure><h2 id="portscan-with-powershell">Portscan with PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Portscan-1024x505.png" alt="PowerShell Portscan" /></p><p>Use PowerShell to check for open port</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-Port</span><span class="w"> </span><span class="nx">80</span><span class="w">
-</span><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-CommonTCPPort</span><span class="w"> </span><span class="nx">HTTP</span></code></pre></figure><h2 id="nslookup-in-powershell">NSlookup in PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-NSlookup-1024x352.png" alt="PowerShell Networking NSlookup" /></p><p>NSlookup using PowerShell:</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Resolve-DnsName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w">
-</span><span class="n">Resolve-DnsName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-Type</span><span class="w"> </span><span class="nx">MX</span><span class="w"> </span><span class="nt">-Server</span><span class="w"> </span><span class="nx">8.8.8.8</span></code></pre></figure><h2 id="route-in-powershell">Route in PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Route-1024x448.png" alt="PowerShell Networking Route" /></p><p>How to replace Route command with PowerShell</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetRoute</span><span class="w"> </span><span class="nt">-Protocol</span><span class="w"> </span><span class="nx">Local</span><span class="w"> </span><span class="nt">-DestinationPrefix</span><span class="w"> </span><span class="nx">192.168</span><span class="o">*</span><span class="w">
+</div><article class="blog_article-card" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-content-wrap">
+    <div class="has-col-all">
+      <div class="divx--item">
+        <h2 class="blog-post_title">Basic Networking with PowerShell</h2>
+      </div>
+    </div>
+    <div class="blog-card__info">
+      <p>
+        
+        <a href="https://www.alainqtec.com/blog/authors/alain" class="icon-link mr-3"><i
+            class="uil uil-edit"></i><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+              itemprop="name"><a href="https://www.alainqtec.com/blog/authors/alain">alain</a></span></span>
+        </a>
+        
+        &nbsp<a href="#" class="icon-link"><i class="uil uil-comments-alt"></i>&nbsp&nbsp150</a>
+      </p>
+      <p>Get started on how to use powershell with networking</p>
+      <div class="post-categories">
+         Category : 
+        <a href="/blog/categories/it-ops">it-ops</a>
+         
+      </div>
+    </div>
+    <div class="blog_post_content">
+      <!--StartFragment-->
+
+<p><a href="https://docs.microsoft.com/en-us/powershell/">PowerShell</a> together with networking are becoming more and more important. I created this little cheat sheet so it becomes easy for people to get started.</p>
+
+<h2 id="basic-networking-powershell-cmdlets">Basic Networking PowerShell cmdlets</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPConfiguration-1024x569.png" alt="Get-NetIPConfiguration" /></p>
+
+<p>Get the IP Configuration (ipconfig with PowerShell)</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetIPConfiguration</span></code></pre></figure>
+
+<p>List all Network Adapters</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span></code></pre></figure>
+
+<p>Get a spesific network adapter by name</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="o">*</span><span class="nx">Ethernet</span><span class="o">*</span></code></pre></figure>
+
+<p>Get more information VLAN ID, Speed, Connection status</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ft</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">Linkspeed</span><span class="p">,</span><span class="w"> </span><span class="nx">VlanID</span></code></pre></figure>
+
+<p>Get driver information</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ft</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverName</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverVersion</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverInformation</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverFileName</span></code></pre></figure>
+
+<p>Get adapter hardware information. This can be really usefull when you need to know the PCI slot of the NIC.</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterHardwareInfo</span></code></pre></figure>
+
+<p>Disable and Enable a Network Adapter</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Disable-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span><span class="w">
+</span><span class="n">Enable-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span></code></pre></figure>
+
+<p>Rename a Network Adapter</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Rename-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless Network Connection"</span><span class="w"> </span><span class="nt">-NewName</span><span class="w"> </span><span class="s2">"Wireless"</span></code></pre></figure>
+
+<h2 id="ip-configuration-using-powershell">IP Configuration using PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Get-NetIPAddress-1024x420.png" alt="PowerShell Networking Get-NetIPAddress" /></p>
+
+<p>Get IP and DNS address information</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-NetIPAddress</span></code></pre></figure>
+
+<p>Get IP address only</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-NetIPAddress</span><span class="p">)</span><span class="o">.</span><span class="nf">IPv4Address</span></code></pre></figure>
+
+<p>Get DNS Server Address information</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Local Area Connection"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-DnsClientServerAddress</span></code></pre></figure>
+
+<p>Set IP Address</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">New-NetIPAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-IPv4Address</span><span class="w"> </span><span class="nx">10.0.1.95</span><span class="w"> </span><span class="nt">-PrefixLength</span><span class="w"> </span><span class="s2">"24"</span><span class="w"> </span><span class="nt">-DefaultGateway</span><span class="w"> </span><span class="nx">10.0.1.1</span></code></pre></figure>
+
+<p>or if you want to change a existing IP Address</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-NetIPAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-IPv4Address</span><span class="w"> </span><span class="nx">192.168.12.25</span><span class="w"> </span><span class="nt">-PrefixLength</span><span class="w"> </span><span class="s2">"24"</span></code></pre></figure>
+
+<p>Remove IP Address</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Remove-NetIPAddress</span></code></pre></figure>
+
+<p>Set DNS Server</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-DnsClientServerAddress</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-ServerAddresses</span><span class="w"> </span><span class="s2">"10.10.20.1"</span><span class="p">,</span><span class="s2">"10.10.20.2"</span></code></pre></figure>
+
+<p>Set interface to DHCP</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Set-NetIPInterface</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="s2">"Wireless"</span><span class="w"> </span><span class="nt">-Dhcp</span><span class="w"> </span><span class="nx">Enabled</span></code></pre></figure>
+
+<p>Clear DNS Cache with PowerShell</p>
+
+<p>You can also manage your DNS cache with PowerShell.</p>
+
+<p>List DNS Cache:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-DnsClientCache</span></code></pre></figure>
+
+<p>Clear DNS Cache</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Clear-DnsClientCache</span></code></pre></figure>
+
+<h2 id="ping-with-powershell">Ping with PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Test-NetConnection-Ping-1024x599.png" alt="PowerShell Networking Test-NetConnection Ping" /></p>
+
+<p>How to Ping with PowerShell. For a simple ping command with PowerShell, you can use the Test-Connection cmdlet:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-Connection</span><span class="w"> </span><span class="nx">alainqtec.com</span></code></pre></figure>
+
+<p>There is an advanced way to test connection using PowerShell</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.alainqtec.com</span></code></pre></figure>
+
+<p>Get some more details from the Test-NetConnection</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.alainqtec.com</span><span class="w"> </span><span class="nt">-InformationLevel</span><span class="w"> </span><span class="nx">Detailed</span></code></pre></figure>
+
+<p>Ping multiple IP using PowerShell</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="mi">1</span><span class="o">..</span><span class="mi">99</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">x.x.x.</span><span class="bp">$_</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">FT</span><span class="w"> </span><span class="nt">-AutoSize</span></code></pre></figure>
+
+<h2 id="tracert">Tracert</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Tracert-1024x425.png" alt="PowerShell Tracert" /></p>
+
+<p>Tracert with PowerShell</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="err">–</span><span class="nx">TraceRoute</span></code></pre></figure>
+
+<h2 id="portscan-with-powershell">Portscan with PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Portscan-1024x505.png" alt="PowerShell Portscan" /></p>
+
+<p>Use PowerShell to check for open port</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-Port</span><span class="w"> </span><span class="nx">80</span><span class="w">
+</span><span class="n">Test-NetConnection</span><span class="w"> </span><span class="nt">-ComputerName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-CommonTCPPort</span><span class="w"> </span><span class="nx">HTTP</span></code></pre></figure>
+
+<h2 id="nslookup-in-powershell">NSlookup in PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-NSlookup-1024x352.png" alt="PowerShell Networking NSlookup" /></p>
+
+<p>NSlookup using PowerShell:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Resolve-DnsName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w">
+</span><span class="n">Resolve-DnsName</span><span class="w"> </span><span class="nx">www.thomasmaurer.ch</span><span class="w"> </span><span class="nt">-Type</span><span class="w"> </span><span class="nx">MX</span><span class="w"> </span><span class="nt">-Server</span><span class="w"> </span><span class="nx">8.8.8.8</span></code></pre></figure>
+
+<h2 id="route-in-powershell">Route in PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Route-1024x448.png" alt="PowerShell Networking Route" /></p>
+
+<p>How to replace Route command with PowerShell</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetRoute</span><span class="w"> </span><span class="nt">-Protocol</span><span class="w"> </span><span class="nx">Local</span><span class="w"> </span><span class="nt">-DestinationPrefix</span><span class="w"> </span><span class="nx">192.168</span><span class="o">*</span><span class="w">
 </span><span class="n">Get-NetRoute</span><span class="w"> </span><span class="nt">-InterfaceAlias</span><span class="w"> </span><span class="nx">Wi-Fi</span><span class="w">
  
-</span><span class="n">New-NetRoute</span><span class="w"> </span><span class="err">–</span><span class="nx">DestinationPrefix</span><span class="w"> </span><span class="s2">"10.0.0.0/24"</span><span class="w"> </span><span class="err">–</span><span class="nx">InterfaceAlias</span><span class="w"> </span><span class="s2">"Ethernet"</span><span class="w"> </span><span class="err">–</span><span class="nx">NextHop</span><span class="w"> </span><span class="nx">192.168.192.1</span></code></pre></figure><h2 id="netstat-in-powershell">NETSTAT in PowerShell</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Netstat-1024x448.png" alt="PowerShell Networking Netstat" /></p><p>How to replace NETSTAT with PowerShell</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetTCPConnection</span><span class="w">
-</span><span class="nx">Get-NetTCPConnection</span><span class="w"> </span><span class="err">–</span><span class="nx">State</span><span class="w"> </span><span class="nx">Established</span></code></pre></figure><h2 id="nic-teaming-powershell-commands">NIC Teaming PowerShell commands</h2><p>Create a new NIC Teaming (Network Adapter Team)</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">New-NetLbfoTeam</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">NICTEAM01</span><span class="w"> </span><span class="nt">-TeamMembers</span><span class="w"> </span><span class="nx">Ethernet</span><span class="p">,</span><span class="w"> </span><span class="nx">Ethernet2</span><span class="w"> </span><span class="nt">-TeamingMode</span><span class="w"> </span><span class="nx">SwitchIndependent</span><span class="w"> </span><span class="nt">-TeamNicName</span><span class="w"> </span><span class="nx">NICTEAM01</span><span class="w"> </span><span class="nt">-LoadBalancingAlgorithm</span><span class="w"> </span><span class="nx">Dynamic</span></code></pre></figure><h2 id="smb-related-powershell-commands">SMB Related PowerShell commands</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/SMB-PowerShell-SMB-Client-Configuration-1024x521.png" alt="SMB PowerShell SMB Client Configuration" /></p><p>Get SMB Client Configuration</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbClientConfiguration</span></code></pre></figure><p>Get SMB Connections</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbConnection</span></code></pre></figure><p>Get SMB Mutlichannel Connections</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbMutlichannelConnection</span></code></pre></figure><p>Get SMB open files</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbOpenFile</span></code></pre></figure><p>Get SMB Direct (RDMA) adapters</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterRdma</span></code></pre></figure><h2 id="hyper-v-networking-cmdlets">Hyper-V Networking cmdlets</h2><p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Hyper-V-PowerShell-Get-VMNetwork-Adapter-1024x215.png" alt="Hyper-V PowerShell Get-VMNetwork Adapter" /></p><p>Get and set Network Adapter VMQ settings</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterVmq</span><span class="w">
+</span><span class="n">New-NetRoute</span><span class="w"> </span><span class="err">–</span><span class="nx">DestinationPrefix</span><span class="w"> </span><span class="s2">"10.0.0.0/24"</span><span class="w"> </span><span class="err">–</span><span class="nx">InterfaceAlias</span><span class="w"> </span><span class="s2">"Ethernet"</span><span class="w"> </span><span class="err">–</span><span class="nx">NextHop</span><span class="w"> </span><span class="nx">192.168.192.1</span></code></pre></figure>
+
+<h2 id="netstat-in-powershell">NETSTAT in PowerShell</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/PowerShell-Netstat-1024x448.png" alt="PowerShell Networking Netstat" /></p>
+
+<p>How to replace NETSTAT with PowerShell</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetTCPConnection</span><span class="w">
+</span><span class="nx">Get-NetTCPConnection</span><span class="w"> </span><span class="err">–</span><span class="nx">State</span><span class="w"> </span><span class="nx">Established</span></code></pre></figure>
+
+<h2 id="nic-teaming-powershell-commands">NIC Teaming PowerShell commands</h2>
+
+<p>Create a new NIC Teaming (Network Adapter Team)</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">New-NetLbfoTeam</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">NICTEAM01</span><span class="w"> </span><span class="nt">-TeamMembers</span><span class="w"> </span><span class="nx">Ethernet</span><span class="p">,</span><span class="w"> </span><span class="nx">Ethernet2</span><span class="w"> </span><span class="nt">-TeamingMode</span><span class="w"> </span><span class="nx">SwitchIndependent</span><span class="w"> </span><span class="nt">-TeamNicName</span><span class="w"> </span><span class="nx">NICTEAM01</span><span class="w"> </span><span class="nt">-LoadBalancingAlgorithm</span><span class="w"> </span><span class="nx">Dynamic</span></code></pre></figure>
+
+<h2 id="smb-related-powershell-commands">SMB Related PowerShell commands</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/SMB-PowerShell-SMB-Client-Configuration-1024x521.png" alt="SMB PowerShell SMB Client Configuration" /></p>
+
+<p>Get SMB Client Configuration</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbClientConfiguration</span></code></pre></figure>
+
+<p>Get SMB Connections</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbConnection</span></code></pre></figure>
+
+<p>Get SMB Mutlichannel Connections</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbMutlichannelConnection</span></code></pre></figure>
+
+<p>Get SMB open files</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-SmbOpenFile</span></code></pre></figure>
+
+<p>Get SMB Direct (RDMA) adapters</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterRdma</span></code></pre></figure>
+
+<h2 id="hyper-v-networking-cmdlets">Hyper-V Networking cmdlets</h2>
+
+<p><img src="https://www.thomasmaurer.ch/wp-content/uploads/2016/02/Hyper-V-PowerShell-Get-VMNetwork-Adapter-1024x215.png" alt="Hyper-V PowerShell Get-VMNetwork Adapter" /></p>
+
+<p>Get and set Network Adapter VMQ settings</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-NetAdapterVmq</span><span class="w">
 </span><span class="c"># Disable VMQ</span><span class="w">
 </span><span class="n">Set-NetAdapterVmq</span><span class="w"> </span><span class="nt">-Enabled</span><span class="w"> </span><span class="bp">$false</span><span class="w">
 </span><span class="c"># Enable VMQ</span><span class="w">
-</span><span class="n">Set-NetAdapterVmq</span><span class="w"> </span><span class="nt">-Enabled</span><span class="w"> </span><span class="bp">$true</span></code></pre></figure><p>Get VM Network Adapter</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">Server01</span></code></pre></figure><p>Get VM Network Adapter IP Addresses</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">NanoConHost01</span><span class="p">)</span><span class="o">.</span><span class="nf">IPAddresses</span></code></pre></figure><p>Get VM Network Adapter Mac Addresses</p><figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">NanoConHost01</span><span class="p">)</span><span class="o">.</span><span class="nf">MacAddress</span></code></pre></figure><p>I hope you enjoyed it and the post was helpful, if you think something important is missing, please add it in the comments.</p><!--EndFragment--><!-- //%- include blog_categories.html -%// --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6633984128817867"
+</span><span class="n">Set-NetAdapterVmq</span><span class="w"> </span><span class="nt">-Enabled</span><span class="w"> </span><span class="bp">$true</span></code></pre></figure>
+
+<p>Get VM Network Adapter</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">Server01</span></code></pre></figure>
+
+<p>Get VM Network Adapter IP Addresses</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">NanoConHost01</span><span class="p">)</span><span class="o">.</span><span class="nf">IPAddresses</span></code></pre></figure>
+
+<p>Get VM Network Adapter Mac Addresses</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nx">NanoConHost01</span><span class="p">)</span><span class="o">.</span><span class="nf">MacAddress</span></code></pre></figure>
+
+<p>I hope you enjoyed it and the post was helpful, if you think something important is missing, please add it in the comments.</p>
+
+<!--EndFragment-->
+
+    </div>
+  </div>
+</article><!-- //%- include blog_categories.html -%// --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6633984128817867"
   crossorigin="anonymous"></script>
 <!-- alainQtec_blog ads-->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6633984128817867" data-ad-slot="3163853490"

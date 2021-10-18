@@ -650,8 +650,69 @@ footer,
     }
   }());
 </script><div class="content">
-      <p><img src="https://img.shields.io/badge/Version-0.6.0-blue.svg" alt="Version" /> <img src="https://img.shields.io/badge/Min%20Ghost%20v.-%3E%3D%202.10-red.svg" alt="MinGhostVersion" /></p><h1 id="ghosthunter">ghostHunter</h1><p><strong>Original developer:</strong> <a href="mailto:jamal@i11u.me">jamal@i11u.me</a></p><p>GhostHunter makes it easy to add search capability to any Ghost theme, using the <a href="https://api.ghost.org/v1.14.0/docs">Ghost API</a> and the <a href="https://lunrjs.com">lunr.js</a> search engine. Indexing and search are done client-side (in the browser). This has several advantages:</p><ul><li>Searches are private to the user, and are not exposed to third parties.<li>Installation and maintenance of powerful-but-daunting standalone search engines (such as <a href="http://lucene.apache.org/solr/">Solr</a> or <a href="https://www.elastic.co/">ElasticSearch</a>) is not required.<li>Instant search (“search-as-you-type” or “typeahead”) is simple to configure.</ul><hr /><h2 id="contents">Contents</h2><ul><li><a href="#ghosthunter">ghostHunter</a><ul><li><a href="#contents">Contents</a><li><a href="#upgrade-notes">Upgrade notes</a><li><a href="#basic-setup">Basic setup</a><li><a href="#advanced-usage">Advanced usage</a><ul><li><a href="#production-installation">Production installation</a><li><a href="#ghosthunter-options">GhostHunter options</a><li><a href="#multiple-search-fields">Multiple search fields</a><li><a href="#clearing-search-results">Clearing search results</a><li><a href="#indexing-and-caching-how-it-works">Indexing and caching: how it works</a><li><a href="#development-rebuilding-ghosthunter">Development: rebuilding ghostHunter</a></ul></ul><li><a href="#footnotes">Footnotes</a></ul><hr /><h2 id="upgrade-notes">Upgrade notes</h2><h3 id="ghosthunter-v060">GhostHunter v0.6.0</h3><ul><li>Implements @JiapengLi “dirty fix” to support the new Ghost v2 Content API.<li>Removes spurious production console.log message.<li>Removes <code class="language-plaintext highlighter-rouge">includepages</code> option.</ul><p>To use this version of ghostHunter, you’ll need to create a Custom Integration and inject its Content API key into your blog header. In your Ghost Settings:</p><blockquote><blockquote><p>read more online ….</p></blockquote></blockquote>
+      <div class="card">
+    <div class="col-md-8 offset-md-2 offset-md-right">
+        <p><img src="https://img.shields.io/badge/Version-0.6.0-blue.svg" alt="Version" />
+<img src="https://img.shields.io/badge/Min%20Ghost%20v.-%3E%3D%202.10-red.svg" alt="MinGhostVersion" /></p>
 
+<h1 id="ghosthunter">ghostHunter</h1>
+
+<p><strong>Original developer:</strong> <a href="mailto:jamal@i11u.me">jamal@i11u.me</a></p>
+
+<p>GhostHunter makes it easy to add search capability to any Ghost theme, using the <a href="https://api.ghost.org/v1.14.0/docs">Ghost API</a> and the <a href="https://lunrjs.com">lunr.js</a> search engine. Indexing and search are done client-side (in the browser). This has several advantages:</p>
+
+<ul>
+  <li>Searches are private to the user, and are not exposed to third parties.</li>
+  <li>Installation and maintenance of powerful-but-daunting standalone search engines (such as <a href="http://lucene.apache.org/solr/">Solr</a> or <a href="https://www.elastic.co/">ElasticSearch</a>) is not required.</li>
+  <li>Instant search (“search-as-you-type” or “typeahead”) is simple to configure.</li>
+</ul>
+
+<hr />
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#ghosthunter">ghostHunter</a>
+    <ul>
+      <li><a href="#contents">Contents</a></li>
+      <li><a href="#upgrade-notes">Upgrade notes</a></li>
+      <li><a href="#basic-setup">Basic setup</a></li>
+      <li><a href="#advanced-usage">Advanced usage</a>
+        <ul>
+          <li><a href="#production-installation">Production installation</a></li>
+          <li><a href="#ghosthunter-options">GhostHunter options</a></li>
+          <li><a href="#multiple-search-fields">Multiple search fields</a></li>
+          <li><a href="#clearing-search-results">Clearing search results</a></li>
+          <li><a href="#indexing-and-caching-how-it-works">Indexing and caching: how it works</a></li>
+          <li><a href="#development-rebuilding-ghosthunter">Development: rebuilding ghostHunter</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#footnotes">Footnotes</a></li>
+</ul>
+
+<hr />
+
+<h2 id="upgrade-notes">Upgrade notes</h2>
+<h3 id="ghosthunter-v060">GhostHunter v0.6.0</h3>
+
+<ul>
+  <li>Implements @JiapengLi “dirty fix” to support the new Ghost v2 Content API.</li>
+  <li>Removes spurious production console.log message.</li>
+  <li>Removes <code class="language-plaintext highlighter-rouge">includepages</code> option.</li>
+</ul>
+
+<p>To use this version of ghostHunter, you’ll need to create a Custom Integration and inject its Content API key into your blog header. In your Ghost Settings:</p>
+
+<blockquote>
+  <blockquote>
+    <p>read more online ….</p>
+  </blockquote>
+</blockquote>
+
+    </div>
+</div>
     </div>
   </main>
   <!--==================== FOOTER ====================-->

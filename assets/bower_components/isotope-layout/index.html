@@ -650,17 +650,66 @@ footer,
     }
   }());
 </script><div class="content">
-      <h1 id="isotope">Isotope</h1><p><em>Filter &amp; sort magical layouts</em></p><p>See <a href="https://isotope.metafizzy.co">isotope.metafizzy.co</a> for complete docs and demos.</p><h2 id="install">Install</h2><h3 id="download">Download</h3><ul><li><a href="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js">isotope.pkgd.js</a> un-minified, or<li><a href="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">isotope.pkgd.min.js</a> minified</ul><h3 id="cdn">CDN</h3><p>Link directly to Isotope files on <a href="https://unpkg.com">unpkg</a>.</p><div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <div class="card">
+    <div class="col-md-8 offset-md-2 offset-md-right">
+        <h1 id="isotope">Isotope</h1>
+
+<p><em>Filter &amp; sort magical layouts</em></p>
+
+<p>See <a href="https://isotope.metafizzy.co">isotope.metafizzy.co</a> for complete docs and demos.</p>
+
+<h2 id="install">Install</h2>
+
+<h3 id="download">Download</h3>
+
+<ul>
+  <li><a href="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js">isotope.pkgd.js</a> un-minified, or</li>
+  <li><a href="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">isotope.pkgd.min.js</a> minified</li>
+</ul>
+
+<h3 id="cdn">CDN</h3>
+
+<p>Link directly to Isotope files on <a href="https://unpkg.com">unpkg</a>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="c">&lt;!-- or --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div><h3 id="package-managers">Package managers</h3><p>npm: <code class="language-plaintext highlighter-rouge">npm install isotope-layout --save</code></p><p>Bower: <code class="language-plaintext highlighter-rouge">bower install isotope-layout --save</code></p><h2 id="license">License</h2><h3 id="commercial-license">Commercial license</h3><p>If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase an Isotope Commercial License at <a href="https://isotope.metafizzy.co/#commercial-license">isotope.metafizzy.co</a></p><h3 id="open-source-license">Open source license</h3><p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Isotope under the terms of the GPLv3.</p><p><a href="https://isotope.metafizzy.co/license.html">Read more about Isotope’s license</a>.</p><h2 id="initialize">Initialize</h2><p>With jQuery</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.grid</span><span class="dl">'</span><span class="p">).</span><span class="nx">isotope</span><span class="p">({</span>
+</code></pre></div></div>
+
+<h3 id="package-managers">Package managers</h3>
+
+<p>npm: <code class="language-plaintext highlighter-rouge">npm install isotope-layout --save</code></p>
+
+<p>Bower: <code class="language-plaintext highlighter-rouge">bower install isotope-layout --save</code></p>
+
+<h2 id="license">License</h2>
+
+<h3 id="commercial-license">Commercial license</h3>
+
+<p>If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase an Isotope Commercial License at <a href="https://isotope.metafizzy.co/#commercial-license">isotope.metafizzy.co</a></p>
+
+<h3 id="open-source-license">Open source license</h3>
+
+<p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Isotope under the terms of the GPLv3.</p>
+
+<p><a href="https://isotope.metafizzy.co/license.html">Read more about Isotope’s license</a>.</p>
+
+<h2 id="initialize">Initialize</h2>
+
+<p>With jQuery</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.grid</span><span class="dl">'</span><span class="p">).</span><span class="nx">isotope</span><span class="p">({</span>
   <span class="c1">// options...</span>
   <span class="na">itemSelector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.grid-item</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">masonry</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">columnWidth</span><span class="p">:</span> <span class="mi">200</span>
   <span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div></div><p>With vanilla JavaScript</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// vanilla JS</span>
+</code></pre></div></div>
+
+<p>With vanilla JavaScript</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// vanilla JS</span>
 <span class="kd">var</span> <span class="nx">grid</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.grid</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">iso</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Isotope</span><span class="p">(</span> <span class="nx">grid</span><span class="p">,</span> <span class="p">{</span>
   <span class="c1">// options...</span>
@@ -669,14 +718,26 @@ footer,
     <span class="na">columnWidth</span><span class="p">:</span> <span class="mi">200</span>
   <span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div></div><p>With HTML</p><p>Add a <code class="language-plaintext highlighter-rouge">data-isotope</code> attribute to your element. Options can be set in JSON in the value.</p><div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span>
+</code></pre></div></div>
+
+<p>With HTML</p>
+
+<p>Add a <code class="language-plaintext highlighter-rouge">data-isotope</code> attribute to your element. Options can be set in JSON in the value.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span>
   <span class="na">data-isotope=</span><span class="s">'{ "itemSelector": ".grid-item", "masonry": { "columnWidth": 200 } }'</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-item"</span><span class="nt">&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-item"</span><span class="nt">&gt;&lt;/div&gt;</span>
   ...
 <span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div><hr /><p>By <a href="https://metafizzy.co">Metafizzy 🌈🐻</a>, 2010–2018</p>
+</code></pre></div></div>
 
+<hr />
+
+<p>By <a href="https://metafizzy.co">Metafizzy 🌈🐻</a>, 2010–2018</p>
+
+    </div>
+</div>
     </div>
   </main>
   <!--==================== FOOTER ====================-->

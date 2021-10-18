@@ -650,13 +650,39 @@ footer,
     }
   }());
 </script><div class="content">
-      <h1 id="fortawesomefontawesome-common-types---svg-with-javascript">@fortawesome/fontawesome-common-types - SVG with JavaScript</h1><blockquote><p>“I came here to chew bubblegum and install Font Awesome 5 - and I’m all out of bubblegum”</p></blockquote><p><a href="https://www.npmjs.com/package/@fortawesome/fontawesome-common-types"><img src="https://img.shields.io/npm/v/@fortawesome/fontawesome-common-types.svg?style=flat-square" alt="npm" /></a></p><h2 id="what-is-this-package">What is this package?</h2><p>Font Awesome 5 JavaScript packages support TypeScript. This package abstracts out some of the common definitions that those packages use.</p><h2 id="here-be-dragons">Here be dragons</h2><p>If you are trying to import types from this package we <em>highly</em> recommend you do the following instead as <em>all types in this package are re-exported to the main fontawesome package</em>.</p><p>your.ts</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import {
+      <div class="card">
+    <div class="col-md-8 offset-md-2 offset-md-right">
+        <h1 id="fortawesomefontawesome-common-types---svg-with-javascript">@fortawesome/fontawesome-common-types - SVG with JavaScript</h1>
+
+<blockquote>
+  <p>“I came here to chew bubblegum and install Font Awesome 5 - and I’m all out of bubblegum”</p>
+</blockquote>
+
+<p><a href="https://www.npmjs.com/package/@fortawesome/fontawesome-common-types"><img src="https://img.shields.io/npm/v/@fortawesome/fontawesome-common-types.svg?style=flat-square" alt="npm" /></a></p>
+
+<h2 id="what-is-this-package">What is this package?</h2>
+
+<p>Font Awesome 5 JavaScript packages support TypeScript. This package abstracts out some of the common definitions that those packages use.</p>
+
+<h2 id="here-be-dragons">Here be dragons</h2>
+
+<p>If you are trying to import types from this package we <em>highly</em> recommend you do the following instead as <em>all types in this package are re-exported to the main fontawesome package</em>.</p>
+
+<p>your.ts</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import {
   IconName
 } from `@fortawesome/fontawesome`
 
 const myIcon: IconName = "..."
-</code></pre></div></div><h2 id="issues-and-support">Issues and support</h2><p>Start with <a href="https://github.com/FortAwesome/Font-Awesome/issues">GitHub issues</a> and ping us on <a href="https://twitter.com/fontawesome">Twitter</a> if you need to.</p>
+</code></pre></div></div>
 
+<h2 id="issues-and-support">Issues and support</h2>
+
+<p>Start with <a href="https://github.com/FortAwesome/Font-Awesome/issues">GitHub issues</a> and ping us on <a href="https://twitter.com/fontawesome">Twitter</a> if you need to.</p>
+
+    </div>
+</div>
     </div>
   </main>
   <!--==================== FOOTER ====================-->

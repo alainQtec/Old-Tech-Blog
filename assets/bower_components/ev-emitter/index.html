@@ -650,7 +650,17 @@ footer,
     }
   }());
 </script><div class="content">
-      <h1 id="evemitter">EvEmitter</h1><p><em>Lil’ event emitter</em> — add a little pub/sub</p><p>EvEmitter adds publish/subscribe pattern to a browser class. It’s a smaller version of <a href="https://github.com/Olical/EventEmitter">Olical/EventEmitter</a>. That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like <a href="http://isotope.metafizzy.co">Isotope</a>, <a href="http://flickity.metafizzy.co">Flickity</a>, <a href="http://masonry.desandro.com">Masonry</a>, and <a href="http://imagesloaded.desandro.com">imagesLoaded</a>.</p><h2 id="api">API</h2><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Inherit prototype, IE8+</span>
+      <div class="card">
+    <div class="col-md-8 offset-md-2 offset-md-right">
+        <h1 id="evemitter">EvEmitter</h1>
+
+<p><em>Lil’ event emitter</em> — add a little pub/sub</p>
+
+<p>EvEmitter adds publish/subscribe pattern to a browser class. It’s a smaller version of <a href="https://github.com/Olical/EventEmitter">Olical/EventEmitter</a>. That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like <a href="http://isotope.metafizzy.co">Isotope</a>, <a href="http://flickity.metafizzy.co">Flickity</a>, <a href="http://masonry.desandro.com">Masonry</a>, and <a href="http://imagesloaded.desandro.com">imagesLoaded</a>.</p>
+
+<h2 id="api">API</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Inherit prototype, IE8+</span>
 <span class="nx">MyClass</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EvEmitter</span><span class="p">();</span>
 
 <span class="c1">// Inherit prototype, IE9+</span>
@@ -661,12 +671,56 @@ footer,
 
 <span class="c1">// single instance</span>
 <span class="kd">var</span> <span class="nx">emitter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EvEmitter</span><span class="p">();</span>
-</code></pre></div></div><h3 id="on">on</h3><p>Add an event listener.</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
-</code></pre></div></div><ul><li><code class="language-plaintext highlighter-rouge">eventName</code> - <em>String</em> - name of the event<li><code class="language-plaintext highlighter-rouge">listener</code> - <em>Function</em></ul><h3 id="off">off</h3><p>Remove an event listener.</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
-</code></pre></div></div><h3 id="once">once</h3><p>Add an event listener to be triggered only once.</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
-</code></pre></div></div><h3 id="emitevent">emitEvent</h3><p>Trigger an event.</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">emitEvent</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">args</span> <span class="p">)</span>
-</code></pre></div></div><ul><li><code class="language-plaintext highlighter-rouge">eventName</code> - <em>String</em> - name of the event<li><code class="language-plaintext highlighter-rouge">args</code> - <em>Array</em> - arguments passed to listeners</ul><h3 id="alloff">allOff</h3><p>Removes all event listeners.</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">allOff</span><span class="p">()</span>
-</code></pre></div></div><h2 id="code-example">Code example</h2><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create event emitter</span>
+</code></pre></div></div>
+
+<h3 id="on">on</h3>
+
+<p>Add an event listener.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">eventName</code> - <em>String</em> - name of the event</li>
+  <li><code class="language-plaintext highlighter-rouge">listener</code> - <em>Function</em></li>
+</ul>
+
+<h3 id="off">off</h3>
+
+<p>Remove an event listener.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="once">once</h3>
+
+<p>Add an event listener to be triggered only once.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">listener</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="emitevent">emitEvent</h3>
+
+<p>Trigger an event.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">emitEvent</span><span class="p">(</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">args</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">eventName</code> - <em>String</em> - name of the event</li>
+  <li><code class="language-plaintext highlighter-rouge">args</code> - <em>Array</em> - arguments passed to listeners</li>
+</ul>
+
+<h3 id="alloff">allOff</h3>
+
+<p>Removes all event listeners.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">emitter</span><span class="p">.</span><span class="nx">allOff</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="code-example">Code example</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create event emitter</span>
 <span class="kd">var</span> <span class="nx">emitter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
 
 <span class="c1">// listeners</span>
@@ -699,8 +753,14 @@ footer,
 
 <span class="nx">emitter</span><span class="p">.</span><span class="nx">emitEvent</span><span class="p">(</span> <span class="dl">'</span><span class="s1">rock</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span> <span class="p">]</span> <span class="p">)</span>
 <span class="c1">// =&gt; 'Hey' 4, 5, 6</span>
-</code></pre></div></div><h2 id="license">License</h2><p>EvEmitter is released under the <a href="http://desandro.mit-license.org/">MIT License</a>. Have at it.</p>
+</code></pre></div></div>
 
+<h2 id="license">License</h2>
+
+<p>EvEmitter is released under the <a href="http://desandro.mit-license.org/">MIT License</a>. Have at it.</p>
+
+    </div>
+</div>
     </div>
   </main>
   <!--==================== FOOTER ====================-->

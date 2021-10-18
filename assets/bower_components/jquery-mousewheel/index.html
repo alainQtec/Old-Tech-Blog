@@ -650,7 +650,25 @@ footer,
     }
   }());
 </script><div class="content">
-      <h1 id="jquery-mouse-wheel-plugin">jQuery Mouse Wheel Plugin</h1><p>A <a href="http://jquery.com/">jQuery</a> plugin that adds cross-browser mouse wheel support with delta normalization.</p><p>In order to use the plugin, simply bind the <code class="language-plaintext highlighter-rouge">mousewheel</code> event to an element.</p><p>It also provides two helper methods called <code class="language-plaintext highlighter-rouge">mousewheel</code> and <code class="language-plaintext highlighter-rouge">unmousewheel</code> that act just like other event helper methods in jQuery.</p><p>The event object is updated with the normalized <code class="language-plaintext highlighter-rouge">deltaX</code> and <code class="language-plaintext highlighter-rouge">deltaY</code> properties. In addition there is a new property on the event object called <code class="language-plaintext highlighter-rouge">deltaFactor</code>. Multiply the <code class="language-plaintext highlighter-rouge">deltaFactor</code> by <code class="language-plaintext highlighter-rouge">deltaX</code> or <code class="language-plaintext highlighter-rouge">deltaY</code> to get the scroll distance that the browser has reported.</p><p>Here is an example of using both the bind and helper method syntax:</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// using on</span>
+      <div class="card">
+    <div class="col-md-8 offset-md-2 offset-md-right">
+        <h1 id="jquery-mouse-wheel-plugin">jQuery Mouse Wheel Plugin</h1>
+
+<p>A <a href="http://jquery.com/">jQuery</a> plugin that adds cross-browser mouse wheel support with delta normalization.</p>
+
+<p>In order to use the plugin, simply bind the <code class="language-plaintext highlighter-rouge">mousewheel</code> event to an element.</p>
+
+<p>It also provides two helper methods called <code class="language-plaintext highlighter-rouge">mousewheel</code> and <code class="language-plaintext highlighter-rouge">unmousewheel</code>
+that act just like other event helper methods in jQuery.</p>
+
+<p>The event object is updated with the normalized <code class="language-plaintext highlighter-rouge">deltaX</code> and <code class="language-plaintext highlighter-rouge">deltaY</code> properties.
+In addition there is a new property on the event object called <code class="language-plaintext highlighter-rouge">deltaFactor</code>. Multiply
+the <code class="language-plaintext highlighter-rouge">deltaFactor</code> by <code class="language-plaintext highlighter-rouge">deltaX</code> or <code class="language-plaintext highlighter-rouge">deltaY</code> to get the scroll distance that the browser
+has reported.</p>
+
+<p>Here is an example of using both the bind and helper method syntax:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// using on</span>
 <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#my_elem</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">mousewheel</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">deltaX</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deltaY</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deltaFactor</span><span class="p">);</span>
 <span class="p">});</span>
@@ -659,18 +677,54 @@ footer,
 <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#my_elem</span><span class="dl">'</span><span class="p">).</span><span class="nx">mousewheel</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">deltaX</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deltaY</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deltaFactor</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div></div><p>The old behavior of adding three arguments (<code class="language-plaintext highlighter-rouge">delta</code>, <code class="language-plaintext highlighter-rouge">deltaX</code>, and <code class="language-plaintext highlighter-rouge">deltaY</code>) to the event handler is now deprecated and will be removed in later releases.</p><h2 id="the-deltas">The Deltas…</h2><p>The combination of Browsers, Operating Systems, and Devices offer a huge range of possible delta values. In fact if the user uses a trackpad and then a physical mouse wheel the delta values can differ wildly. This plugin normalizes those values so you get a whole number starting at +-1 and going up in increments of +-1 according to the force or acceleration that is used. This number has the potential to be in the thousands depending on the device. Check out some of the data collected from users <a href="http://mousewheeldatacollector.herokuapp.com/">here</a>.</p><h3 id="getting-the-scroll-distance">Getting the scroll distance</h3><p>In some use-cases we prefer to have the normalized delta but in others we want to know how far the browser should scroll based on the users input. This can be done by multiplying the <code class="language-plaintext highlighter-rouge">deltaFactor</code> by the <code class="language-plaintext highlighter-rouge">deltaX</code> or <code class="language-plaintext highlighter-rouge">deltaY</code> event property to find the scroll distance the browser reported.</p><p>The <code class="language-plaintext highlighter-rouge">deltaFactor</code> property was added to the event object in 3.1.5 so that the actual reported delta value can be extracted. This is a non-standard property.</p><h2 id="using-with-browserify">Using with <a href="http://browserify.org">Browserify</a></h2><p>Support for browserify is baked in.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>jquery-mousewheel
+</code></pre></div></div>
+
+<p>The old behavior of adding three arguments (<code class="language-plaintext highlighter-rouge">delta</code>, <code class="language-plaintext highlighter-rouge">deltaX</code>, and <code class="language-plaintext highlighter-rouge">deltaY</code>) to the
+event handler is now deprecated and will be removed in later releases.</p>
+
+<h2 id="the-deltas">The Deltas…</h2>
+
+<p>The combination of Browsers, Operating Systems, and Devices offer a huge range of possible delta values. In fact if the user
+uses a trackpad and then a physical mouse wheel the delta values can differ wildly. This plugin normalizes those
+values so you get a whole number starting at +-1 and going up in increments of +-1 according to the force or
+acceleration that is used. This number has the potential to be in the thousands depending on the device.
+Check out some of the data collected from users <a href="http://mousewheeldatacollector.herokuapp.com/">here</a>.</p>
+
+<h3 id="getting-the-scroll-distance">Getting the scroll distance</h3>
+
+<p>In some use-cases we prefer to have the normalized delta but in others we want to know how far the browser should
+scroll based on the users input. This can be done by multiplying the <code class="language-plaintext highlighter-rouge">deltaFactor</code> by the <code class="language-plaintext highlighter-rouge">deltaX</code> or <code class="language-plaintext highlighter-rouge">deltaY</code>
+event property to find the scroll distance the browser reported.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">deltaFactor</code> property was added to the event object in 3.1.5 so that the actual reported delta value can be
+extracted. This is a non-standard property.</p>
+
+<h2 id="using-with-browserify">Using with <a href="http://browserify.org">Browserify</a></h2>
+
+<p>Support for browserify is baked in.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>jquery-mousewheel
 npm <span class="nb">install </span>jquery-browserify
-</code></pre></div></div><p>In your server-side node.js code:</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>In your server-side node.js code:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">browserify</span><span class="dl">'</span><span class="p">)({</span>
     <span class="na">require</span> <span class="p">:</span> <span class="p">[</span> <span class="dl">'</span><span class="s1">jquery-browserify</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">jquery-mousewheel</span><span class="dl">'</span> <span class="p">]</span>
 <span class="p">}));</span>
-</code></pre></div></div><p>In your browser-side javascript:</p><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jquery-browserify</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>In your browser-side javascript:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jquery-browserify</span><span class="dl">'</span><span class="p">);</span>
 <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jquery-mousewheel</span><span class="dl">'</span><span class="p">)(</span><span class="nx">$</span><span class="p">);</span>
 </code></pre></div></div>
 
+    </div>
+</div>
     </div>
   </main>
   <!--==================== FOOTER ====================-->
