@@ -260,7 +260,7 @@ html[data-theme="light"] {
 
 @-webkit-keyframes caret_typewriter {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
 }
 
@@ -1445,6 +1445,14 @@ div#recent-articles-show-all {
     background-size: cover;
     background-position: center;
 }
+
+// .jumbotron[data-theme="dark"] {
+//     background-image: var(--jumbotron-img-url) !important;
+// }
+
+// .jumbotron[data-theme="light"] {
+//     background-image: var(--jumbotron-img-url) !important;
+// }
 
 .jumbotron-heading{
     color: var(--bold-color);
