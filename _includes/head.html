@@ -15,6 +15,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
   <meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
   <meta content="{{ site.title }}" property="og:site_name" />
+  <meta property="og:locale" content="en_US">
   {% if page.noindex %}
   <meta name="robots" content="noindex" />
   {% endif %} {% if page.title %}
@@ -29,10 +30,14 @@
   <meta content="{{ site.description }}" property="og:description" />
   {% endif %} {% if page.url %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
-  {% endif %} {% if page.date %}
+  {% endif %}
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+  {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
-  <meta content="{{ site.url }}/about/" property="article:author" />
-  {% endif %} {% if page.thumbnail %}
+  {% endif %}
+  <meta content="https://twitter.com/alainQtec" property="article:author" />
+  <meta property="article:publisher" content="https://twitter.com/alainQtec" />
+  {% if page.thumbnail %}
   <meta content="{{ site.url }}{{ page.thumbnail }}" property="og:image" />
   {% endif %} {% if page.categories %} {% for category in page.categories
   limit:1 %}
@@ -43,8 +48,8 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ site.share.twitter_username }}" />
-  <meta name="twitter:creator" content="@{{ site.share.twitter_username }}" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
 
   {% if page.title %}
   <meta name="twitter:title" content="{{ page.title }}" />
@@ -57,7 +62,8 @@
   {% endif %} {% if page.summary %}
   <meta name="twitter:description" content="{{ page.summary }}" />
   {% else %}
-  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   {% endif %} {% if page.header-img %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
   {% endif %}
@@ -92,14 +98,7 @@
 
   <!-- Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" type="image/x-icon">
-  <link rel="icon" href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" type="image/x-icon">
-  <!-- <link href="{{site.url}}{{site.baseurl}}/assets/img/favicon.png" rel="icon">
-  <link href="{{site.url}}{{site.baseurl}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-  <!-- <link rel="shortcut icon"
-    href="https://db3pap005files.storage.live.com/y4mnJglXRa08TLUc7GvlC3UPab1HstdN_b2ddv2YgG3aFVFEulXjKfo9bK5EhbodY5678r5eICDtA2UxslVwcYeexEemhPUrvnMQzuZRpSnXZ1_36zddkQHVUbkyHI2v3zcUaa9YpfLie7SkBIUL05BLfKn24ejqmQeLyrqbXUXDT56kreT8yF7WYLx_9QUYNg8?width=391&height=382&cropmode=none"> -->
-
+  {%- include head/favicon.html -%}
   <!-- google-analytics -->
   {% if site.google-analytics %}
   {% include google-analytics.html %}

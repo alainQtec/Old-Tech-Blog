@@ -1,3 +1,7 @@
+---
+extra_scss: ""
+---
+
 <!-- forestryio: ignore; forestryio: admin -->
 <!-- This is just a ui to scare people away // since forestry won't allow unknown account to view the site dashboard -->
 <!DOCTYPE html>
@@ -20,7 +24,7 @@
 
   <!-- Fort awesome icon kit -->
   <script src="https://use.fortawesome.com/b6f38602.js"></script>
-  <link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/img/logo/favicon.png" type="image/x-icon">
+  {%- include head/favicon.html -%}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <!-- <link rel="stylesheet"
     href="https://github.com/alainQtec/tech-blog/blob/5b777e40b282b635f226dcdfad2de3e84ae857cf/assets/css/admin.css"> -->
