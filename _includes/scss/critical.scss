@@ -479,10 +479,10 @@ border-radius: .5rem !important;
 }
 
 @media (min-width: 1025px) {
-.navbar {
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 
@@ -493,6 +493,14 @@ a.blognavbrand,
   font-weight: var(--font-semi-bold);
   font-family: 'Quicksand', sans-serif !important;
   cursor: pointer !important;
+}
+
+@media (min-width: 280px) {
+  a#blognavbrand.blognavbrand {
+      /* position: fixed; */
+      left: 3% !important;
+      top: 2%;
+  }
 }
 
 .blognavbrand span {

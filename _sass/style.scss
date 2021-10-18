@@ -3244,6 +3244,14 @@ a.blognavbrand,
     cursor: pointer !important;
 }
 
+@media (min-width: 280px) {
+    a#blognavbrand.blognavbrand {
+      /* position: fixed; */
+        left: 3% !important;
+        top: 2%;
+    }
+}
+
 .blognavbrand span {
     transition: .54s linear;
 }
