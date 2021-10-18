@@ -891,7 +891,11 @@ nav#home__navbar.home___nav {
 
 .nav__btns{
     display:flex;
-    /* float: left; */
+}
+
+.blognavbrand,
+a#blognavbrand.blognavbrand {
+    left: 3% !important;
 }
 
 .blognavbrand {
