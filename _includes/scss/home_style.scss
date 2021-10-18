@@ -107,7 +107,7 @@ html[data-theme="light"] {
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #ffffff;
 
-    --jumbotron_bg: "wwdc_white.png";
+    --jumbotron_bg: "./wwdc_white.png";
     --bold-color: rgb(0, 0, 0);
     --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     --box-background-color: rgb(249, 249, 250);
@@ -135,7 +135,7 @@ html[data-theme="dark"] {
     --body-color: hsl(var(--hue-color), 28%, 12%);
     --container-color: hsl(var(--hue-color), 29%, 16%);
 
-    --jumbotron_bg: "wwdc_black.png";
+    --jumbotron_bg: "./wwdc_black.png";
     --bold-color: rgb(225, 225, 225);
     --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
     --box-background-color: hsl(0, 0%, 20%);
@@ -168,7 +168,7 @@ html[data-theme="dark"] {
         --body-color: hsl(var(--hue-color), 60%, 99%);
         --container-color: #ffffff;
         
-        --jumbotron_bg: "wwdc_white.png";
+        --jumbotron_bg: "./wwdc_white.png";
         --bold-color: rgb(0, 0, 0);
         --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
         --box-background-color: rgb(249, 249, 250);
@@ -197,7 +197,7 @@ html[data-theme="dark"] {
         --body-color: hsl(var(--hue-color), 28%, 12%);
         --container-color: hsl(var(--hue-color), 29%, 16%);
         
-        --jumbotron_bg: "wwdc_black.png";
+        --jumbotron_bg: "./wwdc_black.png";
         --bold-color: rgb(188, 188, 188);
         --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
         --box-background-color: hsl(0, 0%, 20%);
@@ -1432,7 +1432,8 @@ div.about__container {
 }
 
 .jumbotron {
-    background-image: var(--jumbotron_bg) !important;
+    // background-image: "./wwdc_var(--bold-color).png" !important;
+    background-image: "./wwdc_white.png" !important;
     width: 70%;
     border-radius: 25px;
     background-attachment: fixed;
