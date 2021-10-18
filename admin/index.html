@@ -19,9 +19,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <!-- Fort awesome icon kit -->
-  <script src="https://use.fortawesome.com/b6f38602.js"></script>
-  <link rel="shortcut icon" href="{{site.url}}{{site.baseurl}}/assets/img/logo/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://use.fortawesome.com/b6f38602.js"></script><!-- start favicons snippet, 
+use https://realfavicongenerator.net/ or iconify
+--><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png"><link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="/assets/favicon/favicon.ico"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png"><link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+<meta name="msapplication-TileColor" content="#603cba"><meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png"><meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+
+<meta name="theme-color" content="#ffffff">
+<!-- end favicons snippet --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <!-- <link rel="stylesheet"
     href="https://github.com/alainQtec/tech-blog/blob/5b777e40b282b635f226dcdfad2de3e84ae857cf/assets/css/admin.css"> -->
   <!-- for netlify cms: <link href="https://unpkg.com/netlify-cms/dist/cms.css" rel="stylesheet" /> -->
@@ -498,7 +503,7 @@
           // Just for show. Not my real forestry password & not secure 🚧.
           if (ctx.password === "9874_forestry_cms") {
             send("VALID");
-            // $.getScript("{{site.url}}{{site.baseurl}}/assets/js/forestry_login.js");
+            // $.getScript("https://www.alainqtec.com/assets/js/forestry_login.js");
             var siteId = "mufuojwz6nnomg";
             window.open(("https://app.forestry.io/sites/" + siteId), '_blank').focus();
           } else {
