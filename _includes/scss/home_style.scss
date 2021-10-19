@@ -523,11 +523,9 @@ body {
     align-items: center;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    font-feature-settings: "kernon";
     font-variant-numeric: oldstyle-nums;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    hanging-punctuation: first last;
     text-rendering: optimizeLegibility;
     background-color: var(--body-color);
     color: var(--text-color) !important;
