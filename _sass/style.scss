@@ -2658,22 +2658,6 @@ div.comments_container.has-col-all {
     color: var(--link-color-visited) !important;
 }
 
-.blog_article-card img {
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    filter: contrast(100%);
-}
-
-@media (min-width: 480px) {
-    .blog_article-card img {
-        max-height: 60vh;
-        -o-object-fit: fill;
-        object-fit: fill;
-        object-position: center;
-    }
-}
-
 .blog_post_content p img {
     border-radius: .5em;
     margin: 15px 0px !important;
@@ -2778,19 +2762,6 @@ div.comments_container {
     }
 }
 
-@media screen and (max-width: 640px) {
-    .blog_article-card {
-        background: var(--body-color);
-        box-shadow: 0px 0px 15px rgb(51, 51, 51);
-        width: 95%;
-        border-radius: 1em;
-    }
-    div.top.blog-card,
-    div.blog-card__background,
-    div.comments_container.has-col-all {
-        width: 98% !important;
-    }
-}
 /*--------------------------------------------------------------
 # Navigation and Header
 --------------------------------------------------------------*/
