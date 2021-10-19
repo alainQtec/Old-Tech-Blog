@@ -117,13 +117,13 @@ author_education_details:
 
 author_project_details:
   - project_thumbnail: project.png
-    project_title: $appname
-    project_description: A windows 11/10 utility app to easily troubleshoot and optimize the system for end-users.
+    project_title: $appname1
+    project_description: A windows .... app .
     project_url: https://alainqtec.com/apps/$appname
     visibility: true
   - project_thumbnail: dashb_chart.jpg
-    project_title: Admin Toolpack
-    project_description: A small windows app built for network and system admins.
+    project_title: $appname2
+    project_description: A small app built for ....
     project_url: https://alainqtec.com/apps/$appname
     visibility: true
 
@@ -346,5 +346,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-admin
   - jekyll-menus
+  - jekyll-analytics
+  - jekyll-picture-tag
 
 data_dir: /_data

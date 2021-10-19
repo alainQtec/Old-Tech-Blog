@@ -18,6 +18,9 @@ gem "github-pages", group: :jekyll_plugins
 # Plugins
 group :jekyll_plugins do
     gem 'jekyll-admin'
+    gem 'jekyll-analytics'
+    gem 'jekyll-toc'
+    gem 'jekyll-picture-tag', git: 'https://github.com/rbuchberger/jekyll_picture_tag'
 end
 
 # and associated library.
