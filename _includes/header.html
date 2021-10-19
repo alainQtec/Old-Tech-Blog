@@ -2,6 +2,23 @@
   <!-- Text Animations go here [ -->
   <div class="fixed1">Welcome to <span>Alain</span>'s tech-blog.</div>
   <div class="fixed2 sticky-top"><span>High</span> <span>Quality</span> exclusive content about all things tech.</div>
+  <div class="fixed3">
+    <script>
+      const bouncyCircle = new mojs.Shape({
+        parent: '#bouncyCircle',
+        shape: 'circle',
+        fill: { '#F64040': '#FC46AD' },
+        radius: { 20: 80 },
+        duration: 2000,
+        isYoyo: true,
+        isShowStart: true,
+        easing: 'elastic.inout',
+        repeat: 1,
+      });
+
+      bouncyCircle.play()
+    </script>
+  </div>
   <!-- ]-->
   <div class="parallax__layer parallax__layer--back">
     <div class="starfield">

@@ -182,6 +182,14 @@ div.blog::before, .blog::after::-webkit-scrollbar {
   color: var(--bold-color);
 }
 
+.fixed3 {
+  position: relative;
+  text-align: center;
+  // width: 100vw;
+  top : 33%;
+  z-index: 1000;
+}
+
 .parallax__layer {
   position: absolute;
   top: 0;
