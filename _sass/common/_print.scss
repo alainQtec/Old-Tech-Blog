@@ -1,4 +1,10 @@
 @media print {
+  .ms-editor-squiggler {
+      display: none !important;
+  }
+}
+
+@media print {
   a {
     @include plain() {
       text-decoration: underline;
@@ -17,4 +23,10 @@
   blockquote {
     page-break-inside: avoid;
   }
+}
+.ms-editor-squiggler {
+  all: initial;
+  display: block !important;
+  height: 0px !important;
+  width: 0px !important;
 }
