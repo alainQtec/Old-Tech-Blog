@@ -1,0 +1,51 @@
+@keyframes sun{
+  0%{
+      transform: rotate(170deg);
+      background-color: transparent;
+      box-shadow: 5px -1px 0px #fff;
+      filter: blur(0px);
+  }
+  50%{
+      background-color: transparent;
+      box-shadow: 5px -1px 0px #fff;
+      filter: blur(0px);
+  }
+  90%{
+      background-color: #f5daaa;
+      box-shadow: 0px 0px 10px #f5deb4,
+      0px 0px 20px #f5deb4,
+      0px 0px 30px #f5deb4,
+      inset 0px 0px 2px #efd3a3;
+      filter: blur(1px);
+  }
+  100%{
+      transform: rotate(0deg);
+      background-color: #f5daaa;
+      box-shadow: 0px 0px 10px #f5deb4,
+      0px 0px 20px #f5deb4,
+      0px 0px 30px #f5deb4,
+      inset 0px 0px 2px #efd3a3;
+      filter: blur(1px);
+  }
+}
+@keyframes moon{
+  0%{
+      transform: rotate(0deg);
+      filter: blur(1px);
+  }
+  50%{
+      filter: blur(1px);
+  }
+  90%{
+      background-color: transparent;
+      box-shadow: 5px -1px 0px #fff;
+      filter: blur(0px);
+  
+  }
+  100%{
+      transform: rotate(170deg);
+      background-color: transparent;
+      box-shadow: 5px -1px 0px #fff;
+      filter: blur(0px);
+  }
+}

@@ -2571,11 +2571,29 @@ image.homepage__blob__dp {
 
 /* For medium devices */
 @media screen and (min-width: 768px) {
-    .hlayout__containr {
-        margin: 0;
+    .container{
+        margin-left: auto;
+        margin-right: auto;
     }
 
     body {
+        margin: 0;
+    }
+
+    .section__subtitle {
+        margin-bottom: 4rem;
+    }
+
+    .main {
+        margin: 0 auto !important;
+        padding: 0 1rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        column-gap: .7rem;
+    }
+    .hlayout__containr {
         margin: 0;
     }
 
@@ -2586,13 +2604,6 @@ image.homepage__blob__dp {
     .section__subtitle {
         margin-bottom: 4rem;
     }
-
-    /* .home__header {
-        top: 0;
-        bottom: initial;
-    } */
-
-    /* .home__header, */
     .main__hp {
         margin: 0 auto;
         padding: 0;
@@ -2604,15 +2615,14 @@ image.homepage__blob__dp {
         height: calc(var(--header-height) + 1.5rem);
         column-gap: 1rem;
     }
-
     .nav__icon,
     .Home_ni,
     .Services_ni,
     .Skills_ni,
     .Projects_ni,
     .Contact_ni,
-    .homep__nav__icon,
     .nav__close,
+    .home__navbar__menu,
     .modeSwitcher_btn,
     .nav__toggle {
         display: none;
@@ -2624,5 +2634,4 @@ image.homepage__blob__dp {
         column-gap: 2rem;
     }
 }
-
 /* For large devices */
