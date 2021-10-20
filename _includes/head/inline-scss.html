@@ -1,0 +1,20 @@
+{% if page.layout == 'home' %}
+<style>
+    {{home_style | scssify}}
+</style>
+{% endif %}
+
+{% if page.layout == 'notfound' %}
+<style>
+    {{404_style | scssify}}
+</style>
+{% endif %}
+
+
+{% if page.layout != 'home' and page.layout != 'notfound' %}
+<style>
+    {{critical_style | scssify}}
+</style>
+{% endif %}
+
+
