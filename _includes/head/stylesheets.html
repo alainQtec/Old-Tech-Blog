@@ -7,3 +7,4 @@
 {% endif %}
 {% if page.layout == 'blog' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/blog.css" />{% endif %}
 {% if page.layout == 'notfound' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/404.css" />{% endif %}
+{% if page.layout != 'notfound' and page.layout != 'home' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/_includes/scss/custom.scss" />{% endif %}

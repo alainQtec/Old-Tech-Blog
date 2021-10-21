@@ -14,6 +14,8 @@
 {% include scss/animate/_typewriter.scss %}
 {% include scss/components/_footer.scss %}
 
+{% if page.layout != 'notfound' and page.layout != 'home' %}{% include scss/custom.scss %}{% endif %}
+
 
 // Import Map
 //     // "scss/common/reset",
