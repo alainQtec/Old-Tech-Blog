@@ -9,25 +9,22 @@ extra_scss: ""
 {% endcapture %}
 
 <!DOCTYPE html>
-<html>
-  {% if page.layout %}
-    {{page.layout}}
-  {% endif %}
-{% include head.html %}
-  <body>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- include head.html -%}
+<body>
     <main>
       <a href="#">
         <header class="top-header">
         </header>
 
-        <!--dust particel-->
+        <!--Dust particles begin -->
         <div>
           <div class="starsec"></div>
           <div class="starthird"></div>
           <div class="starfourth"></div>
           <div class="starfifth"></div>
         </div>
-        <!--Dust particle end--->
+        <!--Dust particles end--->
         <section class="error">
           <!-- Content -->
           <div class="error__content">
@@ -55,6 +52,6 @@ extra_scss: ""
         </section>
       </a>
     </main>
-    {%- include footer.html-%}
+    {%- include footer.html -%}
   </body>
 </html>
