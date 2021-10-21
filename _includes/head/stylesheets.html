@@ -1,4 +1,9 @@
 {% if page.layout != 'notfound' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/common.css" />{% endif %}
-{% if page.layout == 'home' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css" />{% endif %}
+{% if page.layout == 'home' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+{% endif %}
 {% if page.layout == 'blog' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/blog.css" />{% endif %}
 {% if page.layout == 'notfound' %}<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/404.css" />{% endif %}

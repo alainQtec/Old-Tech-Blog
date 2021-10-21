@@ -1,8 +1,12 @@
 <head>
   <meta charset="utf-8" />
+  {% if page.layout == 'home' %}
+  <title>Alain Herve</title>
+  {% else %}
   <title>
     {% if page.title %}{{ page.title }} | @{{site.title}}{% else %}{{ site.title }} | {{ site.subtitle }}{% endif %}
   </title>
+  {% endif %}
   <meta http-equip="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
@@ -64,7 +68,7 @@
   {% endif %} {% if page.header-img %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
   {% endif %}
-  {%- include head/favicon.html -%}
+  
 
   <!-- <link href="{{site.url}}{{site.baseurl}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,6 +81,7 @@
   <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> -->
   <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'> -->
 
+  {%- include head/favicon.html -%}
   {%- include head/inline-scss.html -%}
   {%- include head/stylesheets.html -%}
   
@@ -121,6 +126,17 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
   <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/scroll.js"></script> -->
   <!-- <script src="/assets/js/main.min.js?v=1"></script> -->
+
+  {% if page.layout == 'home' %}
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/jquery.scrollaway.js"></script>
+  <!-- Innfinite Scroll js -->
+  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  <!-- or -->
+  <!-- <script src="/path/to/infinite-scroll.pkgd.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.js"></script> -->
+  {% endif %}
+
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-115907213-1']);
@@ -165,10 +181,10 @@
       fjs.parentNode.insertBefore(js, fjs)
     }(document, "script", "dhm"))
   </script> -->
+
   <!-- https://www.buymeacoffee.com/alainherve -->
-  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve"
-    data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)"
-    data-position="right" data-x_margin="10" data-y_margin="10"></script>
+  {% if page.layout == 'home' %}<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve" data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)" data-position="right" data-x_margin="10" data-y_margin="10"></script>{% endif %}
+  {% if page.layout != 'home' and page.layout != 'notfound' %}<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve" data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)" data-position="right" data-x_margin="57" data-y_margin="16"></script>{% endif %}
 
   <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
   <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
