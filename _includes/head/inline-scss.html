@@ -1,20 +1,15 @@
 {% if page.layout == 'home' %}
-<style>
+<style type="text/css">
     {{home_style | scssify}}
 </style>
 {% endif %}
-
 {% if page.layout == 'notfound' %}
-<style>
+<style type="text/css">
     {{404_style | scssify}}
 </style>
 {% endif %}
-
-
 {% if page.layout != 'home' and page.layout != 'notfound' %}
-<style>
+<style type="text/css">
     {{critical_style | scssify}}
 </style>
 {% endif %}
-
-

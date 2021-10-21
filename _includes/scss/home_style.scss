@@ -1,206 +1,4 @@
 @charset "utf-8";
-/*==================== VARIABLES CSS ====================*/
-:root {
-    --header-height: 3rem;
-
-    /* Change favorite color */
-    --hue-color: 251;
-    /*========== Font and typography ==========*/
-    --body-font: 'Quicksand', sans-serif !important;
-
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --big-font-size: 5.1rem !important;
-    --h1-font-size: 2.5rem;
-    --h2-font-size: 1.3rem;
-    --h3-font-size: 1.1rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
-
-    --clr1: #ddd;
-    --clr2: #efefef;
-    --clr3: #333;
-    --clr4: tomato;
-    --border-radius: 7px;
-    --text-radius: 50em;
-}
-
-@font-face {
-	font-family: Roboto;
-	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff2")
-			format("woff2"),
-		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff")
-			format("woff"),
-		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.ttf")
-			format("ttf");
-	font-weight: 300;
-	font-style: var(--font-medium);
-}
-
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 4.8rem !important;
-        --h1-font-size: 2.5rem;
-        --h2-font-size: 1.3rem;
-        --h3-font-size: 1.1rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .88rem;
-        --smaller-font-size: .75rem;
-    }
-}
-
-/* =========== Themes =========== */
-html,
-html[data-theme="light"] {
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 82%, 68%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 65%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 76%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #ffffff;
-
-    --bold-color: rgb(0, 0, 0);
-    --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-    --box-background-color: rgb(249, 249, 250);
-    --highlight-color: hsl(0, 0%, 80%);
-    --light-border-color: rgb(230, 230, 230);
-    --light-text-color: rgb(72, 72, 74);
-    --link-color: rgb(0, 112, 201);
-    --link-color-visited: hsl(250, 100%, 37%);
-    --main-background-color: rgb(255, 255, 255);
-    --main-text-color: rgb(22, 22, 22);
-    --medium-text-color: hsl(0, 40%, 2%);
-    --sidebar-color: hsl(0, 0%, 90%);
-    --underline-color: hsl(0, 0%, 60%);
-    --social-link-color: #262222;
-    --card-background-color: rgb(250, 250, 250);
-    --newsletter-background-color: #00000008;
-    --button-background-color: #fff;
-}
-
-html[data-theme="dark"] {
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-    --container-color: hsl(var(--hue-color), 29%, 16%);
-
-    --bold-color: rgb(225, 225, 225);
-    --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
-    --box-background-color: hsl(0, 0%, 20%);
-    --highlight-color: hsl(0, 0%, 60%);
-    --light-border-color: hsl(0, 0%, 30%);
-    --light-text-color: rgb(199, 199, 204);
-    --link-color: #f69801;
-    --link-color-visited: hsl(250, 100%, 60%);
-    --main-background-color: rgb(28, 28, 30);
-    --main-text-color: rgb(220, 220, 220);
-    --medium-text-color: hsl(0, 0%, 70%);
-    --underline-color: hsl(0, 0%, 50%);
-    --social-link-color: #ffffff;
-    --card-background-color: rgb(32, 32, 34);
-    --newsletter-background-color: #222324;
-    --button-background-color: #111;
-}
-
-@media (prefers-color-scheme: light) {
-    html,
-    html[data-theme="light"] {
-        --first-color: hsl(var(--hue-color), 69%, 61%);
-        --first-color-second: hsl(var(--hue-color), 82%, 68%);
-        --first-color-alt: hsl(var(--hue-color), 57%, 65%);
-        --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-        --title-color: hsl(var(--hue-color), 8%, 15%);
-        --text-color: hsl(var(--hue-color), 8%, 45%);
-        --text-color-light: hsl(var(--hue-color), 8%, 65%);
-        --input-color: hsl(var(--hue-color), 76%, 96%);
-        --body-color: hsl(var(--hue-color), 60%, 99%);
-        --container-color: #ffffff;
-        
-        --bold-color: rgb(0, 0, 0);
-        --body-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-        --box-background-color: rgb(249, 249, 250);
-        --highlight-color: hsl(0, 0%, 80%);
-        --light-border-color: rgb(230, 230, 230);
-        --light-text-color: rgb(72, 72, 74);
-        --link-color: #ca6521;
-        --nav-color: #ffffff;
-        --nav-link-color: #111111;
-        --search-color: #ababab;
-        --link-color-visited: hsl(250, 100%, 37%);
-        --main-background-color: rgb(255, 255, 255);
-        --main-text-color: rgb(22, 22, 22);
-        --medium-text-color: hsl(0, 0%, 20%);
-        --sidebar-color: hsl(0, 0%, 90%);
-        --underline-color: hsl(0, 0%, 60%);
-        --social-link-color: #262222;
-        --card-background-color: rgb(250, 250, 250);
-        --button-background-color: #fff;
-    }
-    html[data-theme="dark"] {
-        --first-color-second: hsl(var(--hue-color), 30%, 8%);
-        --title-color: hsl(var(--hue-color), 8%, 95%);
-        --text-color: hsl(var(--hue-color), 8%, 75%);
-        --input-color: hsl(var(--hue-color), 29%, 16%);
-        --body-color: hsl(var(--hue-color), 28%, 12%);
-        --container-color: hsl(var(--hue-color), 29%, 16%);
-        
-        --bold-color: rgb(188, 188, 188);
-        --body-background-image: linear-gradient(to top, #000000 0%, rgb(153, 153, 153) 100%);
-        --box-background-color: hsl(0, 0%, 20%);
-        --highlight-color: hsl(0, 0%, 60%);
-        --light-border-color: hsl(0, 0%, 30%);
-        --light-text-color: rgb(199, 199, 204);
-        --link-color: #f69801;
-        --nav-color: #131313;
-        --search-color: #FF7901;
-        --nav-link-color: rgba(255, 255, 255, .5);
-        --link-color-visited: hsl(250, 100%, 60%);
-        --main-background-color: rgb(28, 28, 30);
-        --main-text-color: rgb(220, 220, 220);
-        --medium-text-color: hsl(0, 0%, 70%);
-        --underline-color: hsl(0, 0%, 50%);
-        --social-link-color: #ffffff;
-        --card-background-color: rgb(32, 32, 34);
-        --newsletter-background-color: #222324;
-        --button-background-color: #111;
-    }
-}
-
-html,
-html[data-theme="dark"],
-html[data-theme="light"] {
-    height: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
-}
 
 /* animations */
 
@@ -269,6 +67,7 @@ html[data-theme="light"] {
     animation: caret_typewriter 1s steps(1) infinite;
     content: "";
 }
+
 .change-theme{
     font-size: 1.25rem;
     color: var(--title-color);
@@ -288,6 +87,44 @@ html[data-theme="light"] {
     left:50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Scroll 
+// .scroll-list {}
+@media screen and (max-width: 768px) {
+    .scroll-list {
+        margin-top: 2px;
+    }
+}
+.scroll-list__wrp {
+    overflow: auto;
+}
+.scroll-list__wrp .scrollbar-track {
+    display: none !important;
+}
+.js-scroll-list-item {
+    display: block;
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+    transform: scale(0.7);
+}
+.js-scroll-list-item.item-hide {
+    opacity: 0;
+    transform: scale(0.7);
+}
+.js-scroll-list-item.item-focus {
+    opacity: 1;
+    transform: scale(1);
+}
+.js-scroll-list-item.item-next {
+    opacity: 1;
+    transform: scale(1);
+}
+.js-scroll-list-item.item-next + .js-scroll-list-item {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /*======================================================= BASE =======================================================*/
 *{
@@ -687,6 +524,7 @@ nav#home__navbar.home___nav {
 
 .nav__btns{
     display:flex;
+    float: left;
 }
 
 .blognavbrand,

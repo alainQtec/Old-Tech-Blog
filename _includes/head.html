@@ -5,8 +5,10 @@
   </title>
   <meta http-equip="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{ page.summary | escape }}{% endif %}- {% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %},{{ page.keywords | escape }}" />
+  <meta name="description"
+    content="{% if page.description %}{{page.description}}{% else %}{{ page.summary | escape }}{% endif %}- {% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords"
+    content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %},{{ page.keywords | escape }}" />
   <meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
   <meta content="{{ site.title }}" property="og:site_name" />
   <meta property="og:locale" content="en_US">
@@ -76,9 +78,8 @@
   <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'> -->
 
   {%- include head/inline-scss.html -%}
+  {%- include head/stylesheets.html -%}
   
-  
-  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/main.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 

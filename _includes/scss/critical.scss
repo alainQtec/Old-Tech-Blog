@@ -272,6 +272,18 @@ div.blog::before, .blog::after::-webkit-scrollbar {
 }
 
 /* -------- Navbar ----- */
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem
+}
 
 nav#navbar.navbar:before {
   top: 0;
@@ -541,6 +553,11 @@ a.blognavbrand,
 .blognavbrand:hover span:nth-child(3):after {
   position: relative;
   content: "h";
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem
 }
 
 .nav-link,

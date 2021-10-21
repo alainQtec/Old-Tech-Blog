@@ -1,0 +1,99 @@
+---
+---
+// # Only this Sass file needs front matter (the dashes are enough)
+// # I only use this file to import common css for all pages
+@charset "utf-8";
+
+{% include scss/common/_base.scss %}
+{% include scss/common/_fonts.scss %}
+{% include scss/common/_themes.scss %}
+{% include scss/animate/_glow.scss %}
+{% include scss/animate/_icon-wiggle.scss %}
+{% include scss/animate/_on-off.scss %}
+{% include scss/animate/_text-color.scss %}
+{% include scss/animate/_typewriter.scss %}
+{% include scss/components/_footer.scss %}
+
+
+// Import Map
+//     // "scss/common/reset",
+//     // "scss/common/variables",
+//     "scss/common/base",
+//     "scss/common/fonts",
+//     // "scss/common/print",
+//     // "scss/common/function",
+//     // "scss/common/classes",
+
+//       "scss/common/themes",
+//        "scss/skins/ // site.text_skin | default: site.data.variables.default.text_skin //",
+//        "scss/skins/chocolate",
+//        "scss/skins/dark",
+//        "scss/skins/default",
+//        "scss/skins/forest",
+//        "scss/skins/ocean",
+//        "scss/skins/orange",
+//     // "scss/skins/highlight/ // site.highlight_theme | default: site.data.variables.default.highlight_theme //",
+//     // "scss/skins/highlight/tomorrow",
+//     // "scss/skins/highlight/tomorrow-night",
+//     // "scss/skins/highlight/tomorrow-night-eighties",
+//     // "scss/skins/highlight/tomorrow-night-blue",
+//     // "scss/skins/highlight/tomorrow-night-bright",
+
+//     // "scss/common/components/button",
+//     // "scss/common/components/image",
+//     // "scss/common/components/card",
+//     // "scss/common/components/gallery",
+//     // "scss/common/components/hero",
+//     // "scss/common/components/menu",
+//     // "scss/common/components/modal",
+//     // "scss/common/components/toc",
+//     // "scss/common/components/item",
+//     // "scss/common/components/swiper",
+
+//     // "scss/animate/fade-in",
+//     "scss/animate/glow",
+//     "scss/animate/icon-wiggle",
+//     "scss/animate/on-off",
+//     // "scss/animate/fade-in-down",
+//     // "scss/animate/fade-in-up",
+
+//     // "scss/animate/sun-moon",
+
+//     "scss/animate/text-color",
+//     "scss/animate/typewriter",
+
+//     // "scss/components/main",
+//     // "scss/components/header",
+//     // "scss/components/header-stars"
+
+//     // "scss/components/article-list",
+//     // "scss/components/article-info",
+//     // "scss/components/article-header",
+//     // "scss/components/article-content",
+//     // "scss/components/article-footer",
+//     // "scss/components/author-links",
+//     // "scss/components/author-profile",
+
+//     // "scss/components/switch",
+
+//     // "scss/components/tags",
+//     // "scss/components/search",
+//     // "scss/components/lightbox",
+//     // "scss/components/extensions",
+
+//     // "scss/additional/alert",
+//     // "scss/additional/tag",
+//     // "scss/additional/photo-frame",
+
+//     // "scss/layout/base",
+//     // "scss/layout/page",
+
+//     // "scss/layout/article",
+//     // "scss/layout/articles",
+//     // "scss/layout/archive",
+//     // "scss/layout/home",
+//     // "scss/layout/landing",
+//     // "scss/layout/404",
+//     // "scss/custom"
+//     // "scss/components/footer"
+
