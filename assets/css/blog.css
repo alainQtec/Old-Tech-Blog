@@ -13,6 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-{% include scss/animate/_text-color.scss %}
-{% include scss/components/_header-stars.scss %}
+{% include scss/animate/text-color.scss %}
+{% include scss/components/header-stars.scss %}
 

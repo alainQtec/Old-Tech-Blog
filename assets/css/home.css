@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-{% include scss/animate/_glow.scss %}
-{% include scss/animate/_icon-wiggle.scss %}
-{% include scss/animate/_on-off.scss %}
-{% include scss/animate/_sun-moon.scss %}
-{% include scss/components/_switch.scss %}
+{% include scss/animate/glow.scss %}
+{% include scss/animate/icon-wiggle.scss %}
+{% include scss/animate/on-off.scss %}
+{% include scss/animate/sun-moon.scss %}
+{% include scss/components/switch.scss %}
 

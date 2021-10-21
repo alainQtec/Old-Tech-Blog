@@ -4,15 +4,15 @@
 // # I only use this file to import common css for all pages
 @charset "utf-8";
 
-{% include scss/common/_base.scss %}
-{% include scss/common/_fonts.scss %}
-{% include scss/common/_themes.scss %}
-{% include scss/animate/_glow.scss %}
-{% include scss/animate/_icon-wiggle.scss %}
-{% include scss/animate/_on-off.scss %}
-{% include scss/animate/_text-color.scss %}
-{% include scss/animate/_typewriter.scss %}
-{% include scss/components/_footer.scss %}
+{% include scss/common/base.scss %}
+{% include scss/common/fonts.scss %}
+{% include scss/common/themes.scss %}
+{% include scss/animate/glow.scss %}
+{% include scss/animate/icon-wiggle.scss %}
+{% include scss/animate/on-off.scss %}
+{% include scss/animate/text-color.scss %}
+{% include scss/animate/typewriter.scss %}
+{% include scss/components/footer.scss %}
 
 {% if page.layout != 'notfound' and page.layout != 'home' %}{% include scss/custom.scss %}{% endif %}
 

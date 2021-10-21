@@ -2,8 +2,9 @@
 extra_scss: ""
 ---
 
-{% capture home_style %}
-{% include scss/home_style.scss %}
+
+{% capture home_critical_style %}
+{% include scss/layout/home.scss %}
 {% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
 {% endcapture %}
 
