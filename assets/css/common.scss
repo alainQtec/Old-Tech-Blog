@@ -1,9 +1,10 @@
 ---
 ---
 // # Only this Sass file needs front matter (the dashes are enough)
-// # I only use this file to import common css for all pages
+// # I only use this file to import/include common css for all pages
 @charset "utf-8";
 
+// Begin: Common scss
 {% include scss/common/base.scss %}
 {% include scss/common/fonts.scss %}
 {% include scss/common/themes.scss %}
@@ -13,6 +14,27 @@
 {% include scss/animate/text-color.scss %}
 {% include scss/animate/typewriter.scss %}
 {% include scss/components/footer.scss %}
+// End: Common scss
+
+// Begin: Home scss
+{% if page.layout == 'home' %}
+{% include scss/animate/glow.scss %}
+{% include scss/animate/icon-wiggle.scss %}
+{% include scss/animate/on-off.scss %}
+{% include scss/animate/sun-moon.scss %}
+{% include scss/components/switch.scss %}
+{% endif %}
+// End: Home scss
+
+// Begin: Blog scss
+{% if page.layout == 'blog' %}
+{% include scss/layout/blog.scss %}
+{% include scss/components/header-stars.scss %}
+{% include scss/common/components/nav-menu.scss %}
+{% include scss/animate/text-color.scss %}
+{% include scss/components/header-stars.scss %}
+{% endif %}
+// End: Blog scss
 
 {% if page.layout != 'notfound' and page.layout != 'home' %}{% include scss/custom.scss %}{% endif %}
 

@@ -1,28 +1,11 @@
 .main {
-  width: 100%;
-  max-width: map-get($layout, content-max-width);
-  padding: 0 map-get($spacers, 5);
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   margin: 0 auto;
-  @include media-breakpoint-down(lg) {
-    padding: 0 map-get($spacers, 4);
-  }
-  @include media-breakpoint-down(md) {
-    padding: 0 map-get($spacers, 3);
-  }
-}
-
-.has-aside {
-  .main {
-    max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
-    @include media-breakpoint-down(lg) {
-      max-width: map-get($layout, content-max-width);
-    }
-  }
-}
-
-.full-width {
-  .main {
-    width: 100%;
-    max-width: 100%;
-  }
+  padding: 0;
+  -webkit-border-radius: .5rem !important;
+-moz-border-radius: .5rem !important;
+  border-radius: .5rem;
+  background: var(--body-background-image);
 }

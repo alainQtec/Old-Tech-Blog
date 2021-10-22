@@ -12,3 +12,150 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0 !important;
+  display: block;
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+header, header:before {
+  background: 50% 50% / cover;
+}
+
+header,
+#header.header {
+  width: 100vw;
+  top: 0 !important;
+  /* height: 25%; */
+  min-height: 19vw;
+  box-sizing: border-box;
+  /* position  -not- relative; */
+}
+
+.starfield > * {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 85%;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.starfield > * {
+  background-size: 200px 200px;
+  background-image: radial-gradient(
+      2px 2px at 40px 60px,
+      rgb(223, 223, 223),
+      rgba(0, 0, 0, 0)
+  ),
+  radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 30px 100px, #eee, rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 40px 60px, rgb(0, 255, 0), rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 110px 90px, rgb(255, 0, 0), rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 190px 150px, rgb(255, 200, 0), rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+}
+
+.starfield span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.starfield span:nth-child(3) {
+  transform: rotate(69deg);
+}
+.starfield span:nth-child(4) {
+  transform: rotate(123deg);
+}
+
+.fixed1 {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  top: 10%;
+  z-index: 1000;
+}
+
+.fixed1,
+.fixed1 p,
+.fixed1 p span,
+.fixed1 span {
+  font-size: 24px;
+  color: white;
+}
+
+.fixed1:focus, .fixed1:hover,
+.fixed2:focus, .fixed2:hover {
+  cursor: pointer;
+}
+
+.fixed2 {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  top : 30%;
+  z-index: 1000;
+}
+
+.fixed2,
+.fixed2 p,
+.fixed2 p span,
+.fixed2 span {
+  color: var(--text-color-light);
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.fixed1 span:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  color: var(--first-color-lighter);
+}
+
+.fixed2 span:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  color: var(--bold-color);
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer--back2 {
+  -webkit-transform: translateZ(-6px) scale(5);
+  transform: translateZ(-6px) scale(5);
+}
+
+.parallax__layer--back3 {
+  -webkit-transform: translateZ(-12px) scale(6);
+  transform: translateZ(-12px) scale(6);
+}
+
+.parallax__layer--back4 {
+  -webkit-transform: translateZ(-16px) scale(9);
+  transform: translateZ(-16px) scale(9);
+}
