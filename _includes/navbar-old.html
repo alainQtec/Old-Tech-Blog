@@ -1,0 +1,106 @@
+<nav class="navbar sticky-top" id="navbar">
+  <a class="blognavbrand" href="{{site.url}}{{site.baseurl}}"><span>alain</span><span>Q</span><span>tec</span></a>
+  <ul>
+    <li><a class="nav-link scrollto" href="{{site.url}}{{site.blogurl}}">Home</a></li>
+    <li class="dropdown"><a class="nav-link scrollto" href="{{site.url}}{{site.abouturl}}"><span>About</span> <i
+          class="bi bi-chevron-down"></i></a>
+      <ul>
+        <li><a href="{{site.url}}{{site.baseurl}}/about/">This blog</a></li>
+        <li class="dropdown">
+          <a href="{{site.url}}{{site.baseurl}}/blog/authors/"><span>Authors</span><i
+              class="uil uil-angle-right nav-chevron"></i></a>
+          <ul>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/alain/">Alain</a></li>
+            <li><a href="{{site.url}}{{site.baseurl}}/blog/authors/testauthor/">Test Author</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a class="nav-link scrollto" href="{{site.url}}{{site.baseurl}}/blog/categories/">
+        <span>Categories</span> <i class="uil uil-angle-right nav-chevron"></i></a>
+      <ul>
+        <li>
+          <a href="{{site.url}}{{site.baseurl}}/blog/categories/windows/"><i class="uil uil-microsoft nav-sublink">
+              Windows</i></a>
+        </li>
+        <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/cloud/"><i
+              class="uil uil-desktop-cloud-alt nav-sublink"> Cloud</i></a></li>
+        <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/it-ops"><i class="uil uil-robot nav-sublink">
+              IT-Ops</i></a></li>
+        <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/security/"><i class="uil uil-shield nav-sublink">
+              Security</i></a></li>
+        <li><a href="{{site.url}}{{site.baseurl}}/blog/categories/tools/"><i class="uil uil-package nav-sublink">
+              Tools</i></a>
+        </li>
+      </ul>
+    </li>
+    <li><a class="nav-link scrollto" href="{{ site.url}}{{site.galleryurl}}"><span>Gallery</span></a></li>
+    <li class="nav_shopicon">
+      <a class="nav-link scrollto toggle-shop-button" href="{{ site.url}}{{site.shopurl}}">
+        <i class="uil uil-shopping-cart" aria-hidden="true"></i> <span>Shop</span>
+      </a>
+    </li>
+    <li class="dropdown">
+      <a class="nav-link scrollto" href="#"><span>More</span> <i class="uil uil-angle-right nav-chevron"></i></a>
+      <ul>
+        <li><a href="{{site.url}}{{site.baseurl}}/blog/archive/">
+            <i class="uil uil-archive-alt nav-sublink"> Archive</i></a>
+        </li>
+        <li><a href="#"><i class="uil uil-lightbulb-alt nav-sublink"> Topic Suggestion</i></a></li>
+        <li><a href="#"><i class="uil uil-gift nav-sublink"> Giveaways</i></a></li>
+      </ul>
+    </li>
+    <li class="dropdown"><a class="nav-link scrollto" href="{{site.url}}{{site.baseurl}}/forum/profile/">
+        <span>Account</span> <i class="bi bi-chevron-down"></i></a>
+      <ul>
+        <li><a href="{{site.url}}{{site.baseurl}}/forum/profile/"><i class="uil uil-user nav-sublink">
+              Profile</i></a></li>
+        <li><a href="{{site.url}}{{site.baseurl}}/forum/register/"><i class="uil uil-user-plus nav-sublink">
+              Register</i></a></li>
+        <li><a href="{{site.url}}{{site.baseurl}}/forum/login/"><i class="uil uil-signout nav-sublink">
+              Logout</i></a></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="nav_searchicon">
+    <a class="nav-link toggle-search-button" href="#navbar"><i class="uil uil-search search-icon"
+        aria-hidden="true"></i>Search</a>
+  </div>
+  <div class="uil uil-apps mobile-nav-toggle"></div>
+</nav>
+
+<div class="search-form-container">
+  <form role="form" class="search-form">
+    <fieldset class="search-form__fieldset">
+      <div class="sr_card">
+        <div id="search-container" class="form-group col-lg-8 offset-md-2">
+          <input class="search-form__field form-control input-lg" type="input" id="search-input"
+            placeholder="Type to Search..." autofocus>
+          <input class="search-form__submit" type="submit" value="search">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <div id="filter-records"></div>
+
+  <div class="sr_results-container" id="results-container">
+    <script src="{{site.url}}{{site.baseurl}}/assets/js/search.js" type="text/javascript"></script>
+  </div>
+  <div class="close-search-button search-form-container__close">
+    <i class="fa fa-times icon"></i>
+  </div>
+</div>
+<!-- Auto hide navbar on scroll down -->
+<!-- <script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-60px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script> -->

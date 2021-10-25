@@ -7,10 +7,9 @@ extra_scss: ""
 {%- include head.html -%}
 
 <body>
+  {%- include navbar.html -%}
   <main class="main" id="scroll-animate">
     <!-- //- include header.html -// -->
-    {%- include navbar.html -%}
-    {%- include mobile_menu.html -%}
     <div class="content">
       {{ content }}
     </div>
