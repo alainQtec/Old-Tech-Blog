@@ -160,7 +160,49 @@ compress_html:
     envs: ["development"]
 # sass
 sass:
+  sass_dir: _sass
   style: compressed
+
+# Assets
+assets:
+  source_maps: true
+  destination: "/assets"
+  compression: false
+  gzip: false
+  defaults:
+    integrity:
+      { css, img, js }: false
+  caching:
+    enabled: true
+    path: ".jekyll-cache/assets"
+    type: file
+  # --
+  # Assets you wish to always have compiled.
+  #   This can also be combined with raw_precompile which
+  #   copies assets without running through the pipeline
+  #   making them ultra fast.
+  # --
+  precompile: []
+  raw_precompile: []
+  #
+  # --
+  # baseurl: whether or not to append site.baseurl
+  # destination: the folder you store them in on the CDN.
+  # url: the CDN url (fqdn, or w/ identifier).
+  # --
+  cdn:
+    baseurl: false
+    destination: false
+    url: null
+  # --
+  # See lib/jekyll/assets/config.rb
+  #   for a list of defaults
+  # --
+  sources:
+    - _assets/custom
+  plugins:
+    css: { autoprefixer: {} }
+    img: { optim: {} }
 
 ## => Post
 ##############################
@@ -193,20 +235,12 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
-
-#     defaults:
-# - scope:
-#     path: ""
-#     type: posts
-#   values:
-#     layout: article
-#     sharing: true
-#     license: true
-#     aside:
-#       toc: true
-#     show_edit_on_github: true
-#     show_subscribe: true
-#     pageview: true
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
 
 ## license
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
@@ -348,5 +382,6 @@ plugins:
   - jekyll-menus
   - jekyll-analytics
   - jekyll-picture-tag
+  # - jekyll-coffeescript
 
 data_dir: /_data

@@ -1,16 +1,67 @@
 ---
+title: "Alain Herve"
+description: "Developer, designer, content creator, tech enthusiast who loves to build productivity apps and tools."
+thumbnail: "{{site.url}}{{site.baseurl}}/assets/favicon/android-chrome-192x192.png"
 extra_scss: ""
 ---
 
-
-{% capture home_critical_style %}
-{% include scss/home_style.scss %}
+{% capture home_style %}
+{% include scss/critical/home.scss %}
 {% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
 {% endcapture %}
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-{%- include head.html -%}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alain Herve">
+  <meta name="description" content="My portfolio Website">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  {%- include head/favicon.html -%}
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'> -->
+  {%- include head/inline-scss.html -%}
+  {%- include head/stylesheets.html -%}
+  <title>Alain Herve</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/jquery.scrollaway.js"></script>
+  <!-- Innfinite Scroll js -->
+  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  <!-- for Mathjax support -->
+  {% if page.usemathjax %}
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  {% endif %}
+
+  <!-- Github Buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+  <!-- https://www.buymeacoffee.com/alainherve -->
+  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve"
+    data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)"
+    data-position="right" data-x_margin="57" data-y_margin="16"></script>
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <html class="no-js">
+  <!--<![endif]-->
+</head>
 
 <body>
   <main class="main__hp" id="scroll-animate">

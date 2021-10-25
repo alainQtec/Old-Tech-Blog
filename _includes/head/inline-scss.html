@@ -1,10 +1,4 @@
-{% if page.layout == 'home' %}
 <style type="text/css">
-    {{home_style | scssify}}
+{% if page.layout == 'home' %}{{home_style | scssify}}{% endif %}
+{% if page.layout == 'notfound' %}{{404_style | scssify}}{% endif %}
 </style>
-{% endif %}
-{% if page.layout == 'notfound' %}
-<style type="text/css">
-    {{404_style | scssify}}
-</style>
-{% endif %}
