@@ -136,10 +136,37 @@ figure.blog_card.it2-card:hover {
   opacity: 1
 }
 
+.item-2_card-header::before,
+.item-2_card-header::after {
+  content: "";
+  display: table
+}
+
 .item-2_card-header {
   color: #fff;
   padding: 1em
 }
+
+.item-2_card-header::after {
+  clear: both
+}
+
+.item-2_card-header .date {
+  float: left;
+  font-size: 12px
+}
+
+
+@media (min-width: 60em) {
+  .item-1 {
+    grid-column: 1/span 2
+  }
+
+  .item-1 h1 {
+    font-size: 24px
+  }
+}
+
 
 .blog_card:focus .date,
 .blog_card:hover .date {

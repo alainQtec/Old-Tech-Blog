@@ -1197,6 +1197,33 @@ nav#navbar.navbar,
     }
 }
 
+div.band {
+    margin-top: 30px !important
+}
+
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 18px
+}
+
+@media (min-width: 30em) {
+    .band {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media (min-width: 60em) {
+    .band {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+
 .top {
     width: 100%;
     margin: 0;
