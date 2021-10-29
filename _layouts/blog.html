@@ -1,45 +1,884 @@
----
-extra_scss: ""
----
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#" class="js no-touch progressive-image no-reduced-motion no-edge no-ie css-mask inline-video desktop no-retina no-safari no-old-safari no-chrome no-ios no-android no-firefox no-fallback no-aow windows enhanced-layout riwlaja idc0_332">
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-{%- include head.html -%}
+<head>
+  <style data-merge-styles="true"></style>
 
-<body class="blog">
-  <div class="blog_parallax">
-    {%- include header/stars.html -%}
-    <main class="main" id="scroll-animate">
-      {%- include navbar.html -%}
-      {%- include mobile_menu.html -%}
-      <div class="content">
-        {{ content }}
+  <meta charset="utf-8">
+  <link rel="canonical" href="https://www.alainQtec.com/">
+
+  <link rel="alternate" href="https://alainQtec.com/" hreflang="en-US">
+  <link rel="alternate" href="https://alainQtec.com/ae-ar/" hreflang="ar-AE">
+  <link rel="alternate" href="https://alainQtec.com/ae/" hreflang="en-AE">
+  <link rel="alternate" href="https://alainQtec.com/am/" hreflang="en-AM">
+  <link rel="alternate" href="https://alainQtec.com/at/" hreflang="de-AT">
+  <link rel="alternate" href="https://alainQtec.com/au/" hreflang="en-AU">
+  <link rel="alternate" href="https://alainQtec.com/az/" hreflang="en-AZ">
+  <link rel="alternate" href="https://alainQtec.com/befr/" hreflang="fr-BE">
+  <link rel="alternate" href="https://alainQtec.com/benl/" hreflang="nl-BE">
+  <link rel="alternate" href="https://alainQtec.com/bg/" hreflang="bg-BG">
+  <link rel="alternate" href="https://alainQtec.com/bh-ar/" hreflang="ar-BH">
+  <link rel="alternate" href="https://alainQtec.com/bh/" hreflang="en-BH">
+  <link rel="alternate" href="https://alainQtec.com/br/" hreflang="pt-BR">
+  <link rel="alternate" href="https://alainQtec.com/bw/" hreflang="en-BW">
+  <link rel="alternate" href="https://alainQtec.com/by/" hreflang="en-BY">
+  <link rel="alternate" href="https://alainQtec.com/ca/" hreflang="en-CA">
+  <link rel="alternate" href="https://alainQtec.com/ca/fr/" hreflang="fr-CA">
+  <link rel="alternate" href="https://alainQtec.com/cf/" hreflang="fr-CF">
+  <link rel="alternate" href="https://alainQtec.com/chde/" hreflang="de-CH">
+  <link rel="alternate" href="https://alainQtec.com/chfr/" hreflang="fr-CH">
+  <link rel="alternate" href="https://alainQtec.com/ci/" hreflang="fr-CI">
+  <link rel="alternate" href="https://alainQtec.com/cl/" hreflang="es-CL">
+  <link rel="alternate" href="https://alainQtec.com/cm/" hreflang="fr-CM">
+  <link rel="alternate" href="https://alainQtec.com/co/" hreflang="es-CO">
+  <link rel="alternate" href="https://alainQtec.com/cz/" hreflang="cs-CZ">
+  <link rel="alternate" href="https://alainQtec.com/de/" hreflang="de-DE">
+  <link rel="alternate" href="https://alainQtec.com/dk/" hreflang="da-DK">
+  <link rel="alternate" href="https://alainQtec.com/ee/" hreflang="et-EE">
+  <link rel="alternate" href="https://alainQtec.com/eg-ar/" hreflang="ar-EG">
+  <link rel="alternate" href="https://alainQtec.com/eg/" hreflang="en-EG">
+  <link rel="alternate" href="https://alainQtec.com/es/" hreflang="es-ES">
+  <link rel="alternate" href="https://alainQtec.com/fi/" hreflang="fi-FI">
+  <link rel="alternate" href="https://alainQtec.com/fr/" hreflang="fr-FR">
+  <link rel="alternate" href="https://alainQtec.com/ge/" hreflang="en-GE">
+  <link rel="alternate" href="https://alainQtec.com/gn/" hreflang="fr-GN">
+  <link rel="alternate" href="https://alainQtec.com/gq/" hreflang="fr-GQ">
+  <link rel="alternate" href="https://alainQtec.com/gr/" hreflang="el-GR">
+  <link rel="alternate" href="https://alainQtec.com/gw/" hreflang="en-GW">
+  <link rel="alternate" href="https://alainQtec.com/hk/" hreflang="zh-HK">
+  <link rel="alternate" href="https://alainQtec.com/hk/en/" hreflang="en-HK">
+  <link rel="alternate" href="https://alainQtec.com/hr/" hreflang="hr-HR">
+  <link rel="alternate" href="https://alainQtec.com/hu/" hreflang="hu-HU">
+  <link rel="alternate" href="https://alainQtec.com/id/" hreflang="en-ID">
+  <link rel="alternate" href="https://alainQtec.com/ie/" hreflang="en-IE">
+  <link rel="alternate" href="https://alainQtec.com/il/" hreflang="en-IL">
+  <link rel="alternate" href="https://alainQtec.com/in/" hreflang="en-IN">
+  <link rel="alternate" href="https://alainQtec.com/it/" hreflang="it-IT">
+  <link rel="alternate" href="https://alainQtec.com/jo-ar/" hreflang="ar-JO">
+  <link rel="alternate" href="https://alainQtec.com/jo/" hreflang="en-JO">
+  <link rel="alternate" href="https://alainQtec.com/jp/" hreflang="ja-JP">
+  <link rel="alternate" href="https://alainQtec.com/ke/" hreflang="en-KE">
+  <link rel="alternate" href="https://alainQtec.com/kg/" hreflang="en-KG">
+  <link rel="alternate" href="https://alainQtec.com/kr/" hreflang="ko-KR">
+  <link rel="alternate" href="https://alainQtec.com/kw-ar/" hreflang="ar-KW">
+  <link rel="alternate" href="https://alainQtec.com/kw/" hreflang="en-KW">
+  <link rel="alternate" href="https://alainQtec.com/kz/" hreflang="en-KZ">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-HN">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-AR">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-SV">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PR">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-DO">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-EC">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-GT">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PE">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-BO">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-NI">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-VE">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PA">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-CR">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-UY">
+  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PY">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-AG">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BS">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-TC">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-TT">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-SR">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BM">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BB">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BZ">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-GD">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-KY">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-LC">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-MS">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-KN">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-AI">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-VC">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-GY">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-VG">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-PR">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-DM">
+  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-JM">
+  <link rel="alternate" href="https://alainQtec.com/li/" hreflang="de-LI">
+  <link rel="alternate" href="https://alainQtec.com/lt/" hreflang="lt-LT">
+  <link rel="alternate" href="https://alainQtec.com/lu/" hreflang="fr-LU">
+  <link rel="alternate" href="https://alainQtec.com/lv/" hreflang="lv-LV">
+  <link rel="alternate" href="https://alainQtec.com/ma/" hreflang="fr-MA">
+  <link rel="alternate" href="https://alainQtec.com/md/" hreflang="en-MD">
+  <link rel="alternate" href="https://alainQtec.com/me/" hreflang="en-ME">
+  <link rel="alternate" href="https://alainQtec.com/mg/" hreflang="en-MG">
+  <link rel="alternate" href="https://alainQtec.com/mk/" hreflang="en-MK">
+  <link rel="alternate" href="https://alainQtec.com/ml/" hreflang="fr-ML">
+  <link rel="alternate" href="https://alainQtec.com/mo/" hreflang="zh-MO">
+  <link rel="alternate" href="https://alainQtec.com/mt/" hreflang="en-MT">
+  <link rel="alternate" href="https://alainQtec.com/mu/" hreflang="fr-MU">
+  <link rel="alternate" href="https://alainQtec.com/mx/" hreflang="es-MX">
+  <link rel="alternate" href="https://alainQtec.com/my/" hreflang="en-MY">
+  <link rel="alternate" href="https://alainQtec.com/mz/" hreflang="en-MZ">
+  <link rel="alternate" href="https://alainQtec.com/ne/" hreflang="fr-NE">
+  <link rel="alternate" href="https://alainQtec.com/ng/" hreflang="en-NG">
+  <link rel="alternate" href="https://alainQtec.com/nl/" hreflang="nl-NL">
+  <link rel="alternate" href="https://alainQtec.com/no/" hreflang="no-NO">
+  <link rel="alternate" href="https://alainQtec.com/nz/" hreflang="en-NZ">
+  <link rel="alternate" href="https://alainQtec.com/om-ar/" hreflang="ar-OM">
+  <link rel="alternate" href="https://alainQtec.com/om/" hreflang="en-OM">
+  <link rel="alternate" href="https://alainQtec.com/ph/" hreflang="en-PH">
+  <link rel="alternate" href="https://alainQtec.com/pl/" hreflang="pl-PL">
+  <link rel="alternate" href="https://alainQtec.com/pt/" hreflang="pt-PT">
+  <link rel="alternate" href="https://alainQtec.com/qa-ar/" hreflang="ar-QA">
+  <link rel="alternate" href="https://alainQtec.com/qa/" hreflang="en-QA">
+  <link rel="alternate" href="https://alainQtec.com/ro/" hreflang="ro-RO">
+  <link rel="alternate" href="https://alainQtec.com/ru/" hreflang="ru-RU">
+  <link rel="alternate" href="https://alainQtec.com/sa-ar/" hreflang="ar-SA">
+  <link rel="alternate" href="https://alainQtec.com/sa/" hreflang="en-SA">
+  <link rel="alternate" href="https://alainQtec.com/se/" hreflang="sv-SE">
+  <link rel="alternate" href="https://alainQtec.com/sg/" hreflang="en-SG">
+  <link rel="alternate" href="https://alainQtec.com/si/" hreflang="en-SI">
+  <link rel="alternate" href="https://alainQtec.com/sk/" hreflang="sk-SK">
+  <link rel="alternate" href="https://alainQtec.com/sn/" hreflang="fr-SN">
+  <link rel="alternate" href="https://alainQtec.com/th/" hreflang="th-TH">
+  <link rel="alternate" href="https://alainQtec.com/tj/" hreflang="en-TJ">
+  <link rel="alternate" href="https://alainQtec.com/tm/" hreflang="en-TM">
+  <link rel="alternate" href="https://alainQtec.com/tn/" hreflang="fr-TN">
+  <link rel="alternate" href="https://alainQtec.com/tr/" hreflang="tr-TR">
+  <link rel="alternate" href="https://alainQtec.com/tw/" hreflang="zh-TW">
+  <link rel="alternate" href="https://alainQtec.com/ua/" hreflang="uk-UA">
+  <link rel="alternate" href="https://alainQtec.com/ug/" hreflang="en-UG">
+  <link rel="alternate" href="https://alainQtec.com/uk/" hreflang="en-GB">
+  <link rel="alternate" href="https://alainQtec.com/uz/" hreflang="en-UZ">
+  <link rel="alternate" href="https://alainQtec.com/vn/" hreflang="en-VN">
+  <link rel="alternate" href="https://alainQtec.com/za/" hreflang="en-ZA">
+  <link rel="alternate" href="https://alainQtec.com.cn/" hreflang="zh-CN">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/blog-navbar.built.css"/>
+  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/ac-localnav.built.css"/>
+  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/b-footer.built.css"/>
+
+  <title>alainQtec</title>
+  <meta name="Description"
+    content="Discover productivity tech from Alain. Get latest tech news, Learn and shop everything tech from tee-shirts, Mugs and e-books. Read daily tech blog download recommended resources and apps.">
+  <meta property="og:title" content="alainQtec">
+  <meta property="og:description"
+    content="Discover productivity tech from Alain. Get latest tech news, Learn and shop everything tech from tee-shirts, Mugs and e-books. Read daily tech blog download recommended resources and apps.">
+  <meta property="og:url" content="https://alainQtec.com/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://alainQtec.com/ac/structured-data/images/open_graph_logo.png?202110180743">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="alainQtec">
+  <link rel="stylesheet" href="https://www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Pro+Icons,v3" type="text/css"
+    media="all">
+  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/main.build.css" type="text/css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/headbuild.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="page-home navbar-overlap body-with-ribbon" data-anim-scroll-group="body"
+  data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
+
+  <h1 class="visuallyhidden">alainQtec</h1>
+  <aside id="b-nav-segmentbar" class="b-nav-segmentbar" lang="en-US" dir="ltr"
+    data-strings="{ 'exit': 'Exit', 'view': 'STOREFRONT Store Home', 'segments': { 'smb': 'Business Store Home', 'eduInd': 'Education Store Home', 'other': 'Store Home' } }">
+  </aside>
+  <input type="checkbox" id="b-nav-menustate" class="b-nav-menustate">
+  <nav id="blog-navbar" class="navbar sticky-top" role="navigation" aria-label="Global" data-hires="false">
+    <div class="b-nav-content">
+      <ul class="b-nav-header">
+        <li class="b-nav-item b-nav-menuicon">
+          <a href="#b-nav-menustate" role="button" class="b-nav-anchor b-nav-anchor-open" id="b-nav-anchor-open">
+            <span class="b-nav-anchor-label">Nav Open</span>
+          </a>
+          <a href="#" role="button" class="b-nav-anchor b-nav-anchor-close" id="b-nav-anchor-close">
+            <span class="b-nav-anchor-label">Nav Close</span>
+          </a>
+          <label class="b-nav-menuicon-label" for="b-nav-menustate" aria-hidden="true">
+            <span class="b-nav-menuicon-bread b-nav-menuicon-bread-top">
+              <span class="b-nav-menuicon-bread-crust b-nav-menuicon-bread-crust-top"></span>
+            </span>
+            <span class="b-nav-menuicon-bread b-nav-menuicon-bread-bottom">
+              <span class="b-nav-menuicon-bread-crust b-nav-menuicon-bread-crust-bottom"></span>
+            </span>
+          </label>
+        </li>
+        <li class="b-nav-item b-nav-brand">
+          <a class="b-nav-link b-nav-brand-link" href="{{site.url}}{{site.baseurl}}"
+            data-analytics-title="@alainQtec blog" id="b-nav-firstfocus-small">
+            <span class="b-nav-link-text-main">alainQtec</span>
+          </a>
+        </li>
+        <li class="b-nav-item b-nav-bag b-nav-bag-small" id="b-nav-bag-small">
+          <div class="b-nav-bag-wrapper">
+            <a class="b-nav-link b-nav-link-bag" href="{{ site.url}}{{site.shopurl}}" data-analytics-title="bag"
+              data-analytics-click="bag" aria-label="Shopping Bag" data-string-badge="Shopping Bag with item count :"
+              role="button" aria-haspopup="true" aria-expanded="false" aria-controls="b-nav-bagview-content"
+              tabindex="0">
+              <span class="b-nav-link-text-main">Shopping Bag</span>
+            </a>
+            <span class="b-nav-bag-badge" aria-hidden="true" data-analytics-title="bag" data-analytics-click="bag">
+              <span class="b-nav-bag-badge-separator"></span>
+              <span class="b-nav-bag-badge-number"></span>
+              <span class="b-nav-bag-badge-unit">+</span>
+            </span>
+          </div>
+          <span class="b-nav-bagview-caret b-nav-bagview-caret-large"></span>
+        </li>
+      </ul>
+      <div class="b-nav-search-placeholder-container" role="search">
+        <div class="b-nav-search b-nav-search-small">
+          <a id="b-nav-link-search-small" class="b-nav-link" href="/us/search" data-analytics-title="search"
+            data-analytics-intrapage-link="" aria-label="Search alainQtec.com" role="button" aria-haspopup="true">
+            <div class="b-nav-search-placeholder-bar">
+              <div class="b-nav-search-placeholder-input">
+                <div class="b-nav-search-placeholder-input-text" aria-hidden="true">
+                  <div class="b-nav-link-search b-nav-search-placeholder-input-icon"></div>
+                  <span class="b-nav-search-placeholder">Search alainQtec.com</span>
+                </div>
+              </div>
+              <div
+                class="b-nav-searchview-close b-nav-searchview-close-small b-nav-search-placeholder-searchview-close">
+                <span class="b-nav-searchview-close-cancel" aria-hidden="true">Cancel</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-      {%- include footer.html -%}
-    </main>
+      <ul class="b-nav-list">
+        <li class="b-nav-item b-nav-brand">
+          <a class="b-nav-link b-nav-brand-link" href="{{site.url}}{{site.baseurl}}"
+            data-analytics-title="alainQtec home" id="b-nav-firstfocus">
+            <span class="b-nav-link-text-main">alainQtec</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-home uil uil-estate" href="{{ site.url}}{{site.blogurl}}"
+            data-analytics-title="home">
+            <span class="b-nav-link-text">Home</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-about uil uil-info-circle" href="{{ site.url}}{{site.abouturl}}"
+            data-analytics-title="about">
+            <span class="b-nav-link-text">About</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-Categories uil uil-parcel"
+            href="{{site.url}}{{site.baseurl}}/blog/categories/" data-analytics-title="categories">
+            <span class="b-nav-link-text">Categories</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-gallery uil uil-images" href="{{ site.url}}{{site.galleryurl}}"
+            data-analytics-title="gallery">
+            <span class="b-nav-link-text">Gallery</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-more uil uil-ellipsis-h" href="#" data-analytics-title="watch">
+            <span class="b-nav-link-text">More</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item">
+          <a class="b-nav-link b-nav-link-account uil uil-user" href="{{site.url}}{{site.baseurl}}/forum/profile/"
+            data-analytics-title="account">
+            <span class="b-nav-link-text">Account</span>
+          </a>
+        </li>
+        <li class="b-nav-item menu-item b-nav-search" role="search">
+          <a id="b-nav-link-search" class="b-nav-link b-nav-link-search" href="/us/search" data-analytics-title="search"
+            data-analytics-intrapage-link="" aria-label="Search alainQtec.com" role="button" aria-haspopup="true"></a>
+        </li>
+        <li class="b-nav-item b-nav-bag" id="b-nav-bag">
+          <div class="b-nav-bag-wrapper">
+            <a class="b-nav-link b-nav-link-bag" href="{{ site.url}}{{site.shopurl}}/bag" data-analytics-title="bag"
+              data-analytics-click="bag" aria-label="Shopping Bag"
+              data-string-badge="Shopping Bag with item count : BAGITEMCOUNT" role="button" aria-haspopup="true"
+              aria-expanded="false" aria-controls="b-nav-bagview-content">
+              <span class="b-nav-link-text-main">Shopping Bag</span>
+            </a>
+            <span class="b-nav-bag-badge" aria-hidden="true" data-analytics-title="bag" data-analytics-click="bag">
+              <span class="b-nav-bag-badge-separator"></span>
+              <span class="b-nav-bag-badge-number"></span>
+              <span class="b-nav-bag-badge-unit">+</span>
+            </span>
+          </div>
+          <span class="b-nav-bagview-caret b-nav-bagview-caret-large"></span>
+        </li>
+      </ul>
+      <aside id="b-nav-searchview" class="b-nav-searchview" role="search" data-analytics-region="search">
+        <div class="b-nav-searchview-content">
+          <div class="b-nav-searchview-bar">
+            <div class="b-nav-searchview-bar-wrapper">
+              <form id="b-nav-searchform" class="b-nav-searchform" action="/us/search" method="get">
+                <div class="b-nav-searchform-wrapper">
+                  <input id="b-nav-searchform-input" class="b-nav-searchform-input" type="text"
+                    aria-label="Search alainQtec.com" placeholder="Search alainQtec.com" autocorrect="off"
+                    autocapitalize="off" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list"
+                    aria-expanded="true" aria-owns="quicklinks suggestions">
+                  <input id="b-nav-searchform-src" type="hidden" name="src" value="globalnav">
+                  <button id="b-nav-searchform-submit" class="b-nav-searchform-submit" type="submit" disabled=""
+                    aria-label="Submit Search"> </button>
+                  <button id="b-nav-searchform-reset" class="b-nav-searchform-reset" type="reset" disabled=""
+                    aria-label="Clear Search">
+                    <span class="b-nav-searchform-reset-background"></span>
+                  </button>
+                </div>
+              </form>
+              <button id="b-nav-searchview-close-small" class="b-nav-searchview-close b-nav-searchview-close-small"
+                aria-label="Cancel Search">
+                <span class="b-nav-searchview-close-cancel" aria-hidden="true">
+                  Cancel
+                </span>
+              </button>
+            </div>
+          </div>
+          <aside id="b-nav-searchresults" class="b-nav-searchresults" data-string-quicklinks="Quick Links"
+            data-string-suggestions="Suggested Searches" data-string-noresults="">
+            <section class="b-nav-searchresults-section b-nav-searchresults-section-defaultlinks"
+              data-analytics-region="defaultlinks search">
+              <div class="b-nav-searchresults-section-wrapper">
+                <h3 class="b-nav-searchresults-header b-nav-searchresults-animated">Quick Links</h3>
+                <ul class="b-nav-searchresults-list" id="defaultlinks" role="listbox">
+                  <li class="b-nav-searchresults-item b-nav-searchresults-animated" role="presentation">
+                    <a href="#/temporary_closures" role="option"
+                      class="b-nav-searchresults-link b-nav-searchresults-link-defaultlinks" data-query="no keyword"
+                      data-section="defaultlinks" data-items="5" data-index="0"
+                      data-label="Visiting an alainQtec Store FAQ"
+                      data-analytics-click="eVar23: {data-query} | {data-section} | {data-items} | {data-label} | {data-index}, events:event50">Read
+                      latest posts</a>
+                  </li>
+                  <li class="b-nav-searchresults-item b-nav-searchresults-animated" role="presentation">
+                    <a href="#" role="option" class="b-nav-searchresults-link b-nav-searchresults-link-defaultlinks"
+                      data-query="no keyword" data-section="defaultlinks" data-items="5" data-index="1"
+                      data-label="Shop alainQtec Store Online"
+                      data-analytics-click="eVar23: {data-query} | {data-section} | {data-items} | {data-label} | {data-index}, events:event50">Shop</a>
+                  </li>
+                  <li class="b-nav-searchresults-item b-nav-searchresults-animated" role="presentation">
+                    <a href="#" role="option" class="b-nav-searchresults-link b-nav-searchresults-link-defaultlinks"
+                      data-query="no keyword" data-section="defaultlinks" data-items="5" data-index="2"
+                      data-label="Accessories"
+                      data-analytics-click="eVar23: {data-query} | {data-section} | {data-items} | {data-label} | {data-index}, events:event50">Discover
+                      new hot topics</a>
+                  </li>
+                  <li class="b-nav-searchresults-item b-nav-searchresults-animated" role="presentation">
+                    <a href="#" role="option" class="b-nav-searchresults-link b-nav-searchresults-link-defaultlinks"
+                      data-query="no keyword" data-section="defaultlinks" data-items="5" data-index="3"
+                      data-label="AirPods"
+                      data-analytics-click="eVar23: {data-query} | {data-section} | {data-items} | {data-label} | {data-index}, events:event50">Need
+                      Help? Reach @alainQtec</a>
+                  </li>
+                  <li class="b-nav-searchresults-item b-nav-searchresults-animated" role="presentation">
+                    <a href="#" role="option" class="b-nav-searchresults-link b-nav-searchresults-link-defaultlinks"
+                      data-query="no keyword" data-section="defaultlinks" data-items="5" data-index="4"
+                      data-label="AirTag"
+                      data-analytics-click="eVar23: {data-query} | {data-section} | {data-items} | {data-label} | {data-index}, events:event50">Leave
+                      Feedback.</a>
+                  </li>
+                </ul>
+                <span role="status" class="b-nav-searchresults-count" aria-live="polite">5 Quick Links</span>
+              </div>
+            </section>
+
+          </aside>
+        </div>
+        <button id="b-nav-searchview-close" class="b-nav-searchview-close" aria-label="Cancel Search">
+          <span class="b-nav-searchview-close-wrapper">
+            <span class="b-nav-searchview-close-left"></span>
+            <span class="b-nav-searchview-close-right"></span>
+          </span>
+        </button>
+      </aside>
+      <aside class="b-nav-bagview" data-analytics-region="bag">
+        <div class="b-nav-bagview-scrim">
+          <span class="b-nav-bagview-caret b-nav-bagview-caret-small"></span>
+        </div>
+        <div class="b-nav-bagview-content" id="b-nav-bagview-content">
+        </div>
+      </aside>
+    </div>
+  </nav>
+  <div class="b-nav-blur"></div>
+  <div id="b-nav-curtain" class="b-nav-curtain"></div>
+  <div id="b-nav-placeholder" class="ac-nav-placeholder"></div>
+
+  <!-- <script type="text/javascript" src="blog-navbar.built.js"></script> -->
+  <div id="b-nav-viewport-emitter" data-viewport-emitter-dispatch=""
+    data-viewport-emitter-state="{&quot;viewport&quot;:&quot;small&quot;,&quot;orientation&quot;:&quot;portrait&quot;,&quot;retina&quot;:false}">
   </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script> -->
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
-  <!-- Toggle Stiky elements -->
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/stiky-toggle.js"></script>
-  <!-- <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
-  </div>
-  <script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
+
+  <main class="main" role="main">
+    <!-- The ribbon -->
+    <section class="homepage-section collection-module" data-module-template="ribbon">
+      <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
+        <div class="module-content">
+          <div class="ribbon-shop-online">
+            <div class="section-content section-content-shop-online">
+              <span class="b-anounce-ribbon">
+                Hurry up and <a href="{{ site.url}}{{site.shopurl}}/merch" target="_self"
+                  data-analytics-title="shop retail - control">checkout</a> new arivals in our stores. Please <a
+                  href="{{ site.url}}{{site.shopurl}}/merch" target="_self" data-analytics-title="feedback">leave
+                  feedback</a>, so our
+                Specialists can help
+                if anything went wrong.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- the CARDS -->
+    <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="hero">
+
+      <div data-unit-id="latest-posts" data-analytics-section-engagement="name:hero-latest-posts">
+        <div class="module-content">
+
+          <div class="unit-wrapper">
+            <a class="unit-link" href="/latest-posts/" target="_self" rel="follow" data-analytics-region="learn more"
+              aria-hidden="true" tabindex="-1">&nbsp;</a>
+            <div class="unit-copy-wrapper">
+
+              <h2 class="headline">Latest Posts</h2>
+              <h3 class="subhead" role="presentation">Cards go Here...</h3>
+
+              <!-- <div class="band">
+              </div> -->
+            </div>
+            <div class="unit-image-wrapper">
+              <figure class="unit-image unit-image-latest-posts-hero-related-postspro">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-unit-id="related-posts" data-analytics-section-engagement="name:hero-related-posts">
+        <div class="module-content">
+
+          <div class="unit-wrapper theme-dark">
+            <a class="unit-link" href="/related-posts/" target="_self" rel="follow" data-analytics-region="learn more"
+              aria-hidden="true" tabindex="-1">&nbsp;</a>
+            <div class="unit-copy-wrapper">
+
+              <h2 class="headline">Related posts</h2>
+              <h3 class="subhead" role="presentation">Slider goes here.</h3>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-unit-id="ads-google" data-analytics-section-engagement="name:hero-ads-google">
+        <div class="module-content">
+
+          <div class="unit-wrapper">
+            <a class="unit-link" href="/ads-google-14-and-16/" target="_self" rel="follow"
+              data-analytics-region="learn more" aria-hidden="true" tabindex="-1">&nbsp;</a>
+            <div class="unit-copy-wrapper">
+
+              <h2 class="headline">Google ads</h2>
+              <h3 class="subhead" role="presentation">Ad. goes here</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Custom Ads section: This is where I put custom ads slides -->
+    <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="promo">
+
+      <div data-unit-id="custom-ad-01" data-analytics-section-engagement="name:promo-ad-01">
+        <div class="module-content"></div>
+      </div>
+      <div data-unit-id="custom-ad-02" data-analytics-section-engagement="name:promo-ad-02">
+        <div class="module-content"></div>
+      </div>
+      <div data-unit-id="custom-ad-03" data-analytics-section-engagement="name:promo-ad-03">
+        <div class="module-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer js" lang="en-US" id="b-footer" role="contentinfo" aria-labelledby="footer-label">
+    <div class="footer-content">
+      <h2 class="footer-label" id="footer-label">alainQtec Footer</h2>
+
+      <!-- <section class="footer-sosumi" aria-label="Footnotes">
+        <ul>
+          <li>footnote one.</li>
+          <li>footnote two.</li>
+          <li>footnote three.</li>
+        </ul>
+      </section> -->
+
+      <nav class="footer-directory with-5-columns" aria-label="alainQtec Directory" role="navigation">
+        <div class="footer-directory-column">
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-products">
+          <div class="col footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-products">
+              <p class="footer-directory-column-section-title-c">&nbsp;</p>
+            </label>
+            <div class="footer-directory-column-section-list">
+              <div class="footer_brand_c">
+                <div><a class="footer__link" href="{{site.url}}{{site.baseurl}}">
+                    <img class="logo" src="{{site.url}}{{site.baseurl}}/assets/favicon/android-chrome-192x192.png"
+                      alt="BrandLogo"></a>
+                </div>
+                <div><a class="footer__link footerbrand"
+                    href="{{site.url}}{{site.baseurl}}"><span><span>alain</span><span>Q</span><span>tec</span></span></a>
+                </div>
+                <div class="foo_slogan">
+                  <a href="#" class="footer__link">Quick productive tech</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-directory-column">
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-services">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-services">
+              <h3 class="footer-directory-column-section-title">Quick Links</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-services"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{ '/feed.xml' | prepend: site.baseurl }}" data-analytics-title="alainQtec music">RSS</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{ site.url}}{{site.shopurl}}" data-analytics-title="alainQtec tv plus">Shop</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{ site.url}}{{site.galleryurl}}">Gallery</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{site.url}}{{site.baseurl}}/forum" data-analytics-title="alainQtec news plus">Forums</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{site.url}}{{site.baseurl}}/sitemap" data-analytics-title="alainQtec arcade">Site map</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="{{site.url}}{{site.baseurl}}/resources" data-analytics-title="icloud">Resources</a></li>
+            </ul>
+          </div>
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-accounts">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-accounts">
+              <h3 class="footer-directory-column-section-title">Blog</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-accounts"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/account">Popular&nbsp;posts</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="https://alainQtecid.alainQtec.com/us/">Tags</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/account">Webmail</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-directory-column"><input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-storeservices">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label"
+              for="footer-directory-column-section-state-storeservices">
+              <h3 class="footer-directory-column-section-title">Categories</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-storeservices"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/retail/" data-analytics-title="find a store">Find a Store</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/retail/geniusbar/" data-analytics-title="genius bar">Genius Bar</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/today/" data-analytics-title="today at alainQtec">Today at alainQtec</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/today/camp/" data-analytics-title="alainQtec camp">alainQtec Camp</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="https://apps.alainQtec.com/us/app/alainQtec-store/id375380948"
+                  data-analytics-title="alainQtec store app" data-analytics-exit-link="">alainQtec Store App</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/special_deals" data-analytics-title="refurbished and clearance">Refurbished and
+                  Clearance</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/payment_plan" data-analytics-title="financing">Financing</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/trade_in"
+                  data-analytics-title="alainQtec trade in">alainQtec&nbsp;Trade&nbsp;In</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/order/list" data-analytics-title="order status">Order Status</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/us/shop/goto/help" data-analytics-title="shopping help">Shopping Help</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-directory-column">
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-business">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-business">
+              <h3 class="footer-directory-column-section-title">Services</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-business"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/business/" data-analytics-title="web development">Web&nbsp;development</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/retail/business/" data-analytics-title="UI design">UI&nbsp;design</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/retail/business/" data-analytics-title="Brand design">Brand&nbsp;design</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/retail/business/" data-analytics-title="Tech support">Tech&nbsp;support</a></li>
+            </ul>
+          </div>
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-education">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-education">
+              <h3 class="footer-directory-column-section-title">Feedback</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-education"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/education/" data-analytics-title="Web chat">Web&nbsp;chat</a></li>
+              <li class="footer-directory-column-section-item"><a
+                  class="footer-directory-column-section-link footer__feedbackm" href="#">Please send us your ideas, bug
+                  reports, suggestions! Any
+                  feedback
+                  would be appreciated.</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-directory-column">
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-responsibility">
+          <div class="footer-directory-column-section">
+            <label class="footer-directory-column-section-label"
+              for="footer-directory-column-section-state-responsibility">
+              <h3 class="footer-directory-column-section-title">Values</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-responsibility"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <ul class="footer-directory-column-section-list">
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/accessibility/" data-analytics-title="accessibility">Accessibility</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/privacy/" data-analytics-title="privacy">Privacy</a></li>
+              <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link"
+                  href="/ethics/" data-analytics-title="ethics and compliance">Ethics &amp; Compliance</a></li>
+              <!-- <li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/supplier-responsibility/" data-analytics-title="supplier responsibility">Supplier Responsibility</a></li> -->
+            </ul>
+          </div>
+          <input class="footer-directory-column-section-state" type="checkbox"
+            id="footer-directory-column-section-state-about">
+          <div class="col social footer__socials footer-directory-column-section">
+            <label class="footer-directory-column-section-label" for="footer-directory-column-section-state-about">
+              <h3 class="footer-directory-column-section-title">Social</h3>
+            </label>
+            <a href="#footer-directory-column-section-state-about"
+              class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open">
+              <span class="footer-directory-column-section-anchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close">
+              <span class="footer-directory-column-section-anchor-label">Close Menu</span>
+            </a>
+            <div class="footer-directory-column-section-list footer_socials">
+              <li class="footer-directory-column-section-item">
+                <a href="https://web.facebook.com/alainQtec" class="footer__social" rel="noopener" target="_blank">
+                  <i class="uil uil-facebook"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://www.instagram.com/alainQtec" class="footer__social" rel="noopener" target="_blank">
+                  <i class="uil uil-instagram"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://twitter.com/alainQtec" class="footer__social" rel="noopener" target="_blank">
+                  <i class="uil uil-twitter-alt"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://reddit.com/r/alainQtec" target="_blank" class="footer__social" rel="noopener"
+                  target="_blank">
+                  <i class="uil uil-reddit-alien-alt"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://www.youtube.com/channel/UCDVYFgx4pJekehwMUuXOyNA" class="footer__social" rel="noopener"
+                  target="_blank">
+                  <i class="uil uil-youtube"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://discord.com/{{discordurl}}" class="footer__social" rel="noopener" target="_blank">
+                  <i class="uil uil-discord"></i>
+                </a>
+              </li>
+              <li class="footer-directory-column-section-item">
+                <a href="https://wa.me/250784703243" class="footer__social" rel="noopener" target="_blank">
+                  <i class="uil uil-whatsapp"></i>
+                </a>
+              </li>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </nav>
+      <section class="footer-b-m">
+        <div class="footer-b-support" x-ms-format-detection="none"> To support my work, you can buy your favorite merch
+          in the <a href="{{ site.url}}{{site.shopurl}}">Store</a> or buy me a <a
+            href="https://bmcwidgetlink/">pizza</a>.
+        </div>
+        <div class="footer-b-m-locale">
+          <a class="footer-b-m-locale-link" href="/choose-country-region/" title="Choose your country or region"
+            aria-label="United States. Choose your country or region" data-analytics-title="choose your country">United
+            States</a>
+        </div>
+        <div class="footer-b-m-legal">
+          <div class="footer-b-m-legal-copyright">{%- include snippets/get-locale-string.html key='COPYRIGHT_DATES'
+            -%}{%- assign _locale_copyright_dates = __return -%}&#169; {{ site.title }} {{ _locale_copyright_dates }}.
+            All rights reserved.</div>
+          <div class="footer-b-m-legal-links">
+            <a class="footer-b-m-legal-link" href="{{site.url}}{{site.privacyurl}}"
+              data-analytics-title="privacy policy">Privacy
+              Policy</a>
+            <a class="footer-b-m-legal-link" href="{{site.url}}{{site.termsurl}}"
+              data-analytics-title="terms of use">Terms of Use</a>
+            <a class="footer-b-m-legal-link" href="/us/shop/goto/help/sales_refunds"
+              data-analytics-title="sales and refunds">Sales and Refunds</a>
+            <a class="footer-b-m-legal-link" href="/legal/" data-analytics-title="legal">Legal</a>
+            <a class="footer-b-m-legal-link" href="/sitemap/" data-analytics-title="site map">Site Map</a>
+          </div>
+        </div>
+      </section>
+      <!-- <script type="text/javascript" src="b-footer.built.js"></script> -->
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@id": "https://alainQtec.com/#organization",
+          "@type": "Organization",
+          "name": "alainQtec",
+          "url": "https://alainQtec.com/",
+          "logo": "https://alainQtec.com/ac/structured-data/images/knowledge_graph_logo.png?202110180743",
+          "subOrganization": {
+            "@type": "Organization",
+            "name": "alainQtec Support",
+            "url": "https://support.alainQtec.com",
+            "@id": "https://support.alainQtec.com/#organization"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-800-692-7753",
+              "contactType": "sales",
+              "areaServed": "US"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+250-784-703-243",
+              "contactType": "technical support",
+              "areaServed": "US",
+              "availableLanguage": ["EN", "ES"]
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+250-724-021-906",
+              "contactType": "customer support",
+              "areaServed": "US",
+              "availableLanguage": ["EN", "ES"]
+            }
+          ],
+          "sameAs": [
+            "http://www.wikidata.org/entity/Q312",
+            "https://www.youtube.com/user/alainQtec",
+            "https://www.linkedin.com/company/alainQtec",
+            "https://www.facebook.com/alainQtec",
+            "https://www.twitter.com/alainQtec"
+          ]
         }
-      });
+      </script>
+      <!-- <script type="text/javascript" src="localeswitcher.built.js"></script> -->
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@id": "https://alainQtec.com/#website",
+      "@type": "WebSite",
+      "url": "https://alainQtec.com/",
+      "name": "alainQtec",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://alainQtec.com/us/search/{search_term_string}?src=mc_google",
+        "query-input": "required name=search_term_string"
+      }
     }
-  </script> -->
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@id": "https://alainQtec.com/#webpage",
+      "@type": "WebPage",
+      "url": "https://alainQtec.com/",
+      "name": "alainQtec"
+    }
+  </script>
+
+  <span style="visibility: hidden; position: absolute; top: 0px; bottom: 0px; z-index: -1;">&nbsp;<iframe
+      style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></span>
+
+  <link rel="stylesheet" href="modal.css">
+  <div id="viewport-emitter" data-viewport-emitter-dispatch=""
+    data-viewport-emitter-state="{&quot;viewport&quot;:&quot;medium&quot;,&quot;orientation&quot;:&quot;portrait&quot;,&quot;retina&quot;:false}">
+  </div>
+
 </body>
+<div cssdimensionstracker="true"
+  style="position: fixed; top: 0px; width: 100%; height: 100vh; pointer-events: none; visibility: hidden; z-index: -1;">
+</div>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+<editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important">
+  <div dir="ltr" style="all: initial;">
+    <div
+      style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; bottom: 0px; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: flex; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: column-reverse; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: 1em; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: fixed; quotes: initial; r: initial; resize: initial; right: 0px; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; top: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;">
+    </div>
+    <div
+      style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;">
+      <link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css">
+      <div style="all: initial;"></div>
+    </div>
+  </div>
+</editor-card>
 
 </html>
+<!-- Copyright © 2021 alainQtec. All rights reserved. -->
