@@ -1,155 +1,27 @@
+---
+extra_scss: ""
+---
+
+{% capture blog_style %}
+{% include scss/critical/blog.scss %}
+{% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
+{% endcapture %}
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#" class="js no-touch progressive-image no-reduced-motion no-edge no-ie css-mask inline-video desktop no-retina no-safari no-old-safari no-chrome no-ios no-android no-firefox no-fallback no-aow windows enhanced-layout riwlaja idc0_332">
 
 <head>
   <style data-merge-styles="true"></style>
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="canonical" href="https://www.alainQtec.com/">
 
-  <link rel="alternate" href="https://alainQtec.com/" hreflang="en-US">
-  <link rel="alternate" href="https://alainQtec.com/ae-ar/" hreflang="ar-AE">
-  <link rel="alternate" href="https://alainQtec.com/ae/" hreflang="en-AE">
-  <link rel="alternate" href="https://alainQtec.com/am/" hreflang="en-AM">
-  <link rel="alternate" href="https://alainQtec.com/at/" hreflang="de-AT">
-  <link rel="alternate" href="https://alainQtec.com/au/" hreflang="en-AU">
-  <link rel="alternate" href="https://alainQtec.com/az/" hreflang="en-AZ">
-  <link rel="alternate" href="https://alainQtec.com/befr/" hreflang="fr-BE">
-  <link rel="alternate" href="https://alainQtec.com/benl/" hreflang="nl-BE">
-  <link rel="alternate" href="https://alainQtec.com/bg/" hreflang="bg-BG">
-  <link rel="alternate" href="https://alainQtec.com/bh-ar/" hreflang="ar-BH">
-  <link rel="alternate" href="https://alainQtec.com/bh/" hreflang="en-BH">
-  <link rel="alternate" href="https://alainQtec.com/br/" hreflang="pt-BR">
-  <link rel="alternate" href="https://alainQtec.com/bw/" hreflang="en-BW">
-  <link rel="alternate" href="https://alainQtec.com/by/" hreflang="en-BY">
-  <link rel="alternate" href="https://alainQtec.com/ca/" hreflang="en-CA">
-  <link rel="alternate" href="https://alainQtec.com/ca/fr/" hreflang="fr-CA">
-  <link rel="alternate" href="https://alainQtec.com/cf/" hreflang="fr-CF">
-  <link rel="alternate" href="https://alainQtec.com/chde/" hreflang="de-CH">
-  <link rel="alternate" href="https://alainQtec.com/chfr/" hreflang="fr-CH">
-  <link rel="alternate" href="https://alainQtec.com/ci/" hreflang="fr-CI">
-  <link rel="alternate" href="https://alainQtec.com/cl/" hreflang="es-CL">
-  <link rel="alternate" href="https://alainQtec.com/cm/" hreflang="fr-CM">
-  <link rel="alternate" href="https://alainQtec.com/co/" hreflang="es-CO">
-  <link rel="alternate" href="https://alainQtec.com/cz/" hreflang="cs-CZ">
-  <link rel="alternate" href="https://alainQtec.com/de/" hreflang="de-DE">
-  <link rel="alternate" href="https://alainQtec.com/dk/" hreflang="da-DK">
-  <link rel="alternate" href="https://alainQtec.com/ee/" hreflang="et-EE">
-  <link rel="alternate" href="https://alainQtec.com/eg-ar/" hreflang="ar-EG">
-  <link rel="alternate" href="https://alainQtec.com/eg/" hreflang="en-EG">
-  <link rel="alternate" href="https://alainQtec.com/es/" hreflang="es-ES">
-  <link rel="alternate" href="https://alainQtec.com/fi/" hreflang="fi-FI">
-  <link rel="alternate" href="https://alainQtec.com/fr/" hreflang="fr-FR">
-  <link rel="alternate" href="https://alainQtec.com/ge/" hreflang="en-GE">
-  <link rel="alternate" href="https://alainQtec.com/gn/" hreflang="fr-GN">
-  <link rel="alternate" href="https://alainQtec.com/gq/" hreflang="fr-GQ">
-  <link rel="alternate" href="https://alainQtec.com/gr/" hreflang="el-GR">
-  <link rel="alternate" href="https://alainQtec.com/gw/" hreflang="en-GW">
-  <link rel="alternate" href="https://alainQtec.com/hk/" hreflang="zh-HK">
-  <link rel="alternate" href="https://alainQtec.com/hk/en/" hreflang="en-HK">
-  <link rel="alternate" href="https://alainQtec.com/hr/" hreflang="hr-HR">
-  <link rel="alternate" href="https://alainQtec.com/hu/" hreflang="hu-HU">
-  <link rel="alternate" href="https://alainQtec.com/id/" hreflang="en-ID">
-  <link rel="alternate" href="https://alainQtec.com/ie/" hreflang="en-IE">
-  <link rel="alternate" href="https://alainQtec.com/il/" hreflang="en-IL">
-  <link rel="alternate" href="https://alainQtec.com/in/" hreflang="en-IN">
-  <link rel="alternate" href="https://alainQtec.com/it/" hreflang="it-IT">
-  <link rel="alternate" href="https://alainQtec.com/jo-ar/" hreflang="ar-JO">
-  <link rel="alternate" href="https://alainQtec.com/jo/" hreflang="en-JO">
-  <link rel="alternate" href="https://alainQtec.com/jp/" hreflang="ja-JP">
-  <link rel="alternate" href="https://alainQtec.com/ke/" hreflang="en-KE">
-  <link rel="alternate" href="https://alainQtec.com/kg/" hreflang="en-KG">
-  <link rel="alternate" href="https://alainQtec.com/kr/" hreflang="ko-KR">
-  <link rel="alternate" href="https://alainQtec.com/kw-ar/" hreflang="ar-KW">
-  <link rel="alternate" href="https://alainQtec.com/kw/" hreflang="en-KW">
-  <link rel="alternate" href="https://alainQtec.com/kz/" hreflang="en-KZ">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-HN">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-AR">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-SV">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PR">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-DO">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-EC">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-GT">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PE">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-BO">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-NI">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-VE">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PA">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-CR">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-UY">
-  <link rel="alternate" href="https://alainQtec.com/la/" hreflang="es-PY">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-AG">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BS">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-TC">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-TT">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-SR">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BM">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BB">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-BZ">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-GD">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-KY">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-LC">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-MS">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-KN">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-AI">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-VC">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-GY">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-VG">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-PR">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-DM">
-  <link rel="alternate" href="https://alainQtec.com/lae/" hreflang="en-JM">
-  <link rel="alternate" href="https://alainQtec.com/li/" hreflang="de-LI">
-  <link rel="alternate" href="https://alainQtec.com/lt/" hreflang="lt-LT">
-  <link rel="alternate" href="https://alainQtec.com/lu/" hreflang="fr-LU">
-  <link rel="alternate" href="https://alainQtec.com/lv/" hreflang="lv-LV">
-  <link rel="alternate" href="https://alainQtec.com/ma/" hreflang="fr-MA">
-  <link rel="alternate" href="https://alainQtec.com/md/" hreflang="en-MD">
-  <link rel="alternate" href="https://alainQtec.com/me/" hreflang="en-ME">
-  <link rel="alternate" href="https://alainQtec.com/mg/" hreflang="en-MG">
-  <link rel="alternate" href="https://alainQtec.com/mk/" hreflang="en-MK">
-  <link rel="alternate" href="https://alainQtec.com/ml/" hreflang="fr-ML">
-  <link rel="alternate" href="https://alainQtec.com/mo/" hreflang="zh-MO">
-  <link rel="alternate" href="https://alainQtec.com/mt/" hreflang="en-MT">
-  <link rel="alternate" href="https://alainQtec.com/mu/" hreflang="fr-MU">
-  <link rel="alternate" href="https://alainQtec.com/mx/" hreflang="es-MX">
-  <link rel="alternate" href="https://alainQtec.com/my/" hreflang="en-MY">
-  <link rel="alternate" href="https://alainQtec.com/mz/" hreflang="en-MZ">
-  <link rel="alternate" href="https://alainQtec.com/ne/" hreflang="fr-NE">
-  <link rel="alternate" href="https://alainQtec.com/ng/" hreflang="en-NG">
-  <link rel="alternate" href="https://alainQtec.com/nl/" hreflang="nl-NL">
-  <link rel="alternate" href="https://alainQtec.com/no/" hreflang="no-NO">
-  <link rel="alternate" href="https://alainQtec.com/nz/" hreflang="en-NZ">
-  <link rel="alternate" href="https://alainQtec.com/om-ar/" hreflang="ar-OM">
-  <link rel="alternate" href="https://alainQtec.com/om/" hreflang="en-OM">
-  <link rel="alternate" href="https://alainQtec.com/ph/" hreflang="en-PH">
-  <link rel="alternate" href="https://alainQtec.com/pl/" hreflang="pl-PL">
-  <link rel="alternate" href="https://alainQtec.com/pt/" hreflang="pt-PT">
-  <link rel="alternate" href="https://alainQtec.com/qa-ar/" hreflang="ar-QA">
-  <link rel="alternate" href="https://alainQtec.com/qa/" hreflang="en-QA">
-  <link rel="alternate" href="https://alainQtec.com/ro/" hreflang="ro-RO">
-  <link rel="alternate" href="https://alainQtec.com/ru/" hreflang="ru-RU">
-  <link rel="alternate" href="https://alainQtec.com/sa-ar/" hreflang="ar-SA">
-  <link rel="alternate" href="https://alainQtec.com/sa/" hreflang="en-SA">
-  <link rel="alternate" href="https://alainQtec.com/se/" hreflang="sv-SE">
-  <link rel="alternate" href="https://alainQtec.com/sg/" hreflang="en-SG">
-  <link rel="alternate" href="https://alainQtec.com/si/" hreflang="en-SI">
-  <link rel="alternate" href="https://alainQtec.com/sk/" hreflang="sk-SK">
-  <link rel="alternate" href="https://alainQtec.com/sn/" hreflang="fr-SN">
-  <link rel="alternate" href="https://alainQtec.com/th/" hreflang="th-TH">
-  <link rel="alternate" href="https://alainQtec.com/tj/" hreflang="en-TJ">
-  <link rel="alternate" href="https://alainQtec.com/tm/" hreflang="en-TM">
-  <link rel="alternate" href="https://alainQtec.com/tn/" hreflang="fr-TN">
-  <link rel="alternate" href="https://alainQtec.com/tr/" hreflang="tr-TR">
-  <link rel="alternate" href="https://alainQtec.com/tw/" hreflang="zh-TW">
-  <link rel="alternate" href="https://alainQtec.com/ua/" hreflang="uk-UA">
-  <link rel="alternate" href="https://alainQtec.com/ug/" hreflang="en-UG">
-  <link rel="alternate" href="https://alainQtec.com/uk/" hreflang="en-GB">
-  <link rel="alternate" href="https://alainQtec.com/uz/" hreflang="en-UZ">
-  <link rel="alternate" href="https://alainQtec.com/vn/" hreflang="en-VN">
-  <link rel="alternate" href="https://alainQtec.com/za/" hreflang="en-ZA">
-  <link rel="alternate" href="https://alainQtec.com.cn/" hreflang="zh-CN">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
+  {%- include head/alternate-urls.html -%}
+  {%- include head/favicon.html -%}
+  {%- include head/inline-scss.html -%}
+  {%- include head/stylesheets.html -%}
+  
   <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/blog-navbar.built.css"/>
   <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/ac-localnav.built.css"/>
   <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/b-footer.built.css"/>
@@ -438,9 +310,7 @@
 
               <h2 class="headline">Latest Posts</h2>
               <h3 class="subhead" role="presentation">Cards go Here...</h3>
-
-              <!-- <div class="band">
-              </div> -->
+              {%- include blog_cards.html -%}
             </div>
             <div class="unit-image-wrapper">
               <figure class="unit-image unit-image-latest-posts-hero-related-postspro">
@@ -857,7 +727,7 @@
   <span style="visibility: hidden; position: absolute; top: 0px; bottom: 0px; z-index: -1;">&nbsp;<iframe
       style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></span>
 
-  <link rel="stylesheet" href="modal.css">
+  <!-- <link rel="stylesheet" href="/assets/css/modal.css"> -->
   <div id="viewport-emitter" data-viewport-emitter-dispatch=""
     data-viewport-emitter-state="{&quot;viewport&quot;:&quot;medium&quot;,&quot;orientation&quot;:&quot;portrait&quot;,&quot;retina&quot;:false}">
   </div>
