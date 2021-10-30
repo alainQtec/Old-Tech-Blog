@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "subexec", "~> 0.2.3"
   spec.add_runtime_dependency "sassc", "~> 2.4"
   spec.add_runtime_dependency "jemoji"
-  spec.add_development_dependency "bundler", "~> 2.2", ">= 2.2.29"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "ffi", "~> 1.15", ">= 1.15.4"
 end
