@@ -60,7 +60,8 @@ div.band {
   font-family: 'Heebo' !important;
   border-radius: .7em;
   min-width: 100% !important;
-  min-height: 14em;
+  height: 15em;
+  // min-height: 15em;
   padding: 5px;
   padding-top: 20px;
   margin: 0px;
@@ -75,6 +76,14 @@ div.band {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   animation-delay: calc(-1s * var(--i))
+}
+
+@media screen and (max-width: 415px) {
+
+  .blog_card,
+  .firststblog_card {
+    height: 14em
+  }
 }
 
 .firststblog_card>span a,
@@ -114,14 +123,6 @@ figure.blog_card.it2-card>span a {
   -o-filter: brightness(100%) !important;
   -ms-filter: brightness(100%) !important;
   filter: brightness(100%) !important
-}
-
-@media screen and (max-width: 415px) {
-
-  .blog_card,
-  .firststblog_card {
-    height: 14em
-  }
 }
 
 .wrapper {
@@ -359,7 +360,7 @@ figure.blog_card.it2-card:hover {
 }
 
 .content {
-  // margin: 0 auto !important;
+  margin: 0 auto !important;
   padding-top: 20px !important;
   margin-top: 15px !important;
   overflow: visible;
