@@ -1723,17 +1723,6 @@ blockquote {
     background: #fff
 }
 
-.card-header,
-.item-2_card-header {
-    width: 100%;
-    text-align: center;
-    align-items: center !important;
-    align-self: center;
-    position: relative;
-    top: 0 !important;
-    left: 0;
-    margin-bottom: 10px
-}
 
 .card-header {
     background-color: transparent;
@@ -1741,11 +1730,6 @@ blockquote {
     background-size: cover
 }
 
-.item-2_card-header {
-    background-color: inherit;
-    border-radius: .67em !important;
-    background-blend-mode: darken
-}
 
 .card:before {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5) !important;
@@ -2577,13 +2561,6 @@ div.post-categories {
     width: 100%;
     transform: translateY(calc(70px + 1em));
     transition: transform 0.3s
-}
-
-.it2-card .post-scroll-i {
-    align-self: center;
-    text-align: center;
-    height: 70px;
-    margin: 0
 }
 
 .it2-card input[type=checkbox] {
@@ -3821,16 +3798,6 @@ ul.pagination.pagination-sm li {
 @media screen and (max-width: 500px) {
     .blog_card {
         max-width: calc(100vw - 4rem)
-    }
-}
-
-@media (min-width: 60em) {
-    .item-1 {
-        grid-column: 1/span 2
-    }
-
-    .item-1 h1 {
-        font-size: 24px
     }
 }
 
