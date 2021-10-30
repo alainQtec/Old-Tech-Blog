@@ -1,3 +1,8 @@
-{% if page.layout != 'notfound' and page.layout != 'home' %}
+{% if page.layout != 'notfound' and page.layout != 'home' and page.layout != 'blog' %}
 <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/main.css" />
+{% endif %}
+{% if page.layout == 'blog' %}
+<link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/blog-navbar.built.css"/>
+<link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/ac-localnav.built.css"/>
+<link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/b-footer.built.css"/>
 {% endif %}

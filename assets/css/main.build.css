@@ -2242,7 +2242,7 @@ html body.navbar-overlap #b-nav-placeholder{
   }
   @media screen and (max-width: 734px) and (min-width: 0px){
       .main [data-module-template="generic"]{
-          --content-height: 500px;
+          --content-height: auto;
           --columns: 1;
           --gutter-width: 12px;
           --gutter-half-width: 6px;
@@ -2255,22 +2255,22 @@ html body.navbar-overlap #b-nav-placeholder{
           --edge-border-width-fallback: 0px
       }
       html[data-text-zoom="1"] .main [data-module-template="generic"]{
-          --content-height: 600px
+          --content-height: auto
       }
       html[data-text-zoom="2"] .main [data-module-template="generic"]{
-          --content-height: 675px
+          --content-height: auto
       }
       html[data-text-zoom="3"] .main [data-module-template="generic"]{
-          --content-height: 750px
+          --content-height: auto
       }
       html[data-text-zoom="4"] .main [data-module-template="generic"]{
-          --content-height: 850px
+          --content-height: auto
       }
       html[data-text-zoom="5"] .main [data-module-template="generic"]{
-          --content-height: 950px
+          --content-height: auto
       }
       html[data-text-zoom="6"] .main [data-module-template="generic"]{
-          --content-height: 1050px
+          --content-height: auto
       }
   }
   .main [data-module-template="generic"].standalone-module{

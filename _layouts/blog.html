@@ -21,11 +21,6 @@ extra_scss: ""
   {%- include head/favicon.html -%}
   {%- include head/inline-scss.html -%}
   {%- include head/stylesheets.html -%}
-  
-  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/blog-navbar.built.css"/>
-  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/ac-localnav.built.css"/>
-  <link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/assets/css/b-footer.built.css"/>
-
   <title>alainQtec</title>
   <meta name="Description"
     content="Discover productivity tech from Alain. Get latest tech news, Learn and shop everything tech from tee-shirts, Mugs and e-books. Read daily tech blog download recommended resources and apps.">
@@ -297,10 +292,12 @@ extra_scss: ""
         </div>
       </div>
     </section>
+    <section class="content">
+      {{ content }}
+    </section>
     <!-- the CARDS -->
-    <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="hero">
+    <!-- <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="hero">
       <div data-unit-id="latest-posts" data-analytics-section-engagement="name:hero-latest-posts">
-        {%- include blog_cards.html -%}
       </div>
       <div data-unit-id="ads-google" data-analytics-section-engagement="name:hero-ads-google">
         <div class="module-content">
@@ -316,7 +313,7 @@ extra_scss: ""
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Custom Ads section: This is where I put custom ads slides -->
     <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="promo">
 

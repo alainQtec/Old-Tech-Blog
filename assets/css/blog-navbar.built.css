@@ -94,10 +94,10 @@ html,body{
   text-align:left
 }
 #blog-navbar,#blog-navbar select,#blog-navbar button,#b-nav-segmentbar,#b-nav-segmentbar select,#b-nav-segmentbar button{
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+  font-family:'Quicksand', sans-serif
 }
 #blog-navbar input,#blog-navbar textarea,#b-nav-segmentbar input,#b-nav-segmentbar textarea{
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+  font-family:'Quicksand', sans-serif
 }
 #blog-navbar sup,#b-nav-segmentbar sup{
   font-size:0.6em;
@@ -997,7 +997,7 @@ h1 #blog-navbar sup,h2 #blog-navbar sup,h3 #blog-navbar sup,h1 #b-nav-segmentbar
   line-height:3.66667;
   font-weight:400;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   color:#f5f5f7;
   position:relative;
   z-index:1;
@@ -1019,7 +1019,7 @@ h1 #blog-navbar sup,h2 #blog-navbar sup,h3 #blog-navbar sup,h1 #b-nav-segmentbar
       line-height:1.23536;
       font-weight:400;
       letter-spacing:-.022em;
-      font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+      font-family:'Quicksand', sans-serif
   }
 }
 #blog-navbar .b-nav-link:hover{
@@ -1450,7 +1450,7 @@ span.b-nav-link-text-main,
   display:block;
   position:relative;
   z-index:2;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   letter-spacing:inherit;
   -webkit-transition:-webkit-transform 0.3s cubic-bezier(0.25, 0.1, 0.3, 1);
   transition:-webkit-transform 0.3s cubic-bezier(0.25, 0.1, 0.3, 1);
@@ -1464,7 +1464,7 @@ span.b-nav-link-text-main,
   position:absolute;
   top:0;
   z-index:2;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   -webkit-font-feature-settings:'case';
   font-feature-settings:'case';
   -webkit-transition:opacity 0.1s cubic-bezier(0.25, 0.1, 0.3, 1);
@@ -1725,7 +1725,7 @@ span.b-nav-link-text-main,
   line-height:1.35718;
   font-weight:400;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   background:#fff;
   border:1px solid #d2d2d7;
   border-radius:18px;
@@ -1795,7 +1795,7 @@ span.b-nav-link-text-main,
   line-height:1.28577;
   font-weight:400;
   letter-spacing:-.014em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   background:#fff
 }
 #blog-navbar .b-nav-bagview-message{
@@ -1812,7 +1812,7 @@ span.b-nav-link-text-main,
   line-height:1.33337;
   font-weight:400;
   letter-spacing:.018em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   text-align:center
 }
 #blog-navbar .b-nav-bagview-linemessage-text{
@@ -1909,7 +1909,7 @@ span.b-nav-link-text-main,
   line-height:1.33337;
   font-weight:400;
   letter-spacing:.018em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   color:#86868b
 }
 #blog-navbar .b-nav-bagview-bagitem-qty:before{
@@ -2003,7 +2003,7 @@ span.b-nav-link-text-main,
   line-height:1.17648;
   font-weight:400;
   letter-spacing:-.022em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   min-width:28px;
   padding-left:16px;
   padding-right:16px;
@@ -2099,7 +2099,7 @@ span.b-nav-link-text-main,
   line-height:1.17648;
   font-weight:400;
   letter-spacing:-.022em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   min-width:28px;
   padding-left:31px;
   padding-right:31px;
@@ -2114,7 +2114,7 @@ span.b-nav-link-text-main,
   line-height:1.17648;
   font-weight:400;
   letter-spacing:-.022em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   min-width:26px;
   padding-left:22px;
   padding-right:22px;
@@ -2129,7 +2129,7 @@ span.b-nav-link-text-main,
   line-height:1.33337;
   font-weight:400;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   min-width:23px;
   padding-left:11px;
   padding-right:11px;
@@ -2405,7 +2405,7 @@ span.b-nav-link-text-main,
   line-height:3.66667;
   font-weight:400;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+  font-family:'Quicksand', sans-serif
 }
 @media only screen and (max-width: 833px){
   #blog-navbar .b-nav-search-placeholder,#blog-navbar .b-nav-search-placeholder-input-text{
@@ -2413,7 +2413,7 @@ span.b-nav-link-text-main,
       line-height:1.23536;
       font-weight:400;
       letter-spacing:-.022em;
-      font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+      font-family:'Quicksand', sans-serif
   }
 }
 #blog-navbar .b-nav-search-placeholder-input-text{
@@ -2626,7 +2626,7 @@ span.b-nav-link-text-main,
   line-height:1.23536;
   font-weight:400;
   letter-spacing:-.022em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   color:#2997ff
 }
 #blog-navbar .b-nav-searchview-close-wrapper{
@@ -2808,7 +2808,7 @@ span.b-nav-link-text-main,
   font-size:17px;
   line-height:1.29412;
   letter-spacing:-.021em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   color:#fff;
   outline:none;
   width:calc(100% - 38px - 40px);
@@ -2822,7 +2822,7 @@ span.b-nav-link-text-main,
       line-height:1.23536;
       font-weight:400;
       letter-spacing:-.022em;
-      font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+      font-family:'Quicksand', sans-serif
   }
 }
 #blog-navbar .b-nav-searchform-input:focus[data-focus-method="key"]{
@@ -3100,7 +3100,7 @@ span.b-nav-link-text-main,
   line-height:2;
   font-weight:400;
   letter-spacing:-.016em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   display:none;
   background:#fff;
   border-top:none;
@@ -3118,7 +3118,7 @@ span.b-nav-link-text-main,
       font-size:14px;
       line-height:3.07143;
       letter-spacing:-.016em;
-      font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+      font-family:'Quicksand', sans-serif
   }
 }
 #blog-navbar.searchshow .b-nav-searchresults,#blog-navbar.searchopen .b-nav-searchresults,#blog-navbar.searchhide .b-nav-searchresults{
@@ -3185,7 +3185,7 @@ span.b-nav-link-text-main,
   font-size:12px;
   line-height:1.33337;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   text-transform:uppercase;
   color:#6e6e73
 }
@@ -3383,7 +3383,7 @@ html.b-nav-segmentbar-visible body{
   line-height:1.33337;
   font-weight:400;
   letter-spacing:-.01em;
-  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family:'Quicksand', sans-serif;
   background:#272729;
   color:rgba(255,255,255,0.92);
   display:none;
