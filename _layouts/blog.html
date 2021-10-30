@@ -299,40 +299,8 @@ extra_scss: ""
     </section>
     <!-- the CARDS -->
     <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="hero">
-
       <div data-unit-id="latest-posts" data-analytics-section-engagement="name:hero-latest-posts">
-        <div class="module-content">
-
-          <div class="unit-wrapper">
-            <a class="unit-link" href="/latest-posts/" target="_self" rel="follow" data-analytics-region="learn more"
-              aria-hidden="true" tabindex="-1">&nbsp;</a>
-            <div class="unit-copy-wrapper">
-
-              <h2 class="headline">Latest Posts</h2>
-              <h3 class="subhead" role="presentation">Cards go Here...</h3>
-            </div>
-            <div class="unit-image-wrapper">
-              {%- include blog_cards.html -%}
-              <figure class="unit-image unit-image-latest-posts-hero-related-postspro">
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-unit-id="related-posts" data-analytics-section-engagement="name:hero-related-posts">
-        <div class="module-content">
-
-          <div class="unit-wrapper theme-dark">
-            <a class="unit-link" href="/related-posts/" target="_self" rel="follow" data-analytics-region="learn more"
-              aria-hidden="true" tabindex="-1">&nbsp;</a>
-            <div class="unit-copy-wrapper">
-
-              <h2 class="headline">Related posts</h2>
-              <h3 class="subhead" role="presentation">Slider goes here.</h3>
-
-            </div>
-          </div>
-        </div>
+        {%- include blog_cards.html -%}
       </div>
       <div data-unit-id="ads-google" data-analytics-section-engagement="name:hero-ads-google">
         <div class="module-content">
