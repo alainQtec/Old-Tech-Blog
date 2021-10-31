@@ -1,14 +1,12 @@
 .band {
   width: 90%;
   max-width: 1240px;
-  padding: 5px;
-  padding-top: 20px;
+  padding: 20px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 18px;
-  /* row-gap: 10px; column-gap: 10px;*/
+  grid-gap: 18px
 }
 
 @media (min-width: 30em) {
