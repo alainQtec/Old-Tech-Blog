@@ -359,6 +359,13 @@ figure.it2-card .blog_post_title {
   transform-origin: 50% 100%
 }
 
+.it2-card .post-scroll-i {
+  align-self: center;
+  text-align: center;
+  height: 70px;
+  margin: 0
+}
+
 figure.it2-card .post-summary {
   text-transform: none;
   --bg-filter-opacity: 0.70;
