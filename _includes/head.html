@@ -2,11 +2,8 @@
   <meta charset="utf-8">
   <style data-merge-styles="true"></style>
   <meta charset="utf-8">
-  <meta name="Description" content="Discover productivity tech from Alain. Get latest tech news, Learn new tech tips and get merchandise including tee-shirts, Mugs and e-books.">
-  <meta property="og:description" content="Discover productivity tech from Alain. Get latest tech news, Learn new tech tips and get merchandise including tee-shirts, Mugs and e-books.">
-  <meta property="og:url" content="https://alainQtec.com/">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://alainQtec.com/ac/structured-data/images/open_graph_logo.png?202110180743">
+  <meta property="og:image" content="{{ site.url }}/assets/favicon/favicon-32x32.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="alainQtec">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | @{{site.title}}{% else %}{{ site.title }} | {{ site.subtitle }}{% endif %}">
@@ -31,9 +28,12 @@
   <meta content="website" property="og:type" />
   {% endif %} {% if page.summary %}
   <meta content="{{ page.summary }}" property="og:description" />
+  <meta name="Description" content="{{ page.summary }}">
   {% else %}
   <meta content="{{ site.description }}" property="og:description" />
-  {% endif %} {% if page.url %}
+  <meta name="{{ site.description }}" content="{{ page.summary }}">
+  {% endif %}
+  {% if page.url %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
   {% endif %}
   {% if page.date %}
