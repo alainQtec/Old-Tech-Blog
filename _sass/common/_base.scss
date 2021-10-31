@@ -791,13 +791,6 @@ html {
   -webkit-tap-highlight-color: transparent
 }
 
-html,
-body {
-  position: relative;
-  height: 100%;
-  scroll-behavior: smooth !important;
-}
-
 .section {
   padding: 2rem 0 2rem !important
 }
@@ -838,6 +831,14 @@ body {
 body::-webkit-scrollbar {
   display: none;
   visibility: hidden
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth !important;
+  // background: var(--body-background-image)
 }
 
 header::before {
