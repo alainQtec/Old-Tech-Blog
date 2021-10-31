@@ -2027,8 +2027,11 @@ body {
   }
 }
 
-[data-module-template] [data-unit-id] .unit-wrapper {
+div.unit-wrapper {
+  z-index: -1
+}
 
+[data-module-template] [data-unit-id] .unit-wrapper {
   top: calc(var(--navbar-collective-height) * -1);
   height: calc(var(--content-height) + var(--navbar-collective-height));
   position: relative;

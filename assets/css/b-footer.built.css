@@ -979,12 +979,6 @@ h1 #b-footer sup,h2 #b-footer sup,h3 #b-footer sup{
   margin-top:0.8em
 }
 #b-footer{
-  --footer-background: #f5f5f7;
-  --footer-border-color: #d2d2d7;
-  --footer-text-color: #6e6e73;
-  --footer-link-color: #424245;
-  --footer-directory-title-color: #1d1d1f;
-  --footer-directory-title-color-hover: #000;
   font-size:12px;
   line-height:1.33337;
   font-weight:400;
@@ -1003,14 +997,7 @@ h1 #b-footer sup,h2 #b-footer sup,h3 #b-footer sup{
   z-index:1;
   /* z-index: -1 */
 }
-.ac-theme-dark #b-footer,#b-footer.b-footer-dark{
-  --footer-background: #1d1d1f;
-  --footer-border-color: #424245;
-  --footer-text-color: #86868b;
-  --footer-link-color: #d2d2d7;
-  --footer-directory-title-color: #f5f5f7;
-  --footer-directory-title-color-hover: #fff
-}
+
 @media only screen and (max-width: 1044px){
   #b-footer{
       min-width:320px
@@ -1521,13 +1508,10 @@ div.footer_socials {
   }
 }
 #b-footer .footer-b-support{
-  --footer-mini-shop-link-color: #06c;
   max-height:9999px;
   padding-bottom:3px
 }
-.ac-theme-dark #b-footer .footer-b-support,#b-footer.b-footer-dark .footer-b-support{
-  --footer-mini-shop-link-color: #2997ff
-}
+
 @media only screen and (max-width: 833px){
   #b-footer .footer-b-support{
       padding-bottom:10px
@@ -1536,6 +1520,7 @@ div.footer_socials {
 #b-footer .footer-b-support a,#b-footer .footer-b-support a:hover{
   color:var(--footer-mini-shop-link-color)
 }
+
 #b-footer .footer-b-m-locale{
   float:right;
   margin-top:5px;
