@@ -1,6 +1,5 @@
---- 
---- 
-
+---
+---
 // # Only the main Sass file needs front matter (the dashes are enough)
 
 @charset "utf-8";
@@ -21,6 +20,8 @@
 // "skins/highlight/tomorrow-night-bright",
 
 // "common/variables",
+"common/base",
+"common/fonts",
 // "common/function",
 // "common/classes",
 // "common/reset",
@@ -40,7 +41,7 @@
 // "animate/fade-in-down",
 // "animate/fade-in-up",
 
-// "components/main",
+"components/main",
 // "components/blog-cards"
 // "components/header",
 // "components/footer",

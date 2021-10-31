@@ -218,9 +218,6 @@ a,.link{
 a:link,a:visited,.link:link,.link:visited{
   text-decoration:none
 }
-a:hover,.link:hover{
-  text-decoration:underline
-}
 a:active,.link:active{
   text-decoration:none
 }
@@ -1671,9 +1668,6 @@ abbr{
 }
 a.icon-wrapper{
   text-decoration:none
-}
-a.icon-wrapper:hover .icon-copy{
-  text-decoration:underline
 }
 html[dir=rtl] .icon-external::before,html[dir=rtl] .icon-external::after{
   content:""
