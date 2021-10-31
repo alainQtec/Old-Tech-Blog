@@ -43,24 +43,20 @@
   <meta property="article:publisher" content="https://twitter.com/alainQtec" />
   {% if page.thumbnail %}
   <meta content="{{ site.url }}{{ page.thumbnail }}" property="og:image" />
-  {% endif %} {% if page.categories %} {% for category in page.categories
-  limit:1 %}
+  {% endif %} {% if page.categories %} {% for category in page.categories limit:1 %}
   <meta content="{{ category }}" property="article:section" />
-  {% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
-  <meta content="{{ tag }}" property="article:tag" />
   {% endfor %} {% endif %}
-
-  <!-- Twitter Cards -->
+  {% if page.tags %} {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag" />{% endfor %}
+  {% endif %}
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
-
   {% if page.title %}
   <meta name="twitter:title" content="{{ page.title }}" />
   {% else %}
   <meta name="twitter:title" content="{{ site.title }}" />
   {% endif %}
-
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
   {% endif %} {% if page.summary %}
@@ -71,18 +67,6 @@
   {% endif %} {% if page.header-img %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
   {% endif %}
-  
-  <!-- <link href="{{site.url}}{{site.baseurl}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{site.url}}{{site.baseurl}}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/atomic-bulldog-grid.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.css" /> -->
-  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'> -->
-  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/d3a8c9b913/UntitledProject/style.css"> -->
-  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> -->
-  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'> -->
-
   {%- include head/alternate-urls.html -%}
   {%- include head/favicon.html -%}
   {%- include head/inline-scss.html -%}
