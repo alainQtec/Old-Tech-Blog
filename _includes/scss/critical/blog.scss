@@ -547,13 +547,14 @@ ul.pagination.pagination-sm li {
   color: var(--first-color-second)
 }
 
-/* News letter */
+/* News letter section */
 
-#newsletter_footer {
+section#newsletter_footer {
   color: var(--main-text-color);
   text-align: center;
   margin: 0 auto;
-  margin-top: 50px !important;
+  // margin-top: 50px !important;
+  padding-bottom: 20px;
   border-radius: 0.7em
 }
 
@@ -576,7 +577,7 @@ ins.adsbygoogle {
 
 @media (max-width: 780px) {
 
-  div#newsletter_footer,
+  section#newsletter_footer,
   ins.adsbygoogle {
     width: 90%
   }
@@ -584,7 +585,7 @@ ins.adsbygoogle {
 
 @media (min-width: 781px) {
 
-  div#newsletter_footer,
+  section#newsletter_footer,
   ins.adsbygoogle {
     width: 80%
   }
@@ -600,21 +601,21 @@ form#mc-embedded-subscribe-form.flex.validate {
   padding: 5px 5px 10px 5px !important
 }
 
-section#letter {
+div#letter {
   min-height: 220px;
   margin: 0 auto
 }
 
-section#letter h2 {
+div#letter h2 {
   font-size: var(--h2-font-size)
 }
 
-section#letter p {
+div#letter p {
   margin-bottom: 0px;
   padding: 0px
 }
 
-section#letter form {
+div#letter form {
   margin-top: 1em;
   width: 85%;
   flex-direction: column;
@@ -624,25 +625,25 @@ section#letter form {
 
 @media (min-width: 500px) {
 
-  section#letter,
+  div#letter,
   #mc-embedded-subscribe-form {
     height: 215px !important
   }
 
-  section#letter h2 {
+  div#letter h2 {
     font-size: var(--h3-font-size)
   }
 }
 
 @media (min-width: 768px) {
-  section#letter form {
+  div#letter form {
     flex-direction: row;
     align-items: center;
     justify-content: space-between
   }
 }
 
-section#letter form input {
+div#letter form input {
   margin: 0.5em auto;
   width: 100%
 }
@@ -672,24 +673,24 @@ input#mc-embedded-subscribe_footer.btn.btn-lg.btn-success:hover {
   box-shadow: 0 0 4.4rem 0.2rem rgba(86, 94, 205, 0.309)
 }
 
-section#letter form input[type='email'] {
+div#letter form input[type='email'] {
   border-radius: 0.7em
 }
 
 @media (min-width: 768px) {
-  section#letter form input {
+  div#letter form input {
     width: auto
   }
 }
 
-section#letter form input[type='email'] {
+div#letter form input[type='email'] {
   padding: 1em 0.5em;
   width: 100%;
   border: 2px solid var(--button-background-color)
 }
 
 @media (min-width: 768px) {
-  section#letter form input[type='email'] {
+  div#letter form input[type='email'] {
     width: 45%
   }
 }
