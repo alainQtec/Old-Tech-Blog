@@ -6,7 +6,7 @@
   <script src="{{site.url}}{{site.baseurl}}/assets/js/blog.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/main.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/navscript.js"></script>
-  <!-- Jquery -->
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/bower_components/jquery.easing/jquery.easing.min.js"></script>
@@ -14,11 +14,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <!-- Scroll JS -->
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
-  <!-- <script src="{{site.url}}{{site.baseurl}}/assets/js/scroll.js"></script> -->
-  <!-- <script src="/assets/js/main.min.js?v=1"></script> -->
 {% endif %}
 <script>
   var base_url = '{{ site.url}}{{site.baseurl}}';
@@ -47,26 +45,8 @@
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
-<!-- Github Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
   crossorigin="anonymous"></script>
-<!-- "Build by Alain" widget  -->
-<!-- <script>
-  (function (d, h, m) {
-    var js, fjs = d.getElementsByTagName(h)[0];
-    if (d.getElementById(m)) { return; }
-    js = d.createElement(h); js.id = m;
-    js.onload = function () {
-      window.makerWidgetComInit({
-        position: "left",
-        widget: "t96v84nvcjom1hvr-hgfqrw7o0s1vcqm6-wkkhuity43yndwor"
-      })
-    };
-    js.src = "https://makerwidget.com/js/embed.js";
-    fjs.parentNode.insertBefore(js, fjs)
-  }(document, "script", "dhm"))
-</script> -->
-{% if page.layout == 'home' %}<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve" data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)" data-position="right" data-x_margin="10" data-y_margin="10"></script>{% endif %}
-{% if page.layout != 'home' and page.layout != 'notfound' %}<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve" data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)" data-position="right" data-x_margin="57" data-y_margin="16"></script>{% endif %}
+{%- include head/widgets/bmc.html -%}
