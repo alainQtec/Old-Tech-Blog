@@ -2028,6 +2028,7 @@ body {
 }
 
 [data-module-template] [data-unit-id] .unit-wrapper {
+
   top: calc(var(--navbar-collective-height) * -1);
   height: calc(var(--content-height) + var(--navbar-collective-height));
   position: relative;
@@ -2040,8 +2041,10 @@ body {
   flex-direction: column;
   overflow: hidden;
   border-radius: .5rem;
-  margin: .5em auto;
-  width: 96%;
+  width: 95%;
+  max-width: 1240px;
+  padding: 10px;
+  margin: .5px auto;
   padding-bottom: 1em;
   background: #fbfbfd
 }
