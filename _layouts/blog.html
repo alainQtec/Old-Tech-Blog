@@ -294,24 +294,19 @@ extra_scss: ""
     <section class="content" data-module-template="generic">
       {{ content }}
     </section>
-    <!-- Custom Ads section: This is where I'll put custom ads slides -->
+    <!-- Custom Ads and newsletter: This is where I'll put custom ads slides -->
     <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="promo">
-
+      <div data-unit-id="Newsletter" data-analytics-section-engagement="name:newsleter">
+        {%- include blog_newsletter.html -%}
+      </div>
       <div data-unit-id="custom-ad-01" data-analytics-section-engagement="name:promo-ad-01">
         <div class="module-content"></div>
       </div>
-      <div data-unit-id="custom-ad-02" data-analytics-section-engagement="name:promo-ad-02">
+      <div data-unit-id="custom-ad-03" data-analytics-section-engagement="name:promo-ad-02">
         <div class="module-content"></div>
       </div>
-      <div data-unit-id="custom-ad-03" data-analytics-section-engagement="name:promo-ad-03">
-        <div class="module-content"></div>
-      </div>
-    </section>
-    <section class="homepage-section collection-module" data-module-template="generic" data-analytics-region="Newsletter">
-      {%- include blog_newsletter.html -%}
     </section>
   </main>
-
   <footer class="footer js" lang="en-US" id="b-footer" role="contentinfo" aria-labelledby="footer-label">
     <div class="footer-content">
       <h2 class="footer-label" id="footer-label">Website Footer</h2>
