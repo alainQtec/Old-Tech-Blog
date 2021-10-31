@@ -352,6 +352,14 @@ figure.it2-card .blog_post_title {
   margin: 0
 }
 
+.it2-card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s
+}
+
 .it2-card input[type=checkbox] {
   display: none
 }
