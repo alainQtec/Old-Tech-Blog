@@ -549,12 +549,13 @@ ul.pagination.pagination-sm li {
 
 /* News letter section */
 
-section#newsletter_footer {
+section#newsletter_footer,
+section#newsletter_footer.homepage-section.collection-module {
   color: var(--main-text-color);
   text-align: center;
   margin: 0 auto;
-  // margin-top: 50px !important;
   padding-bottom: 20px;
+  margin-bottom: 20px;
   border-radius: 0.7em
 }
 
@@ -572,14 +573,15 @@ ins.adsbygoogle {
   border-radius: 1em;
   margin: 0 auto;
   margin-top: 2em !important;
-  width: 80%
+  width: 100%
 }
 
 @media (max-width: 780px) {
 
   section#newsletter_footer,
   ins.adsbygoogle {
-    width: 90%
+    width: 90%;
+    margin: 0 auto
   }
 }
 
