@@ -273,7 +273,6 @@ extra_scss: ""
   </div>
 
   <main class="main" role="main">
-    <!-- The ribbon -->
     <section class="homepage-section collection-module" data-module-template="ribbon">
       <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
         <div class="module-content">
@@ -580,7 +579,7 @@ extra_scss: ""
             States</a>
         </div>
         <div class="footer-b-m-legal">
-          <div class="footer-b-m-legal-copyright">{%- include snippets/get-locale-string.html key='COPYRIGHT_DATES'
+          <div class="footer-b-m-legal-copyright">Copyright {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES'
             -%}{%- assign _locale_copyright_dates = __return -%}&#169; {{ site.title }} {{ _locale_copyright_dates }}.
             All rights reserved.</div>
           <div class="footer-b-m-legal-links">
@@ -697,4 +696,3 @@ extra_scss: ""
 </editor-card>
 
 </html>
-<!-- Copyright © 2021 alainQtec. All rights reserved. -->
