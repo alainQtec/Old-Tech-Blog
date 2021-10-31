@@ -1,3 +1,6 @@
+<link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+{% if page.layout != 'post' and page.layout != 'page' %}
 <link rel="alternate" href="https://alainQtec.com/" hreflang="en-US">
 <link rel="alternate" href="https://alainQtec.com/ae-ar/" hreflang="ar-AE">
 <link rel="alternate" href="https://alainQtec.com/ae/" hreflang="en-AE">
@@ -139,3 +142,5 @@
 <link rel="alternate" href="https://alainQtec.com/vn/" hreflang="en-VN">
 <link rel="alternate" href="https://alainQtec.com/za/" hreflang="en-ZA">
 <link rel="alternate" href="https://alainQtec.com.cn/" hreflang="zh-CN">
+{% endif %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
