@@ -15,57 +15,26 @@ extra_scss: ""
 
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Alain Herve">
-  <meta name="description" content="My portfolio Website">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   {%- include head/favicon.html -%}
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
-  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'> -->
+  <!--=============== BOXICONS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+  <!--=============== CSS ===============-->
+  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
   {%- include head/inline-scss.html -%}
-  {%- include head/stylesheets.html -%}
-  <title>Alain Herve</title>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/jquery.scrollaway.js"></script>
-  <!-- Innfinite Scroll js -->
-  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
-  <!-- for Mathjax support -->
-  {% if page.usemathjax %}
-  <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        TeX: { equationNumbers: { autoNumber: "AMS" } }
-        });
-  </script>
-  <script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  {% endif %}
 
-  <!-- Github Buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-  <!-- https://www.buymeacoffee.com/alainherve -->
-  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="alainherve"
-    data-description="Support Alain on Buy me a coffee!" data-message="" data-color="hsla(251, 82%, 72%, 0.522)"
-    data-position="right" data-x_margin="57" data-y_margin="16"></script>
-
-  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <html class="no-js">
-  <!--<![endif]-->
+  <title>Responsive Halloween Website</title>
 </head>
 
 <body>
-  <main class="main__hp" id="scroll-animate">
-    <!-- <header class="home__header" id="home__header"> -->
+  <main class="main" id="scroll-animate">
     <header>
       <nav class="home___nav" id="home__navbar">
         <a class="blognavbrand" id="blognavbrand"
@@ -123,12 +92,13 @@ extra_scss: ""
         </div>
       </nav>
     </header>
-    <div class="homepage__container">
-      <article class="homepage_content_card scroll-list" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="article-content-wrap scroll-list__wrp js-scroll-content js-scroll-list">
-          <div class="home hp__section js-scroll-list-item" id="home">
-            <div class="home__container hlayout__containr hp_grid">
-              <div class="home__content hp_grid">
+    <article class="homepage_content_card" itemscope itemtype="http://schema.org/BlogPosting">
+      <section class="section home container" id="home">
+        <div class="swiper home-swiper">
+          <div class="swiper-wrapper">
+            <!-- HOME SLIDER 1 -->
+            <section class="swiper-slide">
+              <div class="home__content-0 grid">
                 <div class="home__social">
                   <a href="https://www.linkedin.com/in/alain-herve-9400bb201/" target="_blank"
                     class="homepage__social-icon">
@@ -160,16 +130,16 @@ extra_scss: ""
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0" mask-type="alpha">
                       <path class="homepage_blob_path" d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                                  130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                                  97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                                  0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
                     </mask>
                     <g mask="url(#mask0)">
                       <path
                         d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                                  165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                                  129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                                  -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
                       <image class="homepage__blob__dp"
                         xlink:href="{{site.url}}{{site.baseurl}}/assets/img/profile.png" />
                     </g>
@@ -198,881 +168,456 @@ extra_scss: ""
                   </a>
                 </div>
               </div>
-              <div class="home__scroll">
-                <a href="#contact" class="home__scroll button--flex">
-                  <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                  <span class="home__scroll-name">Scroll down</span>
-                  <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            </section>
+
+            <!-- HOME SLIDER 2 -->
+            <section class="swiper-slide">
+              <div class="home__content grid">
+                <div class="home__group">
+                  <img src="assets/img/home2-img.png" alt="" class="home__img">
+                  <div class="home__indicator"></div>
+
+                  <div class="home__details-img">
+                    <h4 class="home__details-title">Adino & Grahami</h4>
+                    <span class="home__details-subtitle">No words can describe them</span>
+                  </div>
+                </div>
+
+                <div class="home__data">
+                  <h3 class="home__subtitle">#2 top Best duo</h3>
+                  <h1 class="home__title">BRING BACK <br> MY COTTON <br> CANDY</h1>
+                  <p class="home__description">Adino steals cotton candy from his brother and eats them
+                    all in one bite,
+                    a hungry beast. Grahami can no longer contain his anger towards Adino.
+                  </p>
+
+                  <div class="home__buttons">
+                    <a href="#" class="button">Book Now</a>
+                    <a href="#" class="button--link button--flex">Track Record <i
+                        class='bx bx-right-arrow-alt button__icon'></i></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- HOME SLIDER 3 -->
+            <section class="swiper-slide">
+              <div class="home__content grid">
+                <div class="home__group">
+                  <img src="assets/img/home3-img.png" alt="" class="home__img">
+                  <div class="home__indicator"></div>
+
+                  <div class="home__details-img">
+                    <h4 class="home__details-title">Captain Sem</h4>
+                    <span class="home__details-subtitle">Veteran Spooky Ghost</span>
+                  </div>
+                </div>
+
+                <div class="home__data">
+                  <h3 class="home__subtitle">#3 Top Scariest Ghost</h3>
+                  <h1 class="home__title">RESPAWN <br> THE SPOOKY <br> SKULL</h1>
+                  <p class="home__description">In search for cute little puppy, Captain Sem has come back
+                    from his tragic death.
+                    With his hogwarts certified power he promise to be a hero for all of ghostkind.
+                  </p>
+
+                  <div class="home__buttons">
+                    <a href="#" class="button">Book Now</a>
+                    <a href="#" class="button--link button--flex">Track Record <i
+                        class='bx bx-right-arrow-alt button__icon'></i></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="section about" id="about">
+        <h2 class="section__title">About me</h2>
+        <div class="about__container container grid">
+          <img src="{{site.url}}{{site.baseurl}}/assets/img/about_Me.png" alt="Alain Herve" class="about__img">
+          <div class="about__data">
+            <h2 class="section__title about__title">@alainQtec</h2>
+            <p class="about__description">
+              Passionate 👨‍💻.Helping you get more done, using quick tech solutions.
+              <br>
+              When I'm not coding I like sketching and getting inspiration from "online Art Communities".
+              <br>
+              I also enjoy automating my workflow with <a
+                href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> and <a
+                href="https://en.wikipedia.org/wiki/PowerShell">PowerShell</a>.<br>I mean Why not make your
+              computer do the grunt work!
+            </p>
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">2+</span>
+                <span class="about__info-name">Years <br> experience</span>
+              </div>
+              <div>
+                <span class="about__info-title">20+</span>
+                <span class="about__info-name">Completed <br> Projects</span>
+              </div>
+              <div>
+                <span class="about__info-title">1</span>
+                <span class="about__info-name">Company <br> Worked</span>
+              </div>
+              <div class="about__buttons button--flex">
+                <a download="" href="{{site.url}}{{site.baseurl}}/assets/pdf/Alain_Herve_Resume_Preview.pdf"
+                  class="button_Dl_CV button--fex">CV<i class="uil uil-download-alt button__icon"></i>
                 </a>
               </div>
             </div>
           </div>
-          <div class="about hp__section js-scroll-list-item" id="about">
-            <h2 class="section__title">About me</h2>
-            <span class="section__subtitle">Introduction</span>
-            <div class="about__container hlayout__containr hp_grid">
-              <img src="{{site.url}}{{site.baseurl}}/assets/img/about_Me.png" alt="Alain Herve" class="about__img">
-              <div class="about__data">
-                <p class="about__description">
-                  Passionate 👨‍💻.Helping you get more done, using quick tech solutions.
-                  <br>
-                  When I'm not coding I like sketching and getting inspiration from "online Art Communities".
-                  <br>
-                  I also enjoy automating my workflow with <a
-                    href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> and <a
-                    href="https://en.wikipedia.org/wiki/PowerShell">PowerShell</a>.<br>I mean Why not make your
-                  computer do the grunt work!
-                </p>
-                <div class="about__info">
-                  <div>
-                    <span class="about__info-title">2+</span>
-                    <span class="about__info-name">Years <br> experience</span>
-                  </div>
-                  <div>
-                    <span class="about__info-title">20+</span>
-                    <span class="about__info-name">Completed <br> Projects</span>
-                  </div>
-                  <div>
-                    <span class="about__info-title">1</span>
-                    <span class="about__info-name">Company <br> Worked</span>
-                  </div>
-                  <div class="about__buttons button--flex">
-                    <a download="" href="{{site.url}}{{site.baseurl}}/assets/pdf/Alain_Herve_Resume_Preview.pdf"
-                      class="button_Dl_CV button--fex">CV<i class="uil uil-download-alt button__icon"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <br id="blog">
-            </div>
+          <br id="blog">
+        </div>
+      </section>
+      <section class="section Recent_Posts" id="recent-articles">
+        <div class="recent_posts_H" id="recent-articles-header">
+          <div id="recent-articles-title">
+            <span>
+              <h1 class="section__title .jumbotron-heading">Recent Posts</h1>
+            </span>
           </div>
-          <div class="Recent_Posts hp__section js-scroll-list-item" id="recent-articles">
-            <div class="recent_posts_H" id="recent-articles-header">
-              <div id="recent-articles-title">
-                <span>
-                  <h1 class="section__title .jumbotron-heading">Recent Posts</h1>
-                </span>
+          <div id="recent-articles-show-all">
+            <a class="btn btn-lg btn-dark" href="{{ site.url}}{{site.blogurl}}"><span>Show All</span></a>
+          </div>
+        </div>
+        <div class="blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            {% for post in site.posts limit:5 %}
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="thumbnail">
               </div>
-              <div id="recent-articles-show-all">
-                <a class="btn btn-lg btn-dark" href="{{ site.url}}{{site.blogurl}}"><span>Show All</span></a>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code"><time datetime="{{ post.date }}" itemprop="datePublished">{{
+                    post.date | date: "%b %-d, %Y" }}</time></span>
+                <div class="blog-slider__title">{{post.title}}</div>
+                <div class="blog-slider__text">{{post.summary}}</div>
+                <a href="{{post.url}}" class="blog-slider__button">READ MORE</a>
               </div>
             </div>
-            <div class="blog-slider">
-              <div class="blog-slider__wrp swiper-wrapper">
-                {% for post in site.posts limit:5 %}
-                <div class="blog-slider__item swiper-slide">
-                  <div class="blog-slider__img">
-                    <img src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="thumbnail">
-                  </div>
-                  <div class="blog-slider__content">
-                    <span class="blog-slider__code"><time datetime="{{ post.date }}" itemprop="datePublished">{{
-                        post.date | date: "%b %-d, %Y" }}</time></span>
-                    <div class="blog-slider__title">{{post.title}}</div>
-                    <div class="blog-slider__text">{{post.summary}}</div>
-                    <a href="{{post.url}}" class="blog-slider__button">READ MORE</a>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-              <div class="blog-slider__pagination"></div>
-            </div>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-            <script src="{{site.url}}{{site.baseurl}}/assets/js/blog-slider.js"></script>
+            {% endfor %}
           </div>
-          <div class="skills hp__section js-scroll-list-item" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">Technologies</span>
-            <!-- 
-                            # TODO:
-                            One way to get fynamic Language stats is by using versel
-                            Versel example: ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alainQtec&layout=compact&hide=css,html&theme=tokyonight)
-                            Wakatime example: [![alainQtec's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=alainQtec&layout=compact)](https://github.com/alainQtec)
-                            # TODO
-              -->
-            <div class="skills__container hlayout__containr hp_grid">
-              <div>
-                <!--==================== SKILLS 1 ====================-->
-                <div class="skill__content skills__open">
-                  <div class="skill__header">
-                    <i class="uil uil-brackets-curly skills__icon"></i>
-                    <h1 class="skill__title">Frontend developer</h1>
-                  </div>
-                  <div>
-                    <details>
-                      <summary>👨‍💻<span class="skill__subtitle"> Building Beautiful websites..</span>
-                      </summary>
-                      <div class="skills__list hp_grid">
+          <div class="blog-slider__pagination"></div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script> -->
+        <script src="{{site.url}}{{site.baseurl}}/assets/js/blog-slider.js"></script>
+      </section>
+      <section class="section category">
+        <h2 class="section__title">Favorite Scare <br> Category</h2>
 
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">HTML</h3>
-                            <span class="skill__nummber">90%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__html"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">CSS</h3>
-                            <span class="skill__nummber">80%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__css"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">Firebase</h3>
-                            <span class="skill__nummber">60%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__Firebase"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">Jekyll</h3>
-                            <span class="skill__nummber">70%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__Jekyll"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">Wordpress</h3>
-                            <span class="skill__nummber">80%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__Wordpress"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">Node JS</h3>
-                            <span class="skill__nummber">45%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__NodeJS"></span>
-                          </div>
-                        </div>
-
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills_name">JavaScript</h3>
-                            <span class="skill__nummber">40%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__JavaScript"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </details>
-                  </div>
-                  <!--==================== SKILLS 2 ====================-->
-                  <div class="skill__content skills__close">
-                    <div class="skill__header">
-                      <i class="uil uil-swatchbook skills__icon"></i>
-                      <h1 class="skills__title">Designer</h1>
-                    </div>
-                    <div>
-                      <!-- <h1 class="skill__title"></h1> -->
-                      <details>
-                        <summary>🔥<span class="skill__subtitle"> Designing Mockups & UIs..</span>
-                        </summary>
-                        <div class="skills__list hp_grid">
-                          <div class="skills__data">
-
-                            <div class="skills__titles">
-                              <h3 class="skills_name">Figma</h3>
-                              <span class="skill__nummber">70%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__Figma"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">Adobe XD</h3>
-                              <span class="skill__nummber">50%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__AdobeXD"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">Canva</h3>
-                              <span class="skill__nummber">30%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__Canva"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </details>
-                    </div>
-                  </div>
-                  <!--==================== SKILLS 3 ====================-->
-                  <div class="skill__content skills__close">
-                    <div class="skill__header">
-                      <i class="uil uil-server-network skills__icon"></i>
-                      <h1 class="skill__title">I.T automation</h1>
-                    </div>
-                    <div>
-                      <details>
-                        <summary>❤️<span class="skill__subtitle"> Building tools for IT Support & system
-                            admins.</span>
-                        </summary>
-                        <div class="skills__list hp_grid">
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">PowerShell</h3>
-                              <span class="skill__nummber">80%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__PowerShell"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">WPF</h3>
-                              <span class="skill__nummber">70%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__WPF"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">XAML</h3>
-                              <span class="skill__nummber">50%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__XAML"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">.NET Core</h3>
-                              <span class="skill__nummber">30%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__dotNETCore"></span>
-                            </div>
-                          </div>
-
-                          <div class="skills__data">
-                            <div class="skills__titles">
-                              <h3 class="skills_name">Python</h3>
-                              <span class="skill__nummber">10%</span>
-                            </div>
-                            <div class="skills__bar">
-                              <span class="skills__percentage skills__Python"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </details>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="category__container container grid">
+          <div class="category__data">
+            <img src="assets/img/category1-img.png" alt="" class="category__img">
+            <h3 class="category__title">Ghosts</h3>
+            <p class="category__description">Choose the ghosts, the scariest there are.</p>
           </div>
-          <div class="qualification hp__section js-scroll-list-item">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personal Journey</span>
-            <div class="qualification__container hlayout__containr">
-              <div class="qualification__tabs">
-                <div class="qualification__button button--flex">
-                  <i class="uil uil-graduation-cap qualification__icon"></i>
-                  Education
-                </div>
 
-                <div class="qualification__button button--flex" data-target="#work">
-                  <i class="uil uil-briefcase-alt qualification__icon"></i>
-                  Work
-                </div>
-              </div>
-
-              <div class="qualification__sections">
-                <!--==================== QUALIFICATION Content 1 ====================-->
-                <div class="qualification__content qualification__active" data-content id="education">
-                  <!--==================== QUALIFICATION 1 ====================-->
-                  <div class="qualification__data">
-
-                    <div>
-                      <Span class="qualification__rounder"></Span>
-                      <Span class="qualification__line"></Span>
-                    </div>
-
-                    <div>
-                      <a href="https://uok.ac.rw" class="Qualif__link">
-                        <h3 class="qualification__title">Bachelor's in Business Information Technology</h3>
-                        <span class="qualification__subtitle">University</span>
-                      </a>
-                      <div class="qualification__calendar">
-                        <i class="uil uil-calendar-alt"></i>
-                        Sep2018 - 2022
-                      </div>
-                    </div>
-                  </div>
-
-                  <!--==================== QUALIFICATION 2 ====================-->
-                  <div class="qualification__data">
-                    <div>
-                      <Span class="qualification__rounder"></Span>
-                      <Span class="qualification__line"></Span>
-                    </div>
-
-                    <div>
-                      <a href="https://rura.rw" class="Qualif__link">
-                        <h3 class="qualification__title">IT Technical Support Intern</h3>
-                        <span class="qualification__subtitle">RURA</span>
-                      </a>
-                      <div class="qualification__calendar">
-                        <i class="uil uil-calendar-alt"></i>
-                        Jun2021 - Sep2021
-                      </div>
-                    </div>
-                  </div>
-
-                  <!--==================== QUALIFICATION 3 ====================-->
-                  <div class="qualification__data">
-
-                    <div>
-                      <Span class="qualification__rounder"></Span>
-                      <Span class="qualification__line"></Span>
-                    </div>
-
-                    <div>
-                      <a href="https://alainQtec.com" class="Qualif__link">
-                        <h3 class="qualification__title">Founder & CEO</h3>
-                        <span class="qualification__subtitle">Company name</span>
-                      </a>
-                      <div class="qualification__calendar">
-                        <i class="uil uil-calendar-alt"></i>
-                        2022 - 20??
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="category__data">
+            <img src="assets/img/category2-img.png" alt="" class="category__img">
+            <h3 class="category__title">Pumpkins</h3>
+            <p class="category__description">You look at the scariest pumpkins there is.</p>
           </div>
-          <div class="services hp__section js-scroll-list-item" id="services">
-            <h2 class="section__title">Services</h2>
-            <span class="section__subtitle">What I offer</span>
-            <div class="services__container hlayout__containr hp_grid">
-              <script type="text/javascript">
-                function hidediv(id) {
-                  document.getElementById(id).style.display = "none";
-                }
-                function showdiv(id) {
-                  document.getElementById(id).style.display = "";
-                }
-              </script>
-              <!--==================== SERVICES 1 ====================-->
-              <div class="services__content hp_grid">
-                <div>
-                  <i class="uil uil-web-grid services__icon"></i>
-                  <h3 class="services__title">UI/UX <br> Designer</h3>
-                </div>
-                <div class="service_show-more" id="showservice0001" onclick="hidediv('showservice0001')">
-                  <a href="#ShowserviceOne" class="servicesModal__btn button--flex" id="modal-closed_service_1">
-                    Show more
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </a>
-                </div>
-                <div class="service__modal__container" id="ShowserviceOne">
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <ul class="services__modal-services hp_grid">
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I conduct user research and testing.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I illustrate design ideas and develop the User
-                            Interface using wireframes.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I create UX element Interactions.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I designing graphic user interface elements, like
-                            menus, tabs and widgets.</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div class="service_Demo__btn">
-                      Demos <i class="uil uil-arrow-right button__icon"></i>
-                    </div>
-                    <a href="#services" class="uil uil-times service__modal__close"
-                      onclick="showdiv('showservice0001')"></a>
-                  </div>
-                </div>
-              </div>
 
-              <!--==================== SERVICES 2 ====================-->
-              <div class="services__content hp_grid">
-                <div>
-                  <i class="uil uil-web-grid services__icon"></i>
-                  <h3 class="services__title">Frontend <br> Developer</h3>
-                </div>
-                <div class="service_show-more" id="showservice0002" onclick="hidediv('showservice0002')">
-                  <a href="#ShowserviceTwo" class="servicesModal__btn button--flex" id="modal-closed_service_2">
-                    Show more
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </a>
-                </div>
-                <div class="service__modal__container" id="ShowserviceTwo">
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <ul class="services__modal-services hp_grid">
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I determine the structure and design of web
-                            pages.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I develop Web pages using various markup
-                            languages.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I optimize web pages for efficiency and "S.E
-                            rank".</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I maintain company brand consistency across all
-                            web pages.</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div class="service_Demo__btn">
-                      Demos <i class="uil uil-arrow-right button__icon"></i>
-                    </div>
-
-                    <a href="#services" class="uil uil-times service__modal__close"
-                      onclick="showdiv('showservice0002')"></a>
-                  </div>
-                </div>
-              </div>
-
-              <!--==================== SERVICES 3 ====================-->
-              <div class="services__content hp_grid">
-                <div>
-                  <i class="uil uil-web-grid services__icon"></i>
-                  <h3 class="services__title">Branding <br> Designer</h3>
-                </div>
-                <div class="service_show-more" id="showservice0003" onclick="hidediv('showservice0003')">
-                  <a href="#ShowserviceThree" class="servicesModal__btn button--flex" id="modal-closed_service_3">
-                    Show more
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </a>
-                </div>
-                <div class="service__modal__container" id="ShowserviceThree">
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <ul class="services__modal-services hp_grid">
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I develop the product brand identity.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I create and design product logos.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I create / assemble images and graphic to produce
-                            quality designs for websites.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p class="services__modal-txt">I review designs for any kind of errors before
-                            publishing.</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div class="service_Demo__btn">
-                      Demos <i class="uil uil-arrow-right button__icon"></i>
-                    </div>
-
-                    <a href="#services" class="uil uil-times service__modal__close"
-                      onclick="showdiv('showservice0003')"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="category__data">
+            <img src="assets/img/category3-img.png" alt="" class="category__img">
+            <h3 class="category__title">Witch Hat</h3>
+            <p class="category__description">Pick the most stylish witch hats out there.</p>
           </div>
-          <div class="projects hp__section js-scroll-list-item" id="projects">
-            <h2 class="section__title">Projects</h2>
-            <span class="section__subtitle">My most recent work</span>
-            <div class="project__container hlayout__containr bd-grid">
-              <div class="project__img">
-                <img src="assets/img/work1.jpg" alt="projEct1">
+        </div>
+      </section>
+      <section class="section trick" id="trick">
+        <h2 class="section__title">Projects</h2>
 
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img src="assets/img/work2.jpg" alt="project2">
-
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img src="assets/img/work3.jpg" alt="proj3ct3">
-
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img src="assets/img/work4.jpg" alt="project4">
-
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img src="assets/img/work5.jpg" alt="proj3ct5">
-
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img src="assets/img/work6.jpg" alt="proj3ct6">
-
-                <div class="project__link">
-                  <a href="https://github.com/alainQtec/repo_Name" class="project__link-name" target="_blank"><i
-                      class="uil uil-github-alt"></i> View details</a>
-                </div>
-              </div>
-            </div>
+        <div class="trick__container container grid">
+          <div class="trick__content">
+            <img src="assets/img/trick-treat1-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Toffee</h3>
+            <span class="trick__subtitle">Candy</span>
+            <span class="trick__price">$11.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
           </div>
-          <div class="project_idea hp__section js-scroll-list-item">
-            <!-- This is the part where I will put a small animation  that shows the progress of my opensource projects from github -->
+
+          <div class="trick__content">
+            <img src="assets/img/trick-treat2-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Bone</h3>
+            <span class="trick__subtitle">Accessory</span>
+            <span class="trick__price">$8.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
           </div>
-          <div class="testimonial hp__section js-scroll-list-item">
-            <h2 class="section__title">Testimonials</h2>
-            <span class="section__subtitle">What They’re Saying</span>
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <!--==================== testimonial 1 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial2.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Joe</span>
-                          <br>
-                          Team
-                        </div>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing
-                      elit. Accusamus doloremque dolorem optio rerum officiis asperiores distinctio explicabo!
-                    </p>
-                  </div>
-                </div>
-                <!--==================== testimonial 2 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial1.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Ena</span>
-                          <br>
-                          CEO
-                        </div>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">I got a good impression, out my project with all the
-                      possible quality and support 24 hours a Lorem ipsum dolor.</p>
-                  </div>
-                </div>
-                <!--==================== testimonial 3 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template3.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Achelle</span>
-                          <br>
-                          Database Admin
-                        </div>
-                        </p>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-                <!--==================== testimonial 4 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template1.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Arther</span>
-                          <br>
-                          Friend.
-                        </div>
-                        </p>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-                <!--==================== testimonial 5 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template2.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Luiz.</span>
-                          <br>
-                          Network Admin.
-                        </div>
-                        </p>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-                <!--==================== testimonial 6 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets//img/testimonial0.jpg" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Dave.</span>
-                          <br>
-                          Friend.
-                        </div>
-                        </p>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-                <!--==================== testimonial 7 ====================-->
-                <div class="swiper-slide">
-                  <div class="testimonial__content fade">
-                    <div class="testimonial__data hp_grid">
-                      <div class="testimonial__header hp_grid">
-                        <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template4.png" alt="testimonial"
-                          class="testimonial__img">
-                        <div class="testimonial__client">
-                          <span class="testimonial__name">Xavier Pablo</span>
-                          <br>
-                          Artist.
-                        </div>
-                      </div>
-                    </div>
-                    <p class="testimonial__description">lorem I got a good impression, out my project with all
-                      the quality and support 24 hours a Lorem ipsum dolor.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- Arrows -->
-              <!--<div class="swiper-button-next"></div> -->
-              <!--<div class="swiper-button-prev"></div> -->
-            </div>
 
-            <!-- Swiper JS -->
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-            <!-- Initialize Swiper -->
-            <script>
-              var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                centeredSlides: true,
-                spaceBetween: 80,
-                slidesPerGroup: 1,
-                loop: true,
-                loopFillGroupWithBlank: false,
-                pagination: {
-                  el: '.swiper-pagination',
-                  clickable: true,
-                },
-                navigation: {
-                  nextEl: '',
-                  prevEl: '',
-                },
-              });
-            </script>
+          <div class="trick__content">
+            <img src="assets/img/trick-treat3-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Scarecrow</h3>
+            <span class="trick__subtitle">Accessory</span>
+            <span class="trick__price">$15.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
           </div>
-          <div class="contact hp__section js-scroll-list-item" id="contact">
-            <h2 class="section__title">Contact</h2>
-            <span class="section__subtitle">Get in touch</span>
 
-            <div class="contact__container hlayout__containr hp_grid">
-              <div>
-                <div class="contact__information">
-                  <i class="uil uil-phone contact__icon"></i>
+          <div class="trick__content">
+            <img src="assets/img/trick-treat4-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Candy Cane</h3>
+            <span class="trick__subtitle">Candy</span>
+            <span class="trick__price">$7.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
+          </div>
 
-                  <div>
-                    <h3 class="contact__title">Call Me</h3>
-                    <span class="contact__subtitle">
-                      <a href="#contact" class="contact__link">
-                        +250-784-703-243
-                      </a>
-                    </span>
-                  </div>
+          <div class="trick__content">
+            <img src="assets/img/trick-treat5-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Pumpkin</h3>
+            <span class="trick__subtitle">Candy</span>
+            <span class="trick__price">$19.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
+          </div>
+
+          <div class="trick__content">
+            <img src="assets/img/trick-treat6-img.png" alt="" class="trick__img">
+            <h3 class="trick__title">Ghost</h3>
+            <span class="trick__subtitle">Accessory</span>
+            <span class="trick__price">$17.99</span>
+            <button class="button trick__button">
+              <i class='bx bxs-user-circle trick__icon'></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section discount">
+        <div class="discount__container container grid">
+          <div class="discount__data">
+            <h2 class="discount__title">Project name <br> github.com/$project</h2>
+            <a href="#" class="button">Go to repo</a>
+          </div>
+
+          <img src="assets/img/project.png" alt="" class="discount__img">
+        </div>
+      </section>
+      <section class="section new" id="new">
+        <h2 class="section__title">Testimonials</h2>
+        <span class="section__subtitle">What They’re Saying</span>
+        <div class="testimonials container">
+          <div class="swiper new-swiper">
+            <div class="swiper-wrapper">
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">Pro</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template2.png" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Joe</h3>
+                <span class="work__title">Team</span>
+
+                <div class="impression_msg">
+                  <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusamus doloremque dolorem optio rerum officiis asperiores distinctio explicabo!</span>
                 </div>
 
-                <div class="contact__information">
-                  <i class="uil uil-envelope contact__icon"></i>
-
-                  <div>
-                    <h3 class="contact__title">Email</h3>
-                    <span class="contact__subtitle">
-                      <a href="https://mailto:alain.1337dev@outlook.com" class="contact__link" target="_blank">
-                        alain.1337dev@outlook.com
-                      </a>
-                    </span>
-                  </div>
-                </div>
-
-                <div class="contact__information">
-                  <i class="uil uil-whatsapp contact__icon"></i>
-                  <div>
-                    <h3 class="contact__title">Whatsapp</h3>
-                    <span class="contact__subtitle">
-                      <a href="https://wa.me/250784703243" class="contact__link" target="_blank">
-                        +250-784-703-243
-                      </a>
-                    </span>
-                  </div>
-                </div>
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
               </div>
 
-              <form action="" class="contact__form hp_grid">
-                <div class="contact__inputs hp_grid">
-                  <div class="contact__content">
-                    <label for="" class="contact__label">Name</label>
-                    <input type="text" class="contact__input">
-                  </div>
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">Jr.</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets//img/testimonial0.jpg" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Ena</h3>
+                <span class="work__title">Ux Deigner</span>
 
-                  <div class="contact__content">
-                    <label for="" class="contact__label">Email</label>
-                    <input type="email" class="contact__input">
-                  </div>
+                <div class="impression_msg">
+                  <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusamus doloremque dolorem optio rerum officiis asperiores distinctio explicabo!</span>
                 </div>
-                <div class="contact__content">
-                  <label for="" class="contact__label">Project</label>
-                  <input type="text" class="contact__input">
+
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
+              </div>
+
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">Pro</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template4.png" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Luiz.</h3>
+                <span class="work__title">Database Admin</span>
+
+                <div class="impression_msg">
+                  <span class="testimonial__description">I got a good impression, out my project with all thepossible quality and support 24 hours a Lorem ipsum dolor.</span>
                 </div>
-                <div class="contact__content">
-                  <label for="" class="contact__label">Message</label>
-                  <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
+              </div>
+
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">New</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial2.png" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Dave</h3>
+                <span class="work__title">Brogrammer</span>
+
+                <div class="impression_msg">
+                  <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusamus doloremque dolorem optio rerum officiis asperiores distinctio explicabo!</span>
                 </div>
-                <div>
-                  <a href="#" class="button_send_msg button--fex">
-                    Send Message
-                    <i class="uil uil-message button__icon"></i>
-                  </a>
+
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
+              </div>
+
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">pro</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial1.png" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Achelle</h3>
+                <span class="work__title">CEO</span>
+
+                <div class="impression_msg">
+                  <span class="testimonial__description">I got a good impression, out my project with all thepossible quality and support 24 hours a Lorem ipsum dolor. distinctio explicabo!</span>
                 </div>
-              </form>
+
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
+              </div>
+
+              <div class="testimonial__data swiper-slide">
+                <div class="exp__tag">pro</div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template3.png" alt="testimonial"
+                  class="testimonial__img">
+                <h3 class="testimonial__name">Charlotte</h3>
+                <span class="work__title">Marketing derector</span>
+
+                <div class="impression_msg">
+                  <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusamus doloremque dolorem optio rerum officiis asperiores distinctio explicabo!</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class='bx bxs-user-circle new__icon'></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </article>
-    </div>
+      </section>
+      <section class="section newsletter">
+        <div class="newsletter__container container">
+          <h2 class="section__title">Newsletter</h2>
+          <p class="newsletter__description">
+            Promotion new products and sales. Directly to your inbox
+          </p>
+
+          <form action="" class="newsletter__form">
+            <input type="text" placeholder="Enter your email" class="newsletter__input">
+            <button class="button">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="section contact" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <span class="section__subtitle">Get in touch</span>
+        <div class="contact__container hlayout__containr hp_grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-phone contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Call Me</h3>
+                <span class="contact__subtitle">
+                  <a href="#contact" class="contact__link">
+                    +250-784-703-243
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">
+                  <a href="https://mailto:alain.1337dev@outlook.com" class="contact__link" target="_blank">
+                    alain.1337dev@outlook.com
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-whatsapp contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Whatsapp</h3>
+                <span class="contact__subtitle">
+                  <a href="https://wa.me/250784703243" class="contact__link" target="_blank">
+                    +250-784-703-243
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form hp_grid">
+            <div class="contact__inputs hp_grid">
+              <div class="contact__content">
+                <label for="" class="contact__label">Name</label>
+                <input type="text" class="contact__input">
+              </div>
+
+              <div class="contact__content">
+                <label for="" class="contact__label">Email</label>
+                <input type="email" class="contact__input">
+              </div>
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Project</label>
+              <input type="text" class="contact__input">
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Message</label>
+              <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+            </div>
+            <div>
+              <a href="#" class="button_send_msg button--fex">
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </article>
   </main>
-  <!--==================== FOOTER ====================-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
   {%- include footer.html -%}
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!--==================== MAIN JS ====================-->
+  <!--=============== SCROLL UP ===============-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+  </a>
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/scrollreveal.min.js"></script>
+  <!--=============== SWIPER JS ===============-->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/main.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/js/h_p.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
-
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36251023-1']);
-    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0">
-  </div>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-  <!-- Vendor JS Files -->
-  <!-- <script src="{{site.url}}{{site.baseurl}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/php-email-form/validate.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/purecounter/purecounter.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="{{site.url}}{{site.baseurl}}/assets/vendor/typed.js/typed.min.js"></script> -->
 </body>
 
 </html>

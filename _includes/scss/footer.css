@@ -292,14 +292,6 @@ footer .logo {
   margin-top: var(--mb-3);
 }
 
-.back-to-top {
-  /* position: fixed; */
-  /* display: flex; */
-  /* flex-direction: row; */
-  left: 1%;
-  bottom: auto;
-}
-
 @media (max-width: 576px) {
   footer .copy {
     flex-direction: column;

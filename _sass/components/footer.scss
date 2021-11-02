@@ -190,8 +190,9 @@ footer .logo {
 }
 
 .foo_hr {
-  color: rgb(237, 234, 234); width: 90%; 
-  align-self: center !important; 
+  color: rgb(237, 234, 234);
+  width: 90%;
+  align-self: center !important;
   margin: 0 auto !important;
 }
 
@@ -290,14 +291,6 @@ footer .logo {
   text-align: center;
   color: rgba(240, 248, 255, 0.96);
   margin-top: var(--mb-3);
-}
-
-.back-to-top {
-  /* position: fixed; */
-  /* display: flex; */
-  /* flex-direction: row; */
-  left: 1%;
-  bottom: auto;
 }
 
 @media (max-width: 576px) {
