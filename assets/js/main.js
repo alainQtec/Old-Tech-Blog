@@ -92,7 +92,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home-swiper, .testimonials-swiper, .newsletter__container`)
-sr.reveal(`.category__data, .project__content, .footer__content`, { interval: 100 })
+sr.reveal(`.service__data, .project__content, .footer__content`, { interval: 100 })
 sr.reveal(`.about__data, .prior-p__img`, { origin: 'left' })
 sr.reveal(`.about__img, .prior-p__data`, { origin: 'right' })
 

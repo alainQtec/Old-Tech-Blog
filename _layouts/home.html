@@ -307,24 +307,146 @@ extra_scss: ""
         <script src="{{site.url}}{{site.baseurl}}/assets/js/blog-slider.js"></script>
       </section>
       <section class="section category">
-        <h2 class="section__title">Favorite Scare <br> Category</h2>
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">What I offer</span>
 
-        <div class="category__container container grid">
-          <div class="category__data">
-            <img src="assets/img/category1-img.png" alt="" class="category__img">
-            <h3 class="category__title">Ghosts</h3>
-            <p class="category__description">Choose the ghosts, the scariest there are.</p>
+        <div class="services__containerr container grid">
+          <div class="service__data">
+            <img src="assets/img/category1-img.png" alt="designer" class="service__img">
+            <h3 class="services__title">UI/UX <br> Designer</h3>
+            <div class="service_show-more" id="showservice0001" onclick="hidediv('showservice0001')">
+              <a href="#ShowserviceOne" class="servicesModal__btn button--flex" id="modal-closed_service_1">
+                Show more
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+            <div class="service__modal__container" id="ShowserviceOne">
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <ul class="services__modal-services hp_grid">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I conduct user research and testing.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I illustrate design ideas and develop the User
+                        Interface using wireframes.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I create UX element Interactions.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I designing graphic user interface elements, like
+                        menus, tabs and widgets.</p>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                <div class="service_Demo__btn">
+                  Demos <i class="uil uil-arrow-right button__icon"></i>
+                </div>
+                <a href="#services" class="uil uil-times service__modal__close"
+                  onclick="showdiv('showservice0001')"></a>
+              </div>
+            </div>
           </div>
 
-          <div class="category__data">
-            <img src="assets/img/category2-img.png" alt="" class="category__img">
-            <h3 class="category__title">Pumpkins</h3>
-            <p class="category__description">You look at the scariest pumpkins there is.</p>
+          <div class="service__data">
+            <img src="assets/img/category2-img.png" alt="front-end" class="service__img">
+            <h3 class="services__title">Frontend <br> Developer</h3>
+            <div class="service_show-more" id="showservice0002" onclick="hidediv('showservice0002')">
+              <a href="#ShowserviceTwo" class="servicesModal__btn button--flex" id="modal-closed_service_2">
+                Show more
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+            <div class="service__modal__container" id="ShowserviceTwo">
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <ul class="services__modal-services hp_grid">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I determine the structure and design of web
+                        pages.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I develop Web pages using various markup
+                        languages.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I optimize web pages for efficiency and "S.E
+                        rank".</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I maintain company brand consistency across all
+                        web pages.</p>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                <div class="service_Demo__btn">
+                  Demos <i class="uil uil-arrow-right button__icon"></i>
+                </div>
+
+                <a href="#services" class="uil uil-times service__modal__close"
+                  onclick="showdiv('showservice0002')"></a>
+              </div>
+            </div>
           </div>
 
-          <div class="category__data">
-            <img src="assets/img/category3-img.png" alt="" class="category__img">
-            <h3 class="category__title">Witch Hat</h3>
+          <div class="service__data">
+            <img src="assets/img/category3-img.png" alt="brand design" class="service__img">
+            <h3 class="services__title">Branding <br> Designer</h3>
+            <div class="service_show-more" id="showservice0003" onclick="hidediv('showservice0003')">
+              <a href="#ShowserviceThree" class="servicesModal__btn button--flex" id="modal-closed_service_3">
+                Show more
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+            <div class="service__modal__container" id="ShowserviceThree">
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <ul class="services__modal-services hp_grid">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I develop the product brand identity.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I create and design product logos.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I create / assemble images and graphic to produce
+                        quality designs for websites.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-txt">I review designs for any kind of errors before
+                        publishing.</p>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                <div class="service_Demo__btn">
+                  Demos <i class="uil uil-arrow-right button__icon"></i>
+                </div>
+
+                <a href="#services" class="uil uil-times service__modal__close"
+                  onclick="showdiv('showservice0003')"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service__data">
+            <img src="assets/img/category3-img.png" alt="hat" class="service__img">
+            <h3 class="services__title">Witch Hat</h3>
             <p class="category__description">Pick the most stylish witch hats out there.</p>
           </div>
         </div>
@@ -434,7 +556,7 @@ extra_scss: ""
                 <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template2.png" alt="testimonial"
                   class="testimonial__img">
                 <h3 class="testimonial__name">Joe</h3>
-                <span class="work__title">Team</span>
+                <span class="work__title">H.R @ contoso ltd</span>
 
                 <div class="impression_msg">
                   <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -451,7 +573,7 @@ extra_scss: ""
                 <img src="{{site.url}}{{site.baseurl}}/assets//img/testimonial0.jpg" alt="testimonial"
                   class="testimonial__img">
                 <h3 class="testimonial__name">Ena</h3>
-                <span class="work__title">Ux Deigner</span>
+                <span class="work__title">Ux Deigner @ contoso plc</span>
 
                 <div class="impression_msg">
                   <span class="testimonial__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -468,7 +590,7 @@ extra_scss: ""
                 <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial_template4.png" alt="testimonial"
                   class="testimonial__img">
                 <h3 class="testimonial__name">Luiz.</h3>
-                <span class="work__title">Database Admin</span>
+                <span class="work__title">Database Admin @ contoso plc</span>
 
                 <div class="impression_msg">
                   <span class="testimonial__description">I got a good impression, out my project with all thepossible
@@ -502,7 +624,7 @@ extra_scss: ""
                 <img src="{{site.url}}{{site.baseurl}}/assets/img/testimonial1.png" alt="testimonial"
                   class="testimonial__img">
                 <h3 class="testimonial__name">Achelle</h3>
-                <span class="work__title">CEO</span>
+                <span class="work__title">CEO @ contoso ltd</span>
 
                 <div class="impression_msg">
                   <span class="testimonial__description">I got a good impression, out my project with all thepossible
