@@ -1918,15 +1918,15 @@ image.homepage__blob__dp {
 }
 
 .service__modal__container {
-  position: static;
-  left: auto;
-  right: auto;
+  position: relative;
+  // left: auto;
+  // right: auto;
   z-index: 10;
   display: none;
   justify-content: center;
   align-items: center;
-  width: 98%;
-  height: 98%;
+  width: 100%;
+  // height: 98%;
 }
 
 .service__modal__container:target {
