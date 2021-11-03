@@ -2329,13 +2329,14 @@ section#recent-articles.Recent_Posts {
 
 .project__img {
   position: relative;
+  padding: 0px;
+  margin: 0px;
   overflow: hidden;
   width: 100%;
   transition: .3s;
 }
 
 .project__img img {
-  top: 0;
   border-radius: .5rem;
   -webkit-column-width: 100%;
   column-width: 100%;
@@ -2902,7 +2903,7 @@ section#recent-articles.Recent_Posts {
   }
 
   .project__img {
-    width: 102%;
+    width: 100%;
   }
 
   .project__title {
