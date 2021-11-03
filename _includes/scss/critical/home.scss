@@ -2382,27 +2382,10 @@ section#recent-articles.Recent_Posts {
   font-size: var(--normal-font-size);
 }
 
-.project__button {
-  display: inline-flex;
-  padding: .5rem;
-  border-radius: .25rem .25rem .75rem .25rem;
-  position: absolute;
-  right: -3rem;
-  bottom: 0;
-}
-
-.project__icon {
-  font-size: 1.25rem;
-  color: var(--title-color);
-}
-
 .project__content:hover .project__img {
   transform: translateY(-.5rem);
 }
 
-.project__content:hover .project__button {
-  right: 0;
-}
 
 /*=============== Priority Project ===============*/
 .prior-p__container {
