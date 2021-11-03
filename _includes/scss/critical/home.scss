@@ -2363,8 +2363,13 @@ section#recent-articles.Recent_Posts {
   bottom: 0;
 }
 
-.project__link-name {
+.project__details-link {
   color: var(--dark-color);
+}
+
+.project__details-link:hover,
+.project__details-link:focus {
+  color: var(--first-color)
 }
 
 .project__subtitle,
