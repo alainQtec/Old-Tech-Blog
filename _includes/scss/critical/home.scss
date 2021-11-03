@@ -2372,18 +2372,14 @@ section#recent-articles.Recent_Posts {
   color: var(--first-color)
 }
 
-.project__subtitle,
-.project__price {
+.project__summary {
   display: block;
-}
-
-.project__subtitle {
+  text-align: center;
   font-size: var(--smaller-font-size);
   margin-bottom: var(--mb-0-5);
 }
 
-.project__title,
-.project__price {
+.project__name {
   color: var(--title-color);
   font-weight: var(--font-medium);
   font-size: var(--normal-font-size);
@@ -2913,7 +2909,7 @@ section#recent-articles.Recent_Posts {
     width: 100%;
   }
 
-  .project__title {
+  .project__name {
     font-size: var(--h3-font-size);
   }
 
