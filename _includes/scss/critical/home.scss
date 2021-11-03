@@ -2389,12 +2389,15 @@ section#recent-articles.Recent_Posts {
   transform: translateY(-.5rem);
 }
 
+.project__container,
+.prior-p__container {
+  padding: 2.5rem 0 1.5rem;
+}
 
-/*=============== Collab Project / open source ===============*/
+/*=============== Collab / open source Project ===============*/
 .prior-p__container {
   background: var(--container-color);
   border-radius: 1rem;
-  padding: 2.5rem 0 1.5rem;
   row-gap: .75rem;
 }
 
