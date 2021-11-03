@@ -1908,7 +1908,9 @@ image.homepage__blob__dp {
 
 .services__modal-txt {
   font-family: inherit;
-  color: black;
+  color: var(--title-color);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
 }
 
 .service_show-more {
