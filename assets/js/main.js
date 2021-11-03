@@ -46,8 +46,8 @@ function scrollHeader() {
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== NEW SWIPER ===============*/
-let newSwiper = new Swiper(".new-swiper", {
+/*=============== Testimonials SWIPER ===============*/
+let newSwiper = new Swiper(".testimonials-swiper", {
     centeredSlides: true,
     slidesPerView: "auto",
     loop: 'true',
@@ -91,7 +91,7 @@ const sr = ScrollReveal({
     // reset: true
 })
 
-sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
+sr.reveal(`.home-swiper, .testimonials-swiper, .newsletter__container`)
 sr.reveal(`.category__data, .project__content, .footer__content`, { interval: 100 })
 sr.reveal(`.about__data, .prior-p__img`, { origin: 'left' })
 sr.reveal(`.about__img, .prior-p__data`, { origin: 'right' })
@@ -106,9 +106,9 @@ sr.reveal('.project__img', { interval: 200 })
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', { interval: 200 })
+sr.reveal('.contact__label', { interval: 200 })
 sr.reveal('.contact__input', { delay: 400 })
-sr.reveal('.contact__button', { delay: 600 })
+sr.reveal('.button_send_msg', { delay: 600 })
 
 
 /*==================== ACCORDION SKILLS ====================*/
