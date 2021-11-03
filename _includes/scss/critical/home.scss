@@ -2510,7 +2510,8 @@ section#recent-articles.Recent_Posts {
 }
 
 /* ============== Swiper ==============*/
-.swiper-wrapper {
+.swiper.testimonials-swiper,
+.swiper.testimonials-swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events {
   z-index: 1;
 }
 
