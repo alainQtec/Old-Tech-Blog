@@ -12,25 +12,83 @@ extra_scss: ""
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="utf-8">
+  <style data-merge-styles="true"></style>
+  <meta charset="utf-8">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ site.url }}/assets/favicon/favicon-32x32.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="alainQtec">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | @{{site.title}}{% else %}{{ site.title }} | {{ site.subtitle }}{% endif %}">
+  <title>Alain Herve</title>
+  <meta http-equip="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="keywords"
+    content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %},{{ page.keywords | escape }}" />
+  <meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
+  <meta content="{{ site.title }}" property="og:site_name" />
+  <meta property="og:locale" content="en_US">
+  <meta http-equiv="Cache-control" content="public">
+  {% if page.noindex %}
+  <meta name="robots" content="noindex" />
+  {% endif %} {% if page.title %}
+  <meta content="{{ page.title }}" property="og:title" />
+  <meta content="article" property="og:type" />
+  {% else %}
+  <meta content="{{ site.title }}" property="og:title" />
+  <meta content="website" property="og:type" />
+  {% endif %} {% if page.summary %}
+  <meta content="{{ page.summary }}" property="og:description" />
+  <meta name="Description" content="{{ page.summary }}">
+  {% else %}
+  <meta content="{{ site.description }}" property="og:description" />
+  <meta name="{{ site.description }}" content="{{ page.summary }}">
+  {% endif %}
+  {% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
+  {% endif %}
+  {% if page.date %}
+  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
+  {% endif %}
+  <meta content="https://twitter.com/alainQtec" property="article:author" />
+  <meta property="article:publisher" content="https://twitter.com/alainQtec" />
+  {% if page.thumbnail %}
+  <meta content="{{ site.url }}{{ page.thumbnail }}" property="og:image" />
+  {% endif %} {% if page.categories %} {% for category in page.categories limit:1 %}
+  <meta content="{{ category }}" property="article:section" />
+  {% endfor %} {% endif %}
+  {% if page.tags %} {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag" />{% endfor %}
+  {% endif %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+  {% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}" />
+  {% else %}
+  <meta name="twitter:title" content="{{ site.title }}" />
+  {% endif %}
+  {% if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+  {% endif %} {% if page.summary %}
+  <meta name="twitter:description" content="{{ page.summary }}" />
+  {% else %}
+  <meta name="twitter:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  {% endif %} {% if page.header-img %}
+  <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
+  {% endif %}
+  {%- include head/alternate-urls.html -%}
   {%- include head/favicon.html -%}
-
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <!--=============== BOXICONS ===============-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-  <!--=============== SWIPER CSS ===============-->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-  <!--=============== CSS ===============-->
-  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+  {%- include head/stylesheets.html -%}
   {%- include head/inline-scss.html -%}
 
-  <title>Responsive Halloween Website</title>
+  {% if site.google-analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+  {% include ads.html %}
 </head>
 
 <body>
@@ -312,7 +370,7 @@ extra_scss: ""
 
         <div class="services__containerr container grid">
           <div class="service__data">
-            <img src="assets/img/category1-img.png" alt="designer" class="service__img">
+            <img src="assets/img/svg/ux-designer.svg" alt="designer" class="service__img">
             <h3 class="services__title">UI/UX <br> Designer</h3>
             <div class="service_show-more" id="showservice0001" onclick="hidediv('showservice0001')">
               <a href="#ShowserviceOne" class="servicesModal__btn button--flex" id="modal-closed_service_1">
@@ -353,9 +411,9 @@ extra_scss: ""
               </div>
             </div>
           </div>
-
+ 
           <div class="service__data">
-            <img src="assets/img/category2-img.png" alt="front-end" class="service__img">
+            <img src="assets/img/web-dev.png" alt="front-end" class="service__img">
             <h3 class="services__title">Frontend <br> Developer</h3>
             <div class="service_show-more" id="showservice0002" onclick="hidediv('showservice0002')">
               <a href="#ShowserviceTwo" class="servicesModal__btn button--flex" id="modal-closed_service_2">
@@ -401,7 +459,7 @@ extra_scss: ""
           </div>
 
           <div class="service__data">
-            <img src="assets/img/category3-img.png" alt="brand design" class="service__img">
+            <img src="assets/img/contoso.png" alt="brand design" class="service__img">
             <h3 class="services__title">Branding <br> Designer</h3>
             <div class="service_show-more" id="showservice0003" onclick="hidediv('showservice0003')">
               <a href="#ShowserviceThree" class="servicesModal__btn button--flex" id="modal-closed_service_3">
