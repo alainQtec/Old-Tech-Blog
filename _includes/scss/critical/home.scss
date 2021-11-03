@@ -1863,14 +1863,14 @@ image.homepage__blob__dp {
 
 .services__modal {
   position: relative;
-  padding: 4rem 2rem;
-  display: inline-table;
+  padding: 2rem;
+  // display: inline-table;
   align-items: center;
   justify-content: center;
   border-radius: .5rem;
   color: hsl(0, 0%, 100%);
   background: linear-gradient(to right bottom, #009FFF, #ec2F4B);
-  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.8);
   overflow: visible;
   transition: .3s;
 }
@@ -1920,12 +1920,12 @@ image.homepage__blob__dp {
 
 .service__modal__container {
   position: static;
-  margin: 0 auto;
+  margin: 1rem auto;
   z-index: 10;
   display: none;
   justify-self: center;
   align-items: center;
-  width: 100%;
+  width: 150%;
   max-height: 8vh;
 }
 
