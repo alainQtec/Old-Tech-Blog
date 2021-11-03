@@ -2433,8 +2433,12 @@ section#recent-articles.Recent_Posts {
   padding: 2rem 0 1.5rem 0;
   border-radius: .75rem;
   text-align: center;
-  z-index: 2000;
   overflow: hidden;
+}
+
+.testimonial__data.swiper-slide,
+.testimonial__data.swiper-slide.swiper-slide-active {
+  z-index: 2000;
 }
 
 .testimonial__data:hover {
@@ -2512,9 +2516,10 @@ section#recent-articles.Recent_Posts {
 /* ============== Swiper ==============*/
 
 .swiper.testimonials-swiper,
+.swiper.testimonials-swiper.swiper-initialized.swiper-horizontal,
 .swiper.testimonials-swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events {
-  z-index: 1;
-  overflow: show;
+  z-index: -1;
+  overflow: visible;
 }
 
 .swiper-slide {
