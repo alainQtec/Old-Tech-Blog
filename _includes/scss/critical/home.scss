@@ -2312,14 +2312,13 @@ section#recent-articles.Recent_Posts {
   }
 }
 
-/*=============== TRICK OR TREAT ===============*/
-.trick__container {
+/*=============== Projects ===============*/
+.project__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  padding-top: 1rem;
 }
 
-.trick__content {
+.project__content {
   position: relative;
   background: var(--container-color);
   border-radius: 1rem;
@@ -2328,29 +2327,62 @@ section#recent-articles.Recent_Posts {
   overflow: hidden;
 }
 
-.trick__img {
-  width: 90px;
+.project__img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   transition: .3s;
 }
 
-.trick__subtitle,
-.trick__price {
+.project__img img {
+  border-radius: .5rem;
+  -webkit-column-width: 100%;
+  column-width: 100%;
+  width: fit-content;
+}
+
+.project__link {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: rgba(255, 255, 255, 0.405);
+  border-radius: .5rem;
+  cursor: pointer;
+  -webkit-backdrop-filter: saturate(180%) blur(10px) !important;
+  backdrop-filter: saturate(180%) blur(10px) !important;
+  transition: .3s;
+}
+
+.project__img:hover .project__link {
+  bottom: 0;
+}
+
+.project__link-name {
+  color: var(--dark-color);
+}
+
+.project__subtitle,
+.project__price {
   display: block;
 }
 
-.trick__subtitle {
+.project__subtitle {
   font-size: var(--smaller-font-size);
   margin-bottom: var(--mb-0-5);
 }
 
-.trick__title,
-.trick__price {
+.project__title,
+.project__price {
   color: var(--title-color);
   font-weight: var(--font-medium);
   font-size: var(--normal-font-size);
 }
 
-.trick__button {
+.project__button {
   display: inline-flex;
   padding: .5rem;
   border-radius: .25rem .25rem .75rem .25rem;
@@ -2359,37 +2391,37 @@ section#recent-articles.Recent_Posts {
   bottom: 0;
 }
 
-.trick__icon {
+.project__icon {
   font-size: 1.25rem;
   color: var(--title-color);
 }
 
-.trick__content:hover .trick__img {
+.project__content:hover .project__img {
   transform: translateY(-.5rem);
 }
 
-.trick__content:hover .trick__button {
+.project__content:hover .project__button {
   right: 0;
 }
 
-/*=============== DISCOUNT ===============*/
-.discount__container {
+/*=============== Priority Project ===============*/
+.prior-p__container {
   background: var(--container-color);
   border-radius: 1rem;
   padding: 2.5rem 0 1.5rem;
   row-gap: .75rem;
 }
 
-.discount__data {
+.prior-p__data {
   text-align: center;
 }
 
-.discount__title {
+.prior-p__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2);
 }
 
-.discount__img {
+.prior-p__img {
   width: 200px;
   justify-self: center;
 }
@@ -2477,7 +2509,23 @@ section#recent-articles.Recent_Posts {
   right: 0;
 }
 
+/* ============== Swiper Slide ==============*/
+
+.swiper-slide {
+  cursor: pointer;
+  background: transparent;
+}
+
+.swiper-slide {
+  filter: blur(3px);
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+}
+
 /*=============== NEWSLETTER ===============*/
+
 .newsletter__description {
   text-align: center;
   margin-bottom: var(--mb-1-5);
@@ -2663,7 +2711,7 @@ section#recent-articles.Recent_Posts {
   }
 
   .category__container,
-  .trick__container {
+  .project__container {
     grid-template-columns: .8fr;
     justify-content: center;
   }
@@ -2749,13 +2797,13 @@ section#recent-articles.Recent_Posts {
     width: 250px;
   }
 
-  .trick__container {
+  .project__container {
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
     gap: 2rem;
   }
 
-  .discount__container {
+  .prior-p__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     align-items: center;
@@ -2764,12 +2812,12 @@ section#recent-articles.Recent_Posts {
     border-radius: 3rem;
   }
 
-  .discount__img {
+  .prior-p__img {
     width: 350px;
     order: -1;
   }
 
-  .discount__data {
+  .prior-p__data {
     padding-right: 6rem;
   }
 
@@ -2862,23 +2910,23 @@ section#recent-articles.Recent_Posts {
     padding-right: 2rem;
   }
 
-  .trick__container {
+  .project__container {
     gap: 3.5rem;
   }
 
-  .trick__content {
+  .project__content {
     border-radius: 1.5rem;
   }
 
-  .trick__img {
+  .project__img {
     width: 110px;
   }
 
-  .trick__title {
+  .project__title {
     font-size: var(--h3-font-size);
   }
 
-  .discount__container {
+  .prior-p__container {
     column-gap: 7rem;
   }
 

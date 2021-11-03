@@ -92,9 +92,9 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
-sr.reveal(`.category__data, .trick__content, .footer__content`, { interval: 100 })
-sr.reveal(`.about__data, .discount__img`, { origin: 'left' })
-sr.reveal(`.about__img, .discount__data`, { origin: 'right' })
+sr.reveal(`.category__data, .project__content, .footer__content`, { interval: 100 })
+sr.reveal(`.about__data, .prior-p__img`, { origin: 'left' })
+sr.reveal(`.about__img, .prior-p__data`, { origin: 'right' })
 
 /*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle', {})
