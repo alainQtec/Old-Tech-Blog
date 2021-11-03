@@ -87,7 +87,7 @@ const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2500,
-    delay: 400,
+    delay: 300,
     // reset: true
 })
 
@@ -107,8 +107,8 @@ sr.reveal('.project__img', { interval: 200 })
 /*SCROLL CONTACT*/
 sr.reveal('.contact__subtitle', {})
 sr.reveal('.contact__label', { interval: 200 })
-sr.reveal('.contact__input', { delay: 400 })
-sr.reveal('.button_send_msg', { delay: 600 })
+sr.reveal('.contact__input', { delay: 230 })
+sr.reveal('.button_send_msg', { delay: 300 })
 
 
 /*==================== ACCORDION SKILLS ====================*/

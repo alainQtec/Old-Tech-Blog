@@ -2335,6 +2335,7 @@ section#recent-articles.Recent_Posts {
 }
 
 .project__img img {
+  top: 0;
   border-radius: .5rem;
   -webkit-column-width: 100%;
   column-width: 100%;
@@ -2349,7 +2350,6 @@ section#recent-articles.Recent_Posts {
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: rgba(255, 255, 255, 0.405);
   border-radius: .5rem;
   cursor: pointer;
   -webkit-backdrop-filter: saturate(180%) blur(10px) !important;
@@ -2902,7 +2902,7 @@ section#recent-articles.Recent_Posts {
   }
 
   .project__img {
-    width: 110px;
+    width: 102%;
   }
 
   .project__title {
