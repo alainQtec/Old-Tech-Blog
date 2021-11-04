@@ -1,6 +1,6 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect the whole blog, values
+# This config file is meant for settings that affect the whole Site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
@@ -13,8 +13,9 @@
 url: https://www.alainqtec.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: "" # does not include hostname
 title: alainQtec
-description: > # this means to ignore newlines until "Language & timezone"
-  Howdy ! I'm Alain, a developer 👨‍💻. passionate and helping you get more done, using quick tech solutions.
+subtitle: Tech blog by @alainQtec
+description: > # this means to ignore newlines
+  Discover productivity tech from Alain. Get latest tech news, Learn new tech tips and get merchandise including tee-shirts, Mugs and e-books.
 homeurl: "/"
 blogurl: "/blog"
 shopurl: "/shop"
@@ -67,7 +68,7 @@ urls:
 
 author_logo: profile.png
 author: Alain Herve
-author_bio: Passionate developer, helping you get more done, using quick tech solutions.
+author_bio: Howdy ! I'm Alain, a developer 👨‍💻. Passionate and helping you get more done, using quick tech solutions.
 author_email: "alainhervem@gmail.com"
 author_location: Earth
 author_website_url: "https://alainqtec.com"
@@ -117,13 +118,13 @@ author_education_details:
 
 author_project_details:
   - project_thumbnail: project.png
-    project_title: $appname
-    project_description: A windows 11/10 utility app to easily troubleshoot and optimize the system for end-users.
+    project_title: $appname1
+    project_description: A windows .... app .
     project_url: https://alainqtec.com/apps/$appname
     visibility: true
   - project_thumbnail: dashb_chart.jpg
-    project_title: Admin Toolpack
-    project_description: A small windows app built for network and system admins.
+    project_title: $appname2
+    project_description: A small app built for ....
     project_url: https://alainqtec.com/apps/$appname
     visibility: true
 
@@ -160,7 +161,49 @@ compress_html:
     envs: ["development"]
 # sass
 sass:
+  sass_dir: _sass
   style: compressed
+
+# Assets
+assets:
+  source_maps: true
+  destination: "/assets"
+  compression: false
+  gzip: false
+  defaults:
+    integrity:
+      { css, img, js }: false
+  caching:
+    enabled: true
+    path: ".jekyll-cache/assets"
+    type: file
+  # --
+  # Assets you wish to always have compiled.
+  #   This can also be combined with raw_precompile which
+  #   copies assets without running through the pipeline
+  #   making them ultra fast.
+  # --
+  precompile: []
+  raw_precompile: []
+  #
+  # --
+  # baseurl: whether or not to append site.baseurl
+  # destination: the folder you store them in on the CDN.
+  # url: the CDN url (fqdn, or w/ identifier).
+  # --
+  cdn:
+    baseurl: false
+    destination: false
+    url: null
+  # --
+  # See lib/jekyll/assets/config.rb
+  #   for a list of defaults
+  # --
+  sources:
+    - _assets/custom
+  plugins:
+    css: { autoprefixer: {} }
+    img: { optim: {} }
 
 ## => Post
 ##############################
@@ -193,20 +236,12 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
-
-#     defaults:
-# - scope:
-#     path: ""
-#     type: posts
-#   values:
-#     layout: article
-#     sharing: true
-#     license: true
-#     aside:
-#       toc: true
-#     show_edit_on_github: true
-#     show_subscribe: true
-#     pageview: true
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
 
 ## license
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
@@ -346,5 +381,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-admin
   - jekyll-menus
+  - jekyll-analytics
+  - jekyll-picture-tag
+  # - jekyll-coffeescript
 
 data_dir: /_data
