@@ -1653,6 +1653,18 @@ image.homepage__blob__dp {
   text-align: right;
 }
 
+.home_about_mainalias {
+  display: block;
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.home_about_mainalias:hover,
+.home_about_mainalias:focus {
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+}
+
 .home__subtitle {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
@@ -2958,7 +2970,6 @@ section#recent-articles.Recent_Posts {
     align-items: center;
   }
 
-  .about__title,
   .about__data {
     text-align: initial;
   }
