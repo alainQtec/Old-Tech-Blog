@@ -1,5 +1,4 @@
 ---
-title: "Alain Herve"
 description: "Developer, designer, content creator, tech enthusiast who loves to build productivity apps and tools."
 thumbnail: "{{site.url}}{{site.baseurl}}/assets/favicon/android-chrome-192x192.png"
 extra_scss: ""
@@ -12,84 +11,7 @@ extra_scss: ""
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-<head>
-  <meta charset="UTF-8">
-  <meta charset="utf-8">
-  <style data-merge-styles="true"></style>
-  <meta charset="utf-8">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="{{ site.url }}/assets/favicon/favicon-32x32.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="alainQtec">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | @{{site.title}}{% else %}{{ site.title }} | {{ site.subtitle }}{% endif %}">
-  <title>Alain Herve</title>
-  <meta http-equip="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="keywords"
-    content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %},{{ page.keywords | escape }}" />
-  <meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
-  <meta content="{{ site.title }}" property="og:site_name" />
-  <meta property="og:locale" content="en_US">
-  <meta http-equiv="Cache-control" content="public">
-  {% if page.noindex %}
-  <meta name="robots" content="noindex" />
-  {% endif %} {% if page.title %}
-  <meta content="{{ page.title }}" property="og:title" />
-  <meta content="article" property="og:type" />
-  {% else %}
-  <meta content="{{ site.title }}" property="og:title" />
-  <meta content="website" property="og:type" />
-  {% endif %} {% if page.summary %}
-  <meta content="{{ page.summary }}" property="og:description" />
-  <meta name="Description" content="{{ page.summary }}">
-  {% else %}
-  <meta content="{{ site.description }}" property="og:description" />
-  <meta name="{{ site.description }}" content="{{ page.summary }}">
-  {% endif %}
-  {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
-  {% endif %}
-  {% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
-  {% endif %}
-  <meta content="https://twitter.com/alainQtec" property="article:author" />
-  <meta property="article:publisher" content="https://twitter.com/alainQtec" />
-  {% if page.thumbnail %}
-  <meta content="{{ site.url }}{{ page.thumbnail }}" property="og:image" />
-  {% endif %} {% if page.categories %} {% for category in page.categories limit:1 %}
-  <meta content="{{ category }}" property="article:section" />
-  {% endfor %} {% endif %}
-  {% if page.tags %} {% for tag in page.tags %}
-  <meta content="{{ tag }}" property="article:tag" />{% endfor %}
-  {% endif %}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
-  {% if page.title %}
-  <meta name="twitter:title" content="{{ page.title }}" />
-  {% else %}
-  <meta name="twitter:title" content="{{ site.title }}" />
-  {% endif %}
-  {% if page.url %}
-  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-  {% endif %} {% if page.summary %}
-  <meta name="twitter:description" content="{{ page.summary }}" />
-  {% else %}
-  <meta name="twitter:description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  {% endif %} {% if page.header-img %}
-  <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
-  {% endif %}
-  {%- include head/alternate-urls.html -%}
-  {%- include head/favicon.html -%}
-  {%- include head/stylesheets.html -%}
-  {%- include head/inline-scss.html -%}
-
-  {% if site.google-analytics %}
-  {% include google-analytics.html %}
-  {% endif %}
-  {% include ads.html %}
-</head>
+{%- include head.html -%}
 
 <body>
   <main class="main" id="scroll-animate">
@@ -808,10 +730,12 @@ extra_scss: ""
   <!--=============== SWIPER JS ===============-->
   <script src="{{site.url}}{{site.baseurl}}/assets/js/swiper-bundle.min.js"></script>
 
-  <!--=============== MAIN JS ===============-->
+  <!--=============== JS ===============-->
   <script src="{{site.url}}{{site.baseurl}}/assets/js/main.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/content-scale.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}/assets/js/jquery.scrollaway.js"></script>
+  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
   <script src="{{site.url}}{{site.baseurl}}/assets/js/mode-switcher.js"></script>
   <!-- wakatime coding activity -->
   <script>
