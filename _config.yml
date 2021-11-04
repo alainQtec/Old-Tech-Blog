@@ -13,9 +13,9 @@
 url: https://www.alainqtec.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: "" # does not include hostname
 title: alainQtec
-subtitle: Tech blog by Alain Herve
+subtitle: Tech blog by @alainQtec
 description: > # this means to ignore newlines
-  Howdy ! I'm Alain, a developer 👨‍💻. Passionate and helping you get more done, using quick tech solutions.
+  Discover productivity tech from Alain. Get latest tech news, Learn new tech tips and get merchandise including tee-shirts, Mugs and e-books.
 homeurl: "/"
 blogurl: "/blog"
 shopurl: "/shop"
@@ -68,7 +68,7 @@ urls:
 
 author_logo: profile.png
 author: Alain Herve
-author_bio: Passionate developer, helping you get more done, using quick tech solutions.
+author_bio: Howdy ! I'm Alain, a developer 👨‍💻. Passionate and helping you get more done, using quick tech solutions.
 author_email: "alainhervem@gmail.com"
 author_location: Earth
 author_website_url: "https://alainqtec.com"

@@ -16,18 +16,16 @@
   <meta http-equiv="Cache-control" content="public">
   {% if page.noindex %}
   <meta name="robots" content="noindex" />
-  {% endif %} {% if page.title %}
-  <meta content="{{ page.title }}" property="og:title" />
-  <meta content="article" property="og:type" />
-  {% else %}
-  <meta content="{{ site.title }}" property="og:title" />
-  <meta content="website" property="og:type" />
-  {% endif %} {% if page.summary %}
+  {% endif %}
+  {% if page.layout == 'blog' or page.layout == 'post' %}<meta content="article" property="og:type" />
+  {% else %}<meta content="website" property="og:type" />
+  {% endif %}
+  {% if page.summary %}
   <meta content="{{ page.summary }}" property="og:description" />
-  <meta name="Description" content="{{ page.summary }}">
+  <meta content="{{ page.summary }}" name="Description">
   {% else %}
-  <meta content="{{ site.description }}" property="og:description" />
-  <meta name="{{ site.description }}" content="{{ page.summary }}">
+  <meta content="{% if page.layout == 'home' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" property="og:description" />
+  <meta content="{% if page.layout == 'home' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" name="Description">
   {% endif %}
   {% if page.url %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
@@ -58,8 +56,7 @@
   {% endif %} {% if page.summary %}
   <meta name="twitter:description" content="{{ page.summary }}" />
   {% else %}
-  <meta name="twitter:description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{% if page.layout == 'home' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}{% endif %}" />
   {% endif %} {% if page.header-img %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.thumbnail }}" />
   {% endif %}
