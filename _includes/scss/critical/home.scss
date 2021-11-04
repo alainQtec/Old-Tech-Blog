@@ -1655,14 +1655,14 @@ image.homepage__blob__dp {
 
 .home_about_mainalias {
   display: block;
-  font-size: var(--small-font-size);
   text-align: center;
 }
 
 .home_about_mainalias:hover,
 .home_about_mainalias:focus {
   color: var(--first-color);
-  font-size: var(--small-font-size);
+  font-size: var(--h1-font-size);
+  transform: translateX(-.5rem);
 }
 
 .home__subtitle {
@@ -2029,14 +2029,15 @@ image.homepage__blob__dp {
 }
 
 .about__img {
-  width: 200px;
+  width: 210px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
 }
 
+.about__img:focus,
 .about__img:hover {
-  transform: translateY(-.11rem);
+  transform: translateX(-.5rem);
 }
 
 .about__info {
