@@ -2030,6 +2030,11 @@ image.homepage__blob__dp {
   margin-bottom: var(--mb-2);
 }
 
+.about__description:focus .home_about_mainalias,
+.about__description:hover .home_about_mainalias {
+  margin-bottom: var(--mb-2);
+}
+
 .about__img {
   width: 210px;
   border-radius: .5rem;
