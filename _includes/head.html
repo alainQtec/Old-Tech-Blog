@@ -24,8 +24,8 @@
   <meta content="{{ page.summary }}" property="og:description" />
   <meta content="{{ page.summary }}" name="Description">
   {% else %}
-  <meta content="{% if page.layout == 'home' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" property="og:description" />
-  <meta content="{% if page.layout == 'home' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" name="Description">
+  <meta content="{% if page.layout == 'home' or page.layout == 'contact' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" property="og:description" />
+  <meta content="{% if page.layout == 'home' or page.layout == 'contact' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" name="Description">
   {% endif %}
   {% if page.url %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
