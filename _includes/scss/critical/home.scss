@@ -1624,13 +1624,16 @@ image.homepage__blob__dp {
   height: auto;
   justify-self: center;
   transform-origin: bottom;
+  transform: scaleY(+1);
   z-index: 100;
 }
 
+.home__img:focus,
 .home__img:hover {
   cursor: grab;
-  // margin-top: 5px;
-  transform: scaleY(1);
+  margin-top: 5px;
+  transform: scaleY(+1);
+  transform-origin: bottom;
 }
 
 .home__indicator {
