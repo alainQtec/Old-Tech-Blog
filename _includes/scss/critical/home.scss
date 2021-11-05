@@ -419,7 +419,7 @@ div#nav-toggle.nav__toggle {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.953);
     border-radius: 1.5rem 1.5rem 0 0;
     transform-origin: center bottom 0px;
-    transition: all 0.5s ease 0.5s;
+    transition: all 0.9s ease 0.9s;
     transition-delay: 0.5s
   }
 }
@@ -427,6 +427,32 @@ div#nav-toggle.nav__toggle {
 .home__nav__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem
+}
+
+@media screen and (min-width: 768px) {
+  .home___nav {
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 1rem;
+  }
+
+  .nav__icon,
+  .Home_ni,
+  .Services_ni,
+  .Skills_ni,
+  .Projects_ni,
+  .Contact_ni,
+  .homep__nav__icon,
+  .nav__close,
+  .modeSwitcher_btn,
+  .nav__toggle {
+    display: none;
+    visibility: hidden;
+  }
+
+  .home__nav__list {
+    display: flex;
+    column-gap: 2rem;
+  }
 }
 
 .home__nav__link {
@@ -539,25 +565,6 @@ div#nav-toggle.nav__toggle {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .home___nav {
-    height: calc(var(--header-height) + 1.5rem);
-    column-gap: 1rem
-  }
-
-  .homep__nav__icon,
-  .nav__close,
-  .modeSwitcher_btn,
-  .nav__toggle {
-    display: none;
-    visibility: hidden
-  }
-
-  .home__nav__list {
-    display: flex;
-    column-gap: 2rem
-  }
-}
 
 /* animations */
 
@@ -849,7 +856,20 @@ div#nav-toggle.nav__toggle {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 0;
+  margin: 0px;
+  padding-top: 4rem !important;
+}
+
+section#home.section.home.container,
+section#testimonials.section.testimonials {
+  margin: 0px !important;
+}
+
+@media (min-width: 250px) {
+  section#home.section.home.container {
+    margin: 0px auto !important;
+  }
 }
 
 .section__title {
@@ -1140,18 +1160,6 @@ div#nav-toggle.nav__toggle {
   transition-delay: 0.25s;
 }
 
-
-.home__nav__list {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  .home__nav__list {
-    display: flex;
-    column-gap: 2rem;
-  }
-}
 
 /* Change background header */
 .scroll-header {
@@ -1584,10 +1592,6 @@ image.homepage__blob__dp {
     font-size: 4.5rem;
   }
 
-  span.alain {
-    font-size: 4.9rem !important;
-  }
-
   .jumbotron-heading {
     font-size: 5rem !important;
   }
@@ -1598,10 +1602,6 @@ image.homepage__blob__dp {
   .homepage__title,
   h1.homepage__title.name-anime {
     font-size: 4.7rem;
-  }
-
-  span.alain {
-    font-size: 5rem !important;
   }
 }
 
@@ -1617,8 +1617,20 @@ image.homepage__blob__dp {
 }
 
 .home__img {
-  height: 250px;
+  float: top;
+  // width: 240px;
+  // height: 250px;
+  width: auto;
+  height: auto;
   justify-self: center;
+  transform-origin: bottom;
+  z-index: 100;
+}
+
+.home__img:hover {
+  cursor: grab;
+  // margin-top: 5px;
+  transform: scaleY(1);
 }
 
 .home__indicator {
@@ -2601,6 +2613,12 @@ section#recent-articles.Recent_Posts {
   width: -webkit-fill-available;
 }
 
+@media (max-width: 1209px) {
+  div.testimonials.container {
+    margin: 0px auto !important;
+  }
+}
+
 .testimonial__img {
   width: 120px;
   margin-bottom: var(--mb-0-5);
@@ -2694,17 +2712,23 @@ section#recent-articles.Recent_Posts {
   right: 0;
 }
 
-/* ============== Swiper ==============*/
+.testimonial__data.swiper-slide.swiper-slide-active {
+  margin: 0 2rem !important;
+}
 
-// .swiper.testimonials-swiper.swiper-initialized.swiper-horizontal,
-// .swiper.testimonials-swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events {
-//   z-index: -1;
-// }
+/* ============== Swiper ==============*/
 
 .swiper,
 .swiper-slide {
+  margin: 0px auto;
   cursor: pointer;
   background: transparent;
+}
+
+.swiper.home-swiper,
+.swiper.testimonials-swiper {
+  margin: 0px;
+  padding: 0px;
 }
 
 .swiper-slide {
@@ -2929,10 +2953,6 @@ section#recent-articles.Recent_Posts {
 @media screen and (min-width: 767px) {
   body {
     margin: 0;
-  }
-
-  .section {
-    padding: 7rem 0 2rem;
   }
 
   .nav {
