@@ -1673,7 +1673,8 @@ image.homepage__blob__dp {
 }
 
 .home__title {
-  font-size: var(--biggest-font-size);
+  font-size: var(--small-font-size);
+  // font-size: var(--biggest-font-size);
   font-weight: var(--font-black);
   line-height: 109%;
   margin-bottom: var(--mb-1);

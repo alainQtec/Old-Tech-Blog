@@ -62,17 +62,14 @@
   {% endif %}
   {%- include head/alternate-urls.html -%}
   {%- include head/favicon.html -%}
-  {%- include head/inline-scss.html -%}
   {%- include head/stylesheets.html -%}
-  {%- include head/js.html -%}
+  {%- include head/inline-scss.html -%}
   {% if site.google-analytics %}
-  {% include google-analytics.html %}
+  {%- include google-analytics.html -%}
   {% endif %}
-  {% include ads.html %}
-  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!-->
+  {% if page.layout != 'home' %}
+  {%- include head/js.html -%}
+  {%- include ads.html -%}
+  {% endif %}
   <html class="no-js">
-  <!--<![endif]-->
 </head>
