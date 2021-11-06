@@ -10,6 +10,7 @@ gem 'liquid-c', '~> 4.0'
 gem 'liquid-tag-parser', '~> 1.9.0'
 gem 'activesupport', '~>5.2.6'
 gem 'fastimage', '~> 1.6.4'
+# gem "jekyll", github: "jekyll/jekyll"
 # gem "sprockets"
 
 
@@ -26,7 +27,9 @@ gem 'github-pages', '~> 221'
 # Plugins
 group :jekyll_plugins do
     gem 'jekyll-admin'
+    gem 'jekyll-commonmark'
     gem 'jekyll-analytics'
+    gem 'jekyll-include-cache'
     gem 'jekyll-toc'
     gem 'jekyll-menus'
     gem 'jekyll-picture-tag', '~> 0.3.0'

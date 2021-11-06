@@ -340,7 +340,15 @@ analytics:
 
 ## => Build
 ##############################
-markdown: kramdown
+# markdown: kramdown
+# kramdown:
+#     input: GFM
+#     hard_wrap: false
+#     syntax_highlighter: rouge
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
 highlighter: rouge
 permalink: pretty # or permalink: date
 
@@ -375,6 +383,8 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-commonmark
+  - jekyll-include-cache
   - jekyll-sitemap
   - jemoji
   - jekyll-gist
