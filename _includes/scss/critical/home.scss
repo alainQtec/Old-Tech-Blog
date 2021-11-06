@@ -441,10 +441,9 @@ div#nav-toggle.nav__toggle {
 
   .home__nav__list,
   ul.home__nav__list.menu {
-    // display: inline-block;
+    // float: left;
     display: flex;
     flex-direction: row;
-    row-gap: 2rem;
     align-items: center;
     font-size: var(--small-font-size);
     color: var(--title-color);
@@ -455,9 +454,9 @@ div#nav-toggle.nav__toggle {
   //   content: "";
   //   clear: both;
   // }
-  // .home__nav__list {
-  //   float: left;
-  // }
+  .home__nav__item {
+    margin-left: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
