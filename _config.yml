@@ -340,15 +340,11 @@ analytics:
 
 ## => Build
 ##############################
-# markdown: kramdown
-# kramdown:
-#     input: GFM
-#     hard_wrap: false
-#     syntax_highlighter: rouge
-markdown: CommonMark
-commonmark:
-  options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table"]
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 highlighter: rouge
 permalink: pretty # or permalink: date
 

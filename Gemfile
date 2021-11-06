@@ -27,7 +27,7 @@ gem 'github-pages', '~> 221'
 # Plugins
 group :jekyll_plugins do
     gem 'jekyll-admin'
-    gem 'jekyll-commonmark'
+    gem 'kramdown', '~> 2.3', '>= 2.3.1'
     gem 'jekyll-analytics'
     gem 'jekyll-include-cache'
     gem 'jekyll-toc'
