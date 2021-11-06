@@ -445,9 +445,8 @@ div#nav-toggle.nav__toggle {
   }
 
   .home__nav__list {
-    display: flex;
-    flex-direction: row;
-    row-gap: 2rem;
+    display: inline-flex;
+    gap: 2rem;
   }
 }
 
