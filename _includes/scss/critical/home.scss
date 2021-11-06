@@ -8,8 +8,12 @@
 
   /* Change favorite color */
   --hue-color: 251;
-  /*========== Font and typography ==========*/
+  /*== Font and typography ==*/
+  --font-family-sans-serif: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  --font-family-monospace: (SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+
   // --body-font: 'Quicksand', sans-serif !important;
+  // --body-font: var(--font-family-sans-serif) !important;
   --body-font: 'Poppins', sans-serif;
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 5.1rem !important;
@@ -298,10 +302,11 @@ a#blognavbrand.blognavbrand {
 }
 
 .blognavbrand {
+  margin: 0 1rem;
   display: inline-block !important;
   color: var(--text-color) !important;
   font-weight: var(--font-semi-bold);
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: var(--font-family-sans-serif);
   cursor: pointer !important
 }
 
@@ -309,6 +314,16 @@ a#blognavbrand.blognavbrand {
   a#blognavbrand.blognavbrand {
     left: 3% !important;
     top: 2%
+  }
+}
+
+@media (min-width: 769px) and (max-width: 960) {
+
+  .blognavbrand,
+  a#blognavbrand.blognavbrand {
+    left: 5% !important;
+    top: 2%;
+    margin: 0 2rem 0 0;
   }
 }
 
@@ -456,13 +471,26 @@ div#nav-toggle.nav__toggle {
   }
 }
 
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 769px) and (max-width: 960) {
   .home__nav__item {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 
-@media (min-width: 960px) and (max-width: 1014px) {
+@media (min-width: 961px) and (max-width: 1052) {}
+
+.home__nav__item {
+  margin-left: 1rem;
+}
+
+
+@media (min-width: 960px) {
+  .home__nav__item {
+    margin-left: 2.5rem;
+  }
+}
+
+@media (min-width: 1014px) {
   .home__nav__item {
     margin-left: 3rem;
   }
@@ -969,62 +997,6 @@ nav#home__navbar.home___nav {
   z-index: 2000;
 }
 
-.blognavbrand,
-a#blognavbrand.blognavbrand {
-  left: 3% !important;
-}
-
-.blognavbrand {
-  display: inline-block !important;
-  color: var(--text-color) !important;
-  font-weight: var(--font-semi-bold);
-  font-family: 'Quicksand', sans-serif !important;
-  cursor: pointer !important;
-}
-
-@media (min-width: 280px) {
-  a#blognavbrand.blognavbrand {
-    /* position: fixed; */
-    left: 3% !important;
-    top: 2%;
-  }
-}
-
-.blognavbrand span {
-  transition: .54s linear;
-}
-
-.blognavbrand:hover span:nth-child(1) {
-  margin-right: 5px;
-}
-
-.blognavbrand:hover span:nth-child(1):after {
-  content: "✨";
-  margin-right: 5px;
-}
-
-.blognavbrand:hover span:nth-child(2) {
-  margin-right: 5px;
-  color: var(--bold-color);
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
-}
-
-.blognavbrand:hover span:nth-child(2):after {
-  position: relative;
-  content: "uick";
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
-}
-
-.blognavbrand:hover span:nth-child(3) {
-  margin-right: 5px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
-}
-
-.blognavbrand:hover span:nth-child(3):after {
-  position: relative;
-  content: "h";
-}
-
 .home__nav__item {
   display: flex;
   flex-direction: column;
@@ -1073,7 +1045,7 @@ a#blognavbrand.blognavbrand {
 
 .homepage_content_card {
   background: var(--body-color);
-  width: 80%;
+  width: 85%;
   border-radius: .8em;
   display: block;
   padding: 30px 0px;
@@ -1092,11 +1064,18 @@ a#blognavbrand.blognavbrand {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.597);
 }
 
-@media screen and (max-width: 640px) {
+@media (min-width: 540px) and (max-width: 768px) {
   .homepage_content_card {
-    background: var(--body-color);
     box-shadow: 0px 0px 15px rgb(51, 51, 51);
-    width: 98%;
+    width: 95%;
+    border-radius: 1em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1014px) {
+  .homepage_content_card {
+    box-shadow: 0px 0px 15px rgb(51, 51, 0);
+    width: 90%;
     border-radius: 1em;
   }
 }
@@ -1367,6 +1346,7 @@ h1.homepage__title.name-anime {
 
   .homepage__title,
   h1.homepage__title.name-anime {
+    font-size: 46px;
     font-weight: var(--font-semi-bold) !important;
   }
 }
