@@ -441,7 +441,7 @@ div#nav-toggle.nav__toggle {
 
   .home__nav__list,
   ul.home__nav__list.menu {
-    // float: left;
+    float: left;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -450,10 +450,11 @@ div#nav-toggle.nav__toggle {
     font-weight: var(--font-medium)
   }
 
-  // .home__nav__list:after {
-  //   content: "";
-  //   clear: both;
-  // }
+  .home__nav__list:after {
+    content: "";
+    clear: both;
+  }
+
   .home__nav__item {
     margin-left: 2rem;
   }
