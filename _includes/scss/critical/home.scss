@@ -444,6 +444,7 @@ div#nav-toggle.nav__toggle {
     // display: inline-block;
     display: flex;
     flex-direction: row;
+    row-gap: 2rem;
     align-items: center;
     font-size: var(--small-font-size);
     color: var(--title-color);
