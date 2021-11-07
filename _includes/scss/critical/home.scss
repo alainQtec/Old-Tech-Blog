@@ -7,6 +7,21 @@
   src: url(/assets/css/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url(/assets/css/fonts/Quicksand/static/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: Quicksand-SemiBold;
+  src: url(/assets/css/fonts/Quicksand/static/Quicksand-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Quicksand-Medium;
+  src: url(/assets/css/fonts/Quicksand/static/Quicksand-Medium.ttf);
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
@@ -19,7 +34,7 @@
 
   // --body-font: 'Quicksand', sans-serif !important;
   // --body-font: var(--font-family-sans-serif) !important;
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Quicksand';
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 5.1rem !important;
   --h1-font-size: 2.5rem;
@@ -1513,8 +1528,8 @@ section#home.section.home.container {
 
 .homepage__title,
 h1.homepage__title.name-anime {
-  font-family: 'Quicksand', sans-serif !important;
-  font-weight: var(--font-medium);
+  font-family: 'Quicksand-SemiBold' !important;
+  // font-weight: var(--font-medium);
 }
 
 ::selection {
