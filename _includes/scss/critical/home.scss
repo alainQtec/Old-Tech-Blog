@@ -1623,7 +1623,6 @@ image.homepage__blob__dp {
 
 @media (max-width: 768px) {
   .home__content {
-    // grid-template-columns: max-content 1fr 1fr;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
   }
@@ -1707,7 +1706,7 @@ image.homepage__blob__dp {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   line-height: 100%;
-  margin-bottom: var(--mb-1);
+  margin: 0 var(--mb-1) var(--mb-1) var(--mb-1);
 }
 
 .home__description {
