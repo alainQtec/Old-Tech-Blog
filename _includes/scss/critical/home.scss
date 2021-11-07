@@ -1093,6 +1093,10 @@ nav#home__navbar.home___nav {
     width: 90%;
     border-radius: .8em;
   }
+
+  #home.section.home.container {
+    height: 70vh;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1014px) {
@@ -1100,6 +1104,10 @@ nav#home__navbar.home___nav {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
     width: 85%;
     border-radius: .8em;
+  }
+
+  #home.section.home.container {
+    height: 60vh;
   }
 }
 
@@ -1110,9 +1118,15 @@ nav#home__navbar.home___nav {
     border-radius: .8em;
   }
 
-  section#home.section.home.container {
+  #home.section.home.container {
     height: 50vh;
   }
+
+  div.about__container.container.grid {
+    margin: 0 1rem 0 1rem !important;
+    gap: 1rem;
+  }
+
 }
 
 .article-content-wrap {
@@ -3152,10 +3166,6 @@ section#recent-articles.Recent_Posts {
 
   .service__img {
     width: 200px;
-  }
-
-  .about__container {
-    column-gap: 7rem;
   }
 
   .about__img {
