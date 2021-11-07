@@ -1521,6 +1521,11 @@ div.footer_socials {
   color:var(--footer-mini-shop-link-color)
 }
 
+.footer-b-support a,
+.footer-b-support a:hover{
+  color: var(--bold-color);
+}
+
 .button_bmc {
   font-size: var(--font-semi-bold);
   font-family: 'Quicksand-Medium';
@@ -1558,7 +1563,14 @@ div.footer_socials {
   transform: translateX(.25rem);
 }
 
-.bmc_btn_msg:hover {
+a.button_bmc {
+  margin: .5em 1em;
+  color: var(--bold-color);
+  font-size: var(--font-medium);
+  font-family: inherit;
+}
+
+a.button_bmc:hover {
   color: #ffffff !important;
   transform: translateX(-.1rem);
 }
