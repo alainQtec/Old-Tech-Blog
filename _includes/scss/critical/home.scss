@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
 
+@font-face {
+  font-family: Quicksand;
+  src: url(/assets/css/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
