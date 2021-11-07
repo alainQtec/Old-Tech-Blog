@@ -191,6 +191,9 @@ footer .logo {
 
 .footer-b-support{
   justify-self: center;
+  justify-items: center;
+  text-align: center;
+  padding: 0;
   margin: 0 auto;
   max-height:9999px;
   padding-bottom:3px
