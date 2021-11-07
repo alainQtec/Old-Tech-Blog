@@ -2034,6 +2034,7 @@ image.homepage__blob__dp {
 /*=============== ABOUT ===============*/
 .about__container {
   row-gap: 2rem;
+  cursor: pointer !important;
 }
 
 .about__data {
@@ -2050,6 +2051,7 @@ image.homepage__blob__dp {
 }
 
 .about__img {
+  margin-top: 2rem;
   width: 210px;
   border-radius: .5rem;
   justify-self: center;
@@ -2058,7 +2060,7 @@ image.homepage__blob__dp {
 
 .about__img:focus,
 .about__img:hover {
-  transform: translateX(-.5rem);
+  transform: translateX(-0.9rem);
 }
 
 .about__info {
