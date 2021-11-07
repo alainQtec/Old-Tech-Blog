@@ -1621,6 +1621,14 @@ image.homepage__blob__dp {
   row-gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .home__content {
+    // grid-template-columns: max-content 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+  }
+}
+
 .home__group {
   display: grid;
   position: relative;
@@ -1698,7 +1706,7 @@ image.homepage__blob__dp {
 .home__title {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
-  line-height: 109%;
+  line-height: 100%;
   margin-bottom: var(--mb-1);
 }
 
