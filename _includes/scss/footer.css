@@ -189,6 +189,72 @@ footer .logo {
   font-size: var(--smaller-font-size);
 }
 
+.footer-b-support{
+  margin: 0 auto;
+  max-height:9999px;
+  padding-bottom:3px
+}
+
+@media only screen and (max-width: 833px){
+  .footer-b-support{
+    padding-bottom:10px
+  }
+}
+.footer-b-support a,
+.footer-b-support a:hover{
+  color: var(--bold-color);
+}
+
+.button_bmc {
+  font-size: var(--font-semi-bold);
+  font-family: 'Quicksand-Medium';
+  display: inline-flex;
+  align-items: center;
+  background-color: #FFDD00 !important;
+  color: #000000 !important;
+  padding: 1em;
+  border: 1px solid #000000b1;
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.542);
+  transition: .6s;
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  cursor: pointer;
+  z-index: 100 !important;
+}
+
+.button_bmc:hover {
+  color: #ffffff;
+  border-color: hsla(0, 0%, 100%, .6);
+  -webkit-transform: translateY(-.2rem);
+  transform: translateY(-.2rem);
+  box-shadow: 0 0 4.4rem .2rem #ffdd00d0;
+}
+
+@media (max-width: 520px) {
+  .button_bmc {
+    margin-top: 1em;
+  }
+}
+
+.button_bmc:hover .pizza {
+  transform: translateX(.25rem);
+}
+
+.bmc_btn_msg,
+.footer-b-support#text {
+  color: var(--bold-color);
+  font-size: var(--font-medium);
+  font-family: inherit;
+}
+
+.bmc_btn_msg:hover,
+.footer-b-support#text:hover {
+  color: #ffffff !important;
+  transform: translateX(-.1rem);
+}
+
 .foo_hr {
   color: rgb(237, 234, 234); width: 90%; 
   align-self: center !important; 
