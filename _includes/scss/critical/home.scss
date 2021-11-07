@@ -1620,7 +1620,8 @@ image.homepage__blob__dp {
   height: auto;
   justify-self: center;
   transform-origin: bottom;
-  transform: scaleY(1rem);
+  transform: scaleY(3rem);
+  border-radius: .5rem;
   z-index: 100;
 }
 
@@ -3063,7 +3064,6 @@ section#recent-articles.Recent_Posts {
 
   .home__img {
     height: 400px;
-    transform: translateY(-3rem);
   }
 
   .home__indicator {
@@ -3159,7 +3159,7 @@ section#recent-articles.Recent_Posts {
 
 @media screen and (min-width: 1200px) {
   .home__img {
-    height: 420px;
+    height: 410px;
   }
 
   .swiper-pagination {
