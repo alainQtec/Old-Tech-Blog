@@ -1064,6 +1064,7 @@ section#testimonials.section.testimonials {
 }
 
 .section__title {
+  font-family: 'Quicksand-SemiBold';
   position: relative;
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-2);
@@ -1529,7 +1530,6 @@ section#home.section.home.container {
 .homepage__title,
 h1.homepage__title.name-anime {
   font-family: 'Quicksand-SemiBold' !important;
-  // font-weight: var(--font-medium);
 }
 
 ::selection {
