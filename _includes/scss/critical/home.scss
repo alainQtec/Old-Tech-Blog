@@ -1045,7 +1045,6 @@ nav#home__navbar.home___nav {
 
 .homepage_content_card {
   background: var(--body-color);
-  width: 85%;
   border-radius: .8em;
   display: block;
   padding: 30px 0px;
@@ -1064,19 +1063,51 @@ nav#home__navbar.home___nav {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.597);
 }
 
+@media (min-width: 280px) and (max-width: 320px) {
+  .homepage_content_card {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+    width: 98%;
+    border-radius: 1em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+  .homepage_content_card {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+    width: 96%;
+    border-radius: 1em;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 540px) {
+  .homepage_content_card {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+    width: 94%;
+    border-radius: 1em;
+  }
+}
+
 @media (min-width: 540px) and (max-width: 768px) {
   .homepage_content_card {
     box-shadow: 0px 0px 15px rgb(51, 51, 51);
-    width: 95%;
-    border-radius: 1em;
+    width: 90%;
+    border-radius: .8em;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1014px) {
   .homepage_content_card {
-    box-shadow: 0px 0px 15px rgb(51, 51, 0);
-    width: 90%;
-    border-radius: 1em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+    width: 85%;
+    border-radius: .8em;
+  }
+}
+
+@media (min-width: 1014px) {
+  .homepage_content_card {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+    width: 80%;
+    border-radius: .8em;
   }
 }
 
