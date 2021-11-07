@@ -1616,13 +1616,11 @@ image.homepage__blob__dp {
 
 .home__img {
   float: top;
-  width: 250px;
-  // height: 250px;
-  // width: auto;
+  width: auto;
   height: auto;
   justify-self: center;
   transform-origin: bottom;
-  transform: scaleY(+1);
+  transform: scaleY(1rem);
   z-index: 100;
 }
 
@@ -1630,8 +1628,6 @@ image.homepage__blob__dp {
 .home__img:hover {
   cursor: grab;
   margin-top: 5px;
-  transform: scaleY(+1);
-  transform-origin: bottom;
 }
 
 .home__indicator {
