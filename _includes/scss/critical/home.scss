@@ -1606,7 +1606,6 @@ image.homepage__blob__dp {
   align-items: center;
 }
 
-
 @media screen and (min-width: 568px) {
   .home__content-0 {
     grid-template-columns: max-content 1fr 1fr;
@@ -1698,14 +1697,13 @@ image.homepage__blob__dp {
 
 .home__title {
   font-size: var(--small-font-size);
-  // font-size: var(--biggest-font-size);
-  font-weight: var(--font-black);
+  font-weight: var(--font-semi-bold);
   line-height: 109%;
   margin-bottom: var(--mb-1);
 }
 
 .home__description {
-  margin-bottom: var(--mb-1);
+  margin: 0 var(--mb-1) 0 var(--mb-1);
 }
 
 .home__buttons {
