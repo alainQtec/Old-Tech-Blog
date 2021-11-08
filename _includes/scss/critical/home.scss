@@ -2477,21 +2477,70 @@ image.homepage__blob__dp {
   column-gap: .5rem;
 }
 
+.button_contactme {
+  font-family: inherit;
+  font-size: var(--font-semi-bold);
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--first-color) !important;
+  color: #000000 !important;
+  padding: .6em;
+  border: 1px solid #000000b1;
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.542);
+  transition: .6s;
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  cursor: pointer;
+  z-index: 100 !important;
+}
+
+.button_contactme:hover {
+  color: #ffffff;
+  border-color: hsla(0, 0%, 100%, .6);
+  -webkit-transform: translateY(-.2rem);
+  transform: translateY(-.2rem);
+  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309);
+}
+
+@media (max-width: 520px) {
+  .button_contactme {
+    margin-top: 1em;
+  }
+}
+
+.button_contactme:hover .i,
+.button_contactme:hover .uil {
+  transform: translateX(.25rem);
+  color: #ffffff;
+}
+
+
+a.button_contactme {
+  margin: .5em 1em;
+  color: var(--bold-color);
+  font-size: var(--font-medium);
+  font-family: inherit;
+}
+
+a.button_contactme:hover {
+  color: #ffffff !important;
+  transform: translateX(-.1rem);
+}
 
 .button_Dl_CV,
-.button_send_msg,
-.button_contactme {
+.button_send_msg {
   display: inline-block;
   background-color: var(--first-color) !important;
   color: #ffffffdc !important;
   padding: 1rem;
-  border-radius: .5rem;
   font-size: var(--font-semi-bold);
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--font-medium);
   border: 1px solid hsla(0, 0%, 100%, .4);
   position: relative;
-  border-radius: .5rem;
+  border-radius: .55rem;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.542);
   transition: .5s;
   cursor: pointer;
@@ -2501,11 +2550,6 @@ image.homepage__blob__dp {
 
 .button_Dl_CV {
   font-size: var(--smaller-font-size) !important;
-}
-
-.button_contactme:hover .button__icon {
-  transform: translateX(.25rem);
-  color: #ffffff;
 }
 
 .button_Dl_CV:hover,
