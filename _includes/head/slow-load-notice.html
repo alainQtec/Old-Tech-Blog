@@ -1,0 +1,70 @@
+<style>
+  html { position: relative; }
+  #slow-notice { width:300px; position: absolute; top:0; left:50%; margin-left: -160px; background-color: #F0DE7D; text-align: center; z-index: 100; padding: 10px; font-family: sans-serif; font-size: 12px; }
+  #slow-notice a, #slow-notice .dismiss { color: #000; text-decoration: underline; cursor:pointer; }
+  #slow-notice .dismiss-container { text-align:right; padding-top:10px; font-size: 10px;}
+</style>
+<script>
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";path=/;" + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+    } 
+
+    if (getCookie('dismissed') != '1') {
+        var html_node = document.getElementsByTagName('html')[0];
+        var div = document.createElement('div');
+        div.setAttribute('id', 'slow-notice');
+
+        var slowLoad = window.setTimeout( function() {
+            var t1 = document.createTextNode("This page is taking a long time to load.");
+            var br = document.createElement('br');
+            var t2 = document.createTextNode("You can switch to the ");
+            var a = document.createElement('a');
+            a.setAttribute('href', 'http://light-version.mysite.com');
+            a.innerHTML = 'Light Weight Site';
+
+            var dismiss = document.createElement('span');
+            dismiss.innerHTML = '[x] dismiss';
+            dismiss.setAttribute('class', 'dismiss');
+            dismiss.onclick = function() {
+                setCookie('dismissed', '1', 1);
+                html_node.removeChild(div);
+            }
+
+            var dismiss_container = document.createElement('div');
+            dismiss_container.appendChild(dismiss);
+            dismiss_container.setAttribute('class', 'dismiss-container');
+
+            div.appendChild(t1);
+            div.appendChild(br);
+            div.appendChild(t2);
+            div.appendChild(a);
+            div.appendChild(dismiss_container);
+
+            html_node.appendChild(div);
+
+        }, 1000 );
+
+        window.addEventListener( 'load', function() {
+            try {
+                window.clearTimeout( slowLoad );
+                html_node.removeChild(div);
+            } catch (e){
+                // that's okay.
+            }
+
+        });
+    }
+</script>
