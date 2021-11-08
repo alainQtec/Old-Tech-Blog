@@ -2446,7 +2446,7 @@ image.homepage__blob__dp {
   display: inline-flex;
   align-items: center;
   background-color: var(--first-color) !important;
-  color: #ffffff;
+  color: var(--body-color);
   padding: .6em;
   border-radius: .5rem;
   font-weight: var(--font-medium);
@@ -2460,7 +2460,10 @@ image.homepage__blob__dp {
   z-index: 100 !important;
 }
 
-.button:hover {
+.button:hover,
+a.buttone:hover {
+  color: #ffffff !important;
+  transform: translateX(-.1rem);
   background-color: var(--first-color-alt);
   border-color: hsla(0, 0%, 100%, .6);
   -webkit-transform: translateY(-.2rem);
@@ -2485,12 +2488,6 @@ a.button {
   font-size: var(--font-medium);
   font-family: inherit;
 }
-
-a.buttone:hover {
-  color: #ffffff !important;
-  transform: translateX(-.1rem);
-}
-
 
 .button--ghost {
   border: 2px solid;
@@ -2519,7 +2516,7 @@ a.buttone:hover {
   display: inline-flex;
   align-items: center;
   background-color: var(--first-color) !important;
-  color: #000000 !important;
+  color: var(--body-color);
   padding: .6em;
   border: 1px solid var(--text-color);
   position: relative;
