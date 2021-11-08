@@ -2485,10 +2485,10 @@ image.homepage__blob__dp {
   background-color: var(--first-color) !important;
   color: #000000 !important;
   padding: .6em;
-  border: 1px solid #000000b1;
+  border: 1px solid var(--text-color);
   position: relative;
   border-radius: .5rem;
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.542);
+  box-shadow: 0 -1px 4px var( --card-background-color);
   transition: .6s;
   -webkit-transition: .6s;
   -moz-transition: .6s;
@@ -2518,7 +2518,7 @@ image.homepage__blob__dp {
 
 
 a.button_contactme {
-  margin: .5em 1em;
+  margin: .5em 1em .5em 0em;
   color: var(--bold-color);
   font-size: var(--font-medium);
   font-family: inherit;
