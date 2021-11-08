@@ -218,7 +218,7 @@ footer .logo {
 
 .button_bmc {
   font-size: var(--font-semi-bold);
-  font-family: 'Quicksand-Medium';
+  font-family: 'Quicksand', sans-serif;
   display: inline-flex;
   align-items: center;
   background-color: #FFDD00 !important;
