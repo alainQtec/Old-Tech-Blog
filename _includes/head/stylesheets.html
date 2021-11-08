@@ -1,5 +1,18 @@
-<link rel="preconnect" href="https://fonts.googleapis.com/">
+<!-- Fast load Google fonts -->
+<!-- [STEP #1] Preconnect with fonts’ origin -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- [STEP #2] Async CSS Fetch -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;346;400;600&display=swap" media="print" onload="this.media='all'" />
+
+<!-- [STEP #3] High-priority async CSS Fetch -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;346;400;600&display=swap" />
+
+<!-- [STEP #4] Load CSS when JavaScript is disabled -->
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;346;400;600&display=swap" /></noscript>
+
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+
 {% if page.layout != 'notfound' and page.layout != 'home' %}
 <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/main.css" />
 {% endif %}
