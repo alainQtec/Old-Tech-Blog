@@ -2438,6 +2438,12 @@ image.homepage__blob__dp {
 
 /*=============== BUTTONS ===============*/
 
+
+.button::before,
+a.button::before {
+  color: #dfe9f3;
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -2461,7 +2467,7 @@ image.homepage__blob__dp {
 }
 
 .button:hover,
-a.buttone:hover {
+a.button:hover {
   color: #ffffff !important;
   transform: translateX(-.1rem);
   background-color: var(--first-color-alt);
@@ -2508,6 +2514,14 @@ a.button {
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
+}
+
+
+.button_contactme::after,
+.button_contactme::before,
+a.button_contactme::before,
+a.button_contactme::after {
+  color: #dfe9f3;
 }
 
 .button_contactme {
