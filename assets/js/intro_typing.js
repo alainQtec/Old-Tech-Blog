@@ -1,5 +1,5 @@
 (function ($) {
-  var aiMsg = ["👋 ", "Welcome to my portfolio site 😊", "I'm always interested in new stuff.", "Have a new project? Let's talk.", "I am a developer, designer and content creator.", "Follow @alainQtec 🙃", "Visit my tech blog 😉"];
+  var aiMsg = ["👋 ", "Welcome to my portfolio page 😊", "I'm always interested in new stuff.", "Have a new project? Let's talk.", "I am a developer, designer and content creator.", "Follow @alainQtec 🙃", "Visit my tech blog 😉"];
 
   $(document).ready(function () {
     var inputAI = $("#reg_ai");

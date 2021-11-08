@@ -31,7 +31,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --first-color-second: hsl(var(--hue-color), 50%, 18%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -54,13 +54,6 @@ html[data-theme="dark"] {
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
     --button-background-color: #111;
-
-    --footer-background: #1d1d1f;
-    --footer-border-color: #424245;
-    --footer-text-color: #86868b;
-    --footer-link-color: #d2d2d7;
-    --footer-directory-title-color: #f5f5f7;
-    --footer-directory-title-color-hover: #fff
 }
 
 @media (prefers-color-scheme: light) {
@@ -100,7 +93,7 @@ html[data-theme="dark"] {
     }
 
     html[data-theme="dark"] {
-        --first-color-second: hsl(var(--hue-color), 30%, 8%);
+        --first-color-second: hsl(var(--hue-color), 50%, 18%);
         --title-color: hsl(var(--hue-color), 8%, 95%);
         --text-color: hsl(var(--hue-color), 8%, 75%);
         --input-color: hsl(var(--hue-color), 29%, 16%);
