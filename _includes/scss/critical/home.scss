@@ -2440,13 +2440,29 @@ image.homepage__blob__dp {
 
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  font-family: inherit;
+  font-size: var(--font-semi-bold);
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--first-color) !important;
   color: #ffffff;
-  // padding: 1rem;
-  padding: 1rem 1.75rem;
+  padding: .6em;
   border-radius: .5rem;
   font-weight: var(--font-medium);
 }
+
+
+// color: #000000 !important;
+
+// border: 1px solid var(--text-color);
+// position: relative;
+// border-radius: .5rem;
+// box-shadow: 0 -1px 4px #00000098;
+// transition: .6s;
+// -webkit-transition: .6s;
+// -moz-transition: .6s;
+// cursor: pointer;
+// z-index: 100 !important;
 
 .button:hover {
   background-color: var(--first-color-alt);
@@ -2488,7 +2504,7 @@ image.homepage__blob__dp {
   border: 1px solid var(--text-color);
   position: relative;
   border-radius: .5rem;
-  box-shadow: 0 -1px 4px var( --card-background-color);
+  box-shadow: 0 -1px 4px #00000098;
   transition: .6s;
   -webkit-transition: .6s;
   -moz-transition: .6s;
