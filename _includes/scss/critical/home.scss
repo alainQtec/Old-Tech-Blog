@@ -2439,6 +2439,7 @@ image.homepage__blob__dp {
 /*=============== BUTTONS ===============*/
 
 .button {
+  position: relative;
   display: inline-block;
   font-family: inherit;
   font-size: var(--font-semi-bold);
@@ -2449,28 +2450,47 @@ image.homepage__blob__dp {
   padding: .6em;
   border-radius: .5rem;
   font-weight: var(--font-medium);
+  border: 1px solid var(--text-color);
+  border-radius: .5rem;
+  box-shadow: 0 -1px 4px #00000098;
+  transition: .6s;
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  cursor: pointer;
+  z-index: 100 !important;
 }
-
-
-// color: #000000 !important;
-
-// border: 1px solid var(--text-color);
-// position: relative;
-// border-radius: .5rem;
-// box-shadow: 0 -1px 4px #00000098;
-// transition: .6s;
-// -webkit-transition: .6s;
-// -moz-transition: .6s;
-// cursor: pointer;
-// z-index: 100 !important;
 
 .button:hover {
   background-color: var(--first-color-alt);
+  border-color: hsla(0, 0%, 100%, .6);
+  -webkit-transform: translateY(-.2rem);
+  transform: translateY(-.2rem);
+  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309);
 }
 
 .button__icon {
   font-size: 1.25rem;
 }
+
+.button:hover .i,
+.button:hover .uil,
+.button:hover .button__icon {
+  transform: translateX(.25rem);
+  color: #ffffff;
+}
+
+a.button {
+  margin: .5em 1em .5em 0em;
+  color: var(--bold-color);
+  font-size: var(--font-medium);
+  font-family: inherit;
+}
+
+a.buttone:hover {
+  color: #ffffff !important;
+  transform: translateX(-.1rem);
+}
+
 
 .button--ghost {
   border: 2px solid;
