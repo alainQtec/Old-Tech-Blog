@@ -1961,8 +1961,8 @@ section#home.section.home.container {
 .homepage__social-icon:focus,
 .homepage__social-icon:hover {
   color: var(--first-color-alt);
-  font-size: 1.6rem;
-  transition: all .6s ease-in-out;
+  transform: translateY(-3.5px);
+  transition: all .3s ease-in-out;
 }
 
 .homepage__img {
@@ -2497,6 +2497,7 @@ image.homepage__blob__dp {
   cursor: pointer;
   z-index: 100 !important;
 }
+
 
 .button_Dl_CV {
   font-size: var(--smaller-font-size) !important;
