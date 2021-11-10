@@ -3032,19 +3032,20 @@ div.about__container.container.grid {
 }
 
 a.recent-articles-show-all {
+  position: fixed;
   margin-right: 4rem;
-  right: 2%
+  left: 2%
 }
 
 @media (min-width: 950px) and (max-width: 1252px) {
   .recent-articles-show-all {
-    right: 5%
+    left: 5%
   }
 }
 
 @media (min-width: 768px) and (max-width: 950px) {
   .recent-articles-show-all {
-    right: 8%
+    left: 8%
   }
 }
 
