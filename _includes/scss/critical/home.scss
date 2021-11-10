@@ -2249,7 +2249,7 @@ image.homepage__blob__dp {
 
   .jumbotron-heading,
   .jumbotron-heading span {
-    font-size: 3.7rem !important;
+    font-size: 2.9rem !important;
   }
 }
 
@@ -2262,7 +2262,7 @@ image.homepage__blob__dp {
 
   .jumbotron-heading,
   .jumbotron-heading span {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   }
 }
 
@@ -2276,7 +2276,7 @@ image.homepage__blob__dp {
 
   .jumbotron-heading,
   .jumbotron-heading span {
-    font-size: 4.4rem !important;
+    font-size: 3.4rem !important;
   }
 }
 
@@ -2289,7 +2289,7 @@ image.homepage__blob__dp {
 
   .jumbotron-heading,
   .jumbotron-heading span {
-    font-size: 4.6rem !important;
+    font-size: 3.9rem !important;
   }
 }
 
@@ -2302,15 +2302,15 @@ image.homepage__blob__dp {
 
   .jumbotron-heading,
   .jumbotron-heading span {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
   }
 }
 
-@media (min-width: 769px) and (max-width: 915px) {
+@media (min-width: 768px) and (max-width: 915px) {
 
   .homepage__title,
   h1.homepage__title.name-anime {
-    font-size: 4.5rem;
+    font-size: 4.4rem;
   }
 }
 
@@ -2319,6 +2319,11 @@ image.homepage__blob__dp {
   .homepage__title,
   h1.homepage__title.name-anime {
     font-size: 4.7rem;
+  }
+
+  .jumbotron-heading,
+  .jumbotron-heading span {
+    font-size: 4.7rem !important;
   }
 }
 
