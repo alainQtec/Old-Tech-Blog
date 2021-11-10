@@ -2347,7 +2347,7 @@ image.homepage__blob__dp {
 
 .home__img {
   float: top;
-  max-width: 250px;
+  width: auto;
   height: auto;
   margin: 0 auto;
   justify-self: center;
@@ -2366,7 +2366,6 @@ image.homepage__blob__dp {
 .home__img:focus,
 .home__img:hover {
   cursor: grab;
-  margin-top: 2px;
 }
 
 .home__indicator {
@@ -3755,7 +3754,8 @@ section#recent-articles.Recent_Posts {
 
   .home__img {
     margin: 0 auto;
-    height: 200px;
+    width: 85%;
+    height: auto;
   }
 
   .home__buttons {
@@ -3815,7 +3815,8 @@ section#recent-articles.Recent_Posts {
   }
 
   .home__img {
-    height: 300px;
+    width: 89%;
+    height: auto;
   }
 
   .swiper-pagination {
@@ -3902,6 +3903,7 @@ section#recent-articles.Recent_Posts {
   }
 
   .home__img {
+    width: 90%;
     height: 400px;
   }
 
