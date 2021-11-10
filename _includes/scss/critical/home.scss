@@ -3026,13 +3026,16 @@ div.about__container.container.grid {
 }
 
 #recent-articles-title {
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
   text-align: center;
   justify-content: center
 }
 
-.recent-articles-show-all {
-  // position: fixed;
+a.recent-articles-show-all {
+  transform-origin: bottom;
+  transform: translateY(-1rem);
   justify-self: flex-end;
   float: right;
   right: 2%
