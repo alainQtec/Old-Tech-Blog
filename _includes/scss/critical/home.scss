@@ -3052,6 +3052,19 @@ div.about__container.container.grid {
   background: transparent;
 }
 
+#recent-articles-title {
+  margin-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 320px) {
+  #recent-articles-title {
+    flex-direction: column;
+    width: max-content;
+    row-gap: 1rem;
+  }
+}
 
 /* =================== Recent blog posts slider ============== */
 .blog-slider {
