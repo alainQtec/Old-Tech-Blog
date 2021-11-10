@@ -2442,6 +2442,7 @@ image.homepage__blob__dp {
 }
 
 .home__buttons {
+  margin-right: 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -3897,9 +3898,9 @@ section#recent-articles.Recent_Posts {
   }
 
   .home__details-img {
-    transform-origin: bottom;
+    // transform-origin: bottom;
     transform: scaleY(10rem);
-    right: 64%;
+    right: 68%;
   }
 
   .home__indicator,
