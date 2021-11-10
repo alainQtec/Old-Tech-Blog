@@ -3034,7 +3034,8 @@ div.about__container.container.grid {
 a.recent-articles-show-all {
   position: fixed;
   right: 2%;
-  top: 50%
+  transform: translateY(1rem);
+  transform-origin: bottom
 }
 
 @media (min-width: 950px) and (max-width: 1252px) {
