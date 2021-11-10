@@ -3032,8 +3032,8 @@ div.about__container.container.grid {
 }
 
 .recent-articles-show-all {
-  position: absolute;
-  height: 50%;
+  // position: fixed;
+  justify-self: flex-end;
   float: right;
   right: 2%
 }
