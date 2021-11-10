@@ -2233,11 +2233,6 @@ image.homepage__blob__dp {
   h1.homepage__title.name-anime {
     font-size: 2.6rem !important;
   }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 2.8rem !important;
-  }
 }
 
 @media (min-width: 281px) and (max-width: 360px) {
@@ -2246,11 +2241,6 @@ image.homepage__blob__dp {
   h1.homepage__title.name-anime {
     font-size: 3.1rem !important;
   }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 3rem !important;
-  }
 }
 
 @media (min-width: 361px) and (max-width: 411px) {
@@ -2258,11 +2248,6 @@ image.homepage__blob__dp {
   .homepage__title,
   h1.homepage__title.name-anime {
     font-size: 3.2rem !important;
-  }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 3rem !important;
   }
 }
 
@@ -2273,11 +2258,6 @@ image.homepage__blob__dp {
     font-size: 3.9rem !important;
     font-weight: var(--font-semi-bold) !important;
   }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 3.4rem !important;
-  }
 }
 
 @media (min-width: 416px) and (max-width: 540px) {
@@ -2286,11 +2266,6 @@ image.homepage__blob__dp {
   h1.homepage__title.name-anime {
     font-size: 3.9rem !important;
   }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 3.8rem !important;
-  }
 }
 
 @media (min-width: 541px) and (max-width: 768px) {
@@ -2298,11 +2273,6 @@ image.homepage__blob__dp {
   .homepage__title,
   h1.homepage__title.name-anime {
     font-size: 4rem;
-  }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 4rem !important;
   }
 }
 
@@ -2319,11 +2289,6 @@ image.homepage__blob__dp {
   .homepage__title,
   h1.homepage__title.name-anime {
     font-size: 4.7rem;
-  }
-
-  .jumbotron-heading,
-  .jumbotron-heading span {
-    font-size: 4.4rem !important;
   }
 }
 
@@ -3030,11 +2995,15 @@ div.about__container.container.grid {
   color: var(--bold-color);
   position: relative;
   font-family: 'Poppins', sans-serif !important;
-  font-weight: var(--font-bold);
   padding-bottom: var(--mb-0-25);
   margin: var(--mb-4) 0;
   padding-top: var(--mb-0-5);
   text-align: center;
+}
+
+.jumbotron-heading:focus,
+.jumbotron-heading:hover {
+  color: var(--first-color);
 }
 
 #article-container {
