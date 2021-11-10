@@ -2447,6 +2447,12 @@ image.homepage__blob__dp {
   justify-content: space-between;
 }
 
+@media (max-width: 983px) {
+  .home__buttons {
+    margin: 0
+  }
+}
+
 /* Swiper Class */
 .swiper-pagination {
   position: initial;
