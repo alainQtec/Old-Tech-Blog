@@ -3896,22 +3896,22 @@ section#recent-articles.Recent_Posts {
     padding-top: 0;
   }
 
+  .home__details-img {
+    transform-origin: bottom;
+    transform: scaleY(5rem);
+    right: 59%;
+  }
+
   .home__indicator {
     top: initial;
     right: initial;
-    bottom: 15%;
+    bottom: 85%;
     left: 45%;
   }
 
   .home__indicator::after {
     top: 0;
     height: 75px;
-  }
-
-  .home__details-img {
-    transform-origin: bottom;
-    transform: scaleY(3rem);
-    right: 58%;
   }
 
   .home__title {
