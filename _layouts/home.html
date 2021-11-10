@@ -253,7 +253,10 @@ extra_scss: ""
       </section>
       <section class="section Recent_Posts" id="recent-articles">
         <div class="recent_posts_H" id="recent-articles-header">
-          <a id="recent-articles-title" href="{{ site.url}}{{site.blogurl}}"><span><h1 class="section__title jumbotron-heading">Recent Posts</h1> Show All</span></a>
+          <div id="recent-articles-title">
+            <a class="section__title jumbotron-heading" href="{{ site.url}}{{site.blogurl}}"><span>Recent Posts</span></a>
+            <a class="recent-articles-show-all" href="{{ site.url}}{{site.blogurl}}" target="_blank" rel="noopener noreferrer">Show All</a>
+          </div>
         </div>
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">
