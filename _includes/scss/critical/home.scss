@@ -2025,6 +2025,28 @@ section#home.section.home.container {
   }
 }
 
+@media (min-width: 540px) and (max-width: 768px) {
+  .home__data {
+    width: 88%;
+    margin: 0 auto;
+  }
+
+  .home__details-img {
+    position: absolute;
+    right: 3rem;
+  }
+
+  .home__indicator {
+    position: absolute;
+    top: 7rem;
+    right: 5rem;
+  }
+
+  .home__indicator::after {
+    right: 55%;
+  }
+}
+
 @media screen and (min-width: 568px) {
   .homepage___data {
     grid-column: initial;
@@ -2361,9 +2383,23 @@ image.homepage__blob__dp {
   cursor: grab;
 }
 
-@media (max-width: 759px) {
+@media (max-width: 540px) {
   .home__img {
-    width: 300px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 759px) {
+  .home__img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 759px) and (max-width: 768px) {
+  .home__img {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
