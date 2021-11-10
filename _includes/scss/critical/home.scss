@@ -3046,14 +3046,14 @@ div.about__container.container.grid {
 }
 
 #recent-articles-title {
-  display: flex;
-  flex-direction: row;
-  width: max-content;
+  margin: 0 auto;
   text-align: center;
   justify-content: center
 }
 
 .recent-articles-show-all {
+  position: absolute;
+  height: 50%;
   float: right;
   right: 2%
 }
@@ -3062,7 +3062,7 @@ div.about__container.container.grid {
 .blog-slider {
   display: flex;
   flex-direction: column;
-  width: 98%;
+  width: 90%;
   position: relative;
   max-width: 825px;
   margin: 0 auto;
