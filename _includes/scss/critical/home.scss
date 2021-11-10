@@ -2346,7 +2346,6 @@ image.homepage__blob__dp {
 }
 
 .home__img {
-  // float: top;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -3910,7 +3909,9 @@ section#recent-articles.Recent_Posts {
   }
 
   .home__details-img {
-    bottom: 0;
+    // bottom: 0;
+    transform-origin: bottom;
+    transform: scaleY(5rem);
     right: 58%;
   }
 
