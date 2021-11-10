@@ -3027,9 +3027,13 @@ div.about__container.container.grid {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  margin-left: 4rem;
   text-align: center;
   justify-content: center
+}
+
+#recent-articles-title span {
+  margin-left: 4rem;
+  // transform: translateX(4rem)
 }
 
 a.recent-articles-show-all {
