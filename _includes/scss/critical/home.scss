@@ -2365,7 +2365,13 @@ image.homepage__blob__dp {
 
 @media (max-width: 759px) {
   .home__img {
-    width: 300px
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home__img {
+    width: 524px;
   }
 }
 
