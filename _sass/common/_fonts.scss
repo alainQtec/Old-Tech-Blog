@@ -2,6 +2,40 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+@font-face {
+  font-family: 'space_grotesk';
+  src: url("/assets/css/fonts/spacegrotesk-bold-webfont.woff2") format("woff2"), url("/assets/css/fonts/spacegrotesk-bold-webfont.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'space_grotesk';
+  src: url("/assets/css/fonts/spacegrotesk-light-webfont.woff") format("woff2"), url("/assets/css/fonts/spacegrotesk-light-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'space_grotesk';
+  src: url("/assets/css/fonts/spacegrotesk-medium-webfont.woff") format("woff2"), url("/assets/css/fonts/spacegrotesk-medium-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'space_grotesk';
+  src: url("/assets/css/fonts/spacegrotesk-regular-webfont.woff") format("woff2"), url("/assets/css/fonts/spacegrotesk-regular-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'space_grotesk';
+  src: url("/assets/css/fonts/spacegrotesk-semibold-webfont.woff") format("woff2"), url("/assets/css/fonts/spacegrotesk-semibold-webfont.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 
 @font-face {
   font-family: DesignerBlock;
