@@ -3017,10 +3017,8 @@ div.about__container.container.grid {
   width: 100%;
 }
 
-.article-card a :hover {
+.article-card a:hover {
   text-decoration: none;
-  /* background: #3030303c!important; */
-  /* border-color: #49494983; */
   border-radius: .5rem !important;
   background: transparent;
 }
@@ -3034,10 +3032,8 @@ div.about__container.container.grid {
 }
 
 a.recent-articles-show-all {
-  transform-origin: bottom;
-  transform: translateY(-1rem);
-  justify-self: flex-end;
-  float: right;
+  margin-top: 1.2rem;
+  margin-left: 4rem;
   right: 2%
 }
 
@@ -3053,7 +3049,8 @@ a.recent-articles-show-all {
   }
 }
 
-/* =================== Recent blog posts slider ============== */
+/* ================ Recent blog posts slider ============== */
+
 .blog-slider {
   display: flex;
   flex-direction: column;
