@@ -3898,19 +3898,18 @@ section#recent-articles.Recent_Posts {
 
   .home__details-img {
     transform-origin: bottom;
-    transform: scaleY(5rem);
+    transform: scaleY(9rem);
     right: 59%;
   }
 
   .home__indicator {
     top: initial;
     right: initial;
-    bottom: 85%;
     left: 45%;
   }
 
   .home__indicator::after {
-    top: 0;
+    top: -2rem;
     height: 75px;
   }
 
