@@ -3031,25 +3031,21 @@ div.about__container.container.grid {
   justify-content: center
 }
 
-#recent-articles-title span {
-  transform: translateX(4rem)
-}
-
 a.recent-articles-show-all {
   margin-top: 1.2rem;
-  margin-left: 4rem;
-  right: 2%
+  margin-right: 4rem;
+  left: 2%
 }
 
 @media (min-width: 950px) and (max-width: 1252px) {
   .recent-articles-show-all {
-    right: 5%
+    left: 5%
   }
 }
 
 @media (min-width: 768px) and (max-width: 950px) {
   .recent-articles-show-all {
-    right: 8%
+    left: 8%
   }
 }
 
