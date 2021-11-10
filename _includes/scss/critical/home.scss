@@ -3015,17 +3015,11 @@ div.about__container.container.grid {
   scroll-behavior: smooth;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  #recent-articles-header {
-    padding: 10rem 1rem !important;
-  }
-}
-
 .jumbotron-heading {
   color: var(--bold-color);
   position: relative;
   font-family: 'Poppins', sans-serif !important;
-  font-weight: bolder !important;
+  font-weight: var(--font-bold);
   padding-bottom: var(--mb-0-25);
   margin: var(--mb-4) 0;
   padding-top: var(--mb-0-5);
@@ -3039,9 +3033,8 @@ div.about__container.container.grid {
 }
 
 #recent-articles-header {
-  display: grid;
+  justify-items: center;
   width: 100%;
-  grid-template-columns: 17fr 2fr;
 }
 
 .article-card a :hover {
