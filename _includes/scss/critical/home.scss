@@ -3059,7 +3059,7 @@ div.about__container.container.grid {
 
 @media screen and (max-width: 320px) {
   #recent-articles-title {
-    flex-direction: column;
+    flex-direction: row;
     width: max-content;
     row-gap: 1rem;
   }
