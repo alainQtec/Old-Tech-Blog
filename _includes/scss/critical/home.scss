@@ -595,6 +595,7 @@ a:link,
 a:visited,
 .link:link,
 .link:visited {
+  border-color: rgba(221, 221, 238, 0.042);
   text-decoration: none
 }
 
@@ -679,7 +680,7 @@ sub {
 }
 
 .footnote a:hover {
-  color: #06c;
+  color: var(--first-color);
   text-decoration: none
 }
 
@@ -2887,6 +2888,13 @@ a.button_contactme:hover {
 }
 
 /*=============== ABOUT ===============*/
+
+@media (min-width: 540px) and (max-width: 1349px) {
+
+  section#about.section.about {
+    padding-top: 0px !important;
+  }
+}
 
 div.about__container.container.grid {
   margin: 0 auto !important;
