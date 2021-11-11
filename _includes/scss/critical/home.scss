@@ -2959,8 +2959,9 @@ div.about__container.container.grid {
   section#recent-articles.section.Recent_Posts {
     margin: .3em;
   }
+
   #recent-articles-header {
-    width: 95%
+    width: 98%
   }
 }
 
@@ -2971,8 +2972,9 @@ div.about__container.container.grid {
     justify-self: center;
     margin: 0 .9em .4em .9em;
   }
+
   #recent-articles-header {
-    width: 88%
+    width: 95%
   }
 }
 
@@ -2983,8 +2985,9 @@ div.about__container.container.grid {
     justify-self: center;
     margin: 0 1rem .4em 1rem;
   }
+
   #recent-articles-header {
-    width: 85%
+    width: 92%
   }
 }
 
@@ -2995,6 +2998,10 @@ div.about__container.container.grid {
     margin: 0 5rem .4em 5rem;
     justify-content: center;
     justify-self: center;
+  }
+
+  #recent-articles-header {
+    width: 89%
   }
 }
 
@@ -3010,7 +3017,6 @@ div.about__container.container.grid {
 #recent-articles-header,
 #recent-articles-header[data-theme="dark"],
 #recent-articles-header[data-theme="light"] {
-  width: 80%;
   align-self: center !important;
   align-items: center;
   padding: 2rem 0 2rem;
