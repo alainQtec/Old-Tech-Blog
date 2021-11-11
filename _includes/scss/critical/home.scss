@@ -2948,8 +2948,7 @@ div.about__container.container.grid {
 }
 
 /* ============== Recent Posts ================*/
-.Recent_Posts,
-.recent_posts_H {
+.Recent_Posts {
   align-self: center !important;
   align-items: center;
 }
@@ -2960,6 +2959,9 @@ div.about__container.container.grid {
   section#recent-articles.section.Recent_Posts {
     margin: .3em;
   }
+  #recent-articles-header {
+    width: 95%
+  }
 }
 
 @media (min-width: 540px) and (max-width: 768px) {
@@ -2969,6 +2971,9 @@ div.about__container.container.grid {
     justify-self: center;
     margin: 0 .9em .4em .9em;
   }
+  #recent-articles-header {
+    width: 88%
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1249px) {
@@ -2977,6 +2982,9 @@ div.about__container.container.grid {
   section#recent-articles.section.Recent_Posts {
     justify-self: center;
     margin: 0 1rem .4em 1rem;
+  }
+  #recent-articles-header {
+    width: 85%
   }
 }
 
@@ -2988,10 +2996,6 @@ div.about__container.container.grid {
     justify-content: center;
     justify-self: center;
   }
-}
-
-.recent_posts_H {
-  padding: 2rem 0 2rem !important;
 }
 
 #recent-articles-header,
@@ -3006,7 +3010,10 @@ div.about__container.container.grid {
 #recent-articles-header,
 #recent-articles-header[data-theme="dark"],
 #recent-articles-header[data-theme="light"] {
-  width: 70%;
+  width: 80%;
+  align-self: center !important;
+  align-items: center;
+  padding: 2rem 0 2rem;
   border-radius: 25px;
   background-attachment: fixed;
   background-size: cover;
