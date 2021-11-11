@@ -2948,28 +2948,39 @@ div.about__container.container.grid {
 }
 
 /* ============== Recent Posts ================*/
-
-.Recent_Posts {
-  max-width: 1054px;
-  align-items: center !important;
-}
-
 .Recent_Posts,
 .recent_posts_H {
+  max-width: 1054px;
   align-self: center !important;
   align-items: center;
 }
 
-.recent_posts_H {
-  padding: 2rem 0 2rem !important;
-}
-
-@media (min-width: 540px) and (max-width: 1249px) {
+@media (min-width: 768px) and (max-width: 1249px) {
 
   .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
     margin: 0 1rem .4em 1rem;
   }
+}
+
+@media (min-width: 540px) and (max-width: 768px) {
+
+  .Recent_Posts,
+  section#recent-articles.section.Recent_Posts {
+    margin: 0 .9em .4em .9em;
+  }
+}
+
+@media (min-width: 540px) {
+
+  .Recent_Posts,
+  section#recent-articles.section.Recent_Posts {
+    margin: .3em;
+  }
+}
+
+.recent_posts_H {
+  padding: 2rem 0 2rem !important;
 }
 
 #recent-articles-header,
