@@ -2954,23 +2954,11 @@ div.about__container.container.grid {
   align-items: center;
 }
 
-@media (min-width: 1249px) {
+@media (max-width: 540px) {
 
   .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
-    margin: 0 auto;
-    justify-content: center;
-    justify-self: center;
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1249px) {
-
-  .Recent_Posts,
-  section#recent-articles.section.Recent_Posts {
-    justify-self: center;
-    margin: 0 1rem .4em 1rem;
+    margin: .3em;
   }
 }
 
@@ -2983,11 +2971,22 @@ div.about__container.container.grid {
   }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) and (max-width: 1249px) {
 
   .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
-    margin: .3em;
+    justify-self: center;
+    margin: 0 1rem .4em 1rem;
+  }
+}
+
+@media (min-width: 1249px) {
+
+  .Recent_Posts,
+  section#recent-articles.section.Recent_Posts {
+    margin: 0 5rem .4em 5rem;
+    justify-content: center;
+    justify-self: center;
   }
 }
 
