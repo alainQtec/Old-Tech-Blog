@@ -2955,9 +2955,13 @@ div.about__container.container.grid {
 }
 
 @media (min-width: 1249px) {
+
+  .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
+    display: flex;
     width: 85%;
     margin: 0 auto;
+    justify-content: center;
     justify-self: center;
   }
 }
