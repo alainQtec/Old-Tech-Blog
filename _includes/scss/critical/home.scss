@@ -2950,15 +2950,24 @@ div.about__container.container.grid {
 /* ============== Recent Posts ================*/
 .Recent_Posts,
 .recent_posts_H {
-  max-width: 1054px;
   align-self: center !important;
   align-items: center;
 }
+
+@media (min-width: 1249px) {
+  section#recent-articles.section.Recent_Posts {
+    width: 85%;
+    margin: 0 auto;
+    justify-self: center;
+  }
+}
+
 
 @media (min-width: 768px) and (max-width: 1249px) {
 
   .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
+    justify-self: center;
     margin: 0 1rem .4em 1rem;
   }
 }
@@ -2967,6 +2976,7 @@ div.about__container.container.grid {
 
   .Recent_Posts,
   section#recent-articles.section.Recent_Posts {
+    justify-self: center;
     margin: 0 .9em .4em .9em;
   }
 }
