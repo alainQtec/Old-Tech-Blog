@@ -457,6 +457,7 @@ select,
 button {
   font-synthesis: none;
   -moz-font-feature-settings: 'kern';
+  font-feature-settings: 'kern';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: ltr;
@@ -587,7 +588,6 @@ li li {
 
 a,
 .link {
-  color: #06c;
   letter-spacing: inherit
 }
 

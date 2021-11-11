@@ -88,6 +88,7 @@ html,body{
 #blog-navbar,#blog-navbar input,#blog-navbar textarea,#blog-navbar select,#blog-navbar button,#b-nav-segmentbar,#b-nav-segmentbar input,#b-nav-segmentbar textarea,#b-nav-segmentbar select,#b-nav-segmentbar button{
   font-synthesis:none;
   -moz-font-feature-settings:'kern';
+  font-feature-settings: 'kern';
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   direction:ltr;

@@ -166,6 +166,7 @@ footer .logo {
 #b-footer,#b-footer input,#b-footer textarea,#b-footer select,#b-footer button{
   font-synthesis:none;
   -moz-font-feature-settings:'kern';
+  font-feature-settings: 'kern';
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   direction:ltr;
