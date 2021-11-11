@@ -2951,9 +2951,6 @@ div.about__container.container.grid {
 
 .Recent_Posts {
   max-width: 1054px;
-}
-
-.Recent_Posts {
   align-items: center !important;
 }
 
@@ -2967,6 +2964,13 @@ div.about__container.container.grid {
   padding: 2rem 0 2rem !important;
 }
 
+@media (min-width: 540px) and (max-width: 1249px) {
+
+  .Recent_Posts,
+  section#recent-articles.section.Recent_Posts {
+    margin: 0 1rem .4em 1rem;
+  }
+}
 
 #recent-articles-header,
 #recent-articles-header[data-theme="light"] {
@@ -3023,7 +3027,8 @@ div.about__container.container.grid {
   background: transparent;
 }
 
-#recent-articles-title {
+#recent-articles-title,
+.recent-articles-show-all {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -3031,23 +3036,9 @@ div.about__container.container.grid {
   justify-content: center
 }
 
-a.recent-articles-show-all {
-  position: fixed;
-  right: 2%;
+.recent-articles-show-all {
   transform: translateY(1rem);
   transform-origin: top
-}
-
-@media (min-width: 950px) and (max-width: 1252px) {
-  .recent-articles-show-all {
-    right: 5%
-  }
-}
-
-@media (min-width: 768px) and (max-width: 950px) {
-  .recent-articles-show-all {
-    right: 8%
-  }
 }
 
 /* ================ Recent blog posts slider ============== */
