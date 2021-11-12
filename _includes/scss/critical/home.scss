@@ -3006,10 +3006,7 @@ div.about__container.container.grid {
 }
 
 .cv-consent-modal-close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #aaa;
+  color: var(--text-color);
   line-height: 50px;
   font-size: 80%;
   position: absolute;
@@ -3025,10 +3022,8 @@ div.about__container.container.grid {
 .cv-consent-modal-close::before,
 .cv-consent-modal-close::after {
   font-family: "SF Pro Icons";
-  color: inherit;
-  display: inline-block;
+  color: black;
   font-style: normal;
-  font-weight: inherit;
   font-size: inherit;
   line-height: 50px;
   position: relative;
