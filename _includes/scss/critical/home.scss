@@ -2990,12 +2990,13 @@ div.about__container.container.grid {
 }
 
 .privacy_agrmnt {
-  max-width: 400px;
   max-height: 100px;
   overflow: scroll;
 }
 
 .privacy_agrmnt pre {
+  max-width: 350px;
+  text-align: justify;
   font-size: .70rem;
 }
 
