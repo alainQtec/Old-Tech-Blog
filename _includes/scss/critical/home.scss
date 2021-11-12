@@ -5,10 +5,8 @@
   /* Change favorite color */
   --hue-color: 251;
   /*== Font and typography ==*/
-  --font-family-sans-serif: ('Quicksand', sans-serif, "Apple Color Emoji");
-  // --body-font: var(--font-family-sans-serif) !important;
-
-  --body-font: 'Quicksand', sans-serif;
+  --font-family-sans-serif: apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, 'Quicksand', sans-serif;
+  --body-font: 'Quicksand', sans-serif !important;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 5.1rem !important;
@@ -2954,6 +2952,86 @@ div.about__container.container.grid {
   display: flex;
   justify-content: center;
 }
+
+/* ============== Modal windows ================*/
+
+.cv-modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.cv-modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-window>div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+}
+
+.cv-modal-window header {
+  font-weight: bold;
+}
+
+.cv-modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+#cv-open-modal.cv-modal-window {
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, 0.522);
+  background-blend-mode: darken;
+}
+
+.cv-consent-modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.cv-consent-modal-close:hover {
+  color: black;
+}
+
+.cv-modal-window>div {
+  border-radius: 1rem;
+}
+
+.cv-modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+small {
+  color: lightgray;
+}
+
 
 /* ============== Recent Posts ================*/
 .Recent_Posts {
