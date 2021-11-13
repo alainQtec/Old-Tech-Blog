@@ -3020,7 +3020,8 @@ div.about__container.container.grid {
 }
 
 .cv-consent-modal-close::before {
-  content: "✕"
+  content: "✕";
+  color: black;
 }
 
 .cv-consent-modal-close {
@@ -3040,7 +3041,6 @@ div.about__container.container.grid {
 .cv-consent-modal-close::before,
 .cv-consent-modal-close::after {
   font-family: "SF Pro Icons";
-  color: black;
   font-style: normal;
   font-size: inherit;
   line-height: 50px;
