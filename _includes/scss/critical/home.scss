@@ -2990,14 +2990,16 @@ div.about__container.container.grid {
 }
 
 .privacy_agrmnt {
-  max-height: 100px;
-  overflow: scroll;
-}
-
-.privacy_agrmnt pre {
-  max-width: 350px;
-  text-align: justify;
+  margin: 4px, 4px;
+  padding: 4px;
   font-size: .70rem;
+  background-color: var(--body-color);
+  width: 500px;
+  height: 110px;
+  /*max-height: 100px;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }
 
 .cv-modal-window header {
