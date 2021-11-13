@@ -3022,7 +3022,7 @@ div.about__container.container.grid {
 
 .cv-consent-modal-close::before {
   content: "✕";
-  color: black;
+  color: var(--bold-color);
 }
 
 .cv-consent-modal-close {
