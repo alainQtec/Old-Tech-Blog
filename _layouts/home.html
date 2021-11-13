@@ -3,6 +3,7 @@ extra_scss: ""
 ---
 
 {% capture home_style %}
+{% include scss/critical/icons.scss %}
 {% include scss/critical/home.scss %}
 {% if page.extra_scss %}{{ page.extra_scss }}{% endif %}
 {% endcapture %}
@@ -21,12 +22,12 @@ extra_scss: ""
           <ul class="home__nav__list menu">
             <li class="home__nav__item">
               <a href="#home" class="home__nav__link active-link">
-                <i class="uil uil-estate homep__nav__icon"></i> <strong>Home</strong>
+                <i class="icon ic-home homep__nav__icon"></i> <strong>Home</strong>
               </a>
             </li>
             <li class="home__nav__item">
               <a href="#about" class="home__nav__link">
-                <i class="uil uil-user homep__nav__icon"></i> <strong>About</strong>
+                <i class="icon ic-user homep__nav__icon"></i> <strong>About</strong>
               </a>
             </li>
             <li class="home__nav__item">
@@ -66,8 +67,7 @@ extra_scss: ""
           </ul>
         </div>
         <div class="nav__toggle" id="nav-toggle">
-          <img src="assets/img/svg/apps.svg" alt="⊟">
-          <!-- <i class="uil uil-apps"></i> -->
+          <i class='icon ic-grid-alt'></i>
         </div>
       </nav>
     </header>

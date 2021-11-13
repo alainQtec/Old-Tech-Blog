@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'boxicons';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('/assets/css/fonts/boxicons.eot');
+  src: url('/assets/css/fonts/boxicons.eot') format('embedded-opentype'),
+    url('/assets/css/fonts/boxicons.woff2') format('woff2'),
+    url('/assets/css/fonts/boxicons.woff') format('woff'),
+    url('/assets/css/fonts/boxicons.ttf') format('truetype'),
+    url('/assets/css/fonts/boxicons.svg?#boxicons') format('svg');
+}
+
+.icon {
+  font-family: 'boxicons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+
+  text-transform: none;
+
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon:hover {
+  color: var(--first-color);
+}
+
+// .ic-ul
+// {
+//     margin-left: 2em;
+//     padding-left: 0;
+
+//     list-style: none;
+// }
+
+// .ic-ul > li
+// {
+//     position: relative;
+// }
+// .ic-ul .icon
+// {
+//     font-size: inherit;
+//     line-height: inherit;
+
+//     position: absolute;
+//     left: -2em;
+
+//     width: 2em;
+
+//     text-align: center;
+// }
+
+.ic-grid-alt:before {
+  content: "\ed5e";
+}
+
+.ic-home:before {
+  content: "\ed75";
+}
+
+.ic-home-alt:before {
+  content: "\ed76";
+}
+
+.ic-home-smile:before {
+  content: "\ed79";
+}
+
+.ic-user:before {
+  content: "\eec6";
+}
+
+.ic-user-check:before {
+  content: "\eec7";
+}
+
+.ic-user-circle:before {
+  content: "\eec8";
+}
+
+.ic-user-minus:before {
+  content: "\eec9";
+}
+
+.ic-user-pin:before {
+  content: "\eeca";
+}
+
+.ic-user-plus:before {
+  content: "\eecb";
+}
+
+.ic-user-x:before {
+  content: "\eecd";
+}
