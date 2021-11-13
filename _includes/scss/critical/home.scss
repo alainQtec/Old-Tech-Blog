@@ -3019,6 +3019,10 @@ div.about__container.container.grid {
   background-blend-mode: darken;
 }
 
+.cv-consent-modal-close::before {
+  content: "✕"
+}
+
 .cv-consent-modal-close {
   color: var(--text-color);
   line-height: 50px;
