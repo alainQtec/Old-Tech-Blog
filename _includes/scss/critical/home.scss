@@ -1140,6 +1140,10 @@ div#nav-toggle.nav__toggle {
   ul.home__nav__list.menu {
     gap: .2rem
   }
+
+  #h-navbar-menu.home__navbar__menu.show-menu {
+    padding: .4rem, .1rem, .2rem .1rem !important;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1155,8 +1159,7 @@ div#nav-toggle.nav__toggle {
   }
 
   #h-navbar-menu.home__navbar__menu.show-menu {
-    padding: 1rem, .2rem, .4rem .2rem !important;
-    // transform: translateY(-1rem)
+    padding: .4rem, .1rem, .2rem .1rem !important;
   }
 }
 
