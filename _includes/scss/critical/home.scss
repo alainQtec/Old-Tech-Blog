@@ -72,6 +72,7 @@ html[data-theme="light"] {
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 76%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
+  --frost-color: hsla(0, 0%, 100%, .3);
   --container-color: #ffffff;
 
   --bold-color: rgb(0, 0, 0);
@@ -98,8 +99,8 @@ html[data-theme="dark"] {
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  // --body-color: hsl(var(--hue-color), 28%, 12%);
   --body-color: rgba(22, 22, 23, 0.92);
+  --frost-color: hsla(0, 0%, 20%, .3);
   --container-color: hsl(var(--hue-color), 29%, 16%);
 
   --bold-color: rgb(225, 225, 225);
@@ -133,6 +134,7 @@ html[data-theme="dark"] {
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 76%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
+    --frost-color: hsla(0, 0%, 100%, .3);
     --container-color: #ffffff;
 
     --bold-color: rgb(0, 0, 0);
@@ -161,8 +163,8 @@ html[data-theme="dark"] {
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
-    // --body-color: hsl(var(--hue-color), 28%, 12%);
     --body-color: rgba(22, 22, 23, 0.92);
+    --frost-color: hsla(0, 0%, 20%, .3);
     --container-color: hsl(var(--hue-color), 29%, 16%);
 
     --bold-color: rgb(188, 188, 188);
@@ -1028,6 +1030,21 @@ div#nav-toggle.nav__toggle {
   animation: icon 0.2s 1
 }
 
+.nav__close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color)
+}
+
+.nav__close:focus,
+.nav__close:hover {
+  color: var(--first-color-alt);
+  transform: rotate(270deg)
+}
+
 .nav__toggle:hover {
   color: var(--first-color);
   animation: icon 0.2s 1
@@ -1046,14 +1063,14 @@ div#nav-toggle.nav__toggle {
     left: 5px;
     right: 5px;
     width: 98%;
+    background: var(--frost-color) !important;
     -webkit-backdrop-filter: saturate(180%) blur(13px) !important;
     backdrop-filter: saturate(180%) blur(13px) !important;
     border-top: 1px solid var(--text-color) !important;
-    background: inherit !important;
     background-color: var(--body-color);
     margin: 0px auto !important;
     padding: 2rem 1.5rem 4rem;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.953);
+    box-shadow: 5px 3px 30px rgba(0, 0, 0, 0.953);
     border-radius: 1.5rem 1.5rem 0 0;
     transform-origin: center bottom 0px;
     transition: all 0.9s ease 0.9s;
@@ -1098,18 +1115,43 @@ div#nav-toggle.nav__toggle {
   }
 }
 
-@media (min-width: 769px) and (max-width: 960) {
+@media (max-width: 480px) {
+  ul.home__nav__list.menu {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .home__nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem
+  }
+
+  #h-navbar-menu.home__navbar__menu.show-menu {
+    // padding: 1rem, .2rem, .4rem .2rem !important;
+    transform: translateY(-1rem)
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .home__nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+  }
+}
+
+@media (max-width: 540px) {
+  .home__nav__item {
+    margin-left: .5rem;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 960px) {
   .home__nav__item {
     margin-left: 1rem;
   }
 }
-
-@media (min-width: 961px) and (max-width: 1052) {}
-
-.home__nav__item {
-  margin-left: 1rem;
-}
-
 
 @media (min-width: 960px) {
   .home__nav__item {
@@ -1123,14 +1165,6 @@ div#nav-toggle.nav__toggle {
   }
 }
 
-@media (max-width: 768px) {
-  .home__nav__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem
-  }
-}
-
 .home__nav__link:hover {
   color: var(--first-color)
 }
@@ -1139,20 +1173,6 @@ div#nav-toggle.nav__toggle {
   font-size: 1.2rem
 }
 
-.nav__close {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--first-color)
-}
-
-.nav__close:focus,
-.nav__close:hover {
-  color: var(--first-color-alt);
-  transform: rotate(270deg)
-}
 
 .home__navbar__menu ul.menu li.home__nav__item {
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99)
