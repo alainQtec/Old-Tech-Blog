@@ -1134,6 +1134,10 @@ div#nav-toggle.nav__toggle {
   .home__nav__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home__nav__list,
+  ul.home__nav__list.menu {
     gap: .5rem
   }
 }
@@ -1143,6 +1147,11 @@ div#nav-toggle.nav__toggle {
   .home__nav__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem
+  }
+
+  .home__nav__list,
+  ul.home__nav__list.menu {
     gap: 1rem
   }
 
@@ -1156,6 +1165,11 @@ div#nav-toggle.nav__toggle {
   .home__nav__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+  }
+
+  .home__nav__list,
+  ul.home__nav__list.menu {
     gap: 2rem
   }
 }
