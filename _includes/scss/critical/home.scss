@@ -1144,6 +1144,13 @@ div#nav-toggle.nav__toggle {
   #h-navbar-menu.home__navbar__menu.show-menu {
     padding: .4rem, .1rem, .2rem .1rem !important;
   }
+
+  input#theme-toggle.nav-link.switch {
+    width: 105px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -2504,6 +2511,12 @@ image.homepage__blob__dp {
 
 .home__description {
   margin: 0 var(--mb-1) var(--mb-2) var(--mb-1);
+}
+
+@media (max-width: 540px) {
+  .home__description {
+    font-size: var(--smaller-font-size);
+  }
 }
 
 .home__buttons {
