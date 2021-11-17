@@ -20,7 +20,6 @@
   {% if page.layout == 'blog' or page.layout == 'post' %}<meta content="article" property="og:type" />
   {% else %}<meta content="website" property="og:type" />
   {% endif %}
-  {%- include head/slow-load-notice.html -%}
   {% if page.summary %}
   <meta content="{{ page.summary }}" property="og:description" />
   <meta content="{{ page.summary }}" name="Description">
@@ -64,13 +63,11 @@
   {%- include head/alternate-urls.html -%}
   {%- include head/favicon.html -%}
   {%- include head/stylesheets.html -%}
+  {%- include head/slow-load-notice.html -%}
+  {%- include head/js.html -%}
   {%- include head/inline-scss.html -%}
   {% if site.google-analytics %}
   {%- include google-analytics.html -%}
-  {% endif %}
-  {% if page.layout != 'home' %}
-  {%- include head/js.html -%}
-  {%- include ads.html -%}
   {% endif %}
   <html class="no-js">
 </head>

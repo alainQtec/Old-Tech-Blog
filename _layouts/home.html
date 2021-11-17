@@ -154,14 +154,14 @@ extra_scss: ""
                   <div class="home__indicator"></div>
 
                   <div class="home__details-img">
-                    <h4 class="home__details-title">Alain</h4>
+                    <h4 class="home__details-title"><a href="https://www.deviantart.com/stylemypc">Alain</a></h4>
                     <span class="home__details-subtitle">On Deviantart</span>
                   </div>
                 </div>
 
                 <div class="home__data">
                   <h3 class="home__subtitle">Alias #2</h3>
-                  <h1 class="home__title">url:platformName/profile</h1>
+                  <h1 class="home__title">deviantart.com/stylemypc</h1>
                   <p class="home__description">
                     Deviantart is a online platform where artists and fans can post, collect, share and monetise their
                     artworks.
@@ -171,7 +171,7 @@ extra_scss: ""
 
                   <div class="home__buttons">
                     <a href="#" class="button">Follow</a>
-                    <a href="#" class="button--link button--flex">Visit gallery <i
+                    <a href="https://www.deviantart.com/stylemypc" class="button--link button--flex">Visit gallery <i
                         class='bx bx-right-arrow-alt button__icon'></i></a>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ extra_scss: ""
                   <div class="home__indicator"></div>
 
                   <div class="home__details-img">
-                    <h4 class="home__details-title">$UserName</h4>
+                    <h4 class="home__details-title">Alain</h4>
                     <span class="home__details-subtitle">On $platformName</span>
                   </div>
                 </div>
@@ -243,46 +243,59 @@ extra_scss: ""
                 <span class="about__info-name">Company <br> Worked</span>
               </div>
               <div class="about__buttons button--flex">
-                <a href="#cv-open-modal" class="button_Dl_CV button--fex">CV<i
+                <a href="#cv-open-modal" class="modal-trigger button_Dl_CV button--fex">CV<i
                     class="uil uil-download-alt button__icon"></i></a>
               </div>
               <div id="cv-open-modal" class="cv-modal-window">
                 <div>
-                  <a class="cv-consent-modal-close" href="#about" title="Close"></a>
-                  <h1>GDPR agreement</h1>
-                  <div class="privacy_agrmnt">
-                      <h2 style="margin: 1em 0;">1. PRIVACY</h2>
+                  <button class="modal-close" style="z-index: 9990;" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                      </path>
+                    </svg>
+                  </button>
+                  <h1><a
+                      href="https://www.bing.com/search?q=GDPR&cvid=3af830e558284531b4bd0f6cb9eb9c7e&aqs=edge..69i57j69i59j69i60.2251j0j1&pglt=163&FORM=ANNTA1&PC=U531#:~:text=Data%20Protection%20Regulation-,The%20General%20Data%20Protection%20Regulation%20(EU)%202016/679%20(GDPR)%20is%20a%20regulation%20in%20EU%20law%20on%20data%20protection%20and%20privacy%20in%20the%20European%20Union%20(EU)%20and%20the%20European%20Economic%20Area%20(EEA).%20It%20also%20addresses%20the%20transfer%20of%20personal%20data%20outside%20the%20EU%20and%20EEA%20areas.,-The%20GDPR%27s%20primary"
+                      target="_blank" rel="noopener noreferrer"><abbr
+                        title="General Data Protection Regulation">GDPR</abbr></a></h1>
+                  <div class="modal-overlay privacy_agrmnt">
+                    <h2 style="margin: 1em 0;">1. PRIVACY aggrement</h2>
+                    <br>
+                    <p>
+                      By clicking <strong>download</strong> you agree to only use the data in
+                      this <abbr title="curriculum vitae">CV</abbr> copy for the sole purpose
+                      of consideration of my skills and experience for professional opportunities.
+                    </p>
+                    <br>
+                    <h2 style="margin: 1em 0;">2. DATA PROTECTION PRINCIPLES</h2>
+                    <br>
+                    <p>
+                      You agree to comply with data protection law and principles, which means that this <abbr
+                        title="curriculum vitae">CV</abbr> will be:
                       <br>
-                      <p>
-                        By clicking <strong>download</strong> you agree to only use the data in 
-                        this <abbr title="curriculum vitae">CV</abbr> copy for the sole purpose 
-                        of consideration of my skills and experience for professional opportunities.
-                      </p>
+                      • Used lawfully, fairly and in a transparent way.
                       <br>
-                      <h2 style="margin: 1em 0;">2. DATA PROTECTION PRINCIPLES</h2>
+                      • Collected only for valid purposes that we have clearly explained to you and not used in any way
+                      that is incompatible with those purposes.
                       <br>
-                      <p>
-                        You agree to comply with data protection law and principles, which means that this <abbr title="curriculum vitae">CV</abbr> will be:
-                        <br>
-                        • Used lawfully, fairly and in a transparent way.
-                        <br>
-                        • Collected only for valid purposes that we have clearly explained to you and not used in any way that is incompatible with those purposes.
-                        <br>
-                        • Relevant to the purposes we have told you about and limited only to those purposes.
-                        <br>
-                        • Kept only as long as necessary for the purposes we have told you about.
-                        <br>
-                        • Kept securely.
-                      </p>
-                      checkbox: I agree
+                      • Relevant to the purposes we have told you about and limited only to those purposes.
                       <br>
-                      <h2 style="margin: 1em 0;">Consent</h2>
+                      • Kept only as long as necessary for the purposes we have told you about.
                       <br>
-                      <p>
-                        I hereby consent to the processing of the personal data in this <abbr title="curriculum vitae">CV</abbr>
-                        by anyone who receives a copy for the sole purpose of consideration of my skills and experience for professional opportunities.
-                      </p>
-                      <br><br>
+                      • Kept securely.
+                    </p>
+                    checkbox: I agree
+                    <br>
+                    <h2 style="margin: 1em 0;">3. Consent</h2>
+                    <br>
+                    <p>
+                      I hereby consent to the processing of the personal data in this <abbr
+                        title="curriculum vitae">CV</abbr>
+                      by anyone who receives a copy for the sole purpose of consideration of my skills and experience
+                      for professional opportunities.
+                    </p>
+                    <br><br>
                   </div>
                   <div><small>Note that your data will be collected</small></div>
                   <br>
