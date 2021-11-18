@@ -1,34 +1,15 @@
-const modalTrigger = document.querySelectorAll('.modal-trigger');
-const closeBtns = document.querySelectorAll('.modal-close');
-
-function openModal() {
-  modalTrigger.forEach(function (trigger) {
-    trigger.addEventListener('click', function (event) {
-      const target = this.getAttribute('href').substr(1);
-      const modalWindow = document.getElementById(target);
-
-      if (modalWindow.classList) {
-        modalWindow.classList.add('open');
-      }
-
-      event.preventDefault();
-    });
+$(document).ready(function () {
+  $(".modal-cancel").on("click", function () {
+    if ($('#useragreemInput').val() == 'true') {
+      $('.modal-close').trigger('click');
+    } else {
+      alert('pls click on checkbox');
+    }
   });
-}
-
-function closeModal() {
-  closeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      modalWindow.forEach((modalWindow) => {
-        modalWindow.classList.remove('open')
-      });
-    });
+  $('.one').change(function () {
+    if (this.checked) {
+      $(this).prop("checked", 'true');
+    }
+    $('#useragreemInput').val(this.checked);
   });
-}
-
-function fireWhenReady(func) {
-  document.addEventListener('DOMContentLoaded', func);
-}
-
-fireWhenReady(openModal);
-fireWhenReady(closeModal);
+});
