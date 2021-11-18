@@ -1031,9 +1031,9 @@ div#nav-toggle.nav__toggle {
 }
 
 .nav__close {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 5rem;
+  // position: absolute;
+  // right: 1.3rem;
+  // bottom: 5rem;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--first-color)
@@ -1092,6 +1092,7 @@ div#nav-toggle.nav__toggle {
   .Contact_ni,
   .homep__nav__icon,
   .nav__close,
+  .nav__closeli,
   .modeSwitcher_btn,
   .nav__toggle {
     display: none;
@@ -4092,6 +4093,7 @@ section#recent-articles.Recent_Posts {
 
   .nav__img,
   .nav__close,
+  .nav__closeli,
   .nav__toggle {
     display: none;
   }
