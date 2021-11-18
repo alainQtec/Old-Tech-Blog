@@ -430,7 +430,7 @@ button:disabled {
 }
 
 :focus {
-  outline: 1px solid rgba(0, 125, 250, 0.015);
+  outline: 1px solid rgba(0, 0, 0, 0.002) !important;
   outline-offset: 1px
 }
 
