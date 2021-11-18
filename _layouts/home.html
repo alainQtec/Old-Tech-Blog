@@ -252,7 +252,45 @@ extra_scss: ""
                 <button type="button" class="modal-trigger button_Dl_CV button--fex" data-toggle="modal"
                   data-target="#cv-open-modal">CV<i class="uil uil-download-alt button__icon"></i></button>
               </div>
-              <div class="cv-modal-window fade" id="cv-open-modal" role="dialog">
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                              <input type="hidden" name="txt1" id="textbox1">
+                              <button type="button" class="close_model btn btn-danger">button</button>
+                              <input type="checkbox" name="ch" class="one" value="1">
+                              <input type="checkbox" name="ch" class="one" value="2">
+                              <input type="checkbox" name="ch" class="one" value="3">
+                              <input type="checkbox" name="ch" class="one" value="4">
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                  </div>
+                </div>
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".close_model").on("click", function () {
+                          if ($('#textbox1').val() == 'true') {
+                              $('.close').trigger('click');
+                          } else {
+                              alert('pls click on checkbox');
+                          }
+                    });
+                    $('.one').change(function () {
+                          if (this.checked) {
+                              $(this).prop("checked", 'true');
+                          }
+                          $('#textbox1').val(this.checked);
+                    });
+                });
+              </script>
+              <!-- <div class="cv-modal-window fade" id="cv-open-modal" role="dialog">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -311,24 +349,7 @@ extra_scss: ""
                     </div>
                   </div>
                 </div>
-              </div>
-              <script type="text/javascript">
-                $(document).ready(function () {
-                    $(".close_model").on("click", function () {
-                          if ($('#textbox1').val() == 'true') {
-                              $('.modal-close').trigger('click');
-                          } else {
-                              alert('pls click on checkbox');
-                          }
-                    });
-                    $('.one').change(function () {
-                          if (this.checked) {
-                              $(this).prop("checked", 'true');
-                          }
-                          $('#textbox1').val(this.checked);
-                    });
-                });
-              </script>
+              </div> -->
             </div>
           </div>
           <br id="blog">
