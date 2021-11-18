@@ -249,8 +249,8 @@ extra_scss: ""
                 <span class="about__info-name">Company <br> Worked</span>
               </div>
               <div class="about__buttons button--flex">
-                <button type="button" class="modal-trigger button_Dl_CV button--fex" data-toggle="cv-modal-window"
-                  data-target="#cv-open-modal">CV<i class="uil uil-download-alt button__icon"></i></button>
+                <a href="#cv-open-modal" class="modal-trigger button_Dl_CV button--fex" data-toggle="cv-modal-window"
+                  data-target="#cv-open-modal">CV<i class="uil uil-download-alt button__icon"></i></a>
               </div>
               <div class="cv-modal-window fade" id="cv-open-modal" role="dialog">
                 <div class="modal-dialog">
@@ -313,10 +313,9 @@ extra_scss: ""
                 </div>
               </div>
               <script type="text/javascript">
-                const modalTrigger = document.querySelectorAll('.modal-trigger');
                 // const closeBtns = document.querySelectorAll('.modal-close');
-
                 function openModal() {
+                  const modalTrigger = document.querySelectorAll('.modal-trigger');
                   modalTrigger.forEach(function (trigger) {
                     trigger.addEventListener('click', function (event) {
                       const target = this.getAttribute('href').substr(1);
