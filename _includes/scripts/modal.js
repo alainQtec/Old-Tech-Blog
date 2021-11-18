@@ -1,9 +1,9 @@
-function openModal() {
-  let modalTrigger = document.querySelectorAll('.modal-trigger');
+const modalTrigger = document.querySelectorAll('.modal-trigger');
+const closeBtns = document.querySelectorAll('.modal-close');
 
+function openModal() {
   modalTrigger.forEach(function (trigger) {
     trigger.addEventListener('click', function (event) {
-      // remove "#" from #modal
       const target = this.getAttribute('href').substr(1);
       const modalWindow = document.getElementById(target);
 
@@ -17,7 +17,6 @@ function openModal() {
 }
 
 function closeModal() {
-  let closeBtns = document.querySelectorAll('.modal-close');
   closeBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       modalWindow.forEach((modalWindow) => {
