@@ -2750,11 +2750,6 @@ a.button_contactme:hover {
   transition: .3s;
 }
 
-.button--flex {
-  display: inline-flex;
-  align-items: center;
-}
-
 .button--small {
   padding: .75rem 1rem;
 }
@@ -3023,30 +3018,59 @@ div.about__container.container.grid {
 
 /* ============== Modal windows ================*/
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s lineaer 0.1s, opacity 0.3s ease;
 
-  &.open {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
+.pop {
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .pop {
+    position: relative;
+    width: 100%;
   }
 }
 
-.cv-modal-window {
+.pop .modal {
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
-  background-color: var(--container-color);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.pop .modal-content {
+  -webkit-transform: translate(-50%, -50%) scale(0.75);
+  transform: translate(-50%, -50%) scale(0.75);
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  background: white;
+  padding: 30px;
+  position: absolute;
+  color: black;
+}
+
+.cv-modal-window {
+  background-color: var(--container-color);
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 600;
   z-index: 9990;
-  visibility: hidden;
-  opacity: 0;
   pointer-events: none;
   transition: visibility 0s lineaer 0.1s, opacity 0.3s ease;
 }
@@ -3073,6 +3097,67 @@ div.about__container.container.grid {
   padding: 2em;
   background: var(--container-color);
 }
+
+/* Close Button */
+.btn-close {
+  text-align: center;
+}
+
+
+
+@media (max-width: 640px) {
+  .pop .modal-content {
+    width: 100%;
+  }
+}
+
+.pop label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pop label.open {
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  text-decoration: underline;
+}
+
+.pop input {
+  display: none;
+}
+
+.pop input:checked+.modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop input:checked+.modal .modal-content {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.pop input:checked+.modal .modal-content p {
+  font-size: 1.25rem;
+  line-height: 125%;
+}
+
+.pop input:checked+.modal label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  background: #666666;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.pop input:checked+.modal label:hover {
+  background: #333333;
+}
+
 
 .privacy_agrmnt {
   margin: 4px, 4px;
