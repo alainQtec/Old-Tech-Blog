@@ -14,12 +14,8 @@
   <meta content="{{ site.title }}" property="og:site_name" />
   <meta property="og:locale" content="en_US">
   <meta http-equiv="Cache-control" content="public">
-  {% if page.noindex %}
-  <meta name="robots" content="noindex" />
-  {% endif %}
-  {% if page.layout == 'blog' or page.layout == 'post' %}<meta content="article" property="og:type" />
-  {% else %}<meta content="website" property="og:type" />
-  {% endif %}
+  {% if page.noindex %}<meta name="robots" content="noindex" />{% endif %}
+  {% if page.layout == 'blog' or page.layout == 'post' %}<meta content="article" property="og:type" />{% else %}<meta content="website" property="og:type" />{% endif %}
   {% if page.summary %}
   <meta content="{{ page.summary }}" property="og:description" />
   <meta content="{{ page.summary }}" name="Description">
@@ -27,12 +23,8 @@
   <meta content="{% if page.layout == 'home' or page.layout == 'contact' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" property="og:description" />
   <meta content="{% if page.layout == 'home' or page.layout == 'contact' %}{{ site.author_bio }}{% else %}{{ site.description }}{% endif %}" name="Description">
   {% endif %}
-  {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url" />
-  {% endif %}
-  {% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
-  {% endif %}
+  {% if page.url %}<meta content="{{ site.url }}{{ page.url }}" property="og:url" />{% endif %}
+  {% if page.date %}<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />{% endif %}
   <meta content="https://twitter.com/alainQtec" property="article:author" />
   <meta property="article:publisher" content="https://twitter.com/alainQtec" />
   {% if page.thumbnail %}

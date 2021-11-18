@@ -595,13 +595,13 @@ a:link,
 a:visited,
 .link:link,
 .link:visited {
-  border-color: rgba(221, 221, 238, 0.042);
+  border-color: rgba(221, 221, 238, 0.042) !important;
   text-decoration: none
 }
 
 a:active,
 .link:active {
-  text-decoration: none
+  text-decoration: none !important;
 }
 
 a:disabled,
