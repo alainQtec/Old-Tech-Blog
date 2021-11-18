@@ -249,48 +249,10 @@ extra_scss: ""
                 <span class="about__info-name">Company <br> Worked</span>
               </div>
               <div class="about__buttons button--flex">
-                <button type="button" class="modal-trigger button_Dl_CV button--fex" data-toggle="modal"
+                <button type="button" class="modal-trigger button_Dl_CV button--fex" data-toggle="cv-modal-window"
                   data-target="#cv-open-modal">CV<i class="uil uil-download-alt button__icon"></i></button>
               </div>
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                          <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title">Modal Header</h4>
-                          </div>
-                          <div class="modal-body">
-                              <input type="hidden" name="txt1" id="textbox1">
-                              <button type="button" class="close_model btn btn-danger">button</button>
-                              <input type="checkbox" name="ch" class="one" value="1">
-                              <input type="checkbox" name="ch" class="one" value="2">
-                              <input type="checkbox" name="ch" class="one" value="3">
-                              <input type="checkbox" name="ch" class="one" value="4">
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                  </div>
-                </div>
-              </div>
-              <script type="text/javascript">
-                $(document).ready(function () {
-                    $(".close_model").on("click", function () {
-                          if ($('#textbox1').val() == 'true') {
-                              $('.close').trigger('click');
-                          } else {
-                              alert('pls click on checkbox');
-                          }
-                    });
-                    $('.one').change(function () {
-                          if (this.checked) {
-                              $(this).prop("checked", 'true');
-                          }
-                          $('#textbox1').val(this.checked);
-                    });
-                });
-              </script>
-              <!-- <div class="cv-modal-window fade" id="cv-open-modal" role="dialog">
+              <div class="cv-modal-window fade" id="cv-open-modal" role="dialog">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -345,11 +307,28 @@ extra_scss: ""
                     <div class="modal-footer">
                       <small>Note that your data will be collected</small>
                       <br>
-                      <button type="button" class="btn btn-default" data-dismiss="cv-modal-window"><a download="" href="{{site.url}}{{site.baseurl}}/assets/pdf/Alain_Herve_Resume_Preview.pdf" class="button_Dl_CV button--fex">Download<i class="uil uil-download-alt button__icon"></i></a></button>
+                      <button type="button" class="btn btn-default" data-dismiss="cv-modal-window"><a download="" href="{{site.url}}{{site.baseurl}}/assets/pdf/Alain_Herve_Resume_Preview.pdf" class="button_Dl_CV button--fex close_model">Download<i class="uil uil-download-alt button__icon"></i></a></button>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".close_model").on("click", function () {
+                          if ($('#textbox1').val() == 'true') {
+                              $('.modal-close').trigger('click');
+                          } else {
+                              alert('pls click on checkbox');
+                          }
+                    });
+                    $('.one').change(function () {
+                          if (this.checked) {
+                              $(this).prop("checked", 'true');
+                          }
+                          $('#textbox1').val(this.checked);
+                    });
+                });
+              </script>
             </div>
           </div>
           <br id="blog">
