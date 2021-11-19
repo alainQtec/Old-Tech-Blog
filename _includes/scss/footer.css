@@ -273,28 +273,45 @@ a.button_bmc:hover {
 
 
 /* @media (max-width:280px) {}
-@media (min-width:280px) and (max-width:568px){}
-@media (min-width:568px) and (max-width:768px){} */
+@media (min-width:280px) and (max-width:568px){}*/
+@media (min-width:768px){
+  .footer__container {
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 1240px) {
+  .footer__container {
+    width: 85%;
+    margin: 0 auto !important;
+    justify-items: center !important;
+    column-gap: 1.2rem !important;
+  }
+}
+
+@media (min-width:568px) and (max-width:768px){
+    .footer__container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 @media (min-width:768px) and (max-width:950px){
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
     column-gap: 1rem;
   }
 }
 @media (min-width:950px) and (max-width:1030px){
+  .footer .col {
+    width: 180px !important;
+    padding: 0px 18px 19px 18px !important;
+  }
   .footer__container {
     grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
     column-gap: 0rem;
-  }
-}
-/* @media (min-width:1028px){} */
-
-@media only screen and (min-width: 1280px) {
-  .footer__container {
-    width: 1200px;
-    margin: 0 auto;
   }
 }
 
@@ -340,19 +357,6 @@ a.button_bmc:hover {
 @media only screen and (max-width: 340px) {
   .footer .col {
     width: 100% !important;
-  }
-}
-
-@media screen and (min-width: 568px) {
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer__container {
-    margin: 0 auto !important;
-    padding: 0 1rem !important;
   }
 }
 
