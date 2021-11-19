@@ -290,7 +290,7 @@ a.button_bmc:hover {
 
 @media (min-width: 1240px) {
   .footer__container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto !important;
     justify-items: center !important;
     column-gap: 1.2rem !important;
