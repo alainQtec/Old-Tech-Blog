@@ -3095,6 +3095,11 @@ label .modal-trigger,
 .pop input:checked+.modal {
   opacity: 1;
   visibility: visible;
+  animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.pop input:checked+.about__data {
+  animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .pop input:checked+.modal label,
@@ -3126,6 +3131,85 @@ label .modal-trigger,
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
   text-decoration: underline;
+}
+
+// html.modal-active,
+// body.modal-active {
+//   overflow: hidden;
+// }
+
+// #modal-container {
+//   display: table;
+//   height: 100%;
+//   width: 100%;
+//   transform: scale(0);
+// }
+
+// #modal-container .modal-background {
+//   display: table-cell;
+//   background: rgba(0, 0, 0, 0.8);
+//   text-align: center;
+//   vertical-align: middle;
+// }
+
+// .four+.about__data {
+//   z-index: 1;
+//   animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+// }
+
+// .four.out .modal-background .modal-content {
+//   animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+// }
+
+
+@keyframes blowUpContent {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  99.9% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes blowUpContentTwo {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blowUpModalTwo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 
 /* modal Close Button */

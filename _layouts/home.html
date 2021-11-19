@@ -249,12 +249,12 @@ extra_scss: ""
                 <span class="about__info-name">Company <br> Worked</span>
               </div>
               <div>
-                <label for="3" class="modal-trigger button_Dl_CV button--fex">CV<i class="uil uil-download-alt button__icon"></i></label>
+                <label for="3" class="modal-trigger button_Dl_CV button--fex" id="four">CV<i class="uil uil-download-alt button__icon"></i></label>
               </div>
             </div>
-            <div class="pop">
+            <div class="pop" id="modal-container">
               <input type="checkbox" id="3" />
-              <div class="modal cv-modal fade" id="cv-modal" role="dialog">
+              <div class="modal cv-modal modal-background" id="cv-modal" role="dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                       <label class="btn-close" for="3" data-dismiss="cv-modal" aria-label="Close">✕</label>
@@ -313,9 +313,22 @@ extra_scss: ""
                 </div>
               </div>
             </div>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <!-- <script>
+              $('.modal-trigger').click(function(){
+                var buttonId = $(this).attr('id');
+                $('#modal-container').removeAttr('class').addClass(buttonId);
+                $('body').addClass('modal-active');
+              })
+              
+              $('#modal-container').click(function(){
+                $(this).addClass('out');
+                $('body').removeClass('modal-active');
+              });
+            </script> -->
           </div>
-          <br id="blog">
         </div>
+        <br id="blog">
       </section>
       <section class="section Recent_Posts" id="recent-articles">
         <div id="recent-articles-header">
