@@ -2713,11 +2713,6 @@ a.button_contactme:hover {
   z-index: 100 !important;
 }
 
-
-.button_Dl_CV {
-  font-size: var(--smaller-font-size) !important;
-}
-
 .button_Dl_CV:hover,
 .button_Dl_CV:focus,
 .button_send_msg:hover,
@@ -3019,12 +3014,10 @@ div.about__container.container.grid {
 /* ============== Modal windows ================*/
 
 
-.pop {
-  margin: auto;
-  background-color: var(--container-color);
+.pop,
+div.pop {
+  margin: 0px !important;
   font-weight: 600;
-  // z-index: 9990;
-  pointer-events: none;
   transition: visibility 0s lineaer 0.1s, opacity 0.3s ease;
 }
 
@@ -3035,14 +3028,19 @@ div.about__container.container.grid {
   }
 }
 
+.pop,
+.pop>* {
+  z-index: 9990;
+}
+
 .pop .modal {
-  z-index: 2;
   opacity: 0;
   visibility: hidden;
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: var(--body-color);
+  border-radius: .5rem;
   top: 0;
   left: 0;
   right: 0;
@@ -3051,52 +3049,72 @@ div.about__container.container.grid {
   transition: opacity 500ms ease-in-out;
 }
 
-.pop .modal-content {
-  -webkit-transform: translate(-50%, -50%) scale(0.75);
-  transform: translate(-50%, -50%) scale(0.75);
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  background: white;
-  padding: 30px;
+.pop .modal>div {
+  width: 400px;
+  height: 100%;
+  border-radius: 18px;
   position: absolute;
   color: black;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
+  padding: 2em;
+  background: var(--container-color);
+  background-blend-mode: darken;
+  -webkit-transform: translate(-50%, -50%) scale(0.75);
+  transform: translate(-50%, -50%) scale(0.75);
 }
 
-.pop .cv-modal .modal-trigger {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
+.pop .modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
+@media (max-width: 640px) {
+  .pop .cv-modal>div {
+    width: 98%;
+    padding: 30px;
+  }
+}
+
+label .modal-trigger,
 .pop .cv-modal:target {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+  transition-delay: 0s;
 }
 
-.pop .cv-modal>div {
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.597);
-  padding: 2em;
-  background: var(--container-color);
+.pop input {
+  display: none;
 }
 
-/* Close Button */
-.btn-close {
-  text-align: center;
+.pop input:checked+.modal {
+  opacity: 1;
+  visibility: visible;
 }
 
+.pop input:checked+.modal label,
+.pop input:checked+.modal .modal-content {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
 
+.pop input:checked+.modal .modal-content p {
+  font-size: .70rem;
+  line-height: 125%;
+}
 
-@media (max-width: 640px) {
-  .pop .modal-content {
-    width: 100%;
-  }
+.pop input:checked+.modal label:hover {
+  background: transparent;
+  color: var(--first-color);
+  border-color: hsla(0, 0%, 100%, .6);
+  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.309);
 }
 
 .pop label {
@@ -3110,56 +3128,53 @@ div.about__container.container.grid {
   text-decoration: underline;
 }
 
-.pop input {
-  display: none;
+/* modal Close Button */
+label .btn-close {
+  color: var(--text-color);
+  line-height: 50px;
+  font-size: 80%;
+  font-weight: var(--font-medium);
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  // width: 70px;
+  text-decoration: none;
+  margin-bottom: 1em;
+  cursor: pointer;
+  background: none;
 }
 
-.pop input:checked+.modal {
-  opacity: 1;
-  visibility: visible;
+label .btn-close>*:before,
+button .modal-close>*:before {
+  font-family: "SF Pro Icons";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  alt: ''
 }
 
-.pop input:checked+.modal .modal-content {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+button .modal-close>*:hover {
+  color: black;
 }
 
-.pop input:checked+.modal .modal-content p {
-  font-size: 1.25rem;
-  line-height: 125%;
-}
-
-.pop input:checked+.modal label {
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // height: 30px;
-  // width: 30px;
-  background: #666666;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.pop input:checked+.modal label:hover {
-  background: #333333;
-}
-
-
+.modal-body,
 .privacy_agrmnt {
-  margin: 4px, 4px;
+  margin: 4px;
+  margin-bottom: 1em;
   padding: 4px;
   font-size: .70rem;
   background-color: var(--body-color);
   border-radius: .5rem;
   width: 100%;
-  height: 110px;
+  height: 180px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 
 .cv-modal-window header {
@@ -3171,46 +3186,26 @@ div.about__container.container.grid {
   margin: 0 0 15px;
 }
 
-#cv-open-modal.cv-modal-window {
-  height: 100%;
-  width: 100%;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.522);
-  background-blend-mode: darken;
+.modal-footer {
+  display: flex;
+  flex-direction: column;
 }
 
-.cv-consent-modal-close::before {
-  content: "✕";
-  color: var(--bold-color);
+.modal-footer .close_model {
+  margin: 0 auto;
 }
 
-.cv-consent-modal-close {
-  color: var(--text-color);
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
+.button_Dl_CV {
+  font-size: var(--smaller-font-size) !important;
+}
+
+.modal-footer small {
   text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-  cursor: pointer;
-  background: none;
-}
-
-.cv-consent-modal-close::before,
-.cv-consent-modal-close::after {
   font-family: "SF Pro Icons";
+  font-size: .66rem;
   font-style: normal;
-  font-size: inherit;
-  line-height: 50px;
-  position: relative;
-  z-index: 1;
-  alt: ''
-}
-
-.cv-consent-modal-close:hover {
-  color: black;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .cv-modal-window>div {
