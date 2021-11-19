@@ -272,8 +272,13 @@ a.button_bmc:hover {
 }
 
 
-/* @media (max-width:280px) {}
-@media (min-width:280px) and (max-width:568px){}*/
+/* @media (max-width:280px) {} */
+@media (min-width:280px) and (max-width:568px){
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: .1rem;
+  }
+}
 @media (min-width:768px){
   .footer__container {
     margin: 0 auto !important;
