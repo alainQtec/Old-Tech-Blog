@@ -4312,12 +4312,6 @@ section#recent-articles.Recent_Posts {
     grid-template-columns: .5fr;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    column-gap: 1rem;
-  }
-
   .footer__img-two {
     right: initial;
     bottom: 0;
