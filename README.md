@@ -6,7 +6,7 @@
 
 Local admin uses [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/)
 
-or when I'm not on my PC I use [`Foresty Admin`](https://app.forestry.io/dashboard/#) : [https://alainqtec.com/admin](https://alainqtec.com/admin)
+or when I'm not on my PC I use [`Forestry Admin`](https://app.forestry.io/dashboard/#) : [https://alainqtec.com/admin](https://alainqtec.com/admin)
 
 Prerequisites:
 
