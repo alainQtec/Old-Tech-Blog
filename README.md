@@ -5,7 +5,7 @@
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 <!-- [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/alainQtec) -->
 
-This is my previous blog; it still works, but it's a hassle to maintain, so I'll have to switch to [migrate to 11nty](https://www.jasha.eu/blogposts/2020/06/migration-from-jekyll-to-eleventy.html).
+This is my previous blog; it still works, but it's a pain to maintain, so I'll have to switch/[migrate to 11nty](https://www.jasha.eu/blogposts/2020/06/migration-from-jekyll-to-eleventy.html).
 
 Local admin uses [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/)
 
