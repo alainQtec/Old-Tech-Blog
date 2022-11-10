@@ -2,9 +2,10 @@
 
 <a href="https://github.com/alainQtec"><sub>My Github<sub> <img src="https://komarev.com/ghpvc/?username=alainQtec&label=Profile%20views&color=0e75b6&style=flat" alt="alainQtec" /> </p>
 
-[![Jekyll site CI](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/alainQtec/tech-blog/actions/workflows/jekyll.yml)
 [![Travis](https://img.shields.io/travis/alainQtec/tech-blog.svg)](https://app.travis-ci.com/alainQtec/tech-blog)
 <!-- [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/alainQtec) -->
+
+This is an old blog, it works but Its a pain to mainain  so I'll have to [migrate to 11nty](https://www.jasha.eu/blogposts/2020/06/migration-from-jekyll-to-eleventy.html)
 
 Local admin uses [`Jekyll Admin`](https://jekyll.github.io/jekyll-admin/)
 
@@ -44,12 +45,6 @@ Then Start the server locally at <http://127.0.0.1:4000/> or <http://localhost:4
 cd Project_repo
 bundle exec jekyll serve --watch
 ```
-
-### Features
-
-This is a personnal project so features are always changing.
-
-[TODO](TODO.md)
 
 ### [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/alainQtec/tech-blog/blob/main/LICENSE)
 
